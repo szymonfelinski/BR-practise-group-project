@@ -1,0 +1,10 @@
+*.orig
+*.pyc
+.dotest
+.idea/
+Temp/
+Diagnosis/
+Binaries/
+*.isopen
+/*.set
+debug.log
