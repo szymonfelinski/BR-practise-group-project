@@ -5,6 +5,7 @@
     <Object Type="File" Description="Software configuration">Cpu.sw</Object>
     <Object Type="File" Description="Permanent variables">Cpu.per</Object>
     <Object Type="File" Description="I/O mapping">IoMap.iom</Object>
+    <Object Type="File" Description="Variable mapping">PvMap.vvm</Object>
     <Object Type="Package">Connectivity</Object>
     <Object Type="Package">TextSystem</Object>
     <Object Type="Package">UnitSystem</Object>
@@ -17,9 +18,10 @@
     <Object Type="Package">mappVision</Object>
     <Object Type="Package">mappCockpit</Object>
   </Objects>
-  <Configuration ModuleId="5APC2100.BY44-000" HasNcOperatingSystem="False">
+  <Configuration ModuleId="5APC2100.BY44-000">
     <AutomationRuntime Version="C4.83" />
+    <Build GccVersion="4.1.2" />
     <DefaultTargetMemory Tasks="UserROM" />
-    <Vc FirmwareVersion="No valid version installed" />
+    <Vc FirmwareVersion="V4.72.2" />
   </Configuration>
 </Cpu>
