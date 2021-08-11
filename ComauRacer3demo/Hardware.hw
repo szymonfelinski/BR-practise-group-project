@@ -34,8 +34,8 @@
     <Connector Name="IF6">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
-    <Parameter ID="ConfigurationID" Value="R3Demo_MappMotion_Cfg" />
-    <Parameter ID="ConfigVersion" Value="2.1.0" />
+    <Parameter ID="ConfigurationID" Value="R3DemoConfig" />
+    <Parameter ID="ConfigVersion" Value="1.0.1" />
     <Parameter ID="UserPartitionSize" Value="128" />
     <Parameter ID="AutomaticTransferOfUserfiles" Value="on" />
     <Parameter ID="Simulation" Value="1" />

@@ -15,11 +15,11 @@
       Source="Racer3.Control"
       Language="IEC">
       <InternalFile
-        Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Temp\Objects\Racer3_demo\5APC2100_BY44_000\Control\Main.st.var" />
+        Path="C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Temp\Objects\Racer3_demo\5APC2100_BY44_000\Control\Main.st.var" />
       <File
-        Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Racer3\Control\Types.typ" />
+        Path="C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Logical\Racer3\Control\Types.typ" />
       <File
-        Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Racer3\Control\Variables.var" />
+        Path="C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Logical\Racer3\Control\Variables.var" />
     </Task>
   </TaskClass>
   <TaskClass
