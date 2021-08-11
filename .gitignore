@@ -1,10 +1,10 @@
 ComauRacer3demo/*.orig
 ComauRacer3demo/*.pyc
-ComauRacer3demo/.dotest
-ComauRacer3demo/.idea/
-ComauRacer3demo/Temp/
-ComauRacer3demo/Diagnosis/
-ComauRacer3demo/Binaries/
+ComauRacer3demo/*.dotest
+ComauRacer3demo/*.idea
+ComauRacer3demo/Temp/*
+ComauRacer3demo/Diagnosis/*
+ComauRacer3demo/Binaries/*
 ComauRacer3demo/*.isopen
 ComauRacer3demo/*.set
 ComauRacer3demo/debug.log
