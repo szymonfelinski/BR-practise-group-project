@@ -1,0 +1,4 @@
+VAR
+	RoboArm : MpRoboArm6Axis;
+	RoboArmPara : MpRoboArm6AxisParType;
+END_VAR
