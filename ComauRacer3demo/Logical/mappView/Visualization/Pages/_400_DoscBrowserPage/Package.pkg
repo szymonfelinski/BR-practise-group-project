@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="File" Description="Page description">_100_MainPage.page</Object>
-    <Object Type="File">_100_MainPageContent.content</Object>
+    <Object Type="File" Description="Page description">_400_DoscBrowserPage.page</Object>
+    <Object Type="File">_400_DocsBrowserPageContent.content</Object>
   </Objects>
 </Package>
