@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.9.3.144 SP"?>
+<Objects>
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Package.pkg"
+    LogicalPath=""
+    Type="Package.ParentUnknown"
+    LastWriteTime="132731511195846214" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Temp\Includes\AS_TempDecl\Racer3_demo\GlobalComponents\McElements.var"
+    LogicalPath="McElements.var"
+    Type="File"
+    LastWriteTime="132731509535742963"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Global.typ"
+    LogicalPath="Global.typ"
+    Type="File"
+    LastWriteTime="132730705368615851"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Global.var"
+    LogicalPath="Global.var"
+    Type="File"
+    LastWriteTime="132730705368776026"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\Package.pkg"
+    LogicalPath="Libraries"
+    Type="Package"
+    LastWriteTime="132731498310205689" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\operator\binary.lby"
+    LogicalPath="Libraries.operator"
+    Type="Library"
+    LastWriteTime="132730705407422186" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\operator\operator.fun"
+    LogicalPath="Libraries.operator.operator.fun"
+    Type="File"
+    LastWriteTime="132730705407282145"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\operator\operator.typ"
+    LogicalPath="Libraries.operator.operator.typ"
+    Type="File"
+    LastWriteTime="132730705407362154"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\operator\operator.var"
+    LogicalPath="Libraries.operator.operator.var"
+    Type="File"
+    LastWriteTime="132730705407412316"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\runtime\binary.lby"
+    LogicalPath="Libraries.runtime"
+    Type="Library"
+    LastWriteTime="132730705410402857" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\runtime\runtime.fun"
+    LogicalPath="Libraries.runtime.runtime.fun"
+    Type="File"
+    LastWriteTime="132730705410243575"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\runtime\runtime.typ"
+    LogicalPath="Libraries.runtime.runtime.typ"
+    Type="File"
+    LastWriteTime="132730705410302901"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\runtime\runtime.var"
+    LogicalPath="Libraries.runtime.runtime.var"
+    Type="File"
+    LastWriteTime="132730705410392914"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\astime\binary.lby"
+    LogicalPath="Libraries.astime"
+    Type="Library"
+    LastWriteTime="132730705413333510" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\astime\astime.fun"
+    LogicalPath="Libraries.astime.astime.fun"
+    Type="File"
+    LastWriteTime="132730705413223490"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\astime\astime.typ"
+    LogicalPath="Libraries.astime.astime.typ"
+    Type="File"
+    LastWriteTime="132730705413273480"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\astime\astime.var"
+    LogicalPath="Libraries.astime.astime.var"
+    Type="File"
+    LastWriteTime="132730705413323509"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsIecCon\binary.lby"
+    LogicalPath="Libraries.AsIecCon"
+    Type="Library"
+    LastWriteTime="132730705416274177" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsIecCon\AsIecCon.fun"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.fun"
+    Type="File"
+    LastWriteTime="132730705416244172"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsIecCon\AsIecCon.typ"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.typ"
+    Type="File"
+    LastWriteTime="132730705416254194"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsIecCon\AsIecCon.var"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.var"
+    Type="File"
+    LastWriteTime="132730705416274177"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpRobotics\binary.lby"
+    LogicalPath="Libraries.MpRobotics"
+    Type="Library"
+    LastWriteTime="132730731625122872" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpRobotics\MpRobotics.fun"
+    LogicalPath="Libraries.MpRobotics.MpRobotics.fun"
+    Type="File"
+    LastWriteTime="132730731625057811"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpRobotics\MpRobotics.typ"
+    LogicalPath="Libraries.MpRobotics.MpRobotics.typ"
+    Type="File"
+    LastWriteTime="132730731625122872"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpRobotics\MpRoboticsError.typ"
+    LogicalPath="Libraries.MpRobotics.MpRoboticsError.typ"
+    Type="File"
+    LastWriteTime="132730731625122872"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McAxGroup\binary.lby"
+    LogicalPath="Libraries.McAxGroup"
+    Type="Library"
+    LastWriteTime="132730731625747965" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McAxGroup\McAxGroup.typ"
+    LogicalPath="Libraries.McAxGroup.McAxGroup.typ"
+    Type="File"
+    LastWriteTime="132730731625591707"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McAxGroup\McAxGroup.fun"
+    LogicalPath="Libraries.McAxGroup.McAxGroup.fun"
+    Type="File"
+    LastWriteTime="132730731625591707"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McAxGroup\McAxGroup.var"
+    LogicalPath="Libraries.McAxGroup.McAxGroup.var"
+    Type="File"
+    LastWriteTime="132730731625591707"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McAxGroup\McAxGroupCfg.typ"
+    LogicalPath="Libraries.McAxGroup.McAxGroupCfg.typ"
+    Type="File"
+    LastWriteTime="132730731625591707"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpBase\Binary.lby"
+    LogicalPath="Libraries.MpBase"
+    Type="Library"
+    LastWriteTime="132730731626281872" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpBase\MpBase.typ"
+    LogicalPath="Libraries.MpBase.MpBase.typ"
+    Type="File"
+    LastWriteTime="132730731626125558"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpBase\MpBase.var"
+    LogicalPath="Libraries.MpBase.MpBase.var"
+    Type="File"
+    LastWriteTime="132730731626281872"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpBase\MpBase.fun"
+    LogicalPath="Libraries.MpBase.MpBase.fun"
+    Type="File"
+    LastWriteTime="132730731626281872"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\MpBase\Common_EventLog.tmx"
+    LogicalPath="Libraries.MpBase.Common_EventLog.tmx"
+    Type="File"
+    LastWriteTime="132730731626281872"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McBase\binary.lby"
+    LogicalPath="Libraries.McBase"
+    Type="Library"
+    LastWriteTime="132730731627063182" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McBase\McBase.typ"
+    LogicalPath="Libraries.McBase.McBase.typ"
+    Type="File"
+    LastWriteTime="132730731626906911"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McBase\McBase.fun"
+    LogicalPath="Libraries.McBase.McBase.fun"
+    Type="File"
+    LastWriteTime="132730731626906911"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McBase\McBase.var"
+    LogicalPath="Libraries.McBase.McBase.var"
+    Type="File"
+    LastWriteTime="132730731626906911"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\McBase\McBaseCfg.typ"
+    LogicalPath="Libraries.McBase.McBaseCfg.typ"
+    Type="File"
+    LastWriteTime="132730731627063182"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\CoTrace\binary.lby"
+    LogicalPath="Libraries.CoTrace"
+    Type="Library"
+    LastWriteTime="132731498308775362" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\CoTrace\CoTrace.fun"
+    LogicalPath="Libraries.CoTrace.CoTrace.fun"
+    Type="File"
+    LastWriteTime="132731498308695349"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\CoTrace\CoTrace.typ"
+    LogicalPath="Libraries.CoTrace.CoTrace.typ"
+    Type="File"
+    LastWriteTime="132731498308755359"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\CoTrace\CoTrace.var"
+    LogicalPath="Libraries.CoTrace.CoTrace.var"
+    Type="File"
+    LastWriteTime="132731498308765369"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsZip\binary.lby"
+    LogicalPath="Libraries.AsZip"
+    Type="Library"
+    LastWriteTime="132731498309405503" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsZip\AsZip.fun"
+    LogicalPath="Libraries.AsZip.AsZip.fun"
+    Type="File"
+    LastWriteTime="132731498309325498"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsZip\AsZip.typ"
+    LogicalPath="Libraries.AsZip.AsZip.typ"
+    Type="File"
+    LastWriteTime="132731498309335495"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\AsZip\AsZip.var"
+    LogicalPath="Libraries.AsZip.AsZip.var"
+    Type="File"
+    LastWriteTime="132731498309395505"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\FileIO\binary.lby"
+    LogicalPath="Libraries.FileIO"
+    Type="Library"
+    LastWriteTime="132731498310135677" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\FileIO\FileIO.fun"
+    LogicalPath="Libraries.FileIO.FileIO.fun"
+    Type="File"
+    LastWriteTime="132731498309995634"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\FileIO\FileIO.typ"
+    LogicalPath="Libraries.FileIO.FileIO.typ"
+    Type="File"
+    LastWriteTime="132731498310045634"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Libraries\FileIO\FileIO.var"
+    LogicalPath="Libraries.FileIO.FileIO.var"
+    Type="File"
+    LastWriteTime="132731498310125664"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Package.pkg"
+    LogicalPath="mappView"
+    Type="Package"
+    LastWriteTime="132731511478227419" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Layouts\Package.pkg"
+    LogicalPath="mappView.Layouts"
+    Type="Package"
+    LastWriteTime="132731510085464662" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Widgets\Package.pkg"
+    LogicalPath="mappView.Widgets"
+    Type="Package"
+    LastWriteTime="132731510085620934" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Resources\Package.pkg"
+    LogicalPath="mappView.Resources"
+    Type="Package"
+    LastWriteTime="132731510085620934" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Resources\Texts\Package.pkg"
+    LogicalPath="mappView.Resources.Texts"
+    Type="Package"
+    LastWriteTime="132731510085620934" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Resources\Snippets\Package.pkg"
+    LogicalPath="mappView.Resources.Snippets"
+    Type="Package"
+    LastWriteTime="132731510085620934" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Resources\Themes\Package.pkg"
+    LogicalPath="mappView.Resources.Themes"
+    Type="Package"
+    LastWriteTime="132731510085620934" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Resources\Media\Package.pkg"
+    LogicalPath="mappView.Resources.Media"
+    Type="Package"
+    LastWriteTime="132731510085620934" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Package.pkg"
+    LogicalPath="mappView.Visualization"
+    Type="Package"
+    LastWriteTime="132731511478227419" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Pages\Package.pkg"
+    LogicalPath="mappView.Visualization.Pages"
+    Type="Package"
+    LastWriteTime="132731511649039653" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Pages\AreaContents\Package.pkg"
+    LogicalPath="mappView.Visualization.Pages.AreaContents"
+    Type="Package"
+    LastWriteTime="132731511478071158" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Pages\_100_MainPage\Package.pkg"
+    LogicalPath="mappView.Visualization.Pages._100_MainPage"
+    Type="Package"
+    LastWriteTime="132731511756067107" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Pages\_100_MainPage\MainPage.page"
+    LogicalPath="mappView.Visualization.Pages._100_MainPage.MainPage.page"
+    Type="File"
+    LastWriteTime="132731511951753647"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Variables\Package.pkg"
+    LogicalPath="mappView.Visualization.Variables"
+    Type="Package"
+    LastWriteTime="132731511478071158" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Expressions\Package.pkg"
+    LogicalPath="mappView.Visualization.Expressions"
+    Type="Package"
+    LastWriteTime="132731511478071158" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Layouts\Package.pkg"
+    LogicalPath="mappView.Visualization.Layouts"
+    Type="Package"
+    LastWriteTime="132731511478071158" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Dialogs\Package.pkg"
+    LogicalPath="mappView.Visualization.Dialogs"
+    Type="Package"
+    LastWriteTime="132731511478227419" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Dialogs\AreaContents\Package.pkg"
+    LogicalPath="mappView.Visualization.Dialogs.AreaContents"
+    Type="Package"
+    LastWriteTime="132731511478227419" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Resources\Package.pkg"
+    LogicalPath="mappView.Visualization.Resources"
+    Type="Package"
+    LastWriteTime="132731511478227419" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Resources\Texts\Package.pkg"
+    LogicalPath="mappView.Visualization.Resources.Texts"
+    Type="Package"
+    LastWriteTime="132731511478227419" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\mappView\Visualization\Resources\Snippets\Package.pkg"
+    LogicalPath="mappView.Visualization.Resources.Snippets"
+    Type="Package"
+    LastWriteTime="132731511478227419" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Racer3\Package.pkg"
+    LogicalPath="Racer3"
+    Type="Package"
+    LastWriteTime="132731511301700780" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Racer3\Control\IEC.prg"
+    LogicalPath="Racer3.Control"
+    Type="Program"
+    LastWriteTime="132731511245250652" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Racer3\Control\Main.st"
+    LogicalPath="Racer3.Control.Main.st"
+    Type="File"
+    LastWriteTime="132731511338074045"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Racer3\Control\Types.typ"
+    LogicalPath="Racer3.Control.Types.typ"
+    Type="File"
+    LastWriteTime="132731511245094374"
+    Private="true" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Logical\Racer3\Control\Variables.var"
+    LogicalPath="Racer3.Control.Variables.var"
+    Type="File"
+    LastWriteTime="132731511245250652"
+    Private="true" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\Config.pkg"
+    LogicalPath="Racer3_demo"
+    Type="Configuration.ParentUnknown"
+    LastWriteTime="132730725189740812" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Hardware.hw"
+    LogicalPath="Racer3_demo.Hardware.hw"
+    Type="File"
+    LastWriteTime="132731512413573071"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\Hardware.hwl"
+    LogicalPath="Racer3_demo.Hardware.hwl"
+    Type="File"
+    LastWriteTime="132730725402216019"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\Cpu.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000"
+    Type="Cpu"
+    LastWriteTime="132730725179720674" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\Cpu.sw"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.Cpu.sw"
+    Type="File"
+    LastWriteTime="132731511301857037"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\Cpu.per"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.Cpu.per"
+    Type="File"
+    LastWriteTime="132730725178096701"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\IoMap.iom"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.IoMap.iom"
+    Type="File"
+    LastWriteTime="132730725178096701"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\PvMap.vvm"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.PvMap.vvm"
+    Type="File"
+    LastWriteTime="132730725178252992"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\Connectivity\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.Connectivity"
+    Type="Package"
+    LastWriteTime="132730725178627961" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\Connectivity\OpcUA\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.Connectivity.OpcUA"
+    Type="Package"
+    LastWriteTime="132731500563180424" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\Connectivity\OpcUA\OpcUaMap.uad"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.Connectivity.OpcUA.OpcUaMap.uad"
+    Type="File"
+    LastWriteTime="132731500563180424"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\TextSystem\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.TextSystem"
+    Type="Package"
+    LastWriteTime="132730725178627961" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\UnitSystem\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.UnitSystem"
+    Type="Package"
+    LastWriteTime="132730725178627961" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity"
+    Type="Package"
+    LastWriteTime="132730725179095632" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\UserRoleSystem\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.UserRoleSystem"
+    Type="Package"
+    LastWriteTime="132730725178939300" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\UserRoleSystem\Role.role"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.UserRoleSystem.Role.role"
+    Type="File"
+    LastWriteTime="132730725178784224"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\UserRoleSystem\User.user"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.UserRoleSystem.User.user"
+    Type="File"
+    LastWriteTime="132730725178939300"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore"
+    Type="Package"
+    LastWriteTime="132730725179095632" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\OwnCertificates\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore.OwnCertificates"
+    Type="Package"
+    LastWriteTime="132730725178939300" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\OwnCertificates\Certificates\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore.OwnCertificates.Certificates"
+    Type="Package"
+    LastWriteTime="132730725178939300" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\OwnCertificates\PrivateKeys\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore.OwnCertificates.PrivateKeys"
+    Type="Package"
+    LastWriteTime="132730725178939300" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore.ThirdPartyCertificates"
+    Type="Package"
+    LastWriteTime="132730725178939300" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\SoftwareCertificates\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore.ThirdPartyCertificates.SoftwareCertificates"
+    Type="Package"
+    LastWriteTime="132730725178939300" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\CertificateRevocationLists\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore.CertificateRevocationLists"
+    Type="Package"
+    LastWriteTime="132730725179095632" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\CertificateStore\CertificateSigningRequests\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.CertificateStore.CertificateSigningRequests"
+    Type="Package"
+    LastWriteTime="132730725179095632" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\TransportLayerSecurity\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.TransportLayerSecurity"
+    Type="Package"
+    LastWriteTime="132730725179095632" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\Firewall\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.Firewall"
+    Type="Package"
+    LastWriteTime="132730725179095632" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\AccessAndSecurity\Firewall\Rules.firewallRules"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.AccessAndSecurity.Firewall.Rules.firewallRules"
+    Type="File"
+    LastWriteTime="132730725179095632"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappControl\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappControl"
+    Type="Package"
+    LastWriteTime="132730725179251889" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappMotion"
+    Type="Package"
+    LastWriteTime="132731508972399287" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\Hierarchy.objecthierarchy"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappMotion.Hierarchy.objecthierarchy"
+    Type="File"
+    LastWriteTime="132731502549203036"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappMotion.ComauRacer3"
+    Type="Package"
+    LastWriteTime="132731508801610346" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxesGrpR3.axesgroup"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappMotion.ComauRacer3.AxesGrpR3.axesgroup"
+    Type="File"
+    LastWriteTime="132731509534308306"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxisConfR3.axis"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappMotion.ComauRacer3.AxisConfR3.axis"
+    Type="File"
+    LastWriteTime="132731506007490938"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\MechSysR3.mechanicalsystem"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappMotion.ComauRacer3.MechSysR3.mechanicalsystem"
+    Type="File"
+    LastWriteTime="132731505194363458"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxGrpFtrR3.axesgroupfeature"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappMotion.ComauRacer3.AxGrpFtrR3.axesgroupfeature"
+    Type="File"
+    LastWriteTime="132731508151165845"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappServices\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappServices"
+    Type="Package"
+    LastWriteTime="132730725179251889" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappSafety\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappSafety"
+    Type="Package"
+    LastWriteTime="132730725179408151" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappSafety\SafeApplication\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappSafety.SafeApplication"
+    Type="Package"
+    LastWriteTime="132730725179408151" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappSafety\SafeCommissioning\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappSafety.SafeCommissioning"
+    Type="Package"
+    LastWriteTime="132730725179408151" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappView\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappView"
+    Type="Package"
+    LastWriteTime="132731498786832352" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappView\Config.mappviewcfg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappView.Config.mappviewcfg"
+    Type="File"
+    LastWriteTime="132731498601780735"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappView\Package\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappView.Package"
+    Type="Package"
+    LastWriteTime="132731498787132349" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappView\Package\Visualizat.vis"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappView.Package.Visualizat.vis"
+    Type="File"
+    LastWriteTime="132731512338283435"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappVision\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappVision"
+    Type="Package"
+    LastWriteTime="132730725179564410" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappCockpit\Package.pkg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappCockpit"
+    Type="Package"
+    LastWriteTime="132731498291071424" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\5APC2100_BY44_000\mappCockpit\Settings.mcocfg"
+    LogicalPath="Racer3_demo.5APC2100_BY44_000.mappCockpit.Settings.mcocfg"
+    Type="File"
+    LastWriteTime="132731498426742524"
+    Private="false" />
+  <Object
+    Path="C:\Users\szymo\Documents\GitHub\BR-projekt-praktyki-sierpien\ComauRacer3praktyki_demo\Physical\Racer3_demo\Hardware.jpg"
+    LogicalPath="Racer3_demo.Hardware.jpg"
+    Type="File"
+    LastWriteTime="132730725402684826"
+    Private="false" />
+</Objects>

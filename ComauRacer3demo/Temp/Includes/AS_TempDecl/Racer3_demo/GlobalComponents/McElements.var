@@ -1,0 +1,9 @@
+VAR
+	gAxesGroup : {REDUND_UNREPLICABLE} McAxesGroupType; (*#1"C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxesGrpR3.axesgroup" #2"1" #3"1"*)
+	gAxisQ1 : {REDUND_UNREPLICABLE} McAxisType; (*#1"C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxisConfR3.axis" #2"1" #3"1"*)
+	gAxisQ2 : {REDUND_UNREPLICABLE} McAxisType; (*#1"C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxisConfR3.axis" #2"1" #3"1"*)
+	gAxisQ3 : {REDUND_UNREPLICABLE} McAxisType; (*#1"C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxisConfR3.axis" #2"1" #3"1"*)
+	gAxisQ4 : {REDUND_UNREPLICABLE} McAxisType; (*#1"C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxisConfR3.axis" #2"1" #3"1"*)
+	gAxisQ5 : {REDUND_UNREPLICABLE} McAxisType; (*#1"C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxisConfR3.axis" #2"1" #3"1"*)
+	gAxisQ6 : {REDUND_UNREPLICABLE} McAxisType; (*#1"C:\BR-projekt-praktyki-sierpien\ComauRacer3demo\Physical\Racer3_demo\5APC2100_BY44_000\mappMotion\ComauRacer3\AxisConfR3.axis" #2"1" #3"1"*)
+END_VAR
