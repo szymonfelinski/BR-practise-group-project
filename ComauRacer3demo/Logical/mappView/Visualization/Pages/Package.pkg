@@ -4,6 +4,7 @@
   <Objects>
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">_100_MainPage</Object>
+    <Object Type="Package">_300_ServicePage</Object>
     <Object Type="Package">_200_AlarmPage</Object>
   </Objects>
 </Package>
