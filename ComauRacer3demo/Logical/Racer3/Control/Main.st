@@ -1,7 +1,7 @@
 
 PROGRAM _INIT
 	(* Insert code here *)
-	 
+	 //tests
 END_PROGRAM
 
 PROGRAM _CYCLIC
