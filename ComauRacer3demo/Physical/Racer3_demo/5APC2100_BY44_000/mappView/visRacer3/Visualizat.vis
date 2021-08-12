@@ -5,7 +5,10 @@
 		<Page refId="MainPage"/>
 		<Page refId="ServicePage"/>
 		<Page refId="AlarmPage"/>
-		<Page refId="DocsBrowserPag"/>
+		<Page refId="ControlPage"/>
+		<Page refId="DocsBrowserPage"/>
+		<Page refId="CaibrationPage"/>
+		
   </Pages>
   <Navigations>
     <!--<Navigation refId="" />-->
@@ -14,13 +17,19 @@
     <!--<BindingsSet refId="" />-->
   </BindingsSets>
   <EventBindingsSets>
-    <!--<EventBindingsSet refId="" />-->
-  </EventBindingsSets>
+		<EventBindingsSet refId="TopPageContent_eventbinding" />
+		<EventBindingsSet refId="DialogLoginContent_eventbinding" />
+	</EventBindingsSets>
   <Dialogs>
-    <!--<Dialog refId="" />-->
+    <Dialog refId="DialogLogin" />
   </Dialogs>
   <Contents>
-    <!--<Content refId="" />-->
+		<Content refId="MainPageContent" />
+		<Content refId="AlamPageContent" />
+		<Content refId="ServicePageContent" />
+		<Content refId="ControlPageContent" />
+		<Content refId="CalibrationPageContent" />
+		<Content refId="DialogLoginContent" />
   </Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
