@@ -9,7 +9,6 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
-    
 	MpRoboArm6Axis_0.MpLink     := ADR(g6AxRobA);
 	MpRoboArm6Axis_0.Parameters := ADR(RoboParameters);
 	MpRoboArm6Axis_0();

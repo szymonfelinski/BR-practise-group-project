@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="czysty_racer3.Hardware.hw" LastWriteTime="08/12/2021 13:16:22" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="5APC2100_BY44_000" Type="5APC2100.BY44-000" X="199.662567" Y="263.4" />
+    <Module Name="5ACCIF01.FPSC-000" Type="5ACCIF01.FPSC-000" X="195.662567" Y="273.4" />
+    <Module Name="X20BB80a" Type="X20BB80" X="314.5" Y="467.5" />
+    <Module Name="X20BM11" Type="X20BM11" X="352.5" Y="467.5" />
+    <Module Name="X20DI9371" Type="X20DI9371" X="352.5" Y="467.5" />
+    <Module Name="X20TB12c" Type="X20TB12" X="352.5" Y="494.5" />
+    <Module Name="X20BM11a" Type="X20BM11" X="365.5" Y="467.5" />
+    <Module Name="X20DO9322" Type="X20DO9322" X="365.5" Y="467.5" />
+    <Module Name="X20TB12d" Type="X20TB12" X="365.5" Y="494.5" />
+    <Module Name="X20PS9400a" Type="X20PS9400" X="339.5" Y="467.5" />
+    <Module Name="X20TB12a" Type="X20TB12" X="339.5" Y="494.5" />
+    <Module Name="X20BC0083" Type="X20BC0083" X="314.5" Y="467.5" />
+    <Module Name="8EI8X8MWT10.0100-1" Type="8EI8X8MWT10.0100-1" X="410.152039" Y="457.380432" />
+    <Module Name="8EI8X8MWT10.0500-1" Type="8EI8X8MWT10.0500-1" X="502.6588" Y="457.380432" />
+    <Module Name="5MP7151.101E-000" Type="5MP7151.101E-000" X="329.498718" Y="-49.9622345" />
+  </Modules>
+  <Links>
+    <Link From="5APC2100_BY44_000" To="5MP7151.101E-000" FromPort="IF3" ToPort="ETH1" IsRoutedByUser="False">
+      <Point X="195.662567" Y="388.5" />
+      <Point X="195.662567" Y="388.5" />
+      <Point X="195.662567" Y="393.5" />
+      <Point X="195.662567" Y="405" />
+      <Point X="461.873718" Y="405" />
+      <Point X="461.873718" Y="163.537811" />
+      <Point X="461.873718" Y="159.537811" />
+      <Point X="461.873718" Y="159.537811" />
+    </Link>
+    <Link From="5ACCIF01.FPSC-000" To="X20BC0083" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="236.662567" Y="281.4" />
+      <Point X="236.662567" Y="281.4" />
+      <Point X="241.662567" Y="281.4" />
+      <Point X="255" Y="281.4" />
+      <Point X="255" Y="542.5" />
+      <Point X="313.5" Y="542.5" />
+      <Point X="328.5" Y="542.5" />
+      <Point X="328.5" Y="542.5" />
+    </Link>
+    <Link From="8EI8X8MWT10.0100-1" To="8EI8X8MWT10.0500-1" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="426.252" Y="467.880432" />
+      <Point X="426.252" Y="467.880432" />
+      <Point X="426.252" Y="456.880432" />
+      <Point X="426.252" Y="445" />
+      <Point X="465" Y="445" />
+      <Point X="465" Y="467.880432" />
+      <Point X="502.358765" Y="467.880432" />
+      <Point X="510.358765" Y="467.880432" />
+      <Point X="510.358765" Y="467.880432" />
+    </Link>
+    <Link From="8EI8X8MWT10.0100-1" To="X20BC0083" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="417.852" Y="467.880432" />
+      <Point X="417.852" Y="467.880432" />
+      <Point X="409.852" Y="467.880432" />
+      <Point X="405" Y="467.880432" />
+      <Point X="405" Y="575" />
+      <Point X="328.5" Y="575" />
+      <Point X="328.5" Y="567.5" />
+      <Point X="328.5" Y="557.5" />
+      <Point X="328.5" Y="557.5" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

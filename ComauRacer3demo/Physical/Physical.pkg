@@ -3,6 +3,7 @@
 <Physical xmlns="http://br-automation.co.at/AS/Physical">
   <Objects>
     <Object Type="Configuration">Racer3_demo</Object>
-	<Object Type="Configuration">z_helpa</Object>
+    <Object Type="Configuration">z_helpa</Object>
+    <Object Type="Configuration">czysty_racer3</Object>
   </Objects>
 </Physical>
