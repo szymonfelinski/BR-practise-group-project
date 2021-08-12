@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="AlarmListItemMessageText">
+      <tuv xml:lang="pl">
+        <seg>Komunikat</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Message</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmListItemTimestampText">
+      <tuv xml:lang="pl">
+        <seg>Data i czas</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Date and time</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmListItemStateText">
+      <tuv xml:lang="pl">
+        <seg>Stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmListNextText">
+      <tuv xml:lang="pl">
+        <seg>Następna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Next</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmListPreviousText">
+      <tuv xml:lang="pl">
+        <seg>Poprzednia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Previous</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
