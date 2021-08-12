@@ -12,6 +12,7 @@ PROGRAM _CYCLIC
 	//RoboArm.MpLink := ADR(gAxesGroupR3);
 	//RoboArm.Parameters := ADR(RoboArmPara);
 	//RoboArm.Enable := TRUE;
+	ManualControl.AxisControl.axis1:=50;
 	RoboArm();
 END_PROGRAM
 
