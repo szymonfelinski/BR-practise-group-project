@@ -5,7 +5,7 @@
 		<Page refId="MainPage"/>
 		<Page refId="ServicePage"/>
 		<Page refId="AlarmPage"/>
-		<Page refId="DocsBrowserPag"/>
+		<Page refId="DocsBrowserPage"/>
   </Pages>
   <Navigations>
     <!--<Navigation refId="" />-->
