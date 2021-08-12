@@ -12,7 +12,16 @@ FUNCTION AxisControl : BOOL
 		axis5:UDINT;
 		axis6:UDINT;
 	END_VAR
-	
 	VAR
 		AxisControlState : AxisControlStateType;
 	END_VAR
+	AxisControl:=TRUE;
+END_FUNCTION
+	
+
+{REDUND_OK} FUNCTION TEST : BOOL (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR_INPUT
+		A : {REDUND_REPLICABLE} BOOL; (**)
+		B : {REDUND_REPLICABLE} BOOL; (**)
+	END_VAR
+END_FUNCTION
