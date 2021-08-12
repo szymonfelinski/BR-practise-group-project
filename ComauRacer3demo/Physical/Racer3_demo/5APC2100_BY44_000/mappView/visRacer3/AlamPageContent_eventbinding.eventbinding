@@ -17,7 +17,7 @@
         <Action>
           <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlamPageContent" widgetRefId="AlarmList">
             <Method xsi:type="widgets.brease.AlarmList.Action.AcknowledgeAll" />
-          </Target>
+					</Target>
         </Action>
       </EventHandler>
     </EventBinding>
