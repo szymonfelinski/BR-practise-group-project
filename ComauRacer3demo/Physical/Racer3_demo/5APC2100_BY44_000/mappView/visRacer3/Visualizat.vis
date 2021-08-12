@@ -26,7 +26,7 @@
 		<EventBindingsSet refId="TopPageContent_eventbinding" />
 		<EventBindingsSet refId="DialogLoginContent_eventbinding" />
 		<EventBindingsSet refId="AlarmPageContent_eventbinding" />
-			<EventBindingsSet refId="SettingsPageConten_eventbinding" />
+		<EventBindingsSet refId="SettingsPageContent_eventbinding" />
 	</EventBindingsSets>
   <Dialogs>
     <Dialog refId="DialogLogin" />
