@@ -8,6 +8,7 @@
 		<Page refId="ControlPage"/>
 		<Page refId="DocsBrowserPage"/>
 		<Page refId="CaibrationPage"/>
+		<Page refId="SettingsPage"/>
 		
 	</Pages>
 	<StartTheme themeRefId="BuRThemeFlat1" />
@@ -24,6 +25,8 @@
   <EventBindingsSets>
 		<EventBindingsSet refId="TopPageContent_eventbinding" />
 		<EventBindingsSet refId="DialogLoginContent_eventbinding" />
+		<EventBindingsSet refId="AlarmPageContent_eventbinding" />
+			<EventBindingsSet refId="SettingsPageConten_eventbinding" />
 	</EventBindingsSets>
   <Dialogs>
     <Dialog refId="DialogLogin" />
@@ -35,6 +38,7 @@
 		<Content refId="ControlPageContent" />
 		<Content refId="CalibrationPageContent" />
 		<Content refId="DialogLoginContent" />
+		<Content refId="SettingsPageContent" />
   </Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
