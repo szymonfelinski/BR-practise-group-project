@@ -10,7 +10,12 @@
 		<Page refId="CaibrationPage"/>
 		<Page refId="SettingsPage"/>
 		
-  </Pages>
+	</Pages>
+	<StartTheme themeRefId="BuRThemeFlat1" />
+	<Themes>
+		<Theme refId="BuRThemeFlat1"/>
+		<Theme refId="BuRThemeFlat2"/>
+	</Themes>
   <Navigations>
     <!--<Navigation refId="" />-->
   </Navigations>  
