@@ -11,7 +11,7 @@
       </Group>
     </Group>
     <Group ID="TargetFiles">
-      <Property ID="TargetFile[1]" Value="mappView.Resources.Texts.VisualizationTexts.tmx" />
+      <Property ID="TargetFile[1]" Value="mappView.Resources.Texts.VisualizationLoginTexts.tmx" />
     </Group>
   </Element>
 </Configuration>
