@@ -3,5 +3,7 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File">Visualizat.vis</Object>
+    <Object Type="File">TopPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">DialogLoginContent_eventbinding.eventbinding</Object>
   </Objects>
 </Package>
