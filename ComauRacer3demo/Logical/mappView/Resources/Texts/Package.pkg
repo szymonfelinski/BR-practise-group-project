@@ -3,5 +3,6 @@
 <Package SubType="TextsPackage" PackageType="TextsPackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="File">VisualizationLoginTexts.tmx</Object>
+    <Object Type="File">VisualizationAlarmTexts.tmx</Object>
   </Objects>
 </Package>
