@@ -8,5 +8,6 @@
     <Object Type="Package">_200_AlarmPage</Object>
     <Object Type="Package">_300_ServicePage</Object>
     <Object Type="Package">_500_ControlPage</Object>
+    <Object Type="Package">CalibrationPage</Object>
   </Objects>
 </Package>
