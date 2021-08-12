@@ -3,8 +3,5 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.Button" id="Button1" top="140" left="440" zIndex="0" text="Button1" />
     <Widget xsi:type="widgets.brease.Button" id="Button2" top="140" left="780" zIndex="1" text="Button2" />
-    <Widget xsi:type="widgets.brease.BarChart" id="BarChart1" top="180" left="140" zIndex="2">
-      <Widgets />
-    </Widget>
   </Widgets>
 </Content>
