@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="MechSys_6AxRobA" Type="mechanicalsystem">
+    <Selector ID="Type" Value="6AxesRoboarm">
+      <Selector ID="Subtype" Value="6AxesRoboarmA">
+        <Selector ID="Description" Value="Standard">
+          <Group ID="Dimensions">
+            <Property ID="TranslationFromBaseToQ1IsReadOnly" Value="0" />
+            <Group ID="TranslationFromBaseToQ1">
+              <Property ID="X" Value="0.0" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="0.0" />
+            </Group>
+            <Property ID="TranslationFromQ1ToQ2IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ1ToQ2">
+              <Property ID="X" Value="250.0" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="640.0" />
+            </Group>
+            <Property ID="TranslationFromQ2ToQ3IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ2ToQ3">
+              <Property ID="X" Value="0.0" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="630.0" />
+            </Group>
+            <Property ID="TranslationFromQ3ToQ4IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ3ToQ4">
+              <Property ID="X" Value="827.5" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="196.0" />
+            </Group>
+            <Property ID="TranslationFromQ4ToQ5IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ4ToQ5">
+              <Property ID="X" Value="0.0" />
+            </Group>
+            <Property ID="TranslationFromQ5ToQ6IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ5ToQ6">
+              <Property ID="X" Value="160.0" />
+            </Group>
+            <Group ID="TranslationFromQ6ToFlange">
+              <Property ID="X" Value="0.0" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="0.0" />
+            </Group>
+          </Group>
+          <Group ID="Offsets">
+            <Property ID="JointAxisIsReadOnly" Value="0" />
+            <Property ID="JointAxis[1]" Value="0.0" />
+            <Property ID="JointAxis[2]" Value="0.0" />
+            <Property ID="JointAxis[3]" Value="0.0" />
+            <Property ID="JointAxis[4]" Value="0.0" />
+            <Property ID="JointAxis[5]" Value="0.0" />
+            <Property ID="JointAxis[6]" Value="0.0" />
+          </Group>
+          <Group ID="CountDirections">
+            <Property ID="JointAxisIsReadOnly" Value="0" />
+            <Property ID="JointAxis[1]" Value="Standard" />
+            <Property ID="JointAxis[2]" Value="Standard" />
+            <Property ID="JointAxis[3]" Value="Standard" />
+            <Property ID="JointAxis[4]" Value="Standard" />
+            <Property ID="JointAxis[5]" Value="Standard" />
+            <Property ID="JointAxis[6]" Value="Standard" />
+          </Group>
+        </Selector>
+        <Selector ID="CoordinatesNames" Value="Default">
+          <Property ID="XCoordinateName" Value="X" />
+          <Property ID="YCoordinateName" Value="Y" />
+          <Property ID="ZCoordinateName" Value="Z" />
+          <Property ID="ACoordinateName" Value="A" />
+          <Property ID="BCoordinateName" Value="B" />
+          <Property ID="CCoordinateName" Value="C" />
+        </Selector>
+        <Selector ID="WireFrameModel" Value="Standard">
+          <Selector ID="Q1ToQ2" Value="ConnectionLine">
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Selector ID="Q2ToQ3" Value="ConnectionLine">
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Selector ID="Q3ToQ4" Value="ConnectionLine">
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Selector ID="Q4ToQ5" Value="ConnectionLine">
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Selector ID="Q5ToQ6" Value="ConnectionLine">
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Selector ID="Q6ToFlange" Value="ConnectionLine">
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Selector ID="FlangeToTcp" Value="ConnectionLine">
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+        </Selector>
+        <Selector ID="DynamicModel" Value="DynParTable">
+          <Property ID="TableRef" />
+        </Selector>
+        <Selector ID="InternalDynamicModel" Value="NotUsed" />
+        <Group ID="JointAxesPositionLimits">
+          <Selector ID="JointAxis[1]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[2]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[3]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[4]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[5]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[6]" Value="UseAxisLimits" />
+        </Group>
+      </Selector>
+    </Selector>
+  </Element>
+</Configuration>
