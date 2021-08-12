@@ -48,24 +48,27 @@
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ1" />
-    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Output" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
-    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
-    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
-    <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="PositionController" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="50.0" />
+    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="81818" />
+    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Output" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1000" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="360" />
+    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="1" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="PositionControllerWithTorqueFeedForward" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="1" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="75.0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0" />
-    <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0004" />
-    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="2.0" />
-    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0" />
-    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0" />
+    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
+    <Parameter ID="FeedForwardIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode" Value="1" />
+    <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="LoopFilter1" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter2" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter3" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
@@ -77,7 +80,8 @@
     <Parameter ID="DriveError" Location="DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1.0" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="Automatic1" />
-    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="Used" />
+    <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[1]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="NotUsed" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="High" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
@@ -91,25 +95,28 @@
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisQ2" />
-    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisQ3" />
+    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="72" />
+    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="Output" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
-    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
-    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="0" />
-    <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="PositionController" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="360" />
+    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="1" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="PositionControllerWithTorqueFeedForward" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="50.0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.0" />
-    <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.0004" />
-    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="2.0" />
-    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="1.5" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0" />
-    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0" />
+    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
+    <Parameter ID="FeedForwardIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode" Value="1" />
+    <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="LoopFilter1" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter2" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter3" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
@@ -121,7 +128,8 @@
     <Parameter ID="DriveError" Location="DriveConfiguration/Channel[2]/RealAxis/StopReaction" Value="DecelerationLimit" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="1.0" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="Automatic1" />
-    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[2]/RealAxis" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[2]/RealAxis" Value="Used" />
+    <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[2]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/HomingSwitch" Value="NotUsed" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/HomingSwitch" Value="High" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
@@ -135,25 +143,28 @@
     <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="NotUsed" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[3]/RealAxis" Value="gAxisQ3" />
-    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Input" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Output" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
-    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
-    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="0" />
-    <Parameter ID="Mode" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="PositionController" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="50.0" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[3]/RealAxis" Value="gAxisQ5" />
+    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="612" />
+    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Output" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="10" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="360" />
+    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="1" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="PositionControllerWithTorqueFeedForward" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="1" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="200.0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="0.0" />
-    <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="0.0004" />
-    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="2.0" />
-    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1.5" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0" />
-    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0" />
+    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
+    <Parameter ID="FeedForwardIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode" Value="1" />
+    <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="LoopFilter1" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter2" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter3" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
@@ -165,7 +176,8 @@
     <Parameter ID="DriveError" Location="DriveConfiguration/Channel[3]/RealAxis/StopReaction" Value="DecelerationLimit" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[3]/RealAxis/MovementErrorLimits" Value="1.0" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[3]/RealAxis/MovementErrorLimits" Value="Automatic1" />
-    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[3]/RealAxis" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[3]/RealAxis" Value="Used" />
+    <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[3]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/HomingSwitch" Value="NotUsed" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/HomingSwitch" Value="High" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
@@ -186,25 +198,28 @@
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ4" />
-    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ2" />
+    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="80" />
+    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="Output" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
-    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
-    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
-    <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="PositionController" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="360" />
+    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="1" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[1]/RealAxis/Controller" Value="PositionControllerWithTorqueFeedForward" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="50.0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0" />
-    <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Position" Value="0.0004" />
-    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="2.0" />
-    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0" />
-    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0" />
+    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
+    <Parameter ID="FeedForwardIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode" Value="1" />
+    <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="LoopFilter1" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter2" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter3" Location="DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
@@ -216,7 +231,8 @@
     <Parameter ID="DriveError" Location="DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1.0" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="Automatic1" />
-    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[1]/RealAxis" Value="Used" />
+    <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[1]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="NotUsed" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="High" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
@@ -230,25 +246,28 @@
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisQ5" />
-    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Output" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
-    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
-    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="0" />
-    <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="PositionController" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="50.0" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisQ4" />
+    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="612" />
+    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Output" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="10" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="360" />
+    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="1" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[2]/RealAxis/Controller" Value="PositionControllerWithTorqueFeedForward" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="1" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="100.0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.0" />
-    <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Position" Value="0.0004" />
-    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="2.0" />
-    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0" />
-    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0" />
+    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
+    <Parameter ID="FeedForwardIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode" Value="1" />
+    <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="LoopFilter1" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter2" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter3" Location="DriveConfiguration/Channel[2]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
@@ -260,7 +279,8 @@
     <Parameter ID="DriveError" Location="DriveConfiguration/Channel[2]/RealAxis/StopReaction" Value="DecelerationLimit" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="1.0" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[2]/RealAxis/MovementErrorLimits" Value="Automatic1" />
-    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[2]/RealAxis" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[2]/RealAxis" Value="Used" />
+    <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[2]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/HomingSwitch" Value="NotUsed" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/HomingSwitch" Value="High" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
@@ -275,24 +295,27 @@
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="NotUsed" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[3]/RealAxis" Value="gAxisQ6" />
-    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="0" />
-    <Parameter ID="Input" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="Input" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="40" />
+    <Parameter ID="OutputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="Output" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
-    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
-    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
-    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="0" />
-    <Parameter ID="Mode" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="PositionController" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="50.0" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="ReferenceDistance" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="360" />
+    <Parameter ID="ModeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="1" />
+    <Parameter ID="Mode" Location="DriveConfiguration/Channel[3]/RealAxis/Controller" Value="PositionControllerWithTorqueFeedForward" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="1" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="200.0" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="0.0" />
-    <Parameter ID="PredictionTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="0.0004" />
     <Parameter ID="TotalDelayTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Position" Value="0.0004" />
-    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="2.0" />
-    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0" />
+    <Parameter ID="ProportionalGainIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="ProportionalGain" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1.5" />
+    <Parameter ID="IntegrationTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1" />
     <Parameter ID="IntegrationTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0" />
-    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0" />
-    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0" />
+    <Parameter ID="FilterTimeIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="1" />
+    <Parameter ID="FilterTime" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/Speed" Value="0.0008" />
+    <Parameter ID="FeedForwardIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode" Value="1" />
+    <Parameter ID="FeedForward" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode" Value="CyclicValueFromAxesGroup" />
     <Parameter ID="LoopFilter1" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter2" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
     <Parameter ID="LoopFilter3" Location="DriveConfiguration/Channel[3]/RealAxis/Controller/Mode/LoopFilters" Value="NotUsed" />
@@ -304,7 +327,8 @@
     <Parameter ID="DriveError" Location="DriveConfiguration/Channel[3]/RealAxis/StopReaction" Value="DecelerationLimit" />
     <Parameter ID="PositionError" Location="DriveConfiguration/Channel[3]/RealAxis/MovementErrorLimits" Value="1.0" />
     <Parameter ID="VelocityErrorMonitoring" Location="DriveConfiguration/Channel[3]/RealAxis/MovementErrorLimits" Value="Automatic1" />
-    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[3]/RealAxis" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="DriveConfiguration/Channel[3]/RealAxis" Value="Used" />
+    <Parameter ID="JerkTime" Location="DriveConfiguration/Channel[3]/RealAxis/JerkFilter" Value="0.01" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/HomingSwitch" Value="NotUsed" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/HomingSwitch" Value="High" />
     <Parameter ID="Source" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />

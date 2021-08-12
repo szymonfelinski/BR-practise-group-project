@@ -1,17 +1,17 @@
 
 PROGRAM _INIT
 
-	MpRoboArm6Axis_0.Enable := TRUE;
+	RoboArm6Axis.Enable := TRUE;
 
-	MpRoboArm6Axis_0.Override  := 100.0;
-	RoboParameters.ProgramName := 'Robotic.st';    //File stored on FileDevice
+	RoboArm6Axis.Override  := 100.0;
+	RoboArm6AxisPara.ProgramName := 'Robotic.st';    //File stored on FileDevice
      
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	MpRoboArm6Axis_0.MpLink     := ADR(g6AxRobA);
-	MpRoboArm6Axis_0.Parameters := ADR(RoboParameters);
-	MpRoboArm6Axis_0();
+	RoboArm6Axis.MpLink     := ADR(gAxesGroupRacer3);
+	RoboArm6Axis.Parameters := ADR(RoboArm6AxisPara);
+	RoboArm6Axis();
 END_PROGRAM
 
 PROGRAM _EXIT

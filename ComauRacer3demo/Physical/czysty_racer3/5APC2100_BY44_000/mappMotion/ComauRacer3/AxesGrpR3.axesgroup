@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <Configuration>
-  <Element ID="gAxesGroupR3" Type="axesgroup">
+  <Element ID="gAxesGroupRacer3" Type="axesgroup">
     <Selector ID="Type" Value="PathGenAxesGroup">
       <Property ID="ProcessingTaskClass" Value="1" />
       <Property ID="License" Value="1" />
@@ -64,6 +64,6 @@
         <Property ID="FeatureRef[3]" Value="FeatureJoggingRacer3" />
       </Group>
     </Selector>
-    <Selector ID="Alarms" Value="MpAlarmX" />
+    <Selector ID="Alarms" Value="None" />
   </Element>
 </Configuration>
