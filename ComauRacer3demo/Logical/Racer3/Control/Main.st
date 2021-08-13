@@ -18,6 +18,8 @@ PROGRAM _INIT
 	ManualMode.PathLimits.Jerk := 0.0;
 	ManualMode.Direction := POSITIVE;*)
 	
+	//ManualControl();
+	//R3ManualMode(
 	
 	State := STATE_INIT;
 	Power := FALSE;
@@ -81,7 +83,7 @@ PROGRAM _CYCLIC
 			ManualControlPara.PathLimits.Jerk;
 			ManualControlPara.PathLimits.Velocity;
 			ManualControlPara;
-			ManualControl(ManualControlPara, RoboArm6AxisPara, RoboArm6Axis);
+			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
 		
 		STATE_SEMI_AUTOMATIC:
 		
