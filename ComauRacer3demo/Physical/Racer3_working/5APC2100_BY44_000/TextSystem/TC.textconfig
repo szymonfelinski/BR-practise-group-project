@@ -13,6 +13,7 @@
     <Group ID="TargetFiles">
       <Property ID="TargetFile[1]" Value="mappView.Resources.Texts.VisualizationLoginTexts.tmx" />
       <Property ID="TargetFile[2]" Value="mappView.Resources.Texts.VisualizationAlarmTexts.tmx" />
+      <Property ID="TargetFile[3]" Value="mappView.Resources.Texts.AlarmTexts.tmx" />
     </Group>
   </Element>
 </Configuration>
