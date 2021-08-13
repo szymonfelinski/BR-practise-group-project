@@ -7,7 +7,7 @@ TYPE
 		Acceleration : REAL; (*Stores set acceleration*)
 		Deceleration : REAL; (*Stores set deceleration*)
 		CoordinateSystem : UDINT; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
-		Direction : DirectionEnum;
+		Direction : DirectionEnum; (*Stores which direction should the axis be moved*)
 	END_STRUCT;
 	R3JointBtnType : 	STRUCT  (*Axes 1-6 select button*)
 		Q1 : BOOL;
