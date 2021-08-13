@@ -46,13 +46,27 @@ PROGRAM _CYCLIC
 			
 		STATE_POWER_ON:
 			
-			IF RoboArm6Axis.Info.ReadyToPowerOn THEN
+			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
 				RoboArm6Axis.Power := TRUE;
 			END_IF
 			
 			IF RoboArm6Axis.PowerOn THEN
-				State := STATE_READY;
+				IF RoboArm6Axis.IsHomed THEN
+					State := STATE_READY;
+				ELSE
+					State := STATE_HOMING;
+				END_IF
+				
 			END_IF
+			
+		STATE_HOMING:
+			IF RoboArm6Axis.IsHomed THEN
+				RoboArm6Axis.Home := FALSE;
+				State := STATE_READY;
+			ELSE
+				RoboArm6Axis.Home := TRUE;
+			END_IF
+			
 			
 		STATE_READY:
 			
@@ -62,6 +76,8 @@ PROGRAM _CYCLIC
 			
 		
 		STATE_MANUAL_CONTROL:
+			
+			ManualControl(RoboArm6AxisPara, RoboArm6Axis);
 		
 		STATE_SEMI_AUTOMATIC:
 		
