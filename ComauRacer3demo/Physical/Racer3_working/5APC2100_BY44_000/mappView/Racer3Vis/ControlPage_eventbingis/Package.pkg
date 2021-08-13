@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">ControlPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">ManualControlPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">AutoControlPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">HalfAutoControlPageContent_eventbinding1.eventbinding</Object>
+    <Object Type="File">CalibrationControlPageContent_eventbinding.eventbinding</Object>
+  </Objects>
+</Package>
