@@ -8,6 +8,5 @@
     <Object Type="Package">mappView</Object>
     <Object Type="Package">Racer3</Object>
     <Object Type="File">Project.language</Object>
-    <Object Type="Program" Language="IEC">Program</Object>
   </Objects>
 </Package>
