@@ -7,5 +7,8 @@
     <Object Type="Package">_400_DoscBrowserPage</Object>
     <Object Type="Package">_200_AlarmPage</Object>
     <Object Type="Package">_300_ServicePage</Object>
+    <Object Type="Package">_500_ControlPage</Object>
+    <Object Type="Package">_600_SettingsPage</Object>
+    <Object Type="Package">Subpages</Object>
   </Objects>
 </Package>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ControlPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1ControlContent" top="86" left="10" width="80" height="80" zIndex="0" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft2ControlContent" top="193" left="10" width="80" height="80" zIndex="1" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft3ControlContent" top="300" left="10" width="80" height="80" zIndex="2" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4ControlContent" top="407" left="10" width="80" height="80" zIndex="3" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1ControlContent" top="86" left="1190" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh2ControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh3ControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnAutoControlContent" top="60" left="180" zIndex="8" text="Auto" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnManualControlContent" top="60" left="600" zIndex="9" text="Manual" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnHalfAutoControlContent" top="60" left="400" zIndex="10" text="HalfAuto" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnHomingControlContent" top="60" left="800" zIndex="11" text="Homing" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1ControlContent" top="260" left="180" zIndex="12" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2ControlContent" top="260" left="340" zIndex="13" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3ControlContent" top="260" left="500" zIndex="14" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ4ControlContent" top="260" left="680" zIndex="15" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ5ControlContent" top="260" left="840" zIndex="16" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ6ControlContent" top="260" left="1000" zIndex="17" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPXControlContent" top="440" left="180" zIndex="18" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPYControlContent" top="440" left="340" zIndex="19" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPZControlContent" top="440" left="500" zIndex="20" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPAControlContent" top="440" left="680" zIndex="21" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPBControlContent" top="440" left="840" zIndex="22" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPCControlContent" top="440" left="1000" zIndex="23" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="300" left="180" zIndex="24" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="300" left="340" zIndex="25" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="300" left="500" zIndex="26" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput4" top="300" left="680" zIndex="27" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput5" top="300" left="840" zIndex="28" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput6" top="300" left="1000" zIndex="29" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput7" top="480" left="180" zIndex="30" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput8" top="480" left="340" zIndex="31" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput9" top="480" left="500" zIndex="32" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput10" top="480" left="680" zIndex="33" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput11" top="480" left="840" zIndex="34" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput12" top="480" left="1000" zIndex="35" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="60" left="1000" zIndex="36" pageId="CaibrationPage" text="NavigationButton1" />
+  </Widgets>
+</Content>
