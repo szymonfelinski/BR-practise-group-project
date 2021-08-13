@@ -6,5 +6,6 @@
     <Object Type="File">TopPageContent_eventbinding.eventbinding</Object>
     <Object Type="File">DialogLoginContent_eventbinding.eventbinding</Object>
     <Object Type="File">AlamPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">ControlPageEventBinding.eventbinding</Object>
   </Objects>
 </Package>
