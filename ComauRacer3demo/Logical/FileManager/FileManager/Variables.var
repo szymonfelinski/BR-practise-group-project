@@ -1,0 +1,6 @@
+VAR
+	nxt_adr : UDINT;
+	cmd : FileManagerUI;
+	iFile : USINT;
+	tabInfo : TableInfo;
+END_VAR
