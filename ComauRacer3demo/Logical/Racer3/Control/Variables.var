@@ -5,4 +5,5 @@ VAR
 	Power : BOOL;
 	ControlSelector : ControlSelectEnum;
 	ManualControl : ManualMode;
+	ManualControlPara : R3ManualModeType;
 END_VAR

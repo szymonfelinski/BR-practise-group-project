@@ -76,8 +76,12 @@ PROGRAM _CYCLIC
 			
 		
 		STATE_MANUAL_CONTROL:
-			
-			ManualControl(RoboArm6AxisPara, RoboArm6Axis);
+			ManualControlPara.PathLimits.Acceleration;
+			ManualControlPara.PathLimits.Deceleration;
+			ManualControlPara.PathLimits.Jerk;
+			ManualControlPara.PathLimits.Velocity;
+			ManualControlPara;
+			ManualControl(ManualControlPara, RoboArm6AxisPara, RoboArm6Axis);
 		
 		STATE_SEMI_AUTOMATIC:
 		
