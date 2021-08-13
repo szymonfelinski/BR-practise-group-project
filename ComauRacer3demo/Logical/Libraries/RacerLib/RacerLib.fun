@@ -1,0 +1,6 @@
+
+FUNCTION test : USINT
+	VAR_INPUT
+		New_Member : USINT;
+	END_VAR
+END_FUNCTION
