@@ -1,10 +1,5 @@
 VAR
-	test_bol2 : BOOL := FALSE;
-	test_bol : BOOL := FALSE;
 	ManualControl : ManualControlType;
 	RoboArmPara : MpRoboArm6AxisParType;
 	RoboArm : MpRoboArm6Axis;
-	Ans : BOOL;
-	b : USINT;
-	c : USINT;
 END_VAR

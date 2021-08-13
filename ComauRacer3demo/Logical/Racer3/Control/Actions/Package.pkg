@@ -2,6 +2,6 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="File">Action.st</Object>
+    <Object Type="Package">ManualControl</Object>
   </Objects>
 </Package>
