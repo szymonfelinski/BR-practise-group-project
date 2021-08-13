@@ -82,7 +82,7 @@ PROGRAM _CYCLIC
 			ManualControlPara.PathLimits.Deceleration;
 			ManualControlPara.PathLimits.Jerk;
 			ManualControlPara.PathLimits.Velocity;
-			ManualControlPara;
+			ManualControlPara; //main struct to be bound in mapp view
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
 		
 		STATE_SEMI_AUTOMATIC:
