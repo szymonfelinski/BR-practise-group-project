@@ -9,5 +9,8 @@
 	<Widget xsi:type="widgets.brease.Button" id="btnRigh2CalibrationContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Button1" margin="0px" />
 	<Widget xsi:type="widgets.brease.Button" id="btnRigh3CalibrationContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
 	<Widget xsi:type="widgets.brease.Button" id="btnRigh4CalibrationContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
+	<Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="8" pageId="AutoControlPage" text="Auto" />
+	<Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="9" pageId="HalfAutoControlPage" text="HalfAuto" />
+	<Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="10" pageId="ManualControlPage" text="Manual" />
 	</Widgets>
 </Content>

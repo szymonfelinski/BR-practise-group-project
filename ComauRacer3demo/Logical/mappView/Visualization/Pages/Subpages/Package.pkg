@@ -6,5 +6,6 @@
     <Object Type="Package">AutoControlPage</Object>
     <Object Type="Package">ManualControlPage</Object>
     <Object Type="Package">HalfAutoControlPage</Object>
+    <Object Type="Package">_500_ControlPage</Object>
   </Objects>
 </Package>

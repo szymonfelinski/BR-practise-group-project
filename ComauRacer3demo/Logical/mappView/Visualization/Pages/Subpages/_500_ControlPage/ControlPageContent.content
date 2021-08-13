@@ -9,19 +9,19 @@
     <Widget xsi:type="widgets.brease.Button" id="btnRigh2ControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Velocity down" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3ControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Acceleration down" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Decceleration down" margin="0px" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnHomingControlContent" top="60" left="800" zIndex="8" text="Homing" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnHomingControlContent" top="180" left="480" zIndex="8" text="Homing" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1ControlContent" top="360" left="540" width="160" zIndex="9" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2ControlContent" top="220" left="540" width="160" zIndex="10" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3ControlContent" top="500" left="540" width="160" zIndex="11" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2ControlContent" top="360" left="860" width="160" zIndex="10" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3ControlContent" top="360" left="240" width="160" zIndex="11" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="400" left="540" width="160" zIndex="12" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="260" left="540" width="160" zIndex="13" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="540" left="540" width="160" zIndex="14" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="60" left="1000" zIndex="15" pageId="CaibrationPage" text="Calibration" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="180" left="540" width="160" height="40" zIndex="16" text="Velocity" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="400" left="860" width="160" zIndex="13" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="400" left="240" width="160" zIndex="14" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="180" left="680" zIndex="15" pageId="CaibrationPage" text="Calibration" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="320" left="860" width="160" height="40" zIndex="16" text="Velocity" textAlign="center" />
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="320" left="540" width="160" height="40" zIndex="17" text="Acceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="460" left="540" width="160" height="40" zIndex="18" text="Decceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton1" top="60" left="180" zIndex="19" pageId="pageId1" text="Auto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton2" top="60" left="400" zIndex="20" pageId="HalfAutoControlPage" text="HalfAuto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton3" top="60" left="600" zIndex="21" pageId="pageId1" text="Manual" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="320" left="240" width="160" height="40" zIndex="18" text="Decceleration" textAlign="center" />
+		<Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="19" pageId="AutoControlPage" text="Auto" />
+		<Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="20" pageId="HalfAutoControlPage" text="HalfAuto" />
+		<Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="21" pageId="ManualControlPage" text="Manual" />
   </Widgets>
 </Content>
