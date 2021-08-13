@@ -1,5 +1,5 @@
 VAR
-	ManualControl : ManualControlType;
+	(*ManualControl : ManualControlType;*)
 	RoboArmPara : MpRoboArm6AxisParType;
 	RoboArm : MpRoboArm6Axis;
 END_VAR

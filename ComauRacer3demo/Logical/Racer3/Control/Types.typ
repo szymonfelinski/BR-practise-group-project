@@ -1,5 +1,11 @@
 
 TYPE
+	ControlSelect : 
+		(
+		ManualJog,
+		SemiAuto,
+		Auto
+		);
 	MainState : 
 		(
 		Init,
@@ -9,11 +15,5 @@ TYPE
 		ManualControl,
 		Error,
 		Suspend
-		);
-	ControlSelect:
-		(
-		ManualJog,
-		SemiAuto,
-		Auto
 		);
 END_TYPE
