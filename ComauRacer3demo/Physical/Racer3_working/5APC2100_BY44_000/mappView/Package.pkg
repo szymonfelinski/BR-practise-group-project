@@ -4,5 +4,10 @@
   <Objects>
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="File">Visualizat.vis</Object>
+    <Object Type="File">AlamPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">ControlPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">DialogLoginContent_eventbinding.eventbinding</Object>
+    <Object Type="File">SettingsPageContent_eventbinding.eventbinding</Object>
+    <Object Type="File">TopPageContent_eventbinding.eventbinding</Object>
   </Objects>
 </Package>
