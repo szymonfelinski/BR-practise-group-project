@@ -9,13 +9,13 @@
     <Widget xsi:type="widgets.brease.Button" id="btnRigh2AuditContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3AuditContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4AuditContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="20" left="120" width="1040" height="660" zIndex="8" itemsPerPage="12">
+    <Widget xsi:type="widgets.brease.AuditList" id="AuditList" top="20" left="120" width="1040" height="660" zIndex="8" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText" textAlign="left">
       <Widgets>
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" zIndex="0" columnType="timestamp" text="AuditListItem1" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" zIndex="1" text="AuditListItem2" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" zIndex="2" columnType="old" text="AuditListItem3" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem4" zIndex="3" columnType="new" text="AuditListItem4" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem5" zIndex="4" columnType="id" text="AuditListItem5" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" zIndex="0" columnType="timestamp" text="$IAT/AlarmListItemTimestampText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" zIndex="1" text="$IAT/AlarmListItemMessageText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" zIndex="2" columnType="old" text="$IAT/AuditListOldText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem4" zIndex="3" columnType="new" text="$IAT/AuditListNewText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem5" zIndex="4" columnType="id" text="ID" />
       </Widgets>
     </Widget>
   </Widgets>
