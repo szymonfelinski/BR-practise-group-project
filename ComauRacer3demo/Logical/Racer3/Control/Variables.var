@@ -4,6 +4,6 @@ VAR
 	State : R3StateMachineEnum;
 	Power : BOOL;
 	ControlSelector : ControlSelectEnum;
-	ManualControl : ManualMode;
+	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
 END_VAR
