@@ -1,6 +1,6 @@
 VAR
 	RoboArm6AxisPara : MpRoboArm6AxisParType;
 	RoboArm6Axis : MpRoboArm6Axis;
-	JogVelocity : REAL;
 	ManualMode : R3ManualModeType;
+	j : INT;
 END_VAR

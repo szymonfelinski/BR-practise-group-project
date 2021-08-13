@@ -2,12 +2,11 @@
 TYPE
 	R3ManualModeType : 	STRUCT  (*Manual mode type*)
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
-		Velocity : REAL; (*Stores set velocity*)
-		Acceleration : REAL; (*Stores set acceleration*)
-		Deceleration : REAL; (*Stores set deceleration*)
 		CoordinateSystem : UDINT; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
 		Direction : DirectionEnum; (*Stores which direction should the axis be moved*)
-		JogVelocity : REAL; (*Stores the actual velocity to be written to axis*)
+		JogVelocity : REAL; (*Stores the velocity of axis*)
+		PathLimits : McJogPathLimitsType;
+		JogVelocityActual : REAL; (*Stores the actual velocity to be written to axis*)
 	END_STRUCT;
 	R3AxisBtnType : 	STRUCT  (*Global Coordinate System Select button*)
 		Q1 : BOOL;

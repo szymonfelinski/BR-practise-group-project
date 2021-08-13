@@ -11,10 +11,11 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 100.0;
 	//RoboArm6AxisPara.Distance[0] := 50.0;
-	ManualMode.Acceleration := 100.0;
+	ManualMode.PathLimits.Acceleration := 100.0;
 	ManualMode.CoordinateSystem := 9;
-	ManualMode.Deceleration := 100.0;
-	ManualMode.Velocity := 10.0;
+	ManualMode.PathLimits.Deceleration := 100.0;
+	ManualMode.PathLimits.Velocity := 10.0;
+	ManualMode.PathLimits.Jerk := 0.0;
 	ManualMode.Direction := POSITIVE;
 	
 END_PROGRAM
@@ -22,8 +23,7 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
 	RoboArm6AxisPara.Jog.CoordSystem := ManualMode.CoordinateSystem;
-	RoboArm6AxisPara.Jog.Acceleration := ManualMode.Acceleration;
-	RoboArm6AxisPara.Jog.Deceleration := ManualMode.Deceleration;
+	RoboArm6AxisPara.Jog.PathLimits := ManualMode.PathLimits;
 	
 	IF RoboArm6Axis.Info.ReadyToPowerOn THEN
 		
@@ -32,28 +32,28 @@ PROGRAM _CYCLIC
 		IF RoboArm6Axis.PowerOn THEN
 
 			IF ManualMode.Direction = POSITIVE THEN // set actual axis velocity based on which direction it's set to be moved
-				ManualMode.JogVelocity := ManualMode.Velocity;
-			ELSIF gManualMode.Direction = NEGATIVE THEN
-				ManualMode.JogVelocity := -1 * ManualMode.Velocity;
+				ManualMode.JogVelocityActual := ManualMode.JogVelocity;
+			ELSIF ManualMode.Direction = NEGATIVE THEN
+				ManualMode.JogVelocityActual := -1 * ManualMode.JogVelocity;
 			END_IF
 			
 			IF ManualMode.AxisButton.Q1 THEN // if a button is pressed, write corresponding velocity to the jog velocity array
-				RoboArm6AxisPara.Jog.Velocity[0] := ManualMode.JogVelocity;
+				RoboArm6AxisPara.Jog.Velocity[0] := ManualMode.JogVelocityActual;
 				RoboArm6Axis.Jog := TRUE;
 			ELSIF ManualMode.AxisButton.Q2 THEN
-				RoboArm6AxisPara.Jog.Velocity[1] := ManualMode.JogVelocity;
+				RoboArm6AxisPara.Jog.Velocity[1] := ManualMode.JogVelocityActual;
 				RoboArm6Axis.Jog := TRUE;
 			ELSIF ManualMode.AxisButton.Q3 THEN
-				RoboArm6AxisPara.Jog.Velocity[2] := ManualMode.JogVelocity;
+				RoboArm6AxisPara.Jog.Velocity[2] := ManualMode.JogVelocityActual;
 				RoboArm6Axis.Jog := TRUE;
 			ELSIF ManualMode.AxisButton.Q4 THEN
-				RoboArm6AxisPara.Jog.Velocity[3] := ManualMode.JogVelocity;
+				RoboArm6AxisPara.Jog.Velocity[3] := ManualMode.JogVelocityActual;
 				RoboArm6Axis.Jog := TRUE;
 			ELSIF ManualMode.AxisButton.Q5 THEN
-				RoboArm6AxisPara.Jog.Velocity[4] := ManualMode.JogVelocity;
+				RoboArm6AxisPara.Jog.Velocity[4] := ManualMode.JogVelocityActual;
 				RoboArm6Axis.Jog := TRUE;
 			ELSIF ManualMode.AxisButton.Q6 THEN
-				RoboArm6AxisPara.Jog.Velocity[5] := ManualMode.JogVelocity;
+				RoboArm6AxisPara.Jog.Velocity[5] := ManualMode.JogVelocityActual;
 				RoboArm6Axis.Jog := TRUE;
 			ELSE //if no buttons are pressed reset jog velocity array
 				RoboArm6Axis.Jog := FALSE;
