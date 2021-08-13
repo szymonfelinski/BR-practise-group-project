@@ -6,7 +6,9 @@
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
-  <TaskClass Name="Cyclic#4" />
+  <TaskClass Name="Cyclic#4">
+    <Task Name="Control" Source="Racer3.Control.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
@@ -29,19 +31,23 @@
     <BinaryObject Name="mCoWebSc" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="McAcpSim" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Settings" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Config_1" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwac" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Config_4" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="sysconf" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="asfw" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="arconfig" Source="" Memory="SystemROM" Language="Binary" />
-    <BinaryObject Name="Config_3" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwd" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="Hierarchy" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Config_2" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="iomap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Role" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AxesR3" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AxGrpFtrR3" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="MechSysR3" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AxesGrpR3" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_1" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_4" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_3" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_2" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="CoTrace" Source="Libraries.CoTrace.lby" Memory="UserROM" Language="binary" Debugging="true" />
@@ -56,6 +62,7 @@
     <LibraryObject Name="McAxis" Source="Libraries.McAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="McAxGroup" Source="Libraries.McAxGroup.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpRobotics" Source="Libraries.MpRobotics.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="ManualCtrl" Source="Libraries.RacerLib.ManualCtrl.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="astime" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -68,6 +75,5 @@
     <LibraryObject Name="asepl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brsystem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="ManualCtrl" Source="Libraries.RacerLib.ManualCtrl.lby" Memory="UserROM" Language="IEC" Debugging="true" />
   </Libraries>
 </SwConfiguration>

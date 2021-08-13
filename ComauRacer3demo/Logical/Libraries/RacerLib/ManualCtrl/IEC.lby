@@ -6,5 +6,6 @@
     <File Description="Exported constants">Constants.var</File>
     <File Description="Exported functions and function blocks">ManualCtrl.fun</File>
     <File>TEST.st</File>
+    <File>Action.st</File>
   </Files>
 </Library>
