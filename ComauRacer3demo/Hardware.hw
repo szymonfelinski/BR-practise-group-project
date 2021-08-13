@@ -50,13 +50,7 @@
     <Parameter ID="Cyclic1Tolerance" Value="0" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="CNC_PrgDir" />
-    <Parameter ID="FileDevicePath1" Value="F:\" />
-    <Group ID="FileDevice2" />
-    <Parameter ID="FileDeviceName2" Value="USB" />
-    <Parameter ID="FileDevicePath2" Value="\bd16" />
-    <Group ID="FileDevice3" />
-    <Parameter ID="FileDeviceName3" Value="SimDev" />
-    <Parameter ID="FileDevicePath3" Value="C:\Temp\SimDev" />
+    <Parameter ID="FileDevicePath1" Value="C:\CNC_PrgDir" />
     <Parameter ID="TimeZone" Value="160" />
     <Parameter ID="ActivateDaylightSavingTime" Value="1" />
     <Group ID="FtpUser1" />
@@ -106,7 +100,7 @@
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
-    <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
+    <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="1" />
     <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
     <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
     <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
@@ -154,7 +148,9 @@
     <Parameter ID="Source" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="X8Trigger2" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="High" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
-    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="SetValueGeneration" />
+    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="CompleteControlledSystem" />
+    <Parameter ID="LoadModel" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation/SimulationModeOnPLC" Value="OneMassBasedOnMotorParameters" />
+    <Parameter ID="AdditiveLoadParID" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation/SimulationModeOnPLC/LoadModel" Value="0" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisQ3" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
@@ -246,7 +242,9 @@
     <Parameter ID="Source" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/Trigger2" Value="X8Trigger2" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/Trigger2" Value="High" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
-    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="SetValueGeneration" />
+    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="CompleteControlledSystem" />
+    <Parameter ID="LoadModel" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation/SimulationModeOnPLC" Value="OneMassBasedOnMotorParameters" />
+    <Parameter ID="AdditiveLoadParID" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation/SimulationModeOnPLC/LoadModel" Value="0" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="NotUsed" />
   </Module>
   <Module Name="8EI8X8MWT10.0500-1" Type="8EI8X8MWT10.0500-1" Version="2.3.0.3">
@@ -254,7 +252,7 @@
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
-    <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
+    <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="1" />
     <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
     <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
     <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
@@ -302,7 +300,9 @@
     <Parameter ID="Source" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="X8Trigger2" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="High" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
-    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="SetValueGeneration" />
+    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="CompleteControlledSystem" />
+    <Parameter ID="LoadModel" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation/SimulationModeOnPLC" Value="OneMassBasedOnMotorParameters" />
+    <Parameter ID="AdditiveLoadParID" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation/SimulationModeOnPLC/LoadModel" Value="0" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="gAxisQ4" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
@@ -348,7 +348,9 @@
     <Parameter ID="Source" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/Trigger2" Value="X8Trigger2" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/Trigger2" Value="High" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[2]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
-    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="SetValueGeneration" />
+    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="CompleteControlledSystem" />
+    <Parameter ID="LoadModel" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation/SimulationModeOnPLC" Value="OneMassBasedOnMotorParameters" />
+    <Parameter ID="AdditiveLoadParID" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation/SimulationModeOnPLC/LoadModel" Value="0" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="NotUsed" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[3]/RealAxis" Value="gAxisQ6" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[3]/RealAxis/MechanicalElements/Gearbox" Value="1" />
@@ -394,7 +396,9 @@
     <Parameter ID="Source" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/Trigger2" Value="X8Trigger2" />
     <Parameter ID="Level" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/Trigger2" Value="High" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[3]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
-    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="SetValueGeneration" />
+    <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="CompleteControlledSystem" />
+    <Parameter ID="LoadModel" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation/SimulationModeOnPLC" Value="OneMassBasedOnMotorParameters" />
+    <Parameter ID="AdditiveLoadParID" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation/SimulationModeOnPLC/LoadModel" Value="0" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="NotUsed" />
   </Module>
   <Module Name="X20BB80" Type="X20BB80" Version="1.1.0.0" />
