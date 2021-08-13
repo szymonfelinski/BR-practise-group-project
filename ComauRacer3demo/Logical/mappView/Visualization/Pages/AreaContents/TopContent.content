@@ -6,7 +6,7 @@
     <Widget xsi:type="widgets.brease.Image" id="pngBuRLogo" top="0" left="0" width="140" zIndex="2" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonAlarmPage" top="10" left="340" width="80" height="80" zIndex="3" image="Media/SymbolLib/Alarm/Alarm.svg" pageId="AlarmPage" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonMainPage" top="10" left="250" width="80" height="80" zIndex="4" pageId="MainPage" text="Main" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonServicePage" top="10" left="430" width="80" height="80" zIndex="5" image="Media/SymbolLib/Symbols/Service.svg" pageId="ServicePage" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonServicePage" top="10" left="430" width="80" height="80" zIndex="5" image="Media/SymbolLib/Symbols/Settings.svg" pageId="SettingsPage" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonControlPage" top="10" left="520" width="80" height="80" zIndex="6" pageId="ControlPage" text="Control" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonCalibrationPage" top="10" left="610" width="80" height="80" zIndex="7" pageId="pageId1" text="Calibration" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonNamePage1" top="10" left="790" width="80" height="80" zIndex="8" pageId="pageId1" text="NavigationButton6" />
