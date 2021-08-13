@@ -17,7 +17,7 @@ TYPE
 		Q5 : BOOL;
 		Q6 : BOOL;
 	END_STRUCT;
-	R3TCPAxisBtnType : 	STRUCT  (*Global Axis Select button*)
+	R3TCPAxisBtnType : 	STRUCT  (*Global Coordinate System Select button*)
 		X : BOOL;
 		Y : BOOL;
 		Z : BOOL;
