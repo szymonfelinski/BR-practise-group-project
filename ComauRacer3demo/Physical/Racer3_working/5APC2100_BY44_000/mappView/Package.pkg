@@ -4,6 +4,5 @@
   <Objects>
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="Package">Racer3Vis</Object>
-    <Object Type="File">AlamPageContent.binding</Object>
   </Objects>
 </Package>
