@@ -3,7 +3,7 @@ TYPE
 	ControlSelectEnum : 
 		(
 		ManualJog,
-		SemiAuto,
-		Auto
+		SemiAutomatic,
+		Automatic
 		);
 END_TYPE

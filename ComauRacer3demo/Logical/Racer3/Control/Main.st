@@ -11,12 +11,12 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 100.0;
 	//RoboArm6AxisPara.Distance[0] := 50.0;
-	ManualMode.PathLimits.Acceleration := 100.0;
+	(*ManualMode.PathLimits.Acceleration := 100.0;
 	ManualMode.CoordinateSystem := 9;
 	ManualMode.PathLimits.Deceleration := 100.0;
 	ManualMode.PathLimits.Velocity := 10.0;
 	ManualMode.PathLimits.Jerk := 0.0;
-	ManualMode.Direction := POSITIVE;
+	ManualMode.Direction := POSITIVE;*)
 	
 	
 	State := STATE_INIT;
@@ -56,7 +56,7 @@ PROGRAM _CYCLIC
 			
 		STATE_READY:
 			
-			IF ManualControl THEN
+			IF ControlSelector = ManualJog THEN
 				State := STATE_MANUAL_CONTROL;
 			END_IF
 			
