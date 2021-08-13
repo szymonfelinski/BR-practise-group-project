@@ -3,5 +3,8 @@
 <Package SubType="EmptyMappViewPackage" PackageType="EmptyMappViewPackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Package">CalibrationPage</Object>
+    <Object Type="Package">AutoControlPage</Object>
+    <Object Type="Package">ManualControlPage</Object>
+    <Object Type="Package">HalfAutoControlPage</Object>
   </Objects>
 </Package>
