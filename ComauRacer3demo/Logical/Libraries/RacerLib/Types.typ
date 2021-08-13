@@ -20,5 +20,5 @@ TYPE
 		(
 		POSITIVE,
 		NEGATIVE
-		);
+	);
 END_TYPE
