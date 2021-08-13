@@ -17,5 +17,8 @@
   <Element ID="Admin" Type="User">
     <Property ID="UserID" Value="3" />
     <Property ID="Password" Value="AxfFT3rpjp2w8nisWzMjC+VPG/77tFOuw6+XyeQA8rorpCGx6fk=" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="Administrators" />
+    </Group>
   </Element>
 </Configuration>
