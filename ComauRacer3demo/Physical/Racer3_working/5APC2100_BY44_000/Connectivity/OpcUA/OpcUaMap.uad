@@ -8,6 +8,14 @@
     <EngineeringUnitAliases />
   </Aliases>
   <DefaultView>
-    <Module Name="&lt;Default&gt;" />
+    <Module Name="&lt;Default&gt;">
+      <Task Name="Control">
+        <Variable Name="RoboArm6Axis">
+          <Variable Name="Info">
+            <Variable Name="JointAxisPosition" EnableArrayElements="True" />
+          </Variable>
+        </Variable>
+      </Task>
+    </Module>
   </DefaultView>
 </OpcUaSource>

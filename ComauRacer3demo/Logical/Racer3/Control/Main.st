@@ -18,22 +18,58 @@ PROGRAM _INIT
 	ManualMode.PathLimits.Jerk := 0.0;
 	ManualMode.Direction := POSITIVE;
 	
+	
+	State := STATE_INIT;
+	Power := FALSE;
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
-	RoboArm6AxisPara.Jog.CoordSystem := ManualMode.CoordinateSystem;
-	RoboArm6AxisPara.Jog.PathLimits := ManualMode.PathLimits;
-	
-	IF RoboArm6Axis.Info.ReadyToPowerOn THEN
-		
-		RoboArm6Axis.Power := TRUE;
-		
-		IF RoboArm6Axis.PowerOn THEN
-
-			
-		END_IF
+	IF RoboArm6Axis.Error THEN
+		State := STATE_ERROR;
 	END_IF
+	
+	CASE State OF
+		STATE_ERROR:
+			IF NOT RoboArm6Axis.Error THEN
+				State := STATE_INIT;
+			END_IF
+			
+		STATE_INIT:
+		
+			RoboArm6Axis.Enable := TRUE;
+			
+			IF Power THEN
+				State := STATE_POWER_ON;
+			END_IF
+			
+		STATE_POWER_ON:
+			
+			IF RoboArm6Axis.Info.ReadyToPowerOn THEN
+				RoboArm6Axis.Power := TRUE;
+			END_IF
+			
+			IF RoboArm6Axis.PowerOn THEN
+				State := STATE_READY;
+			END_IF
+			
+		STATE_READY:
+			
+			IF ManualControl THEN
+				State := STATE_MANUAL_CONTROL;
+			END_IF
+			
+		
+		STATE_MANUAL_CONTROL:
+		
+		STATE_SEMI_AUTOMATIC:
+		
+		STATE_AUTOMATIC:
+		
+		STATE_CALIBRATION:
+		
+	END_CASE
 	
 	
 	IF RoboArm6Axis.UpdateDone THEN
@@ -51,6 +87,7 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	(* Insert code here *)
-	 
+	RoboArm6Axis.Power := FALSE;
+	RoboArm6Axis.Enable := FALSE;
 END_PROGRAM
 
