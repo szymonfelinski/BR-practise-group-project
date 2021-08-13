@@ -9,6 +9,10 @@
 		<Page refId="DocsBrowserPage"/>
 		<Page refId="CaibrationPage"/>
 		<Page refId="SettingsPage"/>
+		<Page refId="AutoControlPage"/>
+		<Page refId="HalfAutoControlPage"/>
+		<Page refId="ManualControlPage"/>
+		<Page refId="AuditPage"/>	
 		
 	</Pages>
 	<StartTheme themeRefId="BuRThemeFlat1" />
@@ -39,6 +43,11 @@
 		<Content refId="CalibrationPageContent" />
 		<Content refId="DialogLoginContent" />
 		<Content refId="SettingsPageContent" />
+		<Content refId="AutoControlPageContent"/>
+		<Content refId="HalfAutoControlPageContent"/>
+		<Content refId="ManualControlPageContent"/>
+		<Content refId="AuditPageContent"/>	
+		
   </Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
