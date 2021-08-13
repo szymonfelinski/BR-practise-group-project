@@ -1,6 +1,9 @@
 VAR
 	RoboArm6AxisPara : MpRoboArm6AxisParType;
 	RoboArm6Axis : MpRoboArm6Axis;
-	ManualMode : R3ManualModeType;
-	j : INT;
+	State : R3StateMachineEnum;
+	Power : BOOL;
+	ControlSelector : ControlSelectEnum;
+	ManualControl : R3ManualMode;
+	ManualControlPara : R3ManualModeType;
 END_VAR

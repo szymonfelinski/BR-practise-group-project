@@ -2,11 +2,11 @@
 TYPE
 	R3ManualModeType : 	STRUCT  (*Manual mode type*)
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
-		CoordinateSystem : UDINT; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
-		Direction : DirectionEnum; (*Stores which direction should the axis be moved*)
+		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
+		Direction : R3DirectionEnum; (*Stores which direction should the axis be moved*)
 		JogVelocity : REAL; (*Stores the velocity of axis*)
-		PathLimits : McJogPathLimitsType;
-		JogVelocityActual : REAL; (*Stores the actual velocity to be written to axis*)
+		PathLimits : McJogPathLimitsType; (*Stores set limits of acceleration and deceleration, velocity and jerk*)
+		ActivateMove : BOOL; (*Enables or disables current move execution*)
 	END_STRUCT;
 	R3AxisBtnType : 	STRUCT  (*Global Coordinate System Select button*)
 		Q1 : BOOL;
@@ -16,9 +16,21 @@ TYPE
 		Q5 : BOOL;
 		Q6 : BOOL;
 	END_STRUCT;
-	DirectionEnum : 
+	R3DirectionEnum : 
 		(
 		POSITIVE,
 		NEGATIVE
-	);
+		);
+	R3StateMachineEnum : 
+		(
+		STATE_ERROR, (*Error state*)
+		STATE_INIT, (*Initialisation state*)
+		STATE_POWER_ON, (*Powering on state*)
+		STATE_READY, (*Ready for commands*)
+		STATE_MANUAL_CONTROL, (*Manual mode*)
+		STATE_SEMI_AUTOMATIC, (*Semi automatic mode*)
+		STATE_AUTOMATIC, (*Automatic mode (script execution)*)
+		STATE_CALIBRATION, (*Calibration mode*)
+		STATE_HOMING (*Homing mode*)
+		);
 END_TYPE

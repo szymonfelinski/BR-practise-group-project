@@ -11,29 +11,87 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 100.0;
 	//RoboArm6AxisPara.Distance[0] := 50.0;
-	ManualMode.PathLimits.Acceleration := 100.0;
+	(*ManualMode.PathLimits.Acceleration := 100.0;
 	ManualMode.CoordinateSystem := 9;
 	ManualMode.PathLimits.Deceleration := 100.0;
 	ManualMode.PathLimits.Velocity := 10.0;
 	ManualMode.PathLimits.Jerk := 0.0;
-	ManualMode.Direction := POSITIVE;
+	ManualMode.Direction := POSITIVE;*)
+	
+	//ManualControl();
+	//R3ManualMode(
+	
+	State := STATE_INIT;
+	Power := FALSE;
 	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
-	RoboArm6AxisPara.Jog.CoordSystem := ManualMode.CoordinateSystem;
-	RoboArm6AxisPara.Jog.PathLimits := ManualMode.PathLimits;
-	
-	IF RoboArm6Axis.Info.ReadyToPowerOn THEN
-		
-		RoboArm6Axis.Power := TRUE;
-		
-		IF RoboArm6Axis.PowerOn THEN
-
-			
-		END_IF
+	IF RoboArm6Axis.Error THEN
+		State := STATE_ERROR;
 	END_IF
+	
+	CASE State OF
+		STATE_ERROR:
+			IF NOT RoboArm6Axis.Error THEN
+				State := STATE_INIT;
+			END_IF
+			
+		STATE_INIT:
+		
+			RoboArm6Axis.Enable := TRUE;
+			
+			IF Power THEN
+				State := STATE_POWER_ON;
+			END_IF
+			
+		STATE_POWER_ON:
+			
+			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
+				RoboArm6Axis.Power := TRUE;
+			END_IF
+			
+			IF RoboArm6Axis.PowerOn THEN
+				IF RoboArm6Axis.IsHomed THEN
+					State := STATE_READY;
+				ELSE
+					State := STATE_HOMING;
+				END_IF
+				
+			END_IF
+			
+		STATE_HOMING:
+			IF RoboArm6Axis.IsHomed THEN
+				RoboArm6Axis.Home := FALSE;
+				State := STATE_READY;
+			ELSE
+				RoboArm6Axis.Home := TRUE;
+			END_IF
+			
+			
+		STATE_READY:
+			
+			IF ControlSelector = ManualJog THEN
+				State := STATE_MANUAL_CONTROL;
+			END_IF
+			
+		
+		STATE_MANUAL_CONTROL:
+			ManualControlPara.PathLimits.Acceleration;
+			ManualControlPara.PathLimits.Deceleration;
+			ManualControlPara.PathLimits.Jerk;
+			ManualControlPara.PathLimits.Velocity;
+			ManualControlPara; //main struct to be bound in mapp view
+			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
+		
+		STATE_SEMI_AUTOMATIC:
+		
+		STATE_AUTOMATIC:
+		
+		STATE_CALIBRATION:
+		
+	END_CASE
 	
 	
 	IF RoboArm6Axis.UpdateDone THEN
@@ -51,6 +109,7 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	(* Insert code here *)
-	 
+	RoboArm6Axis.Power := FALSE;
+	RoboArm6Axis.Enable := FALSE;
 END_PROGRAM
 
