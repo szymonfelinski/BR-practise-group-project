@@ -9,6 +9,10 @@
 		<Page refId="DocsBrowserPage"/>
 		<Page refId="CaibrationPage"/>
 		<Page refId="SettingsPage"/>
+		<Page refId="AutoControlPage"/>
+		<Page refId="HalfAutoControlPage"/>
+		<Page refId="ManualControlPage"/>
+		<Page refId="AuditPage"/>	
 		
 	</Pages>
 	<StartTheme themeRefId="BuRThemeFlat1" />
@@ -27,6 +31,12 @@
 		<EventBindingsSet refId="DialogLoginContent_eventbinding" />
 		<EventBindingsSet refId="AlamPageContent_eventbinding" />
 		<EventBindingsSet refId="SettingsPageContent_eventbinding" />
+		<EventBindingsSet refId="ControlPageContent_eventbinding" />
+		<EventBindingsSet refId="AutoControlPageContent_eventbinding" />
+		<EventBindingsSet refId="ManualControlPageContent_eventbinding" />
+		<EventBindingsSet refId="HalfAutoControlPageContent_eventbinding" />
+		<EventBindingsSet refId="CalibrationControlPageContent_eventbinding" />
+		
 	</EventBindingsSets>
   <Dialogs>
     <Dialog refId="DialogLogin" />
@@ -39,6 +49,11 @@
 		<Content refId="CalibrationPageContent" />
 		<Content refId="DialogLoginContent" />
 		<Content refId="SettingsPageContent" />
+		<Content refId="AutoControlPageContent"/>
+		<Content refId="HalfAutoControlPageContent"/>
+		<Content refId="ManualControlPageContent"/>
+		<Content refId="AuditPageContent"/>	
+		
   </Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
