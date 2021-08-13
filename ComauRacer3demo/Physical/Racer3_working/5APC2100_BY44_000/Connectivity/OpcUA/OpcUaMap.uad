@@ -8,6 +8,235 @@
     <EngineeringUnitAliases />
   </Aliases>
   <DefaultView>
-    <Module Name="&lt;Default&gt;" />
+    <Module Name="&lt;Default&gt;">
+      <Task Name="Control">
+        <Variable Name="RoboArm6Axis">
+          <Variable Name="Info">
+            <Variable Name="JointAxisPosition" EnableArrayElements="True" />
+            <Variable Name="CommunicationReady" />
+            <Variable Name="ReadyToPowerOn" />
+            <Variable Name="WaitForContinue" />
+            <Variable Name="Program">
+              <Variable Name="MainProgram" />
+              <Variable Name="InitProgram" />
+              <Variable Name="CurrentProgram" />
+              <Variable Name="ProgramMonitor">
+                <Variable Name="LineNumber" />
+                <Variable Name="BlockNumber" />
+                <Variable Name="OverallRuntime" />
+                <Variable Name="MovementRuntime" />
+                <Variable Name="CurrentDwellTime" />
+                <Variable Name="RemainingDwellTime" />
+                <Variable Name="BlockMonitor">
+                  <Variable Name="SecondLast" />
+                  <Variable Name="Last" />
+                  <Variable Name="Current" />
+                  <Variable Name="Next" />
+                  <Variable Name="SecondNext" />
+                </Variable>
+              </Variable>
+              <Variable Name="ProgramPhase" />
+              <Variable Name="InterruptStatus" />
+            </Variable>
+            <Variable Name="Path">
+              <Variable Name="CurrentPathVelocity" />
+              <Variable Name="CurrentPathPosition" />
+              <Variable Name="CurrentLength" />
+              <Variable Name="RemainingDistance" />
+              <Variable Name="ProgrammedPathVelocity" />
+            </Variable>
+            <Variable Name="JogStatus" />
+            <Variable Name="PLCopenState" />
+            <Variable Name="Diag">
+              <Variable Name="StatusID" />
+              <Variable Name="Internal" />
+            </Variable>
+          </Variable>
+          <Variable Name="MpLink" />
+          <Variable Name="Enable" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="Parameters" />
+          <Variable Name="Update" />
+          <Variable Name="Override" />
+          <Variable Name="Power" />
+          <Variable Name="Home" />
+          <Variable Name="MoveProgram" />
+          <Variable Name="Interrupt" />
+          <Variable Name="Continue" />
+          <Variable Name="Stop" />
+          <Variable Name="Jog" />
+          <Variable Name="MoveDirect" />
+          <Variable Name="MoveLinear" />
+          <Variable Name="SingleStep" />
+          <Variable Name="Active" />
+          <Variable Name="Error" />
+          <Variable Name="StatusID" />
+          <Variable Name="UpdateDone" />
+          <Variable Name="X" />
+          <Variable Name="Y" />
+          <Variable Name="Z" />
+          <Variable Name="A" />
+          <Variable Name="B" />
+          <Variable Name="C" />
+          <Variable Name="PathVelocity" />
+          <Variable Name="CommandBusy" />
+          <Variable Name="CommandAborted" />
+          <Variable Name="PowerOn" />
+          <Variable Name="IsHomed" />
+          <Variable Name="MoveActive" />
+          <Variable Name="MoveInterrupted" />
+          <Variable Name="MoveDone" />
+          <Variable Name="Stopped" />
+          <Variable Name="InMotion" />
+          <Variable Name="SingleStepActive" />
+          <Variable Name="Internal">
+            <Variable Name="pObject" />
+            <Variable Name="State" />
+          </Variable>
+        </Variable>
+        <Variable Name="ControlSelector" />
+        <Variable Name="ManualControl">
+          <Variable Name="ManualModePara">
+            <Variable Name="AxisButton" />
+            <Variable Name="CoordinateSystem" />
+            <Variable Name="Direction" />
+            <Variable Name="JogVelocity" />
+            <Variable Name="PathLimits" />
+            <Variable Name="ActivateMove" />
+          </Variable>
+          <Variable Name="RoboArm">
+            <Variable Name="MpLink" />
+            <Variable Name="Enable" />
+            <Variable Name="ErrorReset" />
+            <Variable Name="Parameters" />
+            <Variable Name="Update" />
+            <Variable Name="Override" />
+            <Variable Name="Power" />
+            <Variable Name="Home" />
+            <Variable Name="MoveProgram" />
+            <Variable Name="Interrupt" />
+            <Variable Name="Continue" />
+            <Variable Name="Stop" />
+            <Variable Name="Jog" />
+            <Variable Name="MoveDirect" />
+            <Variable Name="MoveLinear" />
+            <Variable Name="SingleStep" />
+            <Variable Name="Active" />
+            <Variable Name="Error" />
+            <Variable Name="StatusID" />
+            <Variable Name="UpdateDone" />
+            <Variable Name="X" />
+            <Variable Name="Y" />
+            <Variable Name="Z" />
+            <Variable Name="A" />
+            <Variable Name="B" />
+            <Variable Name="C" />
+            <Variable Name="PathVelocity" />
+            <Variable Name="CommandBusy" />
+            <Variable Name="CommandAborted" />
+            <Variable Name="PowerOn" />
+            <Variable Name="IsHomed" />
+            <Variable Name="MoveActive" />
+            <Variable Name="MoveInterrupted" />
+            <Variable Name="MoveDone" />
+            <Variable Name="Stopped" />
+            <Variable Name="InMotion" />
+            <Variable Name="SingleStepActive" />
+            <Variable Name="Info" />
+            <Variable Name="Internal" />
+          </Variable>
+          <Variable Name="RoboArmPara">
+            <Variable Name="ProgramName" />
+            <Variable Name="MoveProgramOptions">
+              <Variable Name="InitProgram" />
+              <Variable Name="StartMode" />
+              <Variable Name="StartPointType" />
+              <Variable Name="StartPointParameter" />
+              <Variable Name="RepositioningParameter">
+                <Variable Name="Type" />
+                <Variable Name="String" />
+                <Variable Name="AxisVelocityFactor" />
+              </Variable>
+              <Variable Name="SaveRestartData" />
+            </Variable>
+            <Variable Name="Jog">
+              <Variable Name="Velocity" />
+              <Variable Name="PathLimits">
+                <Variable Name="Velocity" />
+                <Variable Name="Acceleration" />
+                <Variable Name="Deceleration" />
+                <Variable Name="Jerk" />
+              </Variable>
+              <Variable Name="CoordSystem" />
+            </Variable>
+            <Variable Name="Position" />
+            <Variable Name="Distance" />
+            <Variable Name="Velocity" />
+            <Variable Name="Acceleration" />
+            <Variable Name="Deceleration" />
+            <Variable Name="Jerk" />
+            <Variable Name="CoordSystem" />
+            <Variable Name="ManualMoveType" />
+          </Variable>
+          <Variable Name="j" />
+          <Variable Name="JogVelocityActual" />
+        </Variable>
+        <Variable Name="ManualControlPara">
+          <Variable Name="AxisButton">
+            <Variable Name="Q1" />
+            <Variable Name="Q2" />
+            <Variable Name="Q3" />
+            <Variable Name="Q4" />
+            <Variable Name="Q5" />
+            <Variable Name="Q6" />
+          </Variable>
+          <Variable Name="CoordinateSystem" />
+          <Variable Name="Direction" />
+          <Variable Name="JogVelocity" />
+          <Variable Name="PathLimits">
+            <Variable Name="Velocity" />
+            <Variable Name="Acceleration" />
+            <Variable Name="Deceleration" />
+            <Variable Name="Jerk" />
+          </Variable>
+          <Variable Name="ActivateMove" />
+        </Variable>
+        <Variable Name="Power" />
+        <Variable Name="RoboArm6AxisPara">
+          <Variable Name="ProgramName" />
+          <Variable Name="MoveProgramOptions">
+            <Variable Name="InitProgram" />
+            <Variable Name="StartMode" />
+            <Variable Name="StartPointType" />
+            <Variable Name="StartPointParameter" />
+            <Variable Name="RepositioningParameter">
+              <Variable Name="Type" />
+              <Variable Name="String" />
+              <Variable Name="AxisVelocityFactor" />
+            </Variable>
+            <Variable Name="SaveRestartData" />
+          </Variable>
+          <Variable Name="Jog">
+            <Variable Name="Velocity" />
+            <Variable Name="PathLimits">
+              <Variable Name="Velocity" />
+              <Variable Name="Acceleration" />
+              <Variable Name="Deceleration" />
+              <Variable Name="Jerk" />
+            </Variable>
+            <Variable Name="CoordSystem" />
+          </Variable>
+          <Variable Name="Position" />
+          <Variable Name="Distance" />
+          <Variable Name="Velocity" />
+          <Variable Name="Acceleration" />
+          <Variable Name="Deceleration" />
+          <Variable Name="Jerk" />
+          <Variable Name="CoordSystem" />
+          <Variable Name="ManualMoveType" />
+        </Variable>
+        <Variable Name="State" />
+      </Task>
+    </Module>
   </DefaultView>
 </OpcUaSource>
