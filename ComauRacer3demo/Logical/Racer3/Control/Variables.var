@@ -6,4 +6,6 @@ VAR
 	ControlSelector : ControlSelectEnum;
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
+	SemiAutoControlPara : R3SemiAutoModeType;
+	SemiAutoControl : R3SemiAutoMode;
 END_VAR

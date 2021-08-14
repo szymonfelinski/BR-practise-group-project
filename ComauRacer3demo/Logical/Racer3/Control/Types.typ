@@ -1,4 +1,4 @@
-
+(*
 TYPE
 	ControlSelectEnum : 
 		(
@@ -7,3 +7,4 @@ TYPE
 		Automatic
 		);
 END_TYPE
+*)

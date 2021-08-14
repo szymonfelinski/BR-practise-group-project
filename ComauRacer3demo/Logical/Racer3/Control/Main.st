@@ -75,6 +75,9 @@ PROGRAM _CYCLIC
 			IF ControlSelector = ManualJog THEN
 				State := STATE_MANUAL_CONTROL;
 			END_IF
+			IF ControlSelector = SemiAutomatic THEN
+				State := STATE_SEMI_AUTOMATIC;
+			END_IF
 			
 		
 		STATE_MANUAL_CONTROL:
@@ -86,6 +89,8 @@ PROGRAM _CYCLIC
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
 		
 		STATE_SEMI_AUTOMATIC:
+		
+			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_AUTOMATIC:
 		
