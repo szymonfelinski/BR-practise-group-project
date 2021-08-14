@@ -50,10 +50,10 @@ TYPE
 	END_STRUCT;
 	ControlSelectEnum : 
 		(
-		ManualJog := 0,
-		SemiAutomatic := 1,
-		Automatic := 2,
-		None := 3
+		ManualJog := 1,
+		SemiAutomatic := 2,
+		Automatic := 3,
+		None := 0
 		);
 	R3AxisDistanceType : 	STRUCT  (*todo axis position for absolute*)
 		Q2 : REAL;

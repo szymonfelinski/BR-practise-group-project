@@ -9,6 +9,18 @@ FUNCTION_BLOCK R3SemiAutoMode
 			END_IF
 				
 		UPDATE:
+			RoboArmPara.Distance[0] := SemiAutoModePara.AxisDistance.Q1;
+			RoboArmPara.Distance[1] := SemiAutoModePara.AxisDistance.Q2;
+			RoboArmPara.Distance[2] := SemiAutoModePara.AxisDistance.Q3;
+			RoboArmPara.Distance[3] := SemiAutoModePara.AxisDistance.Q4;
+			RoboArmPara.Distance[4] := SemiAutoModePara.AxisDistance.Q5;
+			RoboArmPara.Distance[5] := SemiAutoModePara.AxisDistance.Q6;
+			IF SemiAutoModePara.Mode THEN
+				//TODO change to enum values
+				RoboArmPara.ManualMoveType := 1;
+			ELSE
+				RoboArmPara.ManualMoveType := 0;
+			END_IF
 			RoboArm.Update:= TRUE;
 			IF RoboArm.UpdateDone THEN
 				SemiAutoModePara.ModeForThisMove:=SemiAutoModePara.Mode;
@@ -22,6 +34,7 @@ FUNCTION_BLOCK R3SemiAutoMode
 			ELSE 
 				RoboArm.MoveDirect:=TRUE;
 			END_IF
+			//RoboArm.MoveDone:=FALSE;
 			SemiAutoModePara.State:=GO;
 		GO:
 			IF RoboArm.MoveDone THEN

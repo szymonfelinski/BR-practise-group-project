@@ -14,10 +14,8 @@
 END_FUNCTION_BLOCK
 
 {REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
-	VAR_INPUT
-		SemiAutoModePara : {REDUND_UNREPLICABLE} R3SemiAutoModeType;
-	END_VAR
 	VAR_IN_OUT
+		SemiAutoModePara : R3SemiAutoModeType;
 		RoboArm : MpRoboArm6Axis;
 		RoboArmPara : MpRoboArm6AxisParType;
 		MainState : R3StateMachineEnum;
