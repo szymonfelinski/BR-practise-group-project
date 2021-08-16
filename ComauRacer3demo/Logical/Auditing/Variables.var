@@ -1,8 +1,8 @@
 VAR
 	TriggerEvent : BOOL;
-	TypeVar : WSTRING[100];
-	MessageVar : WSTRING[100];
-	CommentVar : WSTRING[100];
+	TypeVar : WSTRING[100] := "Type";
+	MessageVar : WSTRING[100] := "Message";
+	CommentVar : WSTRING[100] := "Comment";
 	CustomEventStatus : DINT;
 	MpAuditTrail_0 : MpAuditTrail;
 END_VAR

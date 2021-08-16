@@ -7,7 +7,7 @@
   <TaskClass Name="Cyclic#4">
     <Task Name="Control" Source="Racer3.Control.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Auditing" Source="Auditing.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
@@ -45,8 +45,8 @@
     <BinaryObject Name="ashwd" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="Config" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="McPathXT" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_1" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="McPathXT" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_4" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_3" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_2" Source="" Memory="UserROM" Language="Binary" />
@@ -73,6 +73,7 @@
     <LibraryObject Name="RacerLib" Source="Libraries.RacerLib.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="MpAudit" Source="Libraries.MpAudit.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpServer" Source="Libraries.MpServer.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asarprof" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asarlog" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asio" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
