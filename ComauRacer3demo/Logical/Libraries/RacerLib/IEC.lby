@@ -8,5 +8,6 @@
     <File>R3ManualMode.st</File>
     <File>R3SemiAutoMode.st</File>
     <File>R3CalibrationMode.st</File>
+    <File>checkAxisLimits.st</File>
   </Files>
 </Library>

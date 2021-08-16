@@ -8,5 +8,6 @@ VAR
 	ManualControlPara : R3ManualModeType;
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;
-	test_Ebol : BOOL;
+	MpAlarmXCore_Control : MpAlarmXCore;
+	Stop : BOOL := FALSE; (*stops*)
 END_VAR

@@ -22,5 +22,19 @@ END_FUNCTION_BLOCK
 		ControlSelector : ControlSelectEnum;
 	END_VAR
 END_FUNCTION_BLOCK
+
 FUNCTION_BLOCK R3CalibrationMode
 END_FUNCTION_BLOCK
+
+{REDUND_ERROR} FUNCTION checkAxisLimits : BOOL (*returns TRUE if semi-automatic path is containted in axis limits, check is for relative positions*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR_INPUT
+		Q1 : REAL;
+		Q2 : REAL;
+		Q3 : REAL;
+		Q4 : REAL;
+		Q5 : REAL;
+		Q6 : REAL;
+		Mode : BOOL; (*1 for relative, 0 for absolute*)
+		RoboArm : MpRoboArm6Axis; (*needed for current axis position*)
+	END_VAR
+END_FUNCTION

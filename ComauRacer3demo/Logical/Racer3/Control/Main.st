@@ -24,12 +24,30 @@ PROGRAM _INIT
 	State := STATE_INIT;
 	Power := FALSE;
 	
+	//MpAlarmXCore_Control(MpLink := ADR(gAlarmXCore), Enable := TRUE);
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
 	IF RoboArm6Axis.Error THEN
 		State := STATE_ERROR;
+	END_IF
+	
+	IF NOT Power THEN
+		RoboArm6Axis.Power := FALSE;
+		State:= STATE_INIT;
+	END_IF
+	
+	IF Stop THEN
+		//stops and goes to standby
+		RoboArm6Axis.MoveLinear := FALSE;
+		RoboArm6Axis.MoveDirect := FALSE;
+		RoboArm6Axis.Jog := FALSE;
+		SemiAutoControlPara.Flag := FALSE;
+		ManualControlPara.ActivateMove:=FALSE;
+		//TODO turn off traces from all moves for sure, not only flags (clean them up)
+		State:= STATE_READY;
 	END_IF
 	
 	CASE State OF
@@ -100,8 +118,10 @@ PROGRAM _CYCLIC
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
 		
 		STATE_SEMI_AUTOMATIC:
-			SemiAutoControlPara.Flag :=TRUE;
+			//SemiAutoControlPara.Flag :=TRUE;
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
+			//testowo alarm
+			//MpAlarmXSet(gAlarmXCore, 'OutOfLimits');
 		
 		STATE_AUTOMATIC:
 		
