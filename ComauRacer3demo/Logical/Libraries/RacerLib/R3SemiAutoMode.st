@@ -7,6 +7,14 @@ FUNCTION_BLOCK R3SemiAutoMode
 			ELSE
 				SemiAutoModePara.State := START;
 			END_IF
+			SemiAutoModePara.ModeForThisMove:=SemiAutoModePara.Mode;
+			//TODO CHECK AXIS LIMITS AND SINGULAR POINT AND SEND ERROR (ALARM) AND AVOID MOVING
+			IF checkAxisLimitsRelative(Q1:=SemiAutoModePara.AxisDistance.Q1,Q2:=SemiAutoModePara.AxisDistance.Q2,Q3:=SemiAutoModePara.AxisDistance.Q3,Q4:=SemiAutoModePara.AxisDistance.Q4,Q5:=SemiAutoModePara.AxisDistance.Q5,Q6:=SemiAutoModePara.AxisDistance.Q6,Mode := SemiAutoModePara.ModeForThisMove, RoboArm:=RoboArm) THEN
+			// send alarm out of bounds
+			MpAlarmXSet(gAlarmXCore, 'OutOfLimits');
+			END_IF
+			
+			// check for singular point and send alarm
 				
 		UPDATE:
 			RoboArmPara.Distance[0] := SemiAutoModePara.AxisDistance.Q1;
@@ -23,7 +31,6 @@ FUNCTION_BLOCK R3SemiAutoMode
 			END_IF
 			RoboArm.Update:= TRUE;
 			IF RoboArm.UpdateDone THEN
-				SemiAutoModePara.ModeForThisMove:=SemiAutoModePara.Mode;
 				RoboArm.Update:=FALSE;
 				SemiAutoModePara.UpdatePending:=FALSE;
 				SemiAutoModePara.State := START;
