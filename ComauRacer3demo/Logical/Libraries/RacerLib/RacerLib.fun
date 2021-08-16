@@ -20,6 +20,7 @@ END_FUNCTION_BLOCK
 		RoboArmPara : MpRoboArm6AxisParType;
 	END_VAR
 	VAR
-		JogVelocityActual : REAL;
+		JogVelocityActual : {REDUND_UNREPLICABLE} REAL;
+		j : USINT;
 	END_VAR
 END_FUNCTION_BLOCK

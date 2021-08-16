@@ -3,7 +3,7 @@ TYPE
 	R3ManualModeType : 	STRUCT  (*Manual mode type*)
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
-		Direction : R3DirectionEnum; (*Stores which direction should the axis be moved*)
+		Direction : INT; (*Stores which direction should the axis be moved (1 - POSITIVE, -1 - NEGATIVE)*)
 		JogVelocity : REAL; (*Stores the velocity of axis*)
 		PathLimits : McJogPathLimitsType; (*Stores set limits of acceleration and deceleration, velocity and jerk*)
 		ActivateMove : BOOL; (*Enables or disables current move execution*)
@@ -17,9 +17,9 @@ TYPE
 		Q6 : BOOL;
 	END_STRUCT;
 	R3DirectionEnum : 
-		(
-		POSITIVE,
-		NEGATIVE
+		( (*Currently unused*)
+		POSITIVE := 1,
+		NEGATIVE := -1
 		);
 	R3StateMachineEnum : 
 		(
