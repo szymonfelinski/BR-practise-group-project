@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <vdef:Visualization id="visRacer3" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
-	<StartPage pageRefId="MainPage" />
+	<StartPage pageRefId="ControlPage" />
   <Pages>
 		<Page refId="MainPage"/>
 		<Page refId="ServicePage"/>
@@ -25,7 +25,7 @@
 	</Navigations>  
 	
   <BindingsSets>
-		<BindingsSet refId="AuditPageContent_binding" />
+		<!--<BindingsSet refId="AuditPageContent_binding" />-->
 		<!--<BindingsSet refId="AlarmPageContent_binding" />-->
 	</BindingsSets>
 	

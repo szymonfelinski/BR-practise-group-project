@@ -6,7 +6,7 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Control" Source="Racer3.Control.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Audit_notw" Source="Audit_notworking.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Audit" Source="Audit.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
