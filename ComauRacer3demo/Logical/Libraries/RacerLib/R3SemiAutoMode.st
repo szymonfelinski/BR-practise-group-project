@@ -23,6 +23,7 @@ FUNCTION_BLOCK R3SemiAutoMode
 			RoboArmPara.Distance[3] := SemiAutoModePara.AxisDistance.Q4;
 			RoboArmPara.Distance[4] := SemiAutoModePara.AxisDistance.Q5;
 			RoboArmPara.Distance[5] := SemiAutoModePara.AxisDistance.Q6;
+			RoboArmPara.CoordSystem := SemiAutoModePara.CoordinateSystem;
 			IF SemiAutoModePara.Mode THEN
 				//TODO change to enum values
 				RoboArmPara.ManualMoveType := 1;

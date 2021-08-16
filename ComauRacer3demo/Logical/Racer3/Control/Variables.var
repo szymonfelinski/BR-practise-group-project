@@ -10,4 +10,6 @@ VAR
 	SemiAutoControlPara : R3SemiAutoModeType;
 	MpAlarmXCore_Control : MpAlarmXCore;
 	Stop : BOOL := FALSE; (*stops*)
+	changeModePending : USINT;
+	txt_State_out : WSTRING[80];
 END_VAR
