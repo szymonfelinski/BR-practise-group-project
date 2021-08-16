@@ -7,7 +7,7 @@
     <Widget xsi:type="widgets.brease.Button" id="btnLeft4HalfAutoControlContent" top="407" left="10" width="80" height="80" zIndex="3" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1HalfAutoControlContent" top="86" left="1190" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh2HalfAutoControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Start" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh3HalfAutoControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh3HalfAutoControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Stop" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4HalfAutoControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1HalfAutoControlContent" top="260" left="180" zIndex="8" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2HalfAutoControlContent" top="260" left="340" zIndex="9" />

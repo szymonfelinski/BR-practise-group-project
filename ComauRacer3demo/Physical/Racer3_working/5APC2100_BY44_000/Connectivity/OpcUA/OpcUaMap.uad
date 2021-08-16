@@ -247,6 +247,7 @@
           </Variable>
           <Variable Name="Flag" />
         </Variable>
+        <Variable Name="Stop" />
       </Task>
     </Module>
   </DefaultView>

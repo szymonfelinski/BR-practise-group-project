@@ -10,4 +10,5 @@ VAR
 	SemiAutoControlPara : R3SemiAutoModeType;
 	MpAlarmXCore_Control : MpAlarmXCore;
 	Stop : BOOL := FALSE; (*stops*)
+	CoordinateSystem : BOOL;
 END_VAR
