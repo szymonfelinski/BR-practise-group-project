@@ -67,20 +67,20 @@ PROGRAM _CYCLIC
 	
 	CASE State OF
 		STATE_ERROR:
+			txt_State_out:="Error";
 			IF NOT RoboArm6Axis.Error THEN
 				State := STATE_INIT;
 			END_IF
 			
 		STATE_INIT:
-		
+			txt_State_out:="Initialization";
 			RoboArm6Axis.Enable := TRUE;
 			
 			IF Power THEN
 				State := STATE_POWER_ON;
-			END_IF
-			
+			END_IF		
 		STATE_POWER_ON:
-			
+			txt_State_out:="Power";
 			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
 				RoboArm6Axis.Power := TRUE;
 			END_IF
@@ -95,6 +95,7 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		STATE_HOMING:
+			txt_State_out:="Homing";
 			IF RoboArm6Axis.IsHomed THEN
 				RoboArm6Axis.Home := FALSE;
 				State := STATE_READY;
@@ -104,6 +105,17 @@ PROGRAM _CYCLIC
 			
 			
 		STATE_READY:
+			txt_State_out:="Ready";
+
+			
+			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
+			
+			IF ControlSelector = ManualJog AND changeModePending <> 1 THEN
+				// exit from MANUAL
+				// when exiting ManualMode from mappView bind ManualModePara.ExitMode := TRUE and pending state, both at once
+				// because we want to wait till semiAuto and Auto finishes and then goes to READY state, but for manual we have to go out manually
+				ManualControlPara.ExitManual:=TRUE;
+			END_IF
 			
 			IF ControlSelector = ManualJog THEN
 				State := STATE_MANUAL_CONTROL;
@@ -112,35 +124,32 @@ PROGRAM _CYCLIC
 				State := STATE_SEMI_AUTOMATIC;
 			END_IF
 			
-			//testing SemiAutoUpdate
-			(*
-			IF test_Ebol THEN
-				SemiAutoControlPara.AxisDistance.Q1:=50;
-				SemiAutoControlPara.AxisDistance.Q2:=50;
-				SemiAutoControlPara.AxisDistance.Q3:=50;
-				SemiAutoControlPara.Mode:=1;
-				test_Ebol:=FALSE;
-				SemiAutoControlPara.UpdatePending:=TRUE;
-			END_IF
-			*)
+			ControlSelector:=changeModePending;
+			// TODO think what happend when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
+			// maybe do something similar to exit mode in manual
 		
 		STATE_MANUAL_CONTROL:
+			txt_State_out:="ManualControl";
 			ManualControlPara.PathLimits.Acceleration;
 			ManualControlPara.PathLimits.Deceleration;
 			ManualControlPara.PathLimits.Jerk;
 			ManualControlPara.PathLimits.Velocity;
 			ManualControlPara; //main struct to be bound in mapp view
-			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
+			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara,MainState := State, ControlSelector := ControlSelector);
+			//TODO wyjscie z Manual
 		
 		STATE_SEMI_AUTOMATIC:
+			txt_State_out:="SemiAutoControl";
 			//SemiAutoControlPara.Flag :=TRUE;
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 			//testowo alarm
 			//MpAlarmXSet(gAlarmXCore, 'OutOfLimits');
 		
 		STATE_AUTOMATIC:
+			txt_State_out:="AutoControl";
 		
 		STATE_CALIBRATION:
+			txt_State_out:="Calibration";
 		
 	END_CASE
 	

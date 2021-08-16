@@ -8,7 +8,7 @@ FUNCTION_BLOCK R3ManualMode
 	IF ManualModePara.Direction = -1 THEN
 		JogVelocityActual := -1 * ManualModePara.JogVelocity;
 	END_IF
-	IF  ManualModePara.Direction = 1 THEN
+	IF  ManualModePara.Direction = 0 THEN
 		JogVelocityActual := 0;
 	END_IF
 	
@@ -44,6 +44,20 @@ FUNCTION_BLOCK R3ManualMode
 		RoboArm.Jog := TRUE;
 	ELSE
 		RoboArm.Jog := FALSE;
+	END_IF
+	
+	IF ManualModePara.ExitManual THEN
+		//clean up
+		ManualModePara.Direction:=0;
+		JogVelocityActual:=0;
+		FOR j := 0 TO 5 BY 1 DO //set every jog velocity to 0
+				RoboArmPara.Jog.Velocity[j] := 0;
+		END_FOR;
+		ManualModePara.ActivateMove:=FALSE;
+		RoboArm.Jog:=FALSE;
+		//go out
+		MainState := STATE_READY;
+		ControlSelector:=None;
 	END_IF
 	
 		

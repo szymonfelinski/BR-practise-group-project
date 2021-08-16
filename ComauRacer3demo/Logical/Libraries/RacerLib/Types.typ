@@ -7,6 +7,7 @@ TYPE
 		JogVelocity : REAL; (*Stores the velocity of axis*)
 		PathLimits : McJogPathLimitsType; (*Stores set limits of acceleration and deceleration, velocity and jerk*)
 		ActivateMove : BOOL; (*Enables or disables current move execution*)
+		ExitManual : BOOL; (*Exits Manual Mode on True*)
 	END_STRUCT;
 	R3AxisBtnType : 	STRUCT  (*Global Coordinate System Select button*)
 		Q1 : BOOL;
@@ -47,6 +48,7 @@ TYPE
 		UpdatePending : BOOL; (*if UpdatePending then updates before starting move*)
 		State : R3SemiAutoEnumType; (*state selector for state machine*)
 		ModeForThisMove : BOOL; (*makes sure that switching mode in time of moving doesnt bugs out move*)
+		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
 	END_STRUCT;
 	ControlSelectEnum : 
 		(
