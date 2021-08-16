@@ -4,5 +4,9 @@
   <Objects>
     <Object Type="File">Config.mappviewcfg</Object>
     <Object Type="Package">Racer3Vis</Object>
+    <Object Type="File">AlamPageContent.binding</Object>
+    <Object Type="File">ManualControlPageContent.binding</Object>
+    <Object Type="File">Visualizat.vis</Object>
+    <Object Type="File">HalfAutoControlPageContent.binding</Object>
   </Objects>
 </Package>

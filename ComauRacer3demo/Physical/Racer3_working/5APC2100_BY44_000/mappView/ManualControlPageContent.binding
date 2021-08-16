@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ManualControlPageContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.AxisButton.Q3" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnQ3ManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.AxisButton.Q4" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnQ4ManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.AxisButton.Q5" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnQ5ManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.AxisButton.Q6" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnQ6ManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.PathLimits.Deceleration" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmiDeccelerationManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.PathLimits.Acceleration" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmiAccelerationManualControlContent" attribute="value" />
+</Binding>
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.AxisButton.Q1" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnQ1ManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.AxisButton.Q2" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnQ2ManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.PathLimits.Velocity" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmiVelocityManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.JogVelocity" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="NumericInput1" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

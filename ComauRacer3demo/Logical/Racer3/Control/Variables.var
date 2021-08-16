@@ -1,6 +1,16 @@
 VAR
 	RoboArm6AxisPara : MpRoboArm6AxisParType;
 	RoboArm6Axis : MpRoboArm6Axis;
-	ManualMode : R3ManualModeType;
-	j : INT;
+	State : R3StateMachineEnum;
+	Power : BOOL;
+	ControlSelector : ControlSelectEnum := None;
+	ManualControl : R3ManualMode;
+	ManualControlPara : R3ManualModeType;
+	SemiAutoControl : R3SemiAutoMode;
+	SemiAutoControlPara : R3SemiAutoModeType;
+	MpAlarmXCore_Control : MpAlarmXCore;
+	Stop : BOOL := FALSE; (*stops*)
+	changeModePending : USINT;
+	txt_State_out : WSTRING[80];
+	CoordinateSystem : BOOL;
 END_VAR

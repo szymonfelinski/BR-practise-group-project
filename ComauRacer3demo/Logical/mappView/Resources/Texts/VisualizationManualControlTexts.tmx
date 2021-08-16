@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="ManualControlVelocity">
+      <tuv xml:lang="pl">
+        <seg>Prędkość ruchu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity of movement</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlAcceleration">
+      <tuv xml:lang="pl">
+        <seg>Wartość przyspieszenia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlDecceleration">
+      <tuv xml:lang="pl">
+        <seg>Wartość opóźnienia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Decceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlSelMethod">
+      <tuv xml:lang="pl">
+        <seg>Wybierz metodę sterowania</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select control method</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlTCP">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie TCP</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>TCP control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlMoveForward">
+      <tuv xml:lang="pl">
+        <seg>Ruch naprzód</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move forward</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlMoveBackward">
+      <tuv xml:lang="pl">
+        <seg>Ruch wstecz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move backward</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlQi">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie poszczegolnymi osiami</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Individual axis control</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
