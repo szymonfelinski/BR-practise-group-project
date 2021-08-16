@@ -2,24 +2,27 @@
 (* TODO: Add your comment here *)
 FUNCTION_BLOCK R3CalibrationMode
 	
-	RoboArmPara.Jog.CoordSystem := CalibrationPara.CalibrationModePara.CoordinateSystem;
-	RoboArmPara.Jog.PathLimits := CalibrationPara.CalibrationModePara.PathLimits;
+	IF CalibrationPara.CalibrationModePara.Direction = 1 THEN // set actual axis velocity based on which direction it's set to be moved
+		
+		JogVelocityActual := CalibrationPara.CalibrationModePara.JogVelocity;
+		
+	ELSIF CalibrationPara.CalibrationModePara.Direction = -1 THEN
+		
+		JogVelocityActual := -1 * CalibrationPara.CalibrationModePara.JogVelocity;
+		
+	END_IF
 	
 	CASE CalibrationPara.CalibrationState OF
 		STATE_START:
 			
+			RoboArmPara.Jog.CoordSystem := CalibrationPara.CalibrationModePara.CoordinateSystem;
+			RoboArmPara.Jog.PathLimits := CalibrationPara.CalibrationModePara.PathLimits;
+			
 			IF NOT CalibrationPara.CalibrationModePara.ActivateMove THEN //disable jog if "Move" flag isn't set
 				RoboArm.Jog := FALSE;
-			END_IF
-			
-			FOR j := 0 TO 5 BY 1 DO //set every jog velocity to 0
-				RoboArmPara.Jog.Velocity[j] := 0.0;
-			END_FOR;
-	
-			IF CalibrationPara.CalibrationModePara.Direction = 1 THEN // set actual axis velocity based on which direction it's set to be moved
-				JogVelocityActual := CalibrationPara.CalibrationModePara.JogVelocity;
-			ELSIF CalibrationPara.CalibrationModePara.Direction = -1 THEN
-				JogVelocityActual := -1 * CalibrationPara.CalibrationModePara.JogVelocity;
+				FOR j := 0 TO 5 BY 1 DO //set every jog velocity to 0
+					RoboArmPara.Jog.Velocity[j] := 0.0;
+				END_FOR;
 			END_IF
 			
 			IF CalibrationPara.CalibrationModePara.AxisButton.Q1 THEN // if a button is pressed, write corresponding velocity to the jog velocity array
@@ -59,6 +62,11 @@ FUNCTION_BLOCK R3CalibrationMode
 				RoboArm.Jog := FALSE;
 			END_IF
 			
+			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q1 THEN
+				CalibrationPara.CalibrationState := STATE_START;
+			END_IF
+			
+			
 		STATE_CALIBRATE_Q2:
 			RoboArmPara.Jog.Velocity[1] := JogVelocityActual;
 			
@@ -71,6 +79,10 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[1] := TRUE;
 				RoboArm.Jog := FALSE;
+			END_IF
+			
+			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q2 THEN
+				CalibrationPara.CalibrationState := STATE_START;
 			END_IF
 			
 		STATE_CALIBRATE_Q3:
@@ -87,6 +99,10 @@ FUNCTION_BLOCK R3CalibrationMode
 				RoboArm.Jog := FALSE;
 			END_IF
 			
+			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q3 THEN
+				CalibrationPara.CalibrationState := STATE_START;
+			END_IF
+			
 		STATE_CALIBRATE_Q4:
 			RoboArmPara.Jog.Velocity[3] := JogVelocityActual;
 			
@@ -99,6 +115,10 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[3] := TRUE;
 				RoboArm.Jog := FALSE;
+			END_IF
+			
+			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q4 THEN
+				CalibrationPara.CalibrationState := STATE_START;
 			END_IF
 			
 		STATE_CALIBRATE_Q5:
@@ -115,11 +135,15 @@ FUNCTION_BLOCK R3CalibrationMode
 				RoboArm.Jog := FALSE;
 			END_IF
 			
+			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q5 THEN
+				CalibrationPara.CalibrationState := STATE_START;
+			END_IF
+			
 		STATE_CALIBRATE_Q6:
 			(* if all previous axes have been calibrated and set in place *)
 			IF CalibrationPara.AxisCalibrated[0] AND CalibrationPara.AxisCalibrated[1] AND CalibrationPara.AxisCalibrated[2] AND CalibrationPara.AxisCalibrated[3] AND CalibrationPara.AxisCalibrated[4] THEN
 				(*one-time execution of relative movement of axis 5 by -118 degrees*)
-				IF NOT CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 AND NOT RoboArm.MoveActive THEN
+				IF NOT CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 AND NOT RoboArm.MoveActive AND NOT RoboArm.MoveDirect THEN
 					
 					FOR j := 0 TO 5 BY 1 DO //set every distance to 0
 						RoboArmPara.Distance[j] := 0.0;
@@ -154,10 +178,14 @@ FUNCTION_BLOCK R3CalibrationMode
 				END_IF
 				
 			END_IF
+			
+			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q6 THEN
+				CalibrationPara.CalibrationState := STATE_START;
+			END_IF
 		
 		STATE_RESTORE_Q5:
 			
-			IF CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 AND NOT RoboArm.MoveActive THEN
+			IF CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 AND NOT RoboArm.MoveActive AND NOT RoboArm.MoveDirect THEN
 					
 				FOR j := 0 TO 5 BY 1 DO //set every distance to 0
 					RoboArmPara.Distance[j] := 0.0;
@@ -176,6 +204,11 @@ FUNCTION_BLOCK R3CalibrationMode
 				CalibrationPara.Axis5To6Para.Axis5Restored := TRUE;
 				
 			END_IF
+			
+			IF CalibrationPara.Axis5To6Para.Axis5Restored THEN
+				CalibrationPara.CalibrationState := STATE_START;
+			END_IF
+		
 		
 	END_CASE
 	
