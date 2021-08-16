@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="DialogLoginContent" height="150" width="400" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Login" id="Login" top="10" left="10" width="380" height="130" zIndex="0" buttonLabel="$IAT/LoginLoginButtonLabelText" passwordLabel="$IAT/LoginPasswordLabelText" setUserFailMessage="$IAT/LoginUserFailMessage" setUserSuccessMessage="$IAT/LoginUserSuccessMessage" userChangedMessage="$IAT/LoginUserChangedMessageText" userLabel="$IAT/LoginUsernameLabelText" />
+    <Widget xsi:type="widgets.brease.Login" id="Login" top="10" left="10" width="380" height="130" zIndex="0" autFailMessage="$IAT/LoginAuthorisationFailed" buttonLabel="$IAT/LoginLoginButtonLabelText" passwordLabel="$IAT/LoginPasswordLabelText" setUserFailMessage="$IAT/LoginUserFailMessage" setUserSuccessMessage="$IAT/LoginUserSuccessMessage" userChangedMessage="$IAT/LoginUserChangedMessageText" userLabel="$IAT/LoginUsernameLabelText" />
   </Widgets>
 </Content>
