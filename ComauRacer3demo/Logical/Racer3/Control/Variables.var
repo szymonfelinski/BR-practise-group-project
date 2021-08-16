@@ -12,4 +12,5 @@ VAR
 	Stop : BOOL := FALSE; (*stops*)
 	changeModePending : USINT;
 	txt_State_out : WSTRING[80];
+	CoordinateSystem : BOOL;
 END_VAR

@@ -10,6 +10,11 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Acceleration := 1000.0;
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 100.0;
+	
+	ManualControlPara.CoordinateSystem := 0;
+	//SemiAutoControlPara.CoordinateSystem := 0;
+	//SemiAutoControlPara.UpdatePending := TRUE;
+	CoordinateSystem := FALSE;
 	//RoboArm6AxisPara.Distance[0] := 50.0;
 	(*ManualMode.PathLimits.Acceleration := 100.0;
 	ManualMode.CoordinateSystem := 9;
@@ -48,6 +53,16 @@ PROGRAM _CYCLIC
 		ManualControlPara.ActivateMove:=FALSE;
 		//TODO turn off traces from all moves for sure, not only flags (clean them up)
 		State:= STATE_READY;
+	END_IF
+	
+	IF CoordinateSystem = 1 THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
+		ManualControlPara.CoordinateSystem := 9;
+		//SemiAutoControlPara.CoordinateSystem := 9;
+		//SemiAutoControlPara.UpdatePending := TRUE;
+	ELSE
+		ManualControlPara.CoordinateSystem := 0;
+		//SemiAutoControlPara.CoordinateSystem := 0;
+		//SemiAutoControlPara.UpdatePending := TRUE;
 	END_IF
 	
 	CASE State OF
