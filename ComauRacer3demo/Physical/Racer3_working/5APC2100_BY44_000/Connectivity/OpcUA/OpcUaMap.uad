@@ -236,6 +236,17 @@
           <Variable Name="ManualMoveType" />
         </Variable>
         <Variable Name="State" />
+        <Variable Name="SemiAutoControlPara">
+          <Variable Name="AxisDistance">
+            <Variable Name="Q2" />
+            <Variable Name="Q3" />
+            <Variable Name="Q4" />
+            <Variable Name="Q5" />
+            <Variable Name="Q6" />
+            <Variable Name="Q1" />
+          </Variable>
+          <Variable Name="Flag" />
+        </Variable>
       </Task>
     </Module>
   </DefaultView>

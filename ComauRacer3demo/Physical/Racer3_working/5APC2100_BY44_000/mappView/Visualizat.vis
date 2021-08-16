@@ -24,7 +24,8 @@
     <!--<Navigation refId="" />-->
   </Navigations>  
   <BindingsSets>
-    <BindingsSet refId="ManualControlPageContent_binding" />
+		<BindingsSet refId="ManualControlPageContent_binding" />
+		<BindingsSet refId="HalfAutoControlPageContent_binding"/>
   </BindingsSets>
   <EventBindingsSets>
 		<EventBindingsSet refId="TopPageContent_eventbinding" />
