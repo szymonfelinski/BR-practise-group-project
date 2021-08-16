@@ -97,6 +97,8 @@ PROGRAM _CYCLIC
 			CalibrationModePara.CalibrationModePara.PathLimits.Deceleration := 100.0;
 			CalibrationModePara.CalibrationModePara.PathLimits.Jerk := 100.0;
 			CalibrationModePara.CalibrationModePara.PathLimits.Velocity := 100.0;
+			CalibrationModePara.Axis5To6Para.Axis5Angle := 118.0;
+			CalibrationModePara.Axis5To6Para.Axis5Velocity := 100.0;
 			CalibrationModePara.CalibrationModePara.CoordinateSystem := 0; //set axis coordinate system for calibration
 			CalibrationModePara.CalibrationState := STATE_START; //reset calibration state everytime after jog
 			CalibrationMode(CalibrationPara := CalibrationModePara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);

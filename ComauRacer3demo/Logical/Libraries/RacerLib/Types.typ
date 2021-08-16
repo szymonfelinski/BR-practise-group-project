@@ -36,8 +36,9 @@ TYPE
 	R3CalibrationType : 	STRUCT 
 		CalibrationState : R3CalibrationStateEnum; (*State machine used to control Calibration behaviour*)
 		CalibrationModePara : R3ManualModeType; (*same type used for manual mode (slightly different code handling)*)
-		AxisCalibrated : ARRAY[0..5]OF BOOL := [6(0)]; (*Saves which axes have been calibrated*)
+		AxisCalibrated : ARRAY[0..5]OF BOOL := [6(0)]; (*Saves which axes have been calibrated (defaults to 0 upon creation)*)
 		AxisSaveBtn : BOOL; (*Button to save current position as calibrated*)
+		Axis5To6Para : R3Axis5To6Type; (*Stores axis 5 settings for axis 6 calibration*)
 	END_STRUCT;
 	R3CalibrationStateEnum : 
 		(
@@ -47,6 +48,14 @@ TYPE
 		STATE_CALIBRATE_Q3,
 		STATE_CALIBRATE_Q4,
 		STATE_CALIBRATE_Q5,
-		STATE_CALIBRATE_Q6
+		STATE_CALIBRATE_Q6,
+		STATE_RESTORE_Q5
 		);
+	R3Axis5To6Type : 	STRUCT  (*Type for storing axis 5 setting for axis 6 calibration*)
+		Axis5MovedToCalAxis6 : BOOL; (*Stores whether axis 5 has been moved in order to calibrate axis 6*)
+		Axis5Velocity : LREAL; (*Velocity of axis 5*)
+		Axis5Angle : LREAL; (*Angle of axis 5 to be set*)
+		Axis5Return : BOOL; (*Flag to be set by a button to restore axis 5's position after calibrating axis 6*)
+		Axis5Restored : BOOL; (*Axis 5 has been restored to previous position*)
+	END_STRUCT;
 END_TYPE
