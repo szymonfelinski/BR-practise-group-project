@@ -102,6 +102,21 @@ PROGRAM _CYCLIC
 			CalibrationModePara.CalibrationModePara.CoordinateSystem := 0; //set axis coordinate system for calibration
 			//CalibrationModePara.CalibrationState := STATE_START; //reset calibration state everytime after jog
 			CalibrationMode(CalibrationPara := CalibrationModePara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
+			
+			FOR i := 0 TO 14 BY 1 DO
+				IF i < 6 THEN
+					RestorePositionTemp[i] := RoboArm6Axis.Info.JointAxisPosition[i];
+				ELSE
+					RestorePositionTemp[i] := 0.0;
+				END_IF
+				RestorePositionHomingModeTemp[i] := mcHOMING_RESTORE_POSITION;
+			END_FOR
+						
+			IF CalibrationModePara.Axis5To6Para.Axis5Restored AND CalibrationModePara.AxisCalibrated[5] THEN
+				//save positions to PV
+				MC_BR_GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Position := RestorePositionTemp, HomingMode := RestorePositionHomingModeTemp);
+			END_IF
+		
 		
 	END_CASE
 	

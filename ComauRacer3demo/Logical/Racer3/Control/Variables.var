@@ -8,4 +8,8 @@ VAR
 	ManualControlPara : R3ManualModeType;
 	CalibrationMode : R3CalibrationMode;
 	CalibrationModePara : R3CalibrationType;
+	MC_BR_GroupHome : MC_BR_GroupHome_15;
+	RestorePositionHomingModeTemp : ARRAY[0..14] OF McHomingModeEnum;
+	RestorePositionTemp : ARRAY[0..14] OF LREAL;
+	i : USINT;
 END_VAR
