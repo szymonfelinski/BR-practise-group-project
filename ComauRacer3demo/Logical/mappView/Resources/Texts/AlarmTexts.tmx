@@ -4,5 +4,14 @@
     <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
     <prop type="x-BR-TS:Namespace">AlarmTexts</prop>
   </header>
-  <body />
+  <body>
+    <tu tuid="OutOfLimits_Alarm_text">
+      <tuv xml:lang="pl">
+        <seg>Żądane przesunięcia wychodzą poza fizyczne limity osi robota.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Requested moves exceed physical axis limits of the robot.</seg>
+      </tuv>
+    </tu>
+  </body>
 </tmx>

@@ -27,8 +27,9 @@
   <BindingsSets>
 		<BindingsSet refId="AuditPageContent_binding" />
 		<!--<BindingsSet refId="AlarmPageContent_binding" />-->
-	</BindingsSets>
-	
+		<BindingsSet refId="ManualControlPageContent_binding" />
+		<BindingsSet refId="HalfAutoControlPageContent_binding"/>
+  </BindingsSets>
   <EventBindingsSets>
 		<EventBindingsSet refId="TopPageContent_eventbinding" />
 		<EventBindingsSet refId="DialogLoginContent_eventbinding" />
