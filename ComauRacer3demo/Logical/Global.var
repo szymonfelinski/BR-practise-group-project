@@ -1,0 +1,3 @@
+VAR RETAIN
+	gRacer3HomeRestorePos : ARRAY[0..5] OF McAcpAxRestorePosType; (*Permanent - stores home position, set in calibration process*)
+END_VAR

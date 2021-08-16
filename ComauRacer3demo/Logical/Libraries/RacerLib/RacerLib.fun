@@ -13,5 +13,13 @@
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK R3CalibrationMode
+{REDUND_UNREPLICABLE} FUNCTION_BLOCK R3CalibrationMode
+	VAR_IN_OUT
+		CalibrationPara : R3CalibrationType;
+		RoboArm : MpRoboArm6Axis;
+		RoboArmPara : MpRoboArm6AxisParType;
+	END_VAR
+	VAR
+		JogVelocityActual : REAL;
+	END_VAR
 END_FUNCTION_BLOCK

@@ -33,4 +33,18 @@ TYPE
 		STATE_CALIBRATION, (*Calibration mode*)
 		STATE_HOMING (*Homing mode*)
 		);
+	R3CalibrationType : 	STRUCT 
+		CalibrationState : R3CalibrationStateEnum; (*State machine used to control Calibration behaviour*)
+		CalibrationModePara : R3ManualModeType; (*same type used for manual mode (slightly different code handling)*)
+	END_STRUCT;
+	R3CalibrationStateEnum : 
+		(
+		STATE_START,
+		STATE_CALIBRATE_Q1,
+		STATE_CALIBRATE_Q2,
+		STATE_CALIBRATE_Q3,
+		STATE_CALIBRATE_Q4,
+		STATE_CALIBRATE_Q5,
+		STATE_CALIBRATE_Q6
+		);
 END_TYPE
