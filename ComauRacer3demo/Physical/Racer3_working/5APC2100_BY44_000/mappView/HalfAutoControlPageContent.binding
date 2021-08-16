@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="HalfAutoControlPageContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q2" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2HalfAutoControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q3" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ3HalfAutoControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q4" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ4HalfAutoControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q5" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ5HalfAutoControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q6" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ6HalfAutoControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q1" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

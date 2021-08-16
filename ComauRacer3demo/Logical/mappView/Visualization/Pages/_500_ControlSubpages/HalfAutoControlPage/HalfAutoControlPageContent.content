@@ -6,7 +6,7 @@
     <Widget xsi:type="widgets.brease.Button" id="btnLeft3HalfAutoControlContent" top="300" left="10" width="80" height="80" zIndex="2" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft4HalfAutoControlContent" top="407" left="10" width="80" height="80" zIndex="3" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1HalfAutoControlContent" top="86" left="1190" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh2HalfAutoControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh2HalfAutoControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Start" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3HalfAutoControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4HalfAutoControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1HalfAutoControlContent" top="260" left="180" zIndex="8" />
@@ -21,12 +21,12 @@
     <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPAHalfAutoControlContent" top="440" left="680" zIndex="17" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPBHalfAutoControlContent" top="440" left="840" zIndex="18" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniTCPCHalfAutoControlContent" top="440" left="1000" zIndex="19" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto1" top="300" left="180" zIndex="20" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto2" top="300" left="340" zIndex="21" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto3" top="300" left="500" zIndex="22" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto4" top="300" left="680" zIndex="23" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto5" top="300" left="840" zIndex="24" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto6" top="300" left="1000" zIndex="25" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ1HalfAuto" top="300" left="180" zIndex="20" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ2HalfAuto" top="300" left="340" zIndex="21" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ3HalfAuto" top="300" left="500" zIndex="22" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ4HalfAuto" top="300" left="680" zIndex="23" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ5HalfAuto" top="300" left="840" zIndex="24" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ6HalfAuto" top="300" left="1000" zIndex="25" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto7" top="480" left="180" zIndex="26" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto8" top="480" left="340" zIndex="27" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto9" top="480" left="500" zIndex="28" />
