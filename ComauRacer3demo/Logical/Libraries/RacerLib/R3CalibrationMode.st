@@ -46,7 +46,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.Axis5To6Para.Axis5Return AND CalibrationPara.AxisCalibrated[5] AND NOT CalibrationPara.Axis5To6Para.Axis5Restored THEN //only allow this if axis 6 has been calibrated
 				CalibrationPara.CalibrationState := STATE_RESTORE_Q5;
-			END_IF
+			END_IF			
 			
 		STATE_CALIBRATE_Q1:
 			RoboArmPara.Jog.Velocity[0] := JogVelocityActual; //write jog velocity to robot
