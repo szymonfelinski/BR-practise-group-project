@@ -24,7 +24,7 @@ PROGRAM _INIT
 	State := STATE_INIT;
 	Power := FALSE;
 	
-	MpAlarmXCore_0(MpLink := ADR(gAlarmXCore), Enable := TRUE);
+	MpAlarmXCore_Control(MpLink := ADR(gAlarmXCore), Enable := TRUE);
 	
 END_PROGRAM
 
