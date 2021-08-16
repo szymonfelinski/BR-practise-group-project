@@ -55,7 +55,6 @@ FUNCTION_BLOCK R3SemiAutoMode
 				SemiAutoModePara.State:=INIT;
 				SemiAutoModePara.Flag:=FALSE;
 				MainState := STATE_READY;
-				ControlSelector:=None;
 			END_IF
 	END_CASE
 END_FUNCTION_BLOCK
