@@ -8,12 +8,30 @@
         <ACE RoleId="3" RoleName="Operator" Access="0x005F" />
         <ACE RoleId="1" RoleName="Administrators" Access="0x017F" />
       </ACL>
+      <ACL Id="2">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x005F" />
+        <ACE RoleId="1" RoleName="Administrators" Access="0x01FF" />
+        <ACE RoleId="3" RoleName="Operator" Access="0x007F" />
+      </ACL>
     </ACLAliases>
     <EURangeViolationAliases />
     <EURangesAliases />
     <EngineeringUnitAliases />
   </Aliases>
-  <DefaultView AclId="1">
-    <Module Name="&lt;Default&gt;" />
+  <DefaultView AuditEvents="True" AclId="2">
+    <Module Name="&lt;Default&gt;">
+      <Task Name="Control">
+        <Variable Name="ManualMode">
+          <Variable Name="AxisButton">
+            <Variable Name="Q1" />
+            <Variable Name="Q2" />
+            <Variable Name="Q3" />
+            <Variable Name="Q4" />
+            <Variable Name="Q5" />
+            <Variable Name="Q6" />
+          </Variable>
+        </Variable>
+      </Task>
+    </Module>
   </DefaultView>
 </OpcUaSource>

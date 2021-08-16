@@ -9,6 +9,5 @@
     <Object Type="File">TopPageContent_eventbinding.eventbinding</Object>
     <Object Type="Package">ControlPage_eventbingis</Object>
     <Object Type="File">AuditPageContent_binding.binding</Object>
-    <Object Type="File">AlamPageContent_binding.binding</Object>
   </Objects>
 </Package>

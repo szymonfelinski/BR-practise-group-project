@@ -8,7 +8,7 @@
     <Object Type="Package">mappView</Object>
     <Object Type="Package">Racer3</Object>
     <Object Type="File">Project.language</Object>
-    <Object Type="Program" Language="IEC">Audit</Object>
+    <Object Type="Program" Language="IEC">Auditing</Object>
     <Object Type="Program" Language="IEC">Alarm</Object>
   </Objects>
 </Package>
