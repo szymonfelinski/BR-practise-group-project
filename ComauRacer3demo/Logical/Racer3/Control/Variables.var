@@ -10,7 +10,7 @@ VAR
 	SemiAutoControlPara : R3SemiAutoModeType;
 	MpAlarmXCore_Control : MpAlarmXCore;
 	Stop : BOOL := FALSE; (*stops*)
-	changeModePending : USINT;
+	changeModePending : USINT; (*1-Manual       2-SemiManual      3-Auto*)
 	txt_State_out : WSTRING[80];
 	CoordinateSystem : BOOL;
 END_VAR

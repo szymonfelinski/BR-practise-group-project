@@ -81,5 +81,55 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnNavigationAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnNavigationAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnNavigationHalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnNavigationHalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnNavigationManualControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnNavigationManualControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnRigh2ManualControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh2ManualControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnLeft2ManualControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
