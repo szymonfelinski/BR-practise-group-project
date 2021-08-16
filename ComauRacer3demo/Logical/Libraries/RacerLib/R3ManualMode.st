@@ -2,10 +2,14 @@
 (* TODO: Add your comment here *)
 FUNCTION_BLOCK R3ManualMode
 	
-	IF ManualModePara.Direction = POSITIVE THEN // set actual axis velocity based on which direction it's set to be moved
+	IF ManualModePara.Direction = 1 THEN // set actual axis velocity based on which direction it's set to be moved
 		JogVelocityActual := ManualModePara.JogVelocity;
-	ELSIF ManualModePara.Direction = NEGATIVE THEN
+	END_IF
+	IF ManualModePara.Direction = -1 THEN
 		JogVelocityActual := -1 * ManualModePara.JogVelocity;
+	END_IF
+	IF  ManualModePara.Direction = 1 THEN
+		JogVelocityActual := 0;
 	END_IF
 	
 	RoboArmPara.Jog.CoordSystem := ManualModePara.CoordinateSystem;
