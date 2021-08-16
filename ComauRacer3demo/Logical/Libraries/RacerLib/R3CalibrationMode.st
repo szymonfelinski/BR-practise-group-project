@@ -173,6 +173,7 @@ FUNCTION_BLOCK R3CalibrationMode
 					IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 						CalibrationPara.AxisCalibrated[5] := TRUE;
 						RoboArm.Jog := FALSE;
+						CalibrationPara.AxisSaveBtn := FALSE;
 					END_IF
 					
 				END_IF

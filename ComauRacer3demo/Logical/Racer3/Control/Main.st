@@ -115,6 +115,10 @@ PROGRAM _CYCLIC
 			IF CalibrationModePara.Axis5To6Para.Axis5Restored AND CalibrationModePara.AxisCalibrated[5] THEN
 				//save positions to PV
 				MC_BR_GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Position := RestorePositionTemp, HomingMode := RestorePositionHomingModeTemp);
+				IF MC_BR_GroupHome.Done THEN
+					gIsCalibrated := TRUE;
+				END_IF
+				
 			END_IF
 		
 		
