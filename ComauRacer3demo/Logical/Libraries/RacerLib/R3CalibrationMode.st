@@ -1,5 +1,8 @@
 
-(* TODO: Add your comment here *)
+(* TODO: Add your comment here
+ActivateMove and AxisSaveBtn are assumed momentary. 
+not resetting AxisSaveBtn and switching AxisButton will result in immediate AxisCalibrated[i] := TRUE!
+not resetting ActivateMove might result in damage to physical system! *)
 FUNCTION_BLOCK R3CalibrationMode
 	
 	IF CalibrationPara.CalibrationModePara.Direction = 1 THEN // set actual axis velocity based on which direction it's set to be moved
@@ -150,7 +153,7 @@ FUNCTION_BLOCK R3CalibrationMode
 					END_FOR;
 					
 					RoboArmPara.Distance[4] := CalibrationPara.Axis5To6Para.Axis5Angle; //axis 5 has to be moved this amount in order to calibrate axis 6 (see page 100 of _lb-rc-RACER3-STM_en)
-					RoboArmPara.Velocity := CalibrationPara.Axis5To6Para.Axis5Velocity; // use a slow velocity for this (just to be safe)
+					RoboArmPara.Velocity := CalibrationPara.Axis5To6Para.Axis5Velocity; // use a low velocity for this (just to be safe)
 					RoboArmPara.ManualMoveType := mcMOVE_RELATIVE; //select relative movement (to restore position after calibrating axis 6)
 					RoboArmPara.CoordSystem := 0; // select ACS for moving
 					RoboArm.MoveDirect := TRUE; //execute movement
@@ -160,11 +163,11 @@ FUNCTION_BLOCK R3CalibrationMode
 					RoboArm.MoveDirect := FALSE; //reset move flag
 					CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 := TRUE; //set flag to let the program know axis 5 has been moved to correct position
 					
-				ELSIF CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 THEN
+				ELSIF CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 THEN //actual calibration
 					
 					RoboArmPara.Jog.Velocity[5] := JogVelocityActual;
 				
-					IF CalibrationPara.CalibrationModePara.ActivateMove THEN //enable jog only if ActivateMove flag is set
+					IF CalibrationPara.CalibrationModePara.ActivateMove THEN //enable jog only if ActivateMove flag is set (momentary switch in HMI)
 						RoboArm.Jog := TRUE;
 					ELSE
 						RoboArm.Jog := FALSE;

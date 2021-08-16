@@ -64,13 +64,16 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		STATE_HOMING:
-			IF RoboArm6Axis.IsHomed THEN
-				RoboArm6Axis.Home := FALSE;
-				State := STATE_READY;
+			IF gIsCalibrated THEN
+				IF RoboArm6Axis.IsHomed THEN
+					RoboArm6Axis.Home := FALSE;
+					State := STATE_READY;
+				ELSE
+					RoboArm6Axis.Home := TRUE;
+				END_IF
 			ELSE
-				RoboArm6Axis.Home := TRUE;
+				State := STATE_CALIBRATION;
 			END_IF
-			
 			
 		STATE_READY:
 			
@@ -93,32 +96,49 @@ PROGRAM _CYCLIC
 		
 		STATE_CALIBRATION:
 			
-			CalibrationModePara.CalibrationModePara.PathLimits.Acceleration := 100.0; //set low acc, dec and vel limits for calibration purposes
+			CalibrationModePara.CalibrationModePara.PathLimits.Acceleration := 100.0; //set low acceleration, deceleration and velocity limits for calibration purposes
 			CalibrationModePara.CalibrationModePara.PathLimits.Deceleration := 100.0;
-			CalibrationModePara.CalibrationModePara.PathLimits.Jerk := 1000.0;
+			//CalibrationModePara.CalibrationModePara.PathLimits.Jerk := 1000.0; //no need to limit jerk
 			CalibrationModePara.CalibrationModePara.PathLimits.Velocity := 100.0;
-			CalibrationModePara.Axis5To6Para.Axis5Angle := 118.0;
-			CalibrationModePara.Axis5To6Para.Axis5Velocity := 100.0;
+			CalibrationModePara.Axis5To6Para.Axis5Angle := 118.0; //angle defined in calibration pdf (see page 100 of _lb-rc-RACER3-STM_en)
+			CalibrationModePara.Axis5To6Para.Axis5Velocity := 50.0; //use low velocity for moving axis 5 for calibrating axis 6
 			CalibrationModePara.CalibrationModePara.CoordinateSystem := 0; //set axis coordinate system for calibration
 			//CalibrationModePara.CalibrationState := STATE_START; //reset calibration state everytime after jog
-			CalibrationMode(CalibrationPara := CalibrationModePara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
+			CalibrationMode(CalibrationPara := CalibrationModePara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara); //call FB with set values
 			
-			FOR i := 0 TO 14 BY 1 DO
-				IF i < 6 THEN
-					RestorePositionTemp[i] := RoboArm6Axis.Info.JointAxisPosition[i];
-				ELSE
-					RestorePositionTemp[i] := 0.0;
-				END_IF
-				RestorePositionHomingModeTemp[i] := mcHOMING_RESTORE_POSITION;
-			END_FOR
-						
 			IF CalibrationModePara.Axis5To6Para.Axis5Restored AND CalibrationModePara.AxisCalibrated[5] THEN
 				//save positions to PV
-				MC_BR_GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Position := RestorePositionTemp, HomingMode := RestorePositionHomingModeTemp);
-				IF MC_BR_GroupHome.Done THEN
-					gIsCalibrated := TRUE;
-				END_IF
-				
+				IF i = 1 THEN
+					MC_BR_InitHome(Axis := ADR(gAxisQ1), Execute := TRUE, HomingParameters := mcHOMING_RESTORE_POSITION);
+					IF MC_BR_InitHome.Done THEN
+						i = 2;
+					END_IF
+				ELSIF i = 2 THEN
+					MC_BR_InitHome(Axis := ADR(gAxisQ2), Execute := TRUE, HomingParameters := mcHOMING_RESTORE_POSITION);
+					IF MC_BR_InitHome.Done THEN
+						i = 3;
+					END_IF
+				ELSIF i = 3 THEN
+					MC_BR_InitHome(Axis := ADR(gAxisQ3), Execute := TRUE, HomingParameters := mcHOMING_RESTORE_POSITION);
+					IF MC_BR_InitHome.Done THEN
+						i = 4;
+					END_IF
+				ELSIF i = 4 THEN
+					MC_BR_InitHome(Axis := ADR(gAxisQ4), Execute := TRUE, HomingParameters := mcHOMING_RESTORE_POSITION);
+					IF MC_BR_InitHome.Done THEN
+						i = 5;
+					END_IF
+				ELSIF i = 5 THEN
+					MC_BR_InitHome(Axis := ADR(gAxisQ5), Execute := TRUE, HomingParameters := mcHOMING_RESTORE_POSITION);
+					IF MC_BR_InitHome.Done THEN
+						i = 6;
+					END_IF
+				ELSIF i = 6 THEN
+					MC_BR_InitHome(Axis := ADR(gAxisQ6), Execute := TRUE, HomingParameters := mcHOMING_RESTORE_POSITION);
+					IF MC_BR_InitHome.Done THEN
+						gIsCalibrated := TRUE;
+						State := STATE_INIT;
+					END_IF
 			END_IF
 		
 		
