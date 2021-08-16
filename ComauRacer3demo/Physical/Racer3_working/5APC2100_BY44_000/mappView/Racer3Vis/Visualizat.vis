@@ -31,6 +31,12 @@
 		<EventBindingsSet refId="DialogLoginContent_eventbinding" />
 		<EventBindingsSet refId="AlamPageContent_eventbinding" />
 		<EventBindingsSet refId="SettingsPageContent_eventbinding" />
+		<EventBindingsSet refId="ControlPageContent_eventbinding" />
+		<EventBindingsSet refId="AutoControlPageContent_eventbinding" />
+		<EventBindingsSet refId="ManualControlPageContent_eventbinding" />
+		<EventBindingsSet refId="HalfAutoControlPageContent_eventbinding" />
+		<EventBindingsSet refId="CalibrationControlPageContent_eventbinding" />
+		
 	</EventBindingsSets>
   <Dialogs>
     <Dialog refId="DialogLogin" />

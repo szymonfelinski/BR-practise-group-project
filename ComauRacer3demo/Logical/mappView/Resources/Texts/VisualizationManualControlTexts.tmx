@@ -5,12 +5,12 @@
     <prop type="x-BR-TS:Namespace">IAT</prop>
   </header>
   <body>
-    <tu tuid="AlarmListItemMessageText">
+    <tu tuid="ManualControlVelocity">
       <tuv xml:lang="pl">
-        <seg>Komunikat</seg>
+        <seg>Prędkość ruchu</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Message</seg>
+        <seg>Velocity of movement</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>Servus Welt!</seg>
@@ -19,52 +19,60 @@
         <seg>Bonjour tout le monde!</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListItemTimestampText">
+    <tu tuid="ManualControlAcceleration">
       <tuv xml:lang="pl">
-        <seg>Data i czas</seg>
+        <seg>Wartość przyspieszenia</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Date and time</seg>
+        <seg>Acceleration</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListItemStateText">
+    <tu tuid="ManualControlDecceleration">
       <tuv xml:lang="pl">
-        <seg>Stan</seg>
+        <seg>Wartość opóźnienia</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>State</seg>
+        <seg>Decceleration</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListNextText">
+    <tu tuid="ManualControlSelMethod">
       <tuv xml:lang="pl">
-        <seg>Następna</seg>
+        <seg>Wybierz metodę sterowania</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Next</seg>
+        <seg>Select control method</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListPreviousText">
+    <tu tuid="ManualControlTCP">
       <tuv xml:lang="pl">
-        <seg>Poprzednia</seg>
+        <seg>Sterowanie TCP</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Previous</seg>
+        <seg>TCP control</seg>
       </tuv>
     </tu>
-    <tu tuid="AuditListOldText">
+    <tu tuid="ManualControlMoveForward">
       <tuv xml:lang="pl">
-        <seg>Stary</seg>
+        <seg>Ruch naprzód</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Old</seg>
+        <seg>Move forward</seg>
       </tuv>
     </tu>
-    <tu tuid="AuditListNewText">
+    <tu tuid="ManualControlMoveBackward">
       <tuv xml:lang="pl">
-        <seg>Nowy</seg>
+        <seg>Ruch wstecz</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>New</seg>
+        <seg>Move backward</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControlQi">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie poszczegolnymi osiami</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Individual axis control</seg>
       </tuv>
     </tu>
   </body>

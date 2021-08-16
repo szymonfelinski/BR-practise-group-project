@@ -7,5 +7,6 @@
     <File Description="Exported functions and function blocks">RacerLib.fun</File>
     <File>R3ManualMode.st</File>
     <File>R3SemiAutoMode.st</File>
+    <File>R3CalibrationMode.st</File>
   </Files>
 </Library>
