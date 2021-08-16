@@ -3,7 +3,10 @@ VAR
 	RoboArm6Axis : MpRoboArm6Axis;
 	State : R3StateMachineEnum;
 	Power : BOOL;
-	ControlSelector : ControlSelectEnum;
+	ControlSelector : ControlSelectEnum := None;
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
+	SemiAutoControl : R3SemiAutoMode;
+	SemiAutoControlPara : R3SemiAutoModeType;
+	test_Ebol : BOOL;
 END_VAR

@@ -75,7 +75,21 @@ PROGRAM _CYCLIC
 			IF ControlSelector = ManualJog THEN
 				State := STATE_MANUAL_CONTROL;
 			END_IF
+			IF ControlSelector = SemiAutomatic THEN
+				State := STATE_SEMI_AUTOMATIC;
+			END_IF
 			
+			//testing SemiAutoUpdate
+			(*
+			IF test_Ebol THEN
+				SemiAutoControlPara.AxisDistance.Q1:=50;
+				SemiAutoControlPara.AxisDistance.Q2:=50;
+				SemiAutoControlPara.AxisDistance.Q3:=50;
+				SemiAutoControlPara.Mode:=1;
+				test_Ebol:=FALSE;
+				SemiAutoControlPara.UpdatePending:=TRUE;
+			END_IF
+			*)
 		
 		STATE_MANUAL_CONTROL:
 			ManualControlPara.PathLimits.Acceleration;
@@ -86,6 +100,8 @@ PROGRAM _CYCLIC
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
 		
 		STATE_SEMI_AUTOMATIC:
+			SemiAutoControlPara.Flag :=TRUE;
+			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_AUTOMATIC:
 		

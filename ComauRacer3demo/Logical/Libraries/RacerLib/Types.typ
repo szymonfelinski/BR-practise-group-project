@@ -33,4 +33,34 @@ TYPE
 		STATE_CALIBRATION, (*Calibration mode*)
 		STATE_HOMING (*Homing mode*)
 		);
+	R3SemiAutoEnumType : 
+		(
+		INIT := 0,
+		START := 1,
+		UPDATE := 2,
+		GO := 3
+		);
+	R3SemiAutoModeType : 	STRUCT 
+		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
+		Flag : BOOL; (*Flag between READY and SEMIAUTO*)
+		Mode : BOOL; (*Switches between relative and absolute modes, 1 for Relative, 0 for Absolute*)
+		UpdatePending : BOOL; (*if UpdatePending then updates before starting move*)
+		State : R3SemiAutoEnumType; (*state selector for state machine*)
+		ModeForThisMove : BOOL; (*makes sure that switching mode in time of moving doesnt bugs out move*)
+	END_STRUCT;
+	ControlSelectEnum : 
+		(
+		ManualJog := 1,
+		SemiAutomatic := 2,
+		Automatic := 3,
+		None := 0
+		);
+	R3AxisDistanceType : 	STRUCT  (*todo axis position for absolute*)
+		Q2 : REAL;
+		Q3 : REAL;
+		Q4 : REAL;
+		Q5 : REAL;
+		Q6 : REAL;
+		Q1 : REAL;
+	END_STRUCT;
 END_TYPE
