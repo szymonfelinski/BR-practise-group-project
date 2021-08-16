@@ -9,4 +9,5 @@ VAR
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;
 	MpAlarmXCore_Control : MpAlarmXCore;
+	Stop : BOOL := FALSE; (*stops*)
 END_VAR
