@@ -12,5 +12,6 @@
         <Property ID="Encrypt" Value="FALSE" />
       </Group>
     </Group>
+    <Selector ID="Alarms" Value="None" />
   </Element>
 </Configuration>

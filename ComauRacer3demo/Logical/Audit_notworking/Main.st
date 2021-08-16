@@ -2,7 +2,7 @@ PROGRAM _INIT
 	MpAuditTrail_0.Enable := TRUE;
 	MpAuditTrail_0.MpLink := ADR(gAuditTrail);
 	MpAuditTrail_0.DeviceName := ADR('CF');
-	MpAuditTrail_0.Language := ADR('end|metric');
+	MpAuditTrail_0.Language := ADR('en|metric');
 END_PROGRAM
 
 PROGRAM _CYCLIC

@@ -31,6 +31,8 @@
     <Parameter ID="FileDeviceName2" Value="CF" />
     <Parameter ID="FileDevicePath2" Value="C:\Audit\" />
     <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaActivateAuditEvents" Value="1" />
+    <Parameter ID="OpcUa_Security_AdminRole" Value="Administrators" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
   <Module Name="5MP7151.101E-000" Type="5MP7151.101E-000" Version="1.1.0.0">

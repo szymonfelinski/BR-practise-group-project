@@ -22,11 +22,13 @@
 	</Themes>
   <Navigations>
     <!--<Navigation refId="" />-->
-  </Navigations>  
+	</Navigations>  
+	
   <BindingsSets>
-		<!--<BindingsSet refId="AuditPageContent_binding" />
-		<BindingsSet refId="AlarmPageContent_binding" />-->
-  </BindingsSets>
+		<BindingsSet refId="AuditPageContent_binding" />
+		<!--<BindingsSet refId="AlarmPageContent_binding" />-->
+	</BindingsSets>
+	
   <EventBindingsSets>
 		<EventBindingsSet refId="TopPageContent_eventbinding" />
 		<EventBindingsSet refId="DialogLoginContent_eventbinding" />
