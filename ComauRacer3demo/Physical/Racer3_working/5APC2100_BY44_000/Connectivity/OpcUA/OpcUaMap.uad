@@ -191,7 +191,6 @@
             <Variable Name="Q6" />
           </Variable>
           <Variable Name="CoordinateSystem" />
-          <Variable Name="Direction" />
           <Variable Name="JogVelocity" />
           <Variable Name="PathLimits">
             <Variable Name="Velocity" />
@@ -200,6 +199,7 @@
             <Variable Name="Jerk" />
           </Variable>
           <Variable Name="ActivateMove" />
+          <Variable Name="Direction" />
         </Variable>
         <Variable Name="Power" />
         <Variable Name="RoboArm6AxisPara">
