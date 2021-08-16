@@ -41,5 +41,35 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnNavigationAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnNavigationAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnNavigationHalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnNavigationHalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnNavigationManualControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnNavigationManualControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/ManualModePage</prop>
+  </header>
+  <body>
+    <tu tuid="ManualContol.maxVelocity">
+      <tuv xml:lang="pl">
+        <seg>Maksymalna prędkość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Max velocity</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControl.maxAcceleration">
+      <tuv xml:lang="pl">
+        <seg>Maksymalne przyspieszenie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Max acceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControl.maxDecceleration">
+      <tuv xml:lang="pl">
+        <seg>Maksymalne opóźnienie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Max decceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControl.JogVelocity">
+      <tuv xml:lang="pl">
+        <seg>Ustaw prędkość poruszania</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set velocity of movement</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ControlNavigation.HalfAuto">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie półautomatyczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Semi-auto control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ControlNaviogation.Auto">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie automatyczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ControlNavigation..Manual">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie ręczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual control</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

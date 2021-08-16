@@ -36,5 +36,7 @@
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="32" pageId="AutoControlPage" text="Auto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="33" pageId="HalfAutoControlPage" text="HalfAuto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="34" pageId="ManualControlPage" text="Manual" />
+    <Widget xsi:type="widgets.brease.Label" id="QiLabel" top="160" left="560" width="160" zIndex="35" text="Label1" textAlign="center" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="TCPLabel1" top="360" left="560" width="160" zIndex="36" text="Label1" textAlign="center" bold="true" />
   </Widgets>
 </Content>

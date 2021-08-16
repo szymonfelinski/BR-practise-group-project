@@ -2,11 +2,11 @@
 <Content id="ManualControlPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Button" id="btnLeft1ManualControlContent" top="86" left="10" width="80" height="80" zIndex="0" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft2ManualControlContent" top="193" left="10" width="80" height="80" zIndex="1" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft2ManualControlContent" top="193" left="10" width="80" height="80" zIndex="1" text="ACS" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft3ManualControlContent" top="300" left="10" width="80" height="80" zIndex="2" text="-" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft4ManualControlContent" top="407" left="10" width="80" height="80" zIndex="3" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1ManualControlContent" top="86" left="1190" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh2ManualControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh2ManualControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="TCS" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3ManualControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="+" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4ManualControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ1ManualControlContent" top="280" left="200" zIndex="8" text="q1" />
@@ -18,15 +18,13 @@
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="400" left="260" width="180" zIndex="14" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiAccelerationManualControlContent" top="400" left="540" width="180" zIndex="15" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiDeccelerationManualControlContent" top="400" left="840" width="180" zIndex="16" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnTCPManualControlContent" top="160" left="340" width="220" zIndex="17" text="$IAT/ManualControlTCP" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQiManualControlContent" top="160" left="700" width="220" zIndex="18" text="$IAT/ManualControlQi" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="440" left="260" width="180" zIndex="19" text="$IAT/ManualControlVelocity" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="440" left="540" width="180" zIndex="20" text="$IAT/ManualControlAcceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="440" left="840" width="180" zIndex="21" text="$IAT/ManualControlDecceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="22" pageId="AutoControlPage" text="Auto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="23" pageId="HalfAutoControlPage" text="HalfAuto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="24" pageId="ManualControlPage" text="Manual" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="520" left="540" width="180" zIndex="25" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="560" left="540" width="180" zIndex="26" text="JogVelocity" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="440" left="260" width="180" zIndex="17" text="$IAT/ManualModePage/ManualContol.maxVelocity" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="440" left="540" width="180" zIndex="18" text="$IAT/ManualModePage/ManualControl.maxAcceleration" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="440" left="840" width="180" zIndex="19" text="$IAT/ManualModePage/ManualControl.maxDecceleration" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="20" pageId="AutoControlPage" text="$IAT/ManualModePage/ControlNaviogation.Auto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="21" pageId="HalfAutoControlPage" text="$IAT/ManualModePage/ControlNavigation.HalfAuto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="22" pageId="ManualControlPage" text="$IAT/ManualModePage/ControlNavigation..Manual" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="520" left="540" width="180" zIndex="23" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="560" left="540" width="180" zIndex="24" text="$IAT/ManualModePage/ManualControl.JogVelocity" />
   </Widgets>
 </Content>

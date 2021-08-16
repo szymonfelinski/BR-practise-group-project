@@ -248,6 +248,8 @@
           <Variable Name="Flag" />
         </Variable>
         <Variable Name="Stop" />
+        <Variable Name="changeModePending" />
+        <Variable Name="CoordinateSystem" />
       </Task>
     </Module>
   </DefaultView>
