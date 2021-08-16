@@ -24,6 +24,8 @@ PROGRAM _INIT
 	State := STATE_INIT;
 	Power := FALSE;
 	
+	gRacer3HomeRestorePos; //call home restore position variable to init it in memory
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -90,6 +92,14 @@ PROGRAM _CYCLIC
 		STATE_AUTOMATIC:
 		
 		STATE_CALIBRATION:
+			
+			CalibrationModePara.CalibrationModePara.PathLimits.Acceleration := 100.0; //set low acc, dec and vel limits for calibration purposes
+			CalibrationModePara.CalibrationModePara.PathLimits.Deceleration := 100.0;
+			CalibrationModePara.CalibrationModePara.PathLimits.Jerk := 100.0;
+			CalibrationModePara.CalibrationModePara.PathLimits.Velocity := 100.0;
+			CalibrationModePara.CalibrationModePara.CoordinateSystem := 0; //set axis coordinate system for calibration
+			CalibrationModePara.CalibrationState := STATE_START; //reset calibration state everytime after jog
+			CalibrationMode(CalibrationPara := CalibrationModePara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
 		
 	END_CASE
 	

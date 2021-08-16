@@ -36,6 +36,8 @@ TYPE
 	R3CalibrationType : 	STRUCT 
 		CalibrationState : R3CalibrationStateEnum; (*State machine used to control Calibration behaviour*)
 		CalibrationModePara : R3ManualModeType; (*same type used for manual mode (slightly different code handling)*)
+		AxisCalibrated : ARRAY[0..5]OF BOOL := [6(0)]; (*Saves which axes have been calibrated*)
+		AxisSaveBtn : BOOL; (*Button to save current position as calibrated*)
 	END_STRUCT;
 	R3CalibrationStateEnum : 
 		(
