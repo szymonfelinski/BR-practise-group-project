@@ -47,7 +47,8 @@ FUNCTION_BLOCK R3CalibrationMode
 				CalibrationPara.CalibrationState := STATE_CALIBRATE_Q6;
 			END_IF
 			
-			IF CalibrationPara.Axis5To6Para.Axis5Return AND CalibrationPara.AxisCalibrated[5] AND NOT CalibrationPara.Axis5To6Para.Axis5Restored THEN //only allow this if axis 6 has been calibrated
+			IF CalibrationPara.Axis5To6Para.Axis5Return AND CalibrationPara.AxisCalibrated[5] AND NOT CalibrationPara.Axis5To6Para.Axis5Restored THEN 
+				//only allow this if axis 6 has been calibrated (Show button in HMI)
 				CalibrationPara.CalibrationState := STATE_RESTORE_Q5;
 			END_IF			
 			
@@ -210,6 +211,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			END_IF
 			
 			IF CalibrationPara.Axis5To6Para.Axis5Restored THEN
+				CalibrationPara.Axis5To6Para.Axis5Return := FALSE;
 				CalibrationPara.CalibrationState := STATE_START;
 			END_IF
 		

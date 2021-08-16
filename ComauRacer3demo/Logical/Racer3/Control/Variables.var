@@ -6,10 +6,6 @@ VAR
 	ControlSelector : ControlSelectEnum;
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
-	CalibrationMode : R3CalibrationMode;
-	CalibrationModePara : R3CalibrationType;
-	MC_BR_InitHome : MC_BR_InitHome_AcpAx;
-	RestorePositionHomingModeTemp : ARRAY[0..14] OF McHomingModeEnum;
-	RestorePositionTemp : ARRAY[0..14] OF LREAL;
 	i : USINT;
+	Calibration : CalibrationType;
 END_VAR
