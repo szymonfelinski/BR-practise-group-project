@@ -34,7 +34,6 @@ FUNCTION_BLOCK R3SemiAutoMode
 			ELSE 
 				RoboArm.MoveDirect:=TRUE;
 			END_IF
-			//RoboArm.MoveDone:=FALSE;
 			SemiAutoModePara.State:=GO;
 		GO:
 			IF RoboArm.MoveDone THEN
@@ -44,6 +43,7 @@ FUNCTION_BLOCK R3SemiAutoMode
 					RoboArm.MoveDirect:=FALSE;
 				END_IF
 				SemiAutoModePara.State:=INIT;
+				SemiAutoModePara.Flag:=FALSE;
 				MainState := STATE_READY;
 				ControlSelector:=None;
 			END_IF

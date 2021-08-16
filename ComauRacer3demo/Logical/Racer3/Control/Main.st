@@ -80,6 +80,7 @@ PROGRAM _CYCLIC
 			END_IF
 			
 			//testing SemiAutoUpdate
+			(*
 			IF test_Ebol THEN
 				SemiAutoControlPara.AxisDistance.Q1:=50;
 				SemiAutoControlPara.AxisDistance.Q2:=50;
@@ -88,7 +89,7 @@ PROGRAM _CYCLIC
 				test_Ebol:=FALSE;
 				SemiAutoControlPara.UpdatePending:=TRUE;
 			END_IF
-			
+			*)
 		
 		STATE_MANUAL_CONTROL:
 			ManualControlPara.PathLimits.Acceleration;
@@ -99,7 +100,7 @@ PROGRAM _CYCLIC
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara);
 		
 		STATE_SEMI_AUTOMATIC:
-		
+			SemiAutoControlPara.Flag :=TRUE;
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_AUTOMATIC:

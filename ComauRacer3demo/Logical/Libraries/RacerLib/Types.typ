@@ -42,7 +42,7 @@ TYPE
 		);
 	R3SemiAutoModeType : 	STRUCT 
 		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
-		SemiAutoFlag : USINT; (*Flag between READY and SEMIAUTO*)
+		Flag : BOOL; (*Flag between READY and SEMIAUTO*)
 		Mode : BOOL; (*Switches between relative and absolute modes, 1 for Relative, 0 for Absolute*)
 		UpdatePending : BOOL; (*if UpdatePending then updates before starting move*)
 		State : R3SemiAutoEnumType; (*state selector for state machine*)
