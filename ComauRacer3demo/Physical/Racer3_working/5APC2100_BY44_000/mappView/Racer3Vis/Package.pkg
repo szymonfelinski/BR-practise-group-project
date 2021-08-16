@@ -7,5 +7,6 @@
     <Object Type="File">SettingsPageContent_eventbinding.eventbinding</Object>
     <Object Type="File">TopPageContent_eventbinding.eventbinding</Object>
     <Object Type="Package">ControlPage_eventbingis</Object>
+    <Object Type="File">AuditPageContent_binding.binding</Object>
   </Objects>
 </Package>
