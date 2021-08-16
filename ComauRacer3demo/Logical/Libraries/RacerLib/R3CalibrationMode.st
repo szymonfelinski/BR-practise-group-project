@@ -134,7 +134,7 @@ FUNCTION_BLOCK R3CalibrationMode
 				ELSIF RoboArm.MoveDone AND RoboArm.MoveDirect THEN //if move has been executed
 					
 					RoboArm.MoveDirect := FALSE; //reset move flag
-					CalibrationPara.Axis5MovedToCalAxis6 := TRUE; //set flag to let the program know axis 5 has been moved to correct position
+					CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 := TRUE; //set flag to let the program know axis 5 has been moved to correct position
 					
 				ELSIF CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 THEN
 					
@@ -172,7 +172,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			ELSIF RoboArm.MoveDone AND RoboArm.MoveDirect THEN //if move has been executed
 					
 				RoboArm.MoveDirect := FALSE; //reset move flag
-				CalibrationPara.Axis5MovedToCalAxis6 := FALSE; //set flag to let the program know axis 5 has been moved to correct position
+				CalibrationPara.Axis5To6Para.Axis5MovedToCalAxis6 := FALSE; //set flag to let the program know axis 5 has been moved to correct position
 				CalibrationPara.Axis5To6Para.Axis5Restored := TRUE;
 				
 			END_IF

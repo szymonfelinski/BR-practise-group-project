@@ -53,7 +53,7 @@ TYPE
 		);
 	R3Axis5To6Type : 	STRUCT  (*Type for storing axis 5 setting for axis 6 calibration*)
 		Axis5MovedToCalAxis6 : BOOL; (*Stores whether axis 5 has been moved in order to calibrate axis 6*)
-		Axis5Velocity : LREAL; (*Velocity of axis 5*)
+		Axis5Velocity : REAL; (*Velocity of axis 5*)
 		Axis5Angle : LREAL; (*Angle of axis 5 to be set*)
 		Axis5Return : BOOL; (*Flag to be set by a button to restore axis 5's position after calibrating axis 6*)
 		Axis5Restored : BOOL; (*Axis 5 has been restored to previous position*)

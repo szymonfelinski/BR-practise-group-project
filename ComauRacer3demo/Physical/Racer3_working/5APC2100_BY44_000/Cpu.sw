@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
-  <TaskClass Name="Cyclic#1" />
+  <TaskClass Name="Cyclic#1">
+    <Task Name="Control" Source="Racer3.Control.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
-    <Task Name="Control" Source="Racer3.Control.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Audit_notw" Source="Audit_notworking.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
@@ -44,6 +45,7 @@
     <BinaryObject Name="AxGrpFtrR3" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="MechSysR3" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="AxesGrpR3" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_1" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_4" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_3" Source="" Memory="UserROM" Language="Binary" />
@@ -62,6 +64,8 @@
     <LibraryObject Name="McAxis" Source="Libraries.McAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="McAxGroup" Source="Libraries.McAxGroup.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpRobotics" Source="Libraries.MpRobotics.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpFile" Source="Libraries.MpFile.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="RacerLib" Source="Libraries.RacerLib.lby" Memory="UserROM" Language="IEC" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="astime" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asieccon" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -74,7 +78,5 @@
     <LibraryObject Name="asepl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brsystem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="MpFile" Source="Libraries.MpFile.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="RacerLib" Source="Libraries.RacerLib.lby" Memory="UserROM" Language="IEC" Debugging="true" />
   </Libraries>
 </SwConfiguration>
