@@ -5,8 +5,8 @@
     <Group ID="FileManager">
       <Group ID="Devices">
         <Group ID="0">
-          <Property ID="DeviceName" Value="USB" />
-          <Property ID="Text" Value="USB" />
+          <Property ID="DeviceName" Value="UserPart" />
+          <Property ID="Text" Value="UserPart" />
         </Group>
       </Group>
       <Group ID="Access">
