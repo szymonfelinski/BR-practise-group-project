@@ -49,6 +49,8 @@ TYPE
 		State : R3SemiAutoEnumType; (*state selector for state machine*)
 		ModeForThisMove : BOOL; (*makes sure that switching mode in time of moving doesnt bugs out move*)
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
+		PathMode : BOOL; (*Switches between direct and linear path mode, 1 for linear , 0 for direct*)
+		PathModeForThisMove : BOOL;
 	END_STRUCT;
 	ControlSelectEnum : 
 		(
