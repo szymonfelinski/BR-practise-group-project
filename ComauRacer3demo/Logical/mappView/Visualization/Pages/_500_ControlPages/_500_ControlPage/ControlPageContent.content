@@ -16,7 +16,7 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="400" left="540" width="160" zIndex="12" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="400" left="860" width="160" zIndex="13" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="400" left="240" width="160" zIndex="14" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="180" left="660" width="140" zIndex="15" pageId="CaibrationPage" text="$IAT/ControlPage/AutoControl.Calibration" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="180" left="660" width="140" zIndex="15" pageId="CaibrationPage" text="$IAT/ControlPage/Control.Calibration" />
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="320" left="860" width="160" height="40" zIndex="16" text="$IAT/ControlPage/ManualControl.maxDecceleration" textAlign="center" />
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="320" left="540" width="160" height="40" zIndex="17" text="$IAT/ControlPage/ManualControl.maxAcceleration" textAlign="center" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="320" left="240" width="160" height="40" zIndex="18" text="$IAT/ControlPage/ManualContol.maxVelocity" textAlign="center" />

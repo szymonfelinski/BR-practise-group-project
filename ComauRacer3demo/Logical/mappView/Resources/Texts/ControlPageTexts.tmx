@@ -99,5 +99,21 @@
         <seg>Calibration</seg>
       </tuv>
     </tu>
+    <tu tuid="CalibrationControl.Savebtn">
+      <tuv xml:lang="pl">
+        <seg> Zapisz oś</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save axis</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CalibrationControl.Label">
+      <tuv xml:lang="pl">
+        <seg>Wybierz oś do kalibracji</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select axis to be calibrated</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
