@@ -15,6 +15,47 @@
   </Aliases>
   <DefaultView>
     <Module Name="&lt;Default&gt;">
+      <Task Name="FileManage">
+        <Variable Name="tabInfo">
+          <Variable Name="Name" />
+          <Variable Name="Size" />
+          <Variable Name="Type" />
+          <Variable Name="LastModified" />
+          <Variable Name="SelectedRow" />
+        </Variable>
+        <Variable Name="cmd">
+          <Variable Name="MpFileManagerUIConnectType">
+            <Variable Name="File">
+              <Variable Name="PathInfo">
+                <Variable Name="CurrentDir" />
+              </Variable>
+              <Variable Name="Delete" />
+              <Variable Name="Copy" />
+              <Variable Name="Cut" />
+              <Variable Name="Paste" />
+              <Variable Name="Rename" />
+              <Variable Name="EnterFolder" />
+              <Variable Name="CreateFolder" />
+              <Variable Name="NewName" />
+              <Variable Name="Refresh" />
+              <Variable Name="FolderUp" />
+            </Variable>
+            <Variable Name="DeviceList">
+              <Variable Name="SelectedIndex" />
+            </Variable>
+            <Variable Name="MessageBox">
+              <Variable Name="Confirm" />
+              <Variable Name="Cancel" />
+            </Variable>
+          </Variable>
+          <Variable Name="MpFileManagerUI_0">
+            <Variable Name="ErrorReset" />
+          </Variable>
+        </Variable>
+        <Variable Name="aux">
+          <Variable Name="TableConfigurationStr" />
+          <Variable Name="errorNameExists" />
+        </Variable>
       <Task Name="Control">
         <Variable Name="RoboArm6Axis">
           <Variable Name="Info">

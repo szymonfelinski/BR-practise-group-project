@@ -1,4 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="DocsBrowserPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Widgets />
+<Content id="DocsBrowserPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="60" left="100" width="1083" height="520" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="600" text="Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="280" text="Size" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabType" zIndex="2" columnWidth="200" text="Type" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="btnEnterFolder" top="86" left="1190" width="80" height="80" zIndex="1" breakWord="true" multiLine="true" text="$IAT/Browser/Do_FolderEnter" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnFolderUp" top="193" left="1190" width="80" height="80" zIndex="2" breakWord="true" multiLine="true" text="$IAT/Browser/Do_FolderUp" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnNewFolder" top="620" left="1082" height="40" zIndex="3" breakWord="true" multiLine="true" text="$IAT/Browser/Do_CreateFolder" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRefresh" top="300" left="1190" width="80" height="80" zIndex="4" text="$IAT/Browser/Do_Refresh" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnDelete" top="620" left="100" height="40" zIndex="5" text="$IAT/Browser/Do_Delete" />
+    <Widget xsi:type="widgets.brease.Button" id="btnCopy" top="620" left="494" height="40" zIndex="6" text="$IAT/Browser/Do_Copy" />
+    <Widget xsi:type="widgets.brease.Button" id="btnCut" top="620" left="297" height="40" zIndex="7" text="$IAT/Browser/Do_Cut" />
+    <Widget xsi:type="widgets.brease.Button" id="btnPaste" top="620" left="691" height="40" zIndex="8" text="$IAT/Browser/Do_Paste" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRename" top="620" left="888" height="40" zIndex="9" text="$IAT/Browser/Do_Rename" />
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="0" left="0" width="100" height="280" zIndex="10">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice1" top="86" left="10" width="80" height="80" zIndex="0" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device1" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="193" left="10" width="80" height="80" zIndex="1" text="$IAT/Browser/Device2" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="100" width="1080" zIndex="11" fontSize="19px" bold="true" />
+  </Widgets>
 </Content>

@@ -1,0 +1,6 @@
+VAR
+	cmd : FileManagerUI;
+	iFile : USINT;
+	tabInfo : TableInfo;
+	aux : Auxiliary;
+END_VAR
