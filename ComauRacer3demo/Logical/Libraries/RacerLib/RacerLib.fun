@@ -6,18 +6,16 @@
 	VAR_IN_OUT
 		RoboArm : MpRoboArm6Axis;
 		RoboArmPara : MpRoboArm6AxisParType;
+		MainState : R3StateMachineEnum;
+		ControlSelector : ControlSelectEnum;
 	END_VAR
 	VAR
 		j : USINT;
 		JogVelocityActual : REAL;
 	END_VAR
-	VAR_IN_OUT
-		MainState : R3StateMachineEnum;
-		ControlSelector : ControlSelectEnum;
-	END_VAR
 END_FUNCTION_BLOCK
 
-{REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+{REDUND_ERROR} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_IN_OUT
 		SemiAutoModePara : R3SemiAutoModeType;
 		RoboArm : MpRoboArm6Axis;
@@ -25,9 +23,21 @@ END_FUNCTION_BLOCK
 		MainState : R3StateMachineEnum;
 		ControlSelector : ControlSelectEnum;
 	END_VAR
+	VAR
+		WeNeedToGoBack : BOOL;
+	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK R3CalibrationMode
+{REDUND_UNREPLICABLE} FUNCTION_BLOCK R3CalibrationMode
+	VAR_IN_OUT
+		CalibrationPara : R3CalibrationType;
+		RoboArm : MpRoboArm6Axis;
+		RoboArmPara : MpRoboArm6AxisParType;
+	END_VAR
+	VAR
+		JogVelocityActual : {REDUND_UNREPLICABLE} REAL;
+		j : {REDUND_UNREPLICABLE} USINT;
+	END_VAR
 END_FUNCTION_BLOCK
 
 {REDUND_ERROR} FUNCTION checkAxisLimits : BOOL (*returns TRUE if semi-automatic path is containted in axis limits, check is for relative positions*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
