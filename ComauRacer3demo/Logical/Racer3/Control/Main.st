@@ -161,6 +161,8 @@ PROGRAM _CYCLIC
 		
 		STATE_AUTOMATIC:
 			txt_State_out:="AutoControl";
+			
+			
 		
 		STATE_CALIBRATION:
 			

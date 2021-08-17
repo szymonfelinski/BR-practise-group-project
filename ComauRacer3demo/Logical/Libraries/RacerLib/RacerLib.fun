@@ -6,14 +6,12 @@
 	VAR_IN_OUT
 		RoboArm : MpRoboArm6Axis;
 		RoboArmPara : MpRoboArm6AxisParType;
+		MainState : R3StateMachineEnum;
+		ControlSelector : ControlSelectEnum;
 	END_VAR
 	VAR
 		j : USINT;
 		JogVelocityActual : REAL;
-	END_VAR
-	VAR_IN_OUT
-		MainState : R3StateMachineEnum;
-		ControlSelector : ControlSelectEnum;
 	END_VAR
 END_FUNCTION_BLOCK
 
@@ -35,7 +33,7 @@ END_FUNCTION_BLOCK
 	END_VAR
 	VAR
 		JogVelocityActual : {REDUND_UNREPLICABLE} REAL;
-		j : USINT;
+		j : {REDUND_UNREPLICABLE} USINT;
 	END_VAR
 END_FUNCTION_BLOCK
 
@@ -51,3 +49,10 @@ END_FUNCTION_BLOCK
 		RoboArm : MpRoboArm6Axis; (*needed for current axis position*)
 	END_VAR
 END_FUNCTION
+
+{REDUND_UNREPLICABLE} FUNCTION_BLOCK R3AutomaticMode
+	VAR_IN_OUT
+		RoboArm : MpRoboArm6Axis;
+		RoboArmPara : MpRoboArm6AxisParType;
+	END_VAR
+END_FUNCTION_BLOCK

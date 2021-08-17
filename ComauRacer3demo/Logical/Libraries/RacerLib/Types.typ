@@ -1,5 +1,10 @@
 
 TYPE
+	R3AutomaticModePara : 	STRUCT  (*Automatic mode parameters*)
+	END_STRUCT;
+	R3AutomaticModeType : 	STRUCT  (*Automatic mode main structure*)
+		Parameters : R3AutomaticModePara;
+	END_STRUCT;
 	R3ManualModeType : 	STRUCT  (*Manual mode type*)
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
