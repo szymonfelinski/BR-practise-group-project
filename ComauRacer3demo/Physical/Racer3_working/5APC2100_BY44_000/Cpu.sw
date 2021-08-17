@@ -7,7 +7,6 @@
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
-    <Task Name="FileManage" Source="FileManager.FileManager.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Auditing" Source="Auditing.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
@@ -89,10 +88,6 @@
     <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asepl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brsystem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="RacerLib" Source="Libraries.RacerLib.lby" Memory="UserROM" Language="IEC" Debugging="true" />
-    <LibraryObject Name="MpFile" Source="Libraries.MpFile.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asusb" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
