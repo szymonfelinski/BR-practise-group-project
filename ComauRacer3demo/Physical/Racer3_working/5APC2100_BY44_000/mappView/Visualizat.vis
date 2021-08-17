@@ -12,7 +12,8 @@
 		<Page refId="AutoControlPage"/>
 		<Page refId="HalfAutoControlPage"/>
 		<Page refId="ManualControlPage"/>
-		<Page refId="AuditPage"/>	
+		<Page refId="AuditPage"/>
+		<Page refId="UserManagmentPage"/>	
 		
 	</Pages>
 	<StartTheme themeRefId="BuRThemeFlat1" />
@@ -42,6 +43,8 @@
 		<EventBindingsSet refId="HalfAutoControlPageContent_eventbinding" />
 		<EventBindingsSet refId="CalibrationControlPageContent_eventbinding" />
 		<EventBindingsSet refId="AuditPageContent_eventbinding" />
+		<EventBindingsSet refId="UserManagmentPageContent_eventbinding" />
+		
 		
 		
 	</EventBindingsSets>
@@ -59,7 +62,9 @@
 		<Content refId="AutoControlPageContent"/>
 		<Content refId="HalfAutoControlPageContent"/>
 		<Content refId="ManualControlPageContent"/>
-		<Content refId="AuditPageContent"/>	
+		<Content refId="AuditPageContent"/>
+		<Content refId="UserManagmentPageContent"/>	
+		
 		
   </Contents>
   <SnippetsSets>

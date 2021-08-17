@@ -6,5 +6,8 @@
     <Object Type="File">VisualizationAlarmTexts.tmx</Object>
     <Object Type="File">AlarmTexts.tmx</Object>
     <Object Type="File">ControlPageTexts.tmx</Object>
+    <Object Type="File">UserList.tmx</Object>
+    <Object Type="File">AlarmList.tmx</Object>
+    <Object Type="File">AuditList.tmx</Object>
   </Objects>
 </Package>

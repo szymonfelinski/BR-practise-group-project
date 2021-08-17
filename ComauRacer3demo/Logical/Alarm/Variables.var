@@ -1,4 +1,5 @@
 VAR
 	TriggerAlarm : BOOL;
 	MpAlarmXCoreObject : MpAlarmXCore;
+		MpAlarmXHistory_0 : MpAlarmXHistory;
 END_VAR

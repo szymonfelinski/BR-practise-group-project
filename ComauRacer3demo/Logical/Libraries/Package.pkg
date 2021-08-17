@@ -24,5 +24,7 @@
     <Object Type="Library" Language="Binary" Description="Centralized event audit trail">MpAudit</Object>
     <Object Type="Library" Language="Binary" Description="Communication library for mappView widgets">MpServer</Object>
     <Object Type="Library" Language="Binary" Description="Advanced alarm management">MpAlarmX</Object>
+    <Object Type="Library" Language="Binary" Description="User management based on user role system">MpUserX</Object>
+    <Object Type="Library" Language="Binary" Description="File explorer for B+R file devices">MpFile</Object>
   </Objects>
 </Package>
