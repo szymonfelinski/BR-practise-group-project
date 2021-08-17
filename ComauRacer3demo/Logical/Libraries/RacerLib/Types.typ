@@ -64,7 +64,10 @@ TYPE
 		INIT := 0,
 		START := 1,
 		UPDATE := 2,
-		GO := 3
+		GO := 3,
+		STATE_EXIT := 4,
+		STATE_STOP := 5,
+		STATE_PAUSE := 6
 		);
 	R3SemiAutoModeType : 	STRUCT 
 		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
@@ -76,6 +79,7 @@ TYPE
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
 		PathMode : BOOL; (*Switches between direct and linear path mode, 1 for linear , 0 for direct*)
 		PathModeForThisMove : BOOL;
+		ExitSemiAuto : BOOL;
 	END_STRUCT;
 	ControlSelectEnum : 
 		(
