@@ -112,7 +112,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="ManualControlPageContent.btnRigh2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh2ManualControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
@@ -127,6 +127,96 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_8">
+      <Source xsi:type="opcUa.Event" refId="::Control:CoordinateSystem" event="ValueChanged" />
+      <EventHandler condition="newValue=true">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ1ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="X" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=true">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ2ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Y" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=true">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ3ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Z" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=true">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ4ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="A" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=true">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ5ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="B" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=true">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ6ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="C" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_9">
+      <Source xsi:type="opcUa.Event" refId="::Control:CoordinateSystem" event="ValueChanged" />
+      <EventHandler condition="newValue=false">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ1ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Q1" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=false">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ2ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Q2" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=false">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ3ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Q3" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=false">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ4ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Q4" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=false">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ5ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Q5" keepKey="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=false">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ6ManualControlContent">
+            <Method xsi:type="widgets.brease.ToggleButton.Action.SetText" text="Q6" keepKey="false" />
           </Target>
         </Action>
       </EventHandler>
