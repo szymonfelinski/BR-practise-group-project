@@ -55,7 +55,6 @@ FUNCTION_BLOCK R3ManualMode
 		RoboArm.Jog:=FALSE;
 		//go out
 		MainState := STATE_READY;
-		ControlSelector:=None;
 	END_IF
 	
 		

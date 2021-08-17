@@ -56,7 +56,7 @@ PROGRAM _CYCLIC
 		State:= STATE_READY;
 	END_IF
 	
-	IF CoordinateSystem = 1 THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
+	IF CoordinateSystem THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
 		ManualControlPara.CoordinateSystem := 9;
 		//SemiAutoControlPara.CoordinateSystem := 9;
 		//SemiAutoControlPara.UpdatePending := TRUE;
@@ -64,6 +64,12 @@ PROGRAM _CYCLIC
 		ManualControlPara.CoordinateSystem := 0;
 		//SemiAutoControlPara.CoordinateSystem := 0;
 		//SemiAutoControlPara.UpdatePending := TRUE;
+	END_IF
+	
+	IF PathSystem THEN
+		SemiAutoControlPara.PathMode := PathSystem;
+		SemiAutoControlPara.UpdatePending :=TRUE;
+		// TODO Auto too
 	END_IF
 	
 	CASE State OF
