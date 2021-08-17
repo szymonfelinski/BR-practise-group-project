@@ -2,7 +2,7 @@
 <tmx version="1.4">
   <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
     <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
-    <prop type="x-BR-TS:Namespace">IAT/ManualModePage</prop>
+    <prop type="x-BR-TS:Namespace">IAT/ControlPage</prop>
   </header>
   <body>
     <tu tuid="ManualContol.maxVelocity">
@@ -65,6 +65,22 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Manual control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HalfManualControl.TCPLabel">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie za pomocą współrzędnych końcówki</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Controling with tip coordinates</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HalfManualControl.ACPLabel">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie za pomocą współrzednych poszczególnych osi</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Controling with indyidual axes coordinates</seg>
       </tuv>
     </tu>
   </body>
