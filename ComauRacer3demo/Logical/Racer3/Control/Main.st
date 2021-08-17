@@ -281,5 +281,7 @@ PROGRAM _EXIT
 	(* Insert code here *)
 	RoboArm6Axis.Power := FALSE;
 	RoboArm6Axis.Enable := FALSE;
+	
+	RoboArm6Axis(); //this will free up MpLink (possibly)
 END_PROGRAM
 
