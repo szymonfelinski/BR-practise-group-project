@@ -257,6 +257,8 @@
         <Variable Name="changeModePending" />
         <Variable Name="CoordinateSystem" />
         <Variable Name="NOTCoordinateSystem" />
+        <Variable Name="PathSystem" />
+        <Variable Name="ModeSystem" />
       </Task>
     </Module>
   </DefaultView>
