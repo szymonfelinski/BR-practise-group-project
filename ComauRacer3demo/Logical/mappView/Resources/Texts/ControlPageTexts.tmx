@@ -83,5 +83,21 @@
         <seg>Controling with indyidual axes coordinates</seg>
       </tuv>
     </tu>
+    <tu tuid="Control.Homing">
+      <tuv xml:lang="pl">
+        <seg>Homing?</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Homing</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Control.Calibration">
+      <tuv xml:lang="pl">
+        <seg>Kalibracja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Calibration</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

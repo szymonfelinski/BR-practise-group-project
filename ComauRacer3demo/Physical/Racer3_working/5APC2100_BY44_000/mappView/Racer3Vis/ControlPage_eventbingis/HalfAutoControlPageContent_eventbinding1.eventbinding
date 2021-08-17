@@ -91,5 +91,45 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnLeft3HalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:PathSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnRigh3HalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:PathSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnLeft4HalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ModeSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnRigh4HalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ModeSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
