@@ -26,5 +26,121 @@
 <Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q1" attribute="value" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" attribute="value" />
 </Binding>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ4HalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ3HalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2HalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ5HalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ6HalfAutoControlContent" attribute="enable" />
+</Binding>
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[0]" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoQ1HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoQ2HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoQ3HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoQ4HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoQ5HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoQ6HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.X" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoHalfAuto7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Y" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoHalfAuto8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Z" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoHalfAuto9" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.A" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoHalfAuto10" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.B" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoHalfAuto11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.C" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoHalfAuto12" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPAHalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPCHalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPZHalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPBHalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPXHalfAutoControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPYHalfAutoControlContent" attribute="enable" />
+</Binding>
 </Bindings>
 </BindingsSet>
