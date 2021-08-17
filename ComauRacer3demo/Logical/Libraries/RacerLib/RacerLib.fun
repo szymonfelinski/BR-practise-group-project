@@ -6,24 +6,25 @@
 	VAR_IN_OUT
 		RoboArm : MpRoboArm6Axis;
 		RoboArmPara : MpRoboArm6AxisParType;
+		MainState : R3StateMachineEnum;
+		ControlSelector : ControlSelectEnum;
 	END_VAR
 	VAR
 		j : USINT;
 		JogVelocityActual : REAL;
 	END_VAR
-	VAR_IN_OUT
-		MainState : R3StateMachineEnum;
-		ControlSelector : ControlSelectEnum;
-	END_VAR
 END_FUNCTION_BLOCK
 
-{REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+{REDUND_ERROR} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_IN_OUT
 		SemiAutoModePara : R3SemiAutoModeType;
 		RoboArm : MpRoboArm6Axis;
 		RoboArmPara : MpRoboArm6AxisParType;
 		MainState : R3StateMachineEnum;
 		ControlSelector : ControlSelectEnum;
+	END_VAR
+	VAR
+		WeNeedToGoBack : BOOL;
 	END_VAR
 END_FUNCTION_BLOCK
 
@@ -35,7 +36,7 @@ END_FUNCTION_BLOCK
 	END_VAR
 	VAR
 		JogVelocityActual : {REDUND_UNREPLICABLE} REAL;
-		j : USINT;
+		j : {REDUND_UNREPLICABLE} USINT;
 	END_VAR
 END_FUNCTION_BLOCK
 
