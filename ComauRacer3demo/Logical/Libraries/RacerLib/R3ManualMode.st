@@ -4,11 +4,9 @@ FUNCTION_BLOCK R3ManualMode
 	
 	IF ManualModePara.Direction = 1 THEN // set actual axis velocity based on which direction it's set to be moved
 		JogVelocityActual := ManualModePara.JogVelocity;
-	END_IF
-	IF ManualModePara.Direction = -1 THEN
+	ELSIF ManualModePara.Direction = -1 THEN
 		JogVelocityActual := -1 * ManualModePara.JogVelocity;
-	END_IF
-	IF  ManualModePara.Direction = 0 THEN
+	ELSIF  ManualModePara.Direction = 0 THEN
 		JogVelocityActual := 0;
 	END_IF
 	

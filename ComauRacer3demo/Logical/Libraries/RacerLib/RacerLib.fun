@@ -27,7 +27,16 @@ END_FUNCTION_BLOCK
 	END_VAR
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK R3CalibrationMode
+{REDUND_UNREPLICABLE} FUNCTION_BLOCK R3CalibrationMode
+	VAR_IN_OUT
+		CalibrationPara : R3CalibrationType;
+		RoboArm : MpRoboArm6Axis;
+		RoboArmPara : MpRoboArm6AxisParType;
+	END_VAR
+	VAR
+		JogVelocityActual : {REDUND_UNREPLICABLE} REAL;
+		j : USINT;
+	END_VAR
 END_FUNCTION_BLOCK
 
 {REDUND_ERROR} FUNCTION checkAxisLimits : BOOL (*returns TRUE if semi-automatic path is containted in axis limits, check is for relative positions*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
