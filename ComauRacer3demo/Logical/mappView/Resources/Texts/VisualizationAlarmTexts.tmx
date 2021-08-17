@@ -51,5 +51,37 @@
         <seg>Previous</seg>
       </tuv>
     </tu>
+    <tu tuid="AuditListOldText">
+      <tuv xml:lang="pl">
+        <seg>Stary</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Old</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AuditListNewText">
+      <tuv xml:lang="pl">
+        <seg>Nowy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AuditListTypeText">
+      <tuv xml:lang="pl">
+        <seg>Typ</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Type</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AuditButtonExportText">
+      <tuv xml:lang="pl">
+        <seg>Eksportuj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Export</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

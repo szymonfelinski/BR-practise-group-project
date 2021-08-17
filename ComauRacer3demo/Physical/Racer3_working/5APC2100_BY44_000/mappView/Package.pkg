@@ -6,5 +6,8 @@
     <Object Type="Package">Racer3Vis</Object>
     <Object Type="Package">Package</Object>
     <Object Type="File">DialogNameExistContent.eventbinding</Object>
+    <Object Type="File">Visualizat.vis</Object>
+    <Object Type="File">HalfAutoControlPageContent.binding</Object>
+    <Object Type="File">CalibrationPageContent.eventbinding</Object>
   </Objects>
 </Package>

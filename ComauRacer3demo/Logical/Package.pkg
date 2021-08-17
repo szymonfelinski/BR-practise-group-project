@@ -9,5 +9,7 @@
     <Object Type="Package">Racer3</Object>
     <Object Type="File">Project.language</Object>
     <Object Type="Package">FileManager</Object>
+    <Object Type="Program" Language="IEC">Auditing</Object>
+    <Object Type="Program" Language="IEC">Alarm</Object>
   </Objects>
 </Package>

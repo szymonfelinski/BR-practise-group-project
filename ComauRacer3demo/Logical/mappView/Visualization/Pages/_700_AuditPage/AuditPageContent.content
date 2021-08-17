@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="AuditPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft1AuditContent" top="86" left="10" width="80" height="80" zIndex="0" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft2AuditContent" top="193" left="10" width="80" height="80" zIndex="1" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft3AuditContent" top="300" left="10" width="80" height="80" zIndex="2" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft4AuditContent" top="407" left="10" width="80" height="80" zIndex="3" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditContent" top="86" left="1190" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh2AuditContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh3AuditContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh4AuditContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.AuditList" id="AuditList1" top="20" left="120" width="1040" height="660" zIndex="8" itemsPerPage="12">
+    <Widget xsi:type="widgets.brease.AuditList" id="LstAudit" top="20" left="140" width="1000" height="660" zIndex="0" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
       <Widgets>
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem1" zIndex="0" columnType="timestamp" text="AuditListItem1" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem2" zIndex="1" text="AuditListItem2" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem3" zIndex="2" columnType="old" text="AuditListItem3" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem4" zIndex="3" columnType="new" text="AuditListItem4" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="AuditListItem5" zIndex="4" columnType="id" text="AuditListItem5" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditTimestamp" width="240" zIndex="0" columnType="timestamp" text="$IAT/AlarmListItemTimestampText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditMsg" width="460" zIndex="1" text="$IAT/AlarmListItemMessageText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditType" width="100" zIndex="2" columnType="type" text="$IAT/AuditListTypeText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditNew" width="100" zIndex="3" columnType="new" text="$IAT/AuditListNewText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditOld" width="100" zIndex="4" columnType="old" text="$IAT/AuditListOldText" />
       </Widgets>
     </Widget>
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1AuditContent" top="150" left="10" width="80" height="80" zIndex="1" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft2AuditContent" top="257" left="10" width="80" height="80" zIndex="2" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft3AuditContent" top="364" left="10" width="80" height="80" zIndex="3" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4AuditContent" top="471" left="10" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditExport" top="150" left="1190" width="80" height="80" zIndex="5" text="$IAT/AuditButtonExportText" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh2AuditContent" top="257" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh3AuditContent" top="364" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4AuditContentAcknowledgeAll" top="471" left="1190" width="80" height="80" zIndex="8" margin="0px" />
   </Widgets>
 </Content>

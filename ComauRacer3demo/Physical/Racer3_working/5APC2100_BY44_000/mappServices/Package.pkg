@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File">Config.mpfilemanager</Object>
     <Object Type="File">Config_1.mpfilemanagerui</Object>
+    <Object Type="File">Config.mpaudittrail</Object>
+    <Object Type="File">Config_1.mpalarmxcore</Object>
   </Objects>
 </Package>

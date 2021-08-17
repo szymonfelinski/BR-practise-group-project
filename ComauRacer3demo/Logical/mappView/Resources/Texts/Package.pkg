@@ -5,5 +5,7 @@
     <Object Type="File">VisualizationLoginTexts.tmx</Object>
     <Object Type="File">VisualizationAlarmTexts.tmx</Object>
     <Object Type="File">VisualizationDocsBrowserTexts.tmx</Object>
+    <Object Type="File">AlarmTexts.tmx</Object>
+    <Object Type="File">ControlPageTexts.tmx</Object>
   </Objects>
 </Package>

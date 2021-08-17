@@ -1,0 +1,4 @@
+VAR
+	TriggerAlarm : BOOL;
+	MpAlarmXCoreObject : MpAlarmXCore;
+END_VAR
