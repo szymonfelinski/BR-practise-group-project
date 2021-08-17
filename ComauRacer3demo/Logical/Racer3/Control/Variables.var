@@ -7,7 +7,7 @@ VAR
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
 	i : USINT;
-	Calibration : CalibrationType;
+	Calibration : R3CalibrationMainType; (*Main calibration variable.*)
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;
 	MpAlarmXCore_Control : MpAlarmXCore;
