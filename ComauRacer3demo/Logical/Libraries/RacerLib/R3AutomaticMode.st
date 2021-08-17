@@ -33,7 +33,7 @@ FUNCTION_BLOCK R3AutomaticMode
 			
 		autoSTATE_LOAD: //this state loads a program specified in "ProgramName"
 			
-			AutoMode.Cmds.LoadProgram(AxesGroup := AxesGroup, Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := mcLOADPRG_PROGRAM);
+			AutoMode.Cmds.LoadProgram(AxesGroup := ADR(AxesGroup), Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := mcLOADPRG_PROGRAM);
 			
 			IF AutoMode.Cmds.LoadProgram.Done THEN
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
@@ -52,7 +52,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				UnloadMode := mcUNLOADPRG_PROGRAM;
 			END_IF
 						
-			AutoMode.Cmds.UnloadProgram(AxesGroup := AxesGroup, Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := UnloadMode);
+			AutoMode.Cmds.UnloadProgram(AxesGroup := ADR(AxesGroup), Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := UnloadMode);
 			
 			IF AutoMode.Cmds.UnloadProgram.Done THEN
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
@@ -64,39 +64,50 @@ FUNCTION_BLOCK R3AutomaticMode
 			
 			
 		autoSTATE_EXECUTE: //this state executes a program specified in "ProgramName", if program isn't loaded it will automagically load it
+			IF NOT AutoMode.Parameters.Abort THEN
+				
+			AutoMode.Cmds.ExecuteProgram(AxesGroup := ADR(AxesGroup), Execute := TRUE, Name := AutoMode.Parameters.ProgramName);
 			
-		//	IF AutoMode.Parameters.Continuous AND RoboArm.MoveDone THEN
-		//		RoboArm.MoveProgram := FALSE;
-		//		RoboArm.MoveProgram := TRUE;
-		//	END_IF
-						
-			AutoMode.Cmds.ExecuteProgram(AxesGroup := AxesGroup, Execute := TRUE, Name := AutoMode.Parameters.ProgramName);
-			
-		(*	IF AutoMode.Cmds.ExecuteProgram.Done THEN
+			IF AutoMode.Cmds.ExecuteProgram.Done THEN
 				AutoMode.Parameters.Execute := FALSE;
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
 			ELSIF AutoMode.Cmds.ExecuteProgram.Error THEN
 				AutoMode.Info.ErrorID := AutoMode.Cmds.ExecuteProgram.ErrorID;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
 			END_IF
-			RoboArmPara.ProgramName := AutoMode.Parameters.ProgramName;
+			(*RoboArmPara.ProgramName := AutoMode.Parameters.ProgramName;
 			RoboArm.Update := TRUE;
 			RoboArm.MoveProgram := TRUE;
 			IF RoboArm.MoveDone THEN
 				RoboArm.MoveProgram := FALSE;
 			END_IF*)
+			ELSE
+				AutoMode.Parameters.Execute := FALSE;
+				AutoMode.Info.CurrentState := autoSTATE_WAIT;
+			END_IF
 						
-		autoSTATE_DONE: //this state is a goto for load/unload/execute when they're done
+		autoSTATE_DONE: //this state is a goto for execute when it's done
 			
-			AutoMode.Info.CurrentState := autoSTATE_WAIT;
+			IF NOT AutoMode.Parameters.Continuous THEN //if Continuous isn't set, return to idle
+				AutoMode.Parameters.Execute := FALSE;
+				AutoMode.Info.CurrentState := autoSTATE_WAIT;
+			ELSE //do it as long as Continuous is set or until Abort isn't set
+				AutoMode.Parameters.Execute := TRUE;
+				AutoMode.Info.CurrentState := autoSTATE_EXECUTE;
+			END_IF
+				//AutoMode.Info.CurrentState := autoSTATE_WAIT;
+			AutoMode.Cmds.UnloadProgram(Execute := FALSE); //just a precaution
+			AutoMode.Cmds.LoadProgram(Execute := FALSE);
+			AutoMode.Cmds.ExecuteProgram(Execute := FALSE);
 			
-		autoSTATE_ERROR:
+		autoSTATE_ERROR: //error state, ErrorReset is reset automatically
 			IF AutoMode.Parameters.ErrorReset THEN
 				AutoMode.Info.Error := NO_ERROR;
 				AutoMode.Info.ErrorID := 0;
 			END_IF
 			
 			IF AutoMode.Info.Error = NO_ERROR THEN
+				AutoMode.Parameters.ErrorReset := FALSE;
 				AutoMode.Info.CurrentState := autoSTATE_WAIT;
 			END_IF
 			
