@@ -1,4 +1,4 @@
-
+(*
 TYPE
 	ControlSelectEnum : 
 		(
@@ -35,3 +35,4 @@ TYPE
 		STATE_DONE
 		);
 END_TYPE
+*)

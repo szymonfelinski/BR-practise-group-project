@@ -1,8 +1,0 @@
-VAR
-	MpAuditTrail_0 : MpAuditTrail;
-	TriggerEvent : BOOL;
-	TypeVar : WSTRING[100];
-	MessageVar : WSTRING[100];
-	CommentVar : WSTRING[100];
-	CustomEventStatus : DINT;
-END_VAR

@@ -7,6 +7,7 @@ TYPE
 		JogVelocity : REAL; (*Stores the velocity of axis*)
 		PathLimits : McJogPathLimitsType; (*Stores set limits of acceleration and deceleration, velocity and jerk*)
 		ActivateMove : BOOL; (*Enables or disables current move execution*)
+		ExitManual : BOOL; (*Exits Manual Mode on True*)
 	END_STRUCT;
 	R3AxisBtnType : 	STRUCT  (*Global Coordinate System Select button*)
 		Q1 : BOOL;
@@ -57,5 +58,35 @@ TYPE
 		Axis5Angle : LREAL; (*Angle of axis 5 to be set*)
 		Axis5Return : BOOL; (*Flag to be set by a button to restore axis 5's position after calibrating axis 6*)
 		Axis5Restored : BOOL; (*Axis 5 has been restored to previous position*)
+	R3SemiAutoEnumType : 
+		(
+		INIT := 0,
+		START := 1,
+		UPDATE := 2,
+		GO := 3
+		);
+	R3SemiAutoModeType : 	STRUCT 
+		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
+		Flag : BOOL; (*Flag between READY and SEMIAUTO*)
+		Mode : BOOL; (*Switches between relative and absolute modes, 1 for Relative, 0 for Absolute*)
+		UpdatePending : BOOL; (*if UpdatePending then updates before starting move*)
+		State : R3SemiAutoEnumType; (*state selector for state machine*)
+		ModeForThisMove : BOOL; (*makes sure that switching mode in time of moving doesnt bugs out move*)
+		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
+	END_STRUCT;
+	ControlSelectEnum : 
+		(
+		ManualJog := 1,
+		SemiAutomatic := 2,
+		Automatic := 3,
+		None := 0
+		);
+	R3AxisDistanceType : 	STRUCT  (*todo axis position for absolute*)
+		Q2 : REAL;
+		Q3 : REAL;
+		Q4 : REAL;
+		Q5 : REAL;
+		Q6 : REAL;
+		Q1 : REAL;
 	END_STRUCT;
 END_TYPE

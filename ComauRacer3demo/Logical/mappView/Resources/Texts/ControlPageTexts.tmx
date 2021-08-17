@@ -2,15 +2,15 @@
 <tmx version="1.4">
   <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
     <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
-    <prop type="x-BR-TS:Namespace">IAT</prop>
+    <prop type="x-BR-TS:Namespace">IAT/ManualModePage</prop>
   </header>
   <body>
-    <tu tuid="AlarmListItemMessageText">
+    <tu tuid="ManualContol.maxVelocity">
       <tuv xml:lang="pl">
-        <seg>Komunikat</seg>
+        <seg>Maksymalna prędkość</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Message</seg>
+        <seg>Max velocity</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>Servus Welt!</seg>
@@ -19,68 +19,52 @@
         <seg>Bonjour tout le monde!</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListItemTimestampText">
+    <tu tuid="ManualControl.maxAcceleration">
       <tuv xml:lang="pl">
-        <seg>Data i czas</seg>
+        <seg>Maksymalne przyspieszenie</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Date and time</seg>
+        <seg>Max acceleration</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListItemStateText">
+    <tu tuid="ManualControl.maxDecceleration">
       <tuv xml:lang="pl">
-        <seg>Stan</seg>
+        <seg>Maksymalne opóźnienie</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>State</seg>
+        <seg>Max decceleration</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListNextText">
+    <tu tuid="ManualControl.JogVelocity">
       <tuv xml:lang="pl">
-        <seg>Następna</seg>
+        <seg>Ustaw prędkość poruszania</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Next</seg>
+        <seg>Set velocity of movement</seg>
       </tuv>
     </tu>
-    <tu tuid="AlarmListPreviousText">
+    <tu tuid="ControlNavigation.HalfAuto">
       <tuv xml:lang="pl">
-        <seg>Poprzednia</seg>
+        <seg>Sterowanie półautomatyczne</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Previous</seg>
+        <seg>Semi-auto control</seg>
       </tuv>
     </tu>
-    <tu tuid="AuditListOldText">
+    <tu tuid="ControlNaviogation.Auto">
       <tuv xml:lang="pl">
-        <seg>Stary</seg>
+        <seg>Sterowanie automatyczne</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Old</seg>
+        <seg>Auto control</seg>
       </tuv>
     </tu>
-    <tu tuid="AuditListNewText">
+    <tu tuid="ControlNavigation..Manual">
       <tuv xml:lang="pl">
-        <seg>Nowy</seg>
+        <seg>Sterowanie ręczne</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>New</seg>
-      </tuv>
-    </tu>
-    <tu tuid="AuditListTypeText">
-      <tuv xml:lang="pl">
-        <seg>Typ</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Type</seg>
-      </tuv>
-    </tu>
-    <tu tuid="AuditButtonExportText">
-      <tuv xml:lang="pl">
-        <seg>Eksportuj</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Export</seg>
+        <seg>Manual control</seg>
       </tuv>
     </tu>
   </body>

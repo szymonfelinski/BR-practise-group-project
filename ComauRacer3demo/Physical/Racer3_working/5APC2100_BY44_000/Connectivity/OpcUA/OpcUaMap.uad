@@ -2,7 +2,18 @@
 <?AutomationStudio FileVersion="4.9"?>
 <OpcUaSource FileVersion="7" ArVersion="C4.83">
   <Aliases>
-    <ACLAliases />
+    <ACLAliases>
+      <ACL Id="1">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x005F" />
+        <ACE RoleId="3" RoleName="Operator" Access="0x005F" />
+        <ACE RoleId="1" RoleName="Administrators" Access="0x017F" />
+      </ACL>
+      <ACL Id="2">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x005F" />
+        <ACE RoleId="1" RoleName="Administrators" Access="0x01FF" />
+        <ACE RoleId="3" RoleName="Operator" Access="0x007F" />
+      </ACL>
+    </ACLAliases>
     <EURangeViolationAliases />
     <EURangesAliases />
     <EngineeringUnitAliases />
@@ -191,7 +202,6 @@
             <Variable Name="Q6" />
           </Variable>
           <Variable Name="CoordinateSystem" />
-          <Variable Name="Direction" />
           <Variable Name="JogVelocity" />
           <Variable Name="PathLimits">
             <Variable Name="Velocity" />
@@ -200,6 +210,7 @@
             <Variable Name="Jerk" />
           </Variable>
           <Variable Name="ActivateMove" />
+          <Variable Name="Direction" />
         </Variable>
         <Variable Name="Power" />
         <Variable Name="RoboArm6AxisPara">
@@ -236,6 +247,20 @@
           <Variable Name="ManualMoveType" />
         </Variable>
         <Variable Name="State" />
+        <Variable Name="SemiAutoControlPara">
+          <Variable Name="AxisDistance">
+            <Variable Name="Q2" />
+            <Variable Name="Q3" />
+            <Variable Name="Q4" />
+            <Variable Name="Q5" />
+            <Variable Name="Q6" />
+            <Variable Name="Q1" />
+          </Variable>
+          <Variable Name="Flag" />
+        </Variable>
+        <Variable Name="Stop" />
+        <Variable Name="changeModePending" />
+        <Variable Name="CoordinateSystem" />
       </Task>
     </Module>
   </DefaultView>

@@ -6,5 +6,6 @@
     <Object Type="File">AxesR3.axis</Object>
     <Object Type="File">MechSysR3.mechanicalsystem</Object>
     <Object Type="File">AxGrpFtrR3.axesgroupfeature</Object>
+    <Object Type="File">Workspace.workspace</Object>
   </Objects>
 </Package>

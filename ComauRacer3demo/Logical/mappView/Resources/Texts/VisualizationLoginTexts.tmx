@@ -69,5 +69,13 @@
         <seg>Please Login</seg>
       </tuv>
     </tu>
+    <tu tuid="LoginAuthorisationFailed">
+      <tuv xml:lang="pl">
+        <seg>Autoryzacja nie powiodła się</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Authorisation failed</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

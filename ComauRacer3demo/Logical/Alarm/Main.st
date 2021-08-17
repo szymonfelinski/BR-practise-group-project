@@ -1,19 +1,26 @@
 
 PROGRAM _INIT
 	
-	MpAlarmXCore_0(MpLink := ADR(gAlarmXCore) , Enable := TRUE);
+	MpAlarmXCoreObject(MpLink := ADR(gAlarmXCoreLink) , Enable := FALSE);
+
 	 
 END_PROGRAM
 
 PROGRAM _CYCLIC
 	
-	MpAlarmXCore_0();
-	 
+	MpAlarmXCoreObject(Enable := TRUE);
+	
+	IF(TriggerAlarm)THEN
+		MpAlarmXSet(MpLink := gAlarmXCoreLink, Name := 'AlarmTest');
+		TriggerAlarm := FALSE;
+	END_IF
+	
+		
 END_PROGRAM
 
 PROGRAM _EXIT
 	
-	MpAlarmXCore_0(MpLink := ADR(gAlarmXCore) , Enable := FALSE);
+	MpAlarmXCoreObject(Enable := FALSE);
 	 
 END_PROGRAM
 

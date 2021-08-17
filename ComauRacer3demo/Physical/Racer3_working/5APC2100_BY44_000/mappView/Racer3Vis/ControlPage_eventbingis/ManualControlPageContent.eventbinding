@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ManualControlPageContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="ManualControlPageContent.btnRigh3ManualControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh3ManualControlContent" event="MouseDown" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh3ManualControlContent" event="MouseUp" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnLeft3ManualControlContent.MouseUp">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft3ManualControlContent" event="MouseUp" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnLeft3ManualControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft3ManualControlContent" event="MouseDown" />
+      <EventHandler condition="">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="-1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnLeft3ManualControlContent.DisabledClick">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft3ManualControlContent" event="MouseUp" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft3ManualControlContent" event="MouseDown" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_3">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh3ManualControlContent" event="MouseDown" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh3ManualControlContent" event="MouseUp" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnNavigationAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnNavigationAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnNavigationHalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnNavigationHalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnNavigationManualControlContent.Click">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnNavigationManualControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnRigh2ManualControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh2ManualControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ManualControlPageContent.btnLeft2ManualControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>
