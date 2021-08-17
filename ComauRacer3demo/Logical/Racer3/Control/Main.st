@@ -65,7 +65,8 @@ PROGRAM _CYCLIC
 					RoboArm6Axis.Home := FALSE;
 					State := STATE_READY;
 				ELSE
-					Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, HomingMode := Calibration.Para.HomingModeEnum);
+					RoboArm6Axis.Home := TRUE;
+					//Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, HomingMode := Calibration.Para.HomingModeEnum);
 					(*IF Calibration.Cmds.GroupHome.Done THEN
 						State := STATE_READY;
 					END_IF*)

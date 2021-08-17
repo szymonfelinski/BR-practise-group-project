@@ -18,6 +18,10 @@ FUNCTION_BLOCK R3CalibrationMode
 	CASE CalibrationPara.CalibrationState OF
 		STATE_START:
 			
+			IF RoboArm.MoveDirect THEN
+				RoboArm.MoveDirect := FALSE;
+			END_IF
+						
 			RoboArmPara.Jog.CoordSystem := CalibrationPara.CalibrationModePara.CoordinateSystem;
 			RoboArmPara.Jog.PathLimits := CalibrationPara.CalibrationModePara.PathLimits;
 			
@@ -26,6 +30,10 @@ FUNCTION_BLOCK R3CalibrationMode
 				FOR j := 0 TO 5 BY 1 DO //set every jog velocity to 0
 					RoboArmPara.Jog.Velocity[j] := 0.0;
 				END_FOR;
+			END_IF
+			
+			IF CalibrationPara.AxisSaveBtn THEN //if AxisSaveBtn flag is set, reset it
+				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
 			
 			IF CalibrationPara.CalibrationModePara.AxisButton.Q1 THEN // if a button is pressed, write corresponding velocity to the jog velocity array
@@ -64,9 +72,10 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[0] := TRUE;
 				RoboArm.Jog := FALSE;
+				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
 			
-			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q1 THEN
+			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q1 THEN //go back if button is released
 				CalibrationPara.CalibrationState := STATE_START;
 			END_IF
 			
@@ -83,6 +92,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[1] := TRUE;
 				RoboArm.Jog := FALSE;
+				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
 			
 			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q2 THEN
@@ -101,6 +111,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[2] := TRUE;
 				RoboArm.Jog := FALSE;
+				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
 			
 			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q3 THEN
@@ -119,6 +130,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[3] := TRUE;
 				RoboArm.Jog := FALSE;
+				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
 			
 			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q4 THEN
@@ -137,6 +149,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[4] := TRUE;
 				RoboArm.Jog := FALSE;
+				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
 			
 			IF NOT CalibrationPara.CalibrationModePara.AxisButton.Q5 THEN
