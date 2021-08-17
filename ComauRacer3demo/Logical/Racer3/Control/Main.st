@@ -4,7 +4,7 @@ PROGRAM _INIT
 	RoboArm6Axis.Enable := TRUE;
 
 	RoboArm6Axis.Override  := 100.0;
-	RoboArm6AxisPara.ProgramName := 'Robotic.st';    //File stored on FileDevice
+	RoboArm6AxisPara.ProgramName := 'Point.st';    //File stored on FileDevice, default program (Point.st moves TCP to -200, 300, 800)
 	RoboArm6Axis.MpLink     := ADR(gAxesGroupRacer3);
 	RoboArm6Axis.Parameters := ADR(RoboArm6AxisPara);
 	RoboArm6AxisPara.Acceleration := 1000.0;
@@ -163,10 +163,14 @@ PROGRAM _CYCLIC
 		STATE_AUTOMATIC:
 			txt_State_out:="AutoControl";
 			
-			AutomaticModePara.Parameters.ProgramName := 'Point.st';
+			AutomaticModePara.Parameters.Continuous;
+			
+			AutomaticModePara.Parameters.ProgramName;
 			//AutomaticModePara.Parameters.Execute := TRUE;
-			AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
-			AutomaticMode(RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, AutoMode := AutomaticModePara);
+			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
+			AutomaticMode(RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
+			
+			//AutomaticModePara.Cmds.ExecuteProgram(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Name := AutomaticModePara.Parameters.ProgramName);
 		
 		STATE_CALIBRATION:
 			

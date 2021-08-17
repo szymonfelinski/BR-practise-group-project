@@ -33,7 +33,7 @@ FUNCTION_BLOCK R3AutomaticMode
 			
 		autoSTATE_LOAD: //this state loads a program specified in "ProgramName"
 			
-			AutoMode.Cmds.LoadProgram(AxesGroup := ADR(AutoMode.Info.AxesGroup), Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := mcLOADPRG_PROGRAM);
+			AutoMode.Cmds.LoadProgram(AxesGroup := AxesGroup, Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := mcLOADPRG_PROGRAM);
 			
 			IF AutoMode.Cmds.LoadProgram.Done THEN
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
@@ -52,7 +52,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				UnloadMode := mcUNLOADPRG_PROGRAM;
 			END_IF
 						
-			AutoMode.Cmds.UnloadProgram(AxesGroup := ADR(AutoMode.Info.AxesGroup), Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := UnloadMode);
+			AutoMode.Cmds.UnloadProgram(AxesGroup := AxesGroup, Execute := TRUE, Name := AutoMode.Parameters.ProgramName, Mode := UnloadMode);
 			
 			IF AutoMode.Cmds.UnloadProgram.Done THEN
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
@@ -70,7 +70,7 @@ FUNCTION_BLOCK R3AutomaticMode
 		//		RoboArm.MoveProgram := TRUE;
 		//	END_IF
 						
-			AutoMode.Cmds.ExecuteProgram(AxesGroup := ADR(AutoMode.Info.AxesGroup), Execute := TRUE, Name := AutoMode.Parameters.ProgramName);
+			AutoMode.Cmds.ExecuteProgram(AxesGroup := AxesGroup, Execute := TRUE, Name := AutoMode.Parameters.ProgramName);
 			
 		(*	IF AutoMode.Cmds.ExecuteProgram.Done THEN
 				AutoMode.Parameters.Execute := FALSE;

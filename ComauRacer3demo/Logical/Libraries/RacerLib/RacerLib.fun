@@ -57,6 +57,9 @@ END_FUNCTION
 		AutoMode : R3AutomaticModeType;
 	END_VAR
 	VAR
-		UnloadMode : McUnloadProgramModeEnum;
+		UnloadMode : {REDUND_UNREPLICABLE} McUnloadProgramModeEnum;
+	END_VAR
+	VAR_INPUT
+		AxesGroup : REFERENCE TO USINT;
 	END_VAR
 END_FUNCTION_BLOCK
