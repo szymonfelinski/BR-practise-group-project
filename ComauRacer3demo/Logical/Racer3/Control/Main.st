@@ -133,13 +133,14 @@ PROGRAM _CYCLIC
 			
 			IF ControlSelector = ManualJog THEN
 				State := STATE_MANUAL_CONTROL;
-			END_IF
-			IF ControlSelector = SemiAutomatic THEN
+			ELSIF ControlSelector = SemiAutomatic THEN
 				State := STATE_SEMI_AUTOMATIC;
+			ELSIF ControlSelector = Automatic THEN
+				State := STATE_AUTOMATIC;
 			END_IF
-			
+						
 			ControlSelector:=changeModePending;
-			// TODO think what happend when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
+			// TODO think what happens when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
 			// maybe do something similar to exit mode in manual
 		
 		STATE_MANUAL_CONTROL:
@@ -162,7 +163,10 @@ PROGRAM _CYCLIC
 		STATE_AUTOMATIC:
 			txt_State_out:="AutoControl";
 			
-			
+			AutomaticModePara.Parameters.ProgramName := 'Point.st';
+			//AutomaticModePara.Parameters.Execute := TRUE;
+			AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
+			AutomaticMode(RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, AutoMode := AutomaticModePara);
 		
 		STATE_CALIBRATION:
 			

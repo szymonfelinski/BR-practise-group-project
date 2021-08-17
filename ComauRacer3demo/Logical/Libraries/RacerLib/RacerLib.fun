@@ -50,9 +50,13 @@ END_FUNCTION_BLOCK
 	END_VAR
 END_FUNCTION
 
-{REDUND_UNREPLICABLE} FUNCTION_BLOCK R3AutomaticMode
+{REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3AutomaticMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_IN_OUT
 		RoboArm : MpRoboArm6Axis;
 		RoboArmPara : MpRoboArm6AxisParType;
+		AutoMode : R3AutomaticModeType;
+	END_VAR
+	VAR
+		UnloadMode : McUnloadProgramModeEnum;
 	END_VAR
 END_FUNCTION_BLOCK

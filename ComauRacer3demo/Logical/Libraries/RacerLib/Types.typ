@@ -1,9 +1,48 @@
 
 TYPE
+	R3AutomaticModeErrorEnum : 
+		(
+		LOAD_PROGRAM_ERROR := 1,
+		UNLOAD_PROGRAM_ERROR := 2,
+		EXECUTE_PROGRAM_ERROR := 3,
+		NO_ERROR := 0
+		);
+	R3AutomaticModeCmds : 	STRUCT  (*Automatic mode commands*)
+		LoadProgram : MC_BR_LoadProgram;
+		ExecuteProgram : MC_BR_MoveProgram;
+		UnloadProgram : MC_BR_UnloadProgram;
+	END_STRUCT;
+	R3AutomaticModeState : 
+		( (*Automatic mode state machine*)
+		autoSTATE_LOAD, (*loading program*)
+		autoSTATE_WAIT, (*waiting for instruction*)
+		autoSTATE_EXECUTE, (*executing program*)
+		autoSTATE_DONE, (*execution done*)
+		autoSTATE_ERROR, (*error state*)
+		autoSTATE_UNLOAD (*Unloading program state*)
+		);
 	R3AutomaticModePara : 	STRUCT  (*Automatic mode parameters*)
+		ProgramName : STRING[260]; (*Program name to load/execute*)
+		Load : BOOL;
+		Execute : BOOL;
+		Unload : BOOL;
+		ErrorReset : BOOL; (*Resets errors*)
+		Abort : BOOL; (*Aborts execution.*)
+		UnloadAll : BOOL; (*tells the program to unload all programs from memory*)
+		Interrupt : BOOL;
+		Continue : BOOL;
+		Continuous : BOOL;
+	END_STRUCT;
+	R3AutomaticModeInfo : 	STRUCT 
+		CurrentState : R3AutomaticModeState; (*Current automode state*)
+		AxesGroup : McAxesGroupType; (*AxesGroup to execute program on*)
+		Error : R3AutomaticModeErrorEnum;
+		ErrorID : DINT;
 	END_STRUCT;
 	R3AutomaticModeType : 	STRUCT  (*Automatic mode main structure*)
 		Parameters : R3AutomaticModePara;
+		Info : R3AutomaticModeInfo;
+		Cmds : R3AutomaticModeCmds;
 	END_STRUCT;
 	R3ManualModeType : 	STRUCT  (*Manual mode type*)
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
