@@ -9,6 +9,7 @@ PROGRAM _INIT
 	(* define of device names *) 
 	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[0] := 'UserPart';
 	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[1] := 'USB';	
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[2] := 'CNC_PrgDir';	
 	
 	cmd.MpFileManagerUI_0();
 END_PROGRAM

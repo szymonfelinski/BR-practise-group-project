@@ -118,5 +118,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnDevice3.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice3" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

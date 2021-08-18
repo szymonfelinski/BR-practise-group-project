@@ -24,5 +24,6 @@
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="100" width="1080" zIndex="11" fontSize="19px" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice3" top="300" left="10" width="80" height="80" zIndex="12" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device3" />
   </Widgets>
 </Content>

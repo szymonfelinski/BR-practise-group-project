@@ -1,4 +1,6 @@
 VAR
+	FileMgmtConfig : MpFileManagerConfigType;
+	FileMgmt : MpFileManagerConfig;
 	AutomaticMode : R3AutomaticMode; (*automatic mode Fb*)
 	AutomaticModePara : R3AutomaticModeType; (*Main automatic mode variable*)
 	RoboArm6AxisPara : MpRoboArm6AxisParType; (*This variable defines parameters of the robot*)
