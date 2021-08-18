@@ -49,5 +49,53 @@
 <Source xsi:type="opcUa" refId="::Control:ManualControlPara.JogVelocity" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="NumericInput1" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[0]" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoQ1HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoQ2HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoQ3HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoQ4HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoQ5HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoQ6HalfAuto" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.X" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto7" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Y" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto8" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Z" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto9" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.A" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto10" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.B" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto11" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.C" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto12" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

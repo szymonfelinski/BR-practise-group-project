@@ -343,6 +343,9 @@
           <Variable Name="SelectedRow" />
         </Variable>
       </Task>
+      <Task Name="Auditing">
+        <Variable Name="ClearBufferBool" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

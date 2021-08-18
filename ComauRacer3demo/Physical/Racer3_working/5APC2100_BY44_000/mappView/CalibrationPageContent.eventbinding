@@ -41,16 +41,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="CalibrationPageContent.btnRigh2CalibrationContent.MouseUp">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnRigh2CalibrationContent" event="MouseUp" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.AxisSaveBtn">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="CalibrationPageContent.btnRigh3CalibrationContent.MouseDown">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnRigh3CalibrationContent" event="MouseDown" />
       <EventHandler>

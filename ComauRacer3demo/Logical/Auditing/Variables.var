@@ -8,4 +8,5 @@ VAR
 	NewValue : LREAL;
 	OldValue : LREAL;
 	Identifier : STRING[100];
+	ClearBufferBool : BOOL;
 END_VAR
