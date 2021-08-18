@@ -56,13 +56,5 @@
         </Group>
       </Group>
     </Group>
-    <Group ID="FileManagerRestrict">
-      <Group ID="0">
-        <Property ID="Functionality" Value="CNCEditor" />
-      </Group>
-      <Group ID="1">
-        <Property ID="Functionality" Value="TextEditor" />
-      </Group>
-    </Group>
   </Element>
 </Configuration>

@@ -20,6 +20,8 @@ PROGRAM _INIT
 	State := STATE_INIT;
 	Power := FALSE;
 	
+	//FileMgmt(MpLink := ADR(FileManagement), Enable := TRUE, Configuration := ADR(FileMgmtConfig));
+	
 	gRacer3HomeRestorePos; //call home restore position variable to init it in memory
 	//MpAlarmXCore_Control(MpLink := ADR(gAlarmXCore), Enable := TRUE);
 	
