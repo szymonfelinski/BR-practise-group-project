@@ -23,4 +23,5 @@ VAR
 	ModeSystem : BOOL := TRUE; (*0 for absolute, 1 for relative*)
 	LastState : R3StateMachineEnum; (*Stores last machine state.*)
 	CalibrationStateBtn : BOOL; (*TRUE when in state STATE_CALIBRATION *)
+	Pause : BOOL := FALSE;
 END_VAR
