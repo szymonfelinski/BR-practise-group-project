@@ -78,18 +78,22 @@ PROGRAM _CYCLIC
 	CASE State OF
 		STATE_ERROR:
 			txt_State_out:="Error";
+
 			IF NOT RoboArm6Axis.Error THEN
+				RoboArm6Axis.ErrorReset := FALSE;
 				State := STATE_INIT;
 			END_IF
 			
 		STATE_INIT:
 			txt_State_out:="Initialization";
+			
 			RoboArm6Axis.Enable := TRUE;
 			
 			IF Power THEN
 				State := STATE_POWER_ON;
 			END_IF		
 		STATE_POWER_ON:
+			
 			txt_State_out:="Power";
 			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
 				RoboArm6Axis.Power := TRUE;
@@ -189,7 +193,7 @@ PROGRAM _CYCLIC
 		STATE_AUTOMATIC:
 			txt_State_out:="AutoControl";
 			
-			AutomaticModePara.Parameters.Continuous;
+			AutomaticModePara.Parameters;
 			
 			AutomaticModePara.Parameters.ProgramName;
 			//AutomaticModePara.Parameters.Execute := TRUE;
@@ -296,17 +300,18 @@ PROGRAM _CYCLIC
 			END_CASE
 				
 			txt_State_out:="Calibration";
+		STATE_UPDATE:
+			
+			IF RoboArm6Axis.UpdateDone THEN
+				RoboArm6Axis.Update := FALSE;
+				State := LastState;
+			END_IF
+						
+			RoboArm6Axis.Update := TRUE;
 		
 	END_CASE
 	
 	
-	IF RoboArm6Axis.UpdateDone THEN
-		RoboArm6Axis.Update := FALSE;
-	END_IF
-	
-	IF NOT RoboArm6Axis.Error THEN
-		RoboArm6Axis.ErrorReset := FALSE;
-	END_IF
 	
 	RoboArm6Axis();
 	
