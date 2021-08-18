@@ -272,9 +272,13 @@ PROGRAM _CYCLIC
 		RoboArm6Axis.ErrorReset := FALSE;
 	END_IF
 	
-	
-	
 	RoboArm6Axis();
+	
+	
+	////////////Visualization Variables/////////////
+	
+	NOTCoordinateSystem	:= NOT CoordinateSystem;
+
 END_PROGRAM
 
 PROGRAM _EXIT

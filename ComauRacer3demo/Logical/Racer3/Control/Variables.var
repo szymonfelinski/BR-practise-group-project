@@ -14,6 +14,7 @@ VAR
 	Stop : BOOL := FALSE; (*stops*)
 	changeModePending : USINT; (*1-Manual       2-SemiManual      3-Auto*)
 	txt_State_out : WSTRING[80];
+	NOTCoordinateSystem : BOOL; (*Negation of CoordinateSystem needed in visualisation*)
 	CoordinateSystem : BOOL := FALSE; (*0 for axis,1 for euler*)
 	PathSystem : BOOL := TRUE; (*0 for direct, 1 for linear*)
 	ModeSystem : BOOL := TRUE; (*0 for absolute, 1 for relative*)

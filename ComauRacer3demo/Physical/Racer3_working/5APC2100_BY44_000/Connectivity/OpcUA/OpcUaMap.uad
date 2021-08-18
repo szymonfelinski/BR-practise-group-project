@@ -8,11 +8,6 @@
         <ACE RoleId="3" RoleName="Operator" Access="0x005F" />
         <ACE RoleId="1" RoleName="Administrators" Access="0x017F" />
       </ACL>
-      <ACL Id="2">
-        <ACE RoleId="2" RoleName="Everyone" Access="0x005F" />
-        <ACE RoleId="1" RoleName="Administrators" Access="0x01FF" />
-        <ACE RoleId="3" RoleName="Operator" Access="0x007F" />
-      </ACL>
     </ACLAliases>
     <EURangeViolationAliases />
     <EURangesAliases />
@@ -261,6 +256,9 @@
         <Variable Name="Stop" />
         <Variable Name="changeModePending" />
         <Variable Name="CoordinateSystem" />
+        <Variable Name="NOTCoordinateSystem" />
+        <Variable Name="PathSystem" />
+        <Variable Name="ModeSystem" />
       </Task>
     </Module>
   </DefaultView>
