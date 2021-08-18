@@ -115,5 +115,13 @@
         <seg>Select axis to be calibrated</seg>
       </tuv>
     </tu>
+    <tu tuid="ControlPage.PowerON">
+      <tuv xml:lang="pl">
+        <seg>Włącz zasilanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power ON</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
