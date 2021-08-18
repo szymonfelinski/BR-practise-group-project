@@ -123,7 +123,7 @@ TYPE
 		STATE_PAUSE := 4
 		);
 	R3SemiAutoModeType : 	STRUCT 
-		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
+		AskedValue : R3AskedValueType; (*Stores given axis distance for relative move*)
 		Flag : BOOL; (*Flag between READY and SEMIAUTO*)
 		Mode : BOOL; (*Switches between relative and absolute modes, 1 for Relative, 0 for Absolute*)
 		UpdatePending : BOOL; (*if UpdatePending then updates before starting move*)
@@ -142,13 +142,13 @@ TYPE
 		Automatic := 3,
 		None := 0
 		);
-	R3AxisDistanceType : 	STRUCT  (*todo axis position for absolute*)
-		Q2 : REAL;
-		Q3 : REAL;
-		Q4 : REAL;
-		Q5 : REAL;
-		Q6 : REAL;
-		Q1 : REAL;
+	R3AskedValueType : 	STRUCT  (*for SemiAuto*)
+		Q0 : REAL := 69;
+		Q1 : REAL := 20;
+		Q2 : REAL := -7;
+		Q3 : REAL := 69;
+		Q4 : REAL := 20;
+		Q5 : REAL := 0.420;
 	END_STRUCT;
 	R3CalibrationMainType : 	STRUCT 
 		Info : CalibrationInfo; (*Information portion of calibration.*)
