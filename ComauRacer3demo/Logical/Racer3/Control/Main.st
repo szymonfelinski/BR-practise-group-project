@@ -89,7 +89,7 @@ PROGRAM _CYCLIC
 					RoboArm6Axis.Home := TRUE;
 					//Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, HomingMode := Calibration.Para.HomingModeEnum);
 					(*IF Calibration.Cmds.GroupHome.Done THEN
-						State := STATE_READY;
+					State := STATE_READY;
 					END_IF*)
 					
 				END_IF
@@ -172,7 +172,7 @@ PROGRAM _CYCLIC
 			AutomaticModePara.Parameters.ProgramName;
 			//AutomaticModePara.Parameters.Execute := TRUE;
 			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
-			AutomaticMode(RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
+			AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
 			
 			//AutomaticModePara.Cmds.ExecuteProgram(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Name := AutomaticModePara.Parameters.ProgramName);
 		
@@ -274,6 +274,7 @@ PROGRAM _CYCLIC
 			END_CASE
 				
 			txt_State_out:="Calibration";
+			
 		STATE_UPDATE:
 			
 			IF RoboArm6Axis.UpdateDone THEN
