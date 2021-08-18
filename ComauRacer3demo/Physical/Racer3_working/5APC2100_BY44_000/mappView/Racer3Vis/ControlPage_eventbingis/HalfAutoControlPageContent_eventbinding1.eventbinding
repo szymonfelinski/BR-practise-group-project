@@ -11,34 +11,25 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_5">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh1HalfAutoControlContent" event="MouseUp" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:SemiAutoControlPara.Flag">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="EventBinding_6">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft1HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Stop">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_7">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft1HalfAutoControlContent" event="MouseUp" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Stop">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Stop">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:SemiAutoControlPara.Flag">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnNavigationAutoControlContent.Click">
