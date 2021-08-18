@@ -127,10 +127,10 @@
     </tu>
     <tu tuid="Device1">
       <tuv xml:lang="pl">
-        <seg>Partycja użytkownika</seg>
+        <seg>CNC</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>User particiter</seg>
+        <seg>CNC</seg>
       </tuv>
     </tu>
     <tu tuid="Device2">
@@ -195,6 +195,46 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>No</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Device3">
+      <tuv xml:lang="pl">
+        <seg>Audyt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Audit</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Do_sort">
+      <tuv xml:lang="pl">
+        <seg>Sortuj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sort </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Choose_SortMethod">
+      <tuv xml:lang="pl">
+        <seg>Wybierz metodę sortowania</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select a sort method</seg>
+      </tuv>
+    </tu>
+    <tu tuid="FIle_LastModified">
+      <tuv xml:lang="pl">
+        <seg>Ostatnia edycja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last modified</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SortByNameUp">
+      <tuv xml:lang="pl">
+        <seg>Sortowanie po nazwie rosnąco</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Sort by name up</seg>
       </tuv>
     </tu>
   </body>

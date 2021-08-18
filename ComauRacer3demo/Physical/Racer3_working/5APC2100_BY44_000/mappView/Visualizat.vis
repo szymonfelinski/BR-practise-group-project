@@ -53,15 +53,13 @@
 		<EventBindingsSet refId="DialogRenameContent_eventbinding" />
 		<EventBindingsSet refId="DialogNewFolderContent_eventbinding" />
 		<EventBindingsSet refId="DialogConfirmContent_eventbinding" />
-		<!--<EventBindingsSet refId="DialogNameExistContent_eventbinding" /> -->
 	</EventBindingsSets>
   <Dialogs>
 		<Dialog refId="DialogLogin" />
 		<Dialog refId="DialogRename" />
 		<Dialog refId="DialogNewFolder" />
 		<Dialog refId="DialogConfirm" />
-		<Dialog refId="DialogNameExist" />
-  </Dialogs>
+	</Dialogs>
   <Contents>
 		<Content refId="MainPageContent" />
 		<Content refId="AlarmPageContent" />
@@ -78,10 +76,8 @@
 		<Content refId="DocsBrowserPageContent"/>	
 		<Content refId="DialogRenameContent"/>
 		<Content refId="DialogNewFolderContent"/>
-		<Content refId="DialogConfirmContent"/>
-		<Content refId="DialogNameExistContent"/>	
-		
-  </Contents>
+		<Content refId="DialogConfirmContent"/>	
+	</Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
   </SnippetsSets>

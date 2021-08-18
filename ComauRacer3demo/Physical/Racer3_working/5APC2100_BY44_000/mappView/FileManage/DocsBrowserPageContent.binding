@@ -13,10 +13,7 @@
 <Source xsi:type="opcUa" refId="::FileManage:tabInfo.Type" attribute="value" />
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="tabType" attribute="stringValue" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.NewName" attribute="value" />
-<Target xsi:type="brease" contentRefId="DialogRenameContent" widgetRefId="TxtRename" attribute="value" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir" attribute="value" />
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="txtPath" attribute="value" />
@@ -35,5 +32,15 @@
 <Source xsi:type="opcUa" refId="::FileManage:tabInfo.SelectedRow" attribute="value" />
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="Table1" attribute="selectedRow" />
 </Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.NewName" attribute="value" />
+<Target xsi:type="brease" contentRefId="DialogRenameContent" widgetRefId="TxtRename" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::FileManage:tabInfo.LastModified" attribute="value" />
+<Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="tabLastModified" attribute="value" />
+</Binding>
+
 </Bindings>
 </BindingsSet>

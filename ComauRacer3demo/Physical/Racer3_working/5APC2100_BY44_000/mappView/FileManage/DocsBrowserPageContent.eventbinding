@@ -63,7 +63,7 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
           </Target>
         </Action>
       </EventHandler>
@@ -73,7 +73,7 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
           </Target>
         </Action>
       </EventHandler>
@@ -114,6 +114,26 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.FolderUp">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnDevice3.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice3" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnSort.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnSort" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:aux.btnSort">
+            <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
           </Target>
         </Action>
       </EventHandler>
