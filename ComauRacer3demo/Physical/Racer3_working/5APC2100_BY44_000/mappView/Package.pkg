@@ -9,5 +9,6 @@
     <Object Type="File">CalibrationPageContent.eventbinding</Object>
     <Object Type="Package">FileManage</Object>
     <Object Type="File">ControlPageContent.binding</Object>
+    <Object Type="File">CalibrationPageContent.binding</Object>
   </Objects>
 </Package>

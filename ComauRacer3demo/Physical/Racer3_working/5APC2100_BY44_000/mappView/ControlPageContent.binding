@@ -5,5 +5,9 @@
 <Source xsi:type="opcUa" refId="::Control:Power" attribute="value" />
 <Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="ToggleButton1" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CalibrationStateBtn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="Image1" attribute="visible" />
+</Binding>
 </Bindings>
 </BindingsSet>
