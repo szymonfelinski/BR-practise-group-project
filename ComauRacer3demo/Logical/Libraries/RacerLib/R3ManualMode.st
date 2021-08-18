@@ -80,7 +80,9 @@ FUNCTION_BLOCK R3ManualMode
 		ELSE
 			RoboArmPara.Jog.Velocity[5] := 0;
 		END_IF
-		RoboArm.Jog := TRUE;
+		IF RoboArm.Jog <> TRUE THEN
+			RoboArm.Jog := TRUE;
+		END_IF
 	ELSE
 		RoboArm.Jog := FALSE;
 	END_IF
