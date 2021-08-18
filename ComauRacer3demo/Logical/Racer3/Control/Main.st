@@ -167,8 +167,24 @@ PROGRAM _CYCLIC
 		STATE_AUTOMATIC:
 			txt_State_out:="AutoControl";
 			
+			IF ControlSelector = Automatic AND changeModePending <> 3 THEN
+				// exit from Auto
+				AutomaticModePara.Parameters.Abort:=TRUE;
+				ControlSelector:=changeModePending;
+				State:=STATE_READY;
+			END_IF
+			IF Pause AND NOT Stop THEN
+				AutomaticModePara.Parameters.Pause:=TRUE;
+			END_IF
+			IF NOT Pause AND AutomaticModePara.Parameters.Pause AND NOT Stop THEN
+				AutomaticModePara.Parameters.Continue:=TRUE;
+			END_IF
+			IF Stop THEN
+				AutomaticModePara.Parameters.Abort:=TRUE;
+				Stop:=FALSE;
+			END_IF
+
 			AutomaticModePara.Parameters;
-			
 			AutomaticModePara.Parameters.ProgramName;
 			//AutomaticModePara.Parameters.Execute := TRUE;
 			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;

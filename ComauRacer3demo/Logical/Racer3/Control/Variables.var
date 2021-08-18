@@ -21,4 +21,5 @@ VAR
 	PathSystem : BOOL := TRUE; (*0 for direct, 1 for linear*)
 	ModeSystem : BOOL := TRUE; (*0 for absolute, 1 for relative*)
 	LastState : R3StateMachineEnum; (*Stores last machine state.*)
+	Pause : BOOL := FALSE; (*pauses*)
 END_VAR
