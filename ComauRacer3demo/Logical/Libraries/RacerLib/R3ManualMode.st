@@ -18,7 +18,7 @@ FUNCTION_BLOCK R3ManualMode
 	IF ManualModePara.ActivateMove THEN
 		
 		IF ManualModePara.AxisButton.Q1 THEN // if a button is pressed, write corresponding velocity to the jog velocity array
-			IF RoboArmPara.Jog.Velocity[0] <> JogVelocityActual THEN
+			IF RoboArmPara.Jog.Velocity[0] <> JogVelocityActual THEN // test if this fixes strange movement style
 				RoboArmPara.Jog.Velocity[0] := JogVelocityActual;
 			END_IF
 		ELSIF ManualModePara.AxisButton.Q2 THEN

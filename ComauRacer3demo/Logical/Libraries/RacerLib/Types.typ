@@ -65,9 +65,8 @@ TYPE
 		START := 1,
 		UPDATE := 2,
 		GO := 3,
-		STATE_EXIT := 4,
 		STATE_STOP := 5,
-		STATE_PAUSE := 6
+		STATE_PAUSE := 4
 		);
 	R3SemiAutoModeType : 	STRUCT 
 		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
@@ -80,6 +79,7 @@ TYPE
 		PathMode : BOOL; (*Switches between direct and linear path mode, 1 for linear , 0 for direct*)
 		PathModeForThisMove : BOOL;
 		ExitSemiAuto : BOOL;
+		Pause : BOOL;
 	END_STRUCT;
 	ControlSelectEnum : 
 		(
