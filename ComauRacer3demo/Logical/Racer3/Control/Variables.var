@@ -18,4 +18,5 @@ VAR
 	CoordinateSystem : BOOL := FALSE; (*0 for axis,1 for euler*)
 	PathSystem : BOOL := TRUE; (*0 for direct, 1 for linear*)
 	ModeSystem : BOOL := TRUE; (*0 for absolute, 1 for relative*)
+	CalibrationStateBtn : BOOL;
 END_VAR
