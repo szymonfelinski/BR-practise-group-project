@@ -1,5 +1,6 @@
 
 ACTION CalibrationAction: 
+	CalibrationStateBtn := TRUE;
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
 			IF RoboArm6Axis.IsHomed THEN
@@ -90,6 +91,7 @@ ACTION CalibrationAction:
 		
 		STATE_DONE:
 			gIsCalibrated := TRUE;
+			CalibrationStateBtn :=FALSE;
 			State:=STATE_HOMING;
 
 	END_CASE
