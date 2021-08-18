@@ -31,5 +31,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="AuditPageContent.btnAuditClearBuffor.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AuditPageContent" widgetRefId="btnAuditClearBuffor" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Auditing:ClearBufferBool">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
