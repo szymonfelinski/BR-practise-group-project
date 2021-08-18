@@ -195,7 +195,7 @@ PROGRAM _CYCLIC
 		STATE_CALIBRATION:
 			
 			//perform initial homing to trick ACOPOS into thinking axes are homed, basically set home to current position.
-			Calibration;
+			CalibrationAction;
 				
 			txt_State_out:="Calibration";
 			
