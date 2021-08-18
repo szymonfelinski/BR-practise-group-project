@@ -30,6 +30,10 @@
 		<BindingsSet refId="AlarmPageContent_binding" />
 		<BindingsSet refId="ManualControlPageContent_binding" />
 		<BindingsSet refId="HalfAutoControlPageContent_binding"/>
+		<BindingsSet refId="DocsBrowserPageContent_binding" />
+		<BindingsSet refId="DialogNewFolderContent_binding" />
+		<BindingsSet refId="ControlPageContent_binding"/>
+		<BindingsSet refId="TopPageContent_binding"/>
   </BindingsSets>
 
   <EventBindingsSets>
@@ -44,12 +48,18 @@
 		<EventBindingsSet refId="CalibrationControlPageContent_eventbinding" />
 		<EventBindingsSet refId="AuditPageContent_eventbinding" />
 		<EventBindingsSet refId="UserManagmentPageContent_eventbinding" />
-		
-		
-		
+		<EventBindingsSet refId="DocsBrowserPageContent_eventbinding" />
+		<EventBindingsSet refId="DialogRenameContent_eventbinding" />
+		<EventBindingsSet refId="DialogNewFolderContent_eventbinding" />
+		<EventBindingsSet refId="DialogConfirmContent_eventbinding" />
+		<!--<EventBindingsSet refId="DialogNameExistContent_eventbinding" /> -->
 	</EventBindingsSets>
   <Dialogs>
-    <Dialog refId="DialogLogin" />
+		<Dialog refId="DialogLogin" />
+		<Dialog refId="DialogRename" />
+		<Dialog refId="DialogNewFolder" />
+		<Dialog refId="DialogConfirm" />
+		<Dialog refId="DialogNameExist" />
   </Dialogs>
   <Contents>
 		<Content refId="MainPageContent" />
@@ -62,9 +72,13 @@
 		<Content refId="AutoControlPageContent"/>
 		<Content refId="HalfAutoControlPageContent"/>
 		<Content refId="ManualControlPageContent"/>
-		<Content refId="AuditPageContent"/>
 		<Content refId="UserManagmentPageContent"/>	
-		
+		<Content refId="AuditPageContent"/>	
+		<Content refId="DocsBrowserPageContent"/>	
+		<Content refId="DialogRenameContent"/>
+		<Content refId="DialogNewFolderContent"/>
+		<Content refId="DialogConfirmContent"/>
+		<Content refId="DialogNameExistContent"/>	
 		
   </Contents>
   <SnippetsSets>

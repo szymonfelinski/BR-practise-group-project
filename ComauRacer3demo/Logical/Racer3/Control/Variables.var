@@ -1,12 +1,15 @@
 VAR
-	RoboArm6AxisPara : MpRoboArm6AxisParType;
-	RoboArm6Axis : MpRoboArm6Axis;
+	AutomaticMode : R3AutomaticMode; (*automatic mode Fb*)
+	AutomaticModePara : R3AutomaticModeType; (*Main automatic mode variable*)
+	RoboArm6AxisPara : MpRoboArm6AxisParType; (*This variable defines parameters of the robot*)
+	RoboArm6Axis : MpRoboArm6Axis; (*This is the robot in question*)
 	State : R3StateMachineEnum;
 	Power : BOOL;
 	ControlSelector : ControlSelectEnum := None;
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
 	i : USINT;
+	Axis_1to5_calibrated : BOOL; (*If value TRUE then axis 6 can be calibrated*)
 	Calibration : R3CalibrationMainType; (*Main calibration variable.*)
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;
@@ -18,4 +21,6 @@ VAR
 	CoordinateSystem : BOOL := FALSE; (*0 for axis,1 for euler*)
 	PathSystem : BOOL := TRUE; (*0 for direct, 1 for linear*)
 	ModeSystem : BOOL := TRUE; (*0 for absolute, 1 for relative*)
+	LastState : R3StateMachineEnum; (*Stores last machine state.*)
+	CalibrationStateBtn : BOOL; (*TRUE when in state STATE_CALIBRATION *)
 END_VAR

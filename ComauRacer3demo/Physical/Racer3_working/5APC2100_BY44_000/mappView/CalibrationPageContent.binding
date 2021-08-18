@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="CalibrationPageContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q1" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ1CalibrationControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q2" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ2CalibrationControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q3" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ3CalibrationControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q4" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ4CalibrationControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q5" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ5CalibrationControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q6" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ6CalibrationControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.JogVelocity" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="NumericInput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[0]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ1" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ2" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ3" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ4" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ5" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ6" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[5]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image6" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[4]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image5" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[3]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image4" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[2]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image3" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[1]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image2" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[0]" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image1" attribute="visible" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Axis_1to5_calibrated" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ6CalibrationControlContent" attribute="enable" />
+</Binding>
+</Bindings>
+</BindingsSet>

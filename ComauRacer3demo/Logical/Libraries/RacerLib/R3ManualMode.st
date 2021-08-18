@@ -16,15 +16,15 @@ FUNCTION_BLOCK R3ManualMode
 	RoboArmPara.Jog.PathLimits := ManualModePara.PathLimits;
 	
 	IF ManualModePara.ActivateMove THEN
-		
+		(* old Szymon's version
 		IF ManualModePara.AxisButton.Q1 THEN // if a button is pressed, write corresponding velocity to the jog velocity array
-			IF RoboArmPara.Jog.Velocity[0] <> JogVelocityActual THEN
+			//IF RoboArmPara.Jog.Velocity[0] <> JogVelocityActual THEN // test if this fixes strange movement style
 				RoboArmPara.Jog.Velocity[0] := JogVelocityActual;
-			END_IF
+			//END_IF
 		ELSIF ManualModePara.AxisButton.Q2 THEN
-			IF RoboArmPara.Jog.Velocity[1] <> JogVelocityActual THEN
+			//IF RoboArmPara.Jog.Velocity[1] <> JogVelocityActual THEN
 				RoboArmPara.Jog.Velocity[1] := JogVelocityActual;
-			END_IF	
+			//END_IF	
 		ELSIF ManualModePara.AxisButton.Q3 THEN
 			RoboArmPara.Jog.Velocity[2] := JogVelocityActual;
 			
@@ -42,6 +42,43 @@ FUNCTION_BLOCK R3ManualMode
 			FOR j := 0 TO 5 BY 1 DO //set every jog velocity to 0
 				RoboArmPara.Jog.Velocity[j] := 0.0;
 			END_FOR;
+		END_IF
+		*)
+		
+		IF ManualModePara.AxisButton.Q1 THEN
+			RoboArmPara.Jog.Velocity[0] := JogVelocityActual;
+		ELSE
+			RoboArmPara.Jog.Velocity[0] := 0;
+		END_IF
+		
+		IF ManualModePara.AxisButton.Q2 THEN
+			RoboArmPara.Jog.Velocity[1] := JogVelocityActual;
+		ELSE
+			RoboArmPara.Jog.Velocity[1] := 0;
+		END_IF
+		
+		IF ManualModePara.AxisButton.Q3 THEN
+			RoboArmPara.Jog.Velocity[2] := JogVelocityActual;
+		ELSE
+			RoboArmPara.Jog.Velocity[2] := 0;
+		END_IF
+		
+		IF ManualModePara.AxisButton.Q4 THEN
+			RoboArmPara.Jog.Velocity[3] := JogVelocityActual;
+		ELSE
+			RoboArmPara.Jog.Velocity[3] := 0;
+		END_IF
+		
+		IF ManualModePara.AxisButton.Q5 THEN
+			RoboArmPara.Jog.Velocity[4] := JogVelocityActual;
+		ELSE
+			RoboArmPara.Jog.Velocity[4] := 0;
+		END_IF
+		
+		IF ManualModePara.AxisButton.Q6 THEN
+			RoboArmPara.Jog.Velocity[5] := JogVelocityActual;
+		ELSE
+			RoboArmPara.Jog.Velocity[5] := 0;
 		END_IF
 		RoboArm.Jog := TRUE;
 	ELSE

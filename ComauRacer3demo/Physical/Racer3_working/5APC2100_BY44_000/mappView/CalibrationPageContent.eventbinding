@@ -31,5 +31,109 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="CalibrationPageContent.btnRigh2CalibrationContent.MouseDown">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnRigh2CalibrationContent" event="MouseDown" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.AxisSaveBtn">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="CalibrationPageContent.btnRigh2CalibrationContent.MouseUp">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnRigh2CalibrationContent" event="MouseUp" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.AxisSaveBtn">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="CalibrationPageContent.btnRigh3CalibrationContent.MouseDown">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnRigh3CalibrationContent" event="MouseDown" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="CalibrationPageContent.btnRigh3CalibrationContent.MouseUp">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnRigh3CalibrationContent" event="MouseUp" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="CalibrationPageContent.btnLeft3CalibrationContent.MouseDown">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnLeft3CalibrationContent" event="MouseDown" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="-1" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="CalibrationPageContent.btnLeft3CalibrationContent.MouseUp">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnLeft3CalibrationContent" event="MouseUp" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
