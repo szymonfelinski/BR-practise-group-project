@@ -31,18 +31,8 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnOpenFileExplorer.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnOpenFileExplorer" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.OpenFileExplorer" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnNewFile.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnNewFile" event="Click" />
+    <EventBinding id="AutoControlPageContent.btnLeft1AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnLeft1AutoControlContent" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
@@ -51,18 +41,18 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnOpenFile.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnOpenFile" event="Click" />
+    <EventBinding id="AutoControlPageContent.btnLeft2AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnLeft2AutoControlContent" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.Open" filePath="CNC_PrgDir/Point.st" />
+            <Method xsi:type="widgets.brease.MotionPad.Action.OpenFileExplorer" />
           </Target>
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnSaveFile.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSaveFile" event="Click" />
+    <EventBinding id="AutoControlPageContent.btnLeft3AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnLeft3AutoControlContent" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
@@ -71,52 +61,12 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnSaveAsFile.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSaveAsFile" event="Click" />
+    <EventBinding id="AutoControlPageContent.btnLeft4AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnLeft4AutoControlContent" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.SaveAs" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnRun.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnRun" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.Run" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnPause.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnPause" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.Pause" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnResume.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnResume" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.Resume" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="AutoControlPageContent.btnStepOver.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnStepOver" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.StepOver" />
           </Target>
         </Action>
       </EventHandler>

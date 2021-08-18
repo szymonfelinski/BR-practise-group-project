@@ -15,14 +15,13 @@
     <Widget xsi:type="widgets.brease.MotionPad" id="padAutoModeMotionPad" top="140" left="140" width="540" height="540" zIndex="11" keyboard="true" mpLink="gAxesGroupRacer3" permissionOperate="['Administrators', 'Operator']" />
     <Widget xsi:type="widgets.brease.Button" id="btnOpenFileExplorer" top="580" left="820" width="280" zIndex="12" text="file manager" permissionOperate="['Administrators', 'Operator']" />
     <Widget xsi:type="widgets.brease.Button" id="btnNewFile" top="160" left="960" width="140" zIndex="13" text="new" />
-    <Widget xsi:type="widgets.brease.Button" id="btnOpenFile" top="220" left="960" width="140" zIndex="14" text="open" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSaveFile" top="280" left="960" width="140" zIndex="15" text="save" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSaveAsFile" top="340" left="960" width="140" zIndex="16" text="save as" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRun" top="160" left="780" width="140" zIndex="17" text="run" />
-    <Widget xsi:type="widgets.brease.Button" id="btnStop" top="220" left="780" width="140" zIndex="18" text="stop" />
-    <Widget xsi:type="widgets.brease.Button" id="btnPause" top="280" left="780" width="140" zIndex="19" text="Pause" />
-    <Widget xsi:type="widgets.brease.Button" id="btnResume" top="340" left="780" width="140" zIndex="20" text="resume" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRestart" top="400" left="780" width="140" zIndex="21" text="restart" />
-    <Widget xsi:type="widgets.brease.Button" id="btnStepOver" top="460" left="780" width="140" zIndex="22" text="Step" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSaveFile" top="220" left="960" width="140" zIndex="14" text="save" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSaveAsFile" top="280" left="960" width="140" zIndex="15" text="save as" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRun" top="160" left="780" width="140" zIndex="16" text="run" />
+    <Widget xsi:type="widgets.brease.Button" id="btnStop" top="220" left="780" width="140" zIndex="17" text="stop" />
+    <Widget xsi:type="widgets.brease.Button" id="btnPause" top="280" left="780" width="140" zIndex="18" text="Pause" />
+    <Widget xsi:type="widgets.brease.Button" id="btnResume" top="340" left="780" width="140" zIndex="19" text="resume" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRestart" top="400" left="780" width="140" zIndex="20" text="restart" />
+    <Widget xsi:type="widgets.brease.Button" id="btnStepOver" top="460" left="780" width="140" zIndex="21" text="Step" textAlign="center" />
   </Widgets>
 </Content>

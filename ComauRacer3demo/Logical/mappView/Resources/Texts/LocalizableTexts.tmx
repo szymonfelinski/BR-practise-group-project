@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/Automatic</prop>
+  </header>
+  <body>
+    <tu tuid="New">
+      <tuv xml:lang="pl">
+        <seg>Nowy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Neu</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Save">
+      <tuv xml:lang="pl">
+        <seg>Zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SaveAs">
+      <tuv xml:lang="pl">
+        <seg>Zapisz jako</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save as</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Run">
+      <tuv xml:lang="pl">
+        <seg>Wykonaj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Run</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Stop">
+      <tuv xml:lang="pl">
+        <seg>Zatrzymaj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stop</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Pause">
+      <tuv xml:lang="pl">
+        <seg>Wstrzymaj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pause</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Open">
+      <tuv xml:lang="pl">
+        <seg>Otwórz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Open</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Resume">
+      <tuv xml:lang="pl">
+        <seg>Wznów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Resume</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Restart">
+      <tuv xml:lang="pl">
+        <seg>Restart</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Restart</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Step">
+      <tuv xml:lang="pl">
+        <seg>Krok w przód</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Step Over</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ST">
+      <tuv xml:lang="pl">
+        <seg>ST</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>ST</seg>
+      </tuv>
+    </tu>
+    <tu tuid="G-Code">
+      <tuv xml:lang="pl">
+        <seg>G-Code</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>G-Code</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
