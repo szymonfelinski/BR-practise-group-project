@@ -44,7 +44,6 @@ TYPE
 	END_STRUCT;
 	R3AutomaticModeInfo : 	STRUCT 
 		CurrentState : R3AutomaticModeState; (*Current automode state*)
-		AxesGroup : McAxesGroupType; (*AxesGroup to execute program on*)
 		Error : R3AutomaticModeErrorEnum;
 		ErrorID : DINT;
 		Paused : BOOL;

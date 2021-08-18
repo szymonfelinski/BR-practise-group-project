@@ -57,12 +57,12 @@ END_FUNCTION
 
 {REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3AutomaticMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_INPUT
-		AxesGroup : REFERENCE TO USINT;
+		AxesGroup : REFERENCE TO UDINT; (*AxesGroup to execute program on*)
 	END_VAR
 	VAR_IN_OUT
-		AutoMode : R3AutomaticModeType;
+		AutoMode : R3AutomaticModeType; (*Main type variable*)
 	END_VAR
 	VAR
-		UnloadMode : {REDUND_UNREPLICABLE} McUnloadProgramModeEnum;
+		UnloadMode : {REDUND_UNREPLICABLE} McUnloadProgramModeEnum; (*defines unload mode behaviour*)
 	END_VAR
 END_FUNCTION_BLOCK
