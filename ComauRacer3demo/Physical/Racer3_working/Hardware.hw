@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.9.2.46 FileVersion="4.9"?>
+<?AutomationStudio Version=4.9.3.144 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="5ACCIF01.FPSC-000" Type="5ACCIF01.FPSC-000" Version="1.9.0.3">
     <Connection Connector="SL" TargetModule="5APC2100_BY44_000" TargetConnector="SL1" />
@@ -29,10 +29,13 @@
     <Parameter ID="TaskClassIdleTime" Value="2000" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="CNC_PrgDir" />
-    <Parameter ID="FileDevicePath1" Value="C:\CNC_PrgDir\" />
+    <Parameter ID="FileDevicePath1" Value="C:\CNC_PrgDir\" Description="For HW config use D:\CNC_PrgDir\" />
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="AUDIT" />
     <Parameter ID="FileDevicePath2" Value="C:\Temp\Audit" />
+    <Group ID="FileDevice3" />
+    <Parameter ID="FileDeviceName3" Value="UserPart" />
+    <Parameter ID="FileDevicePath3" Value="C:\Temp\UserPart\" Description="For HW config use F:\" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaActivateAuditEvents" Value="1" />
     <Parameter ID="OpcUa_Security_AdminRole" Value="Everyone" />

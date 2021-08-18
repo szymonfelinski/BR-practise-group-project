@@ -7,5 +7,6 @@
     <Object Type="File">Visualizat.vis</Object>
     <Object Type="File">HalfAutoControlPageContent.binding</Object>
     <Object Type="File">CalibrationPageContent.eventbinding</Object>
+    <Object Type="Package">FileManage</Object>
   </Objects>
 </Package>
