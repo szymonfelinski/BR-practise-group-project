@@ -83,5 +83,61 @@
         <seg>Export</seg>
       </tuv>
     </tu>
+    <tu tuid="UserListName">
+      <tuv xml:lang="pl">
+        <seg>Nazwa</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Name</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UserListIsAdmin">
+      <tuv xml:lang="pl">
+        <seg>Administator</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Admin</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UserListFullname">
+      <tuv xml:lang="pl">
+        <seg>Imię i nazwisko</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fullname</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UserListLastLogin">
+      <tuv xml:lang="pl">
+        <seg>Ostatnie logowanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UserListRole">
+      <tuv xml:lang="pl">
+        <seg>Role</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Roles</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmAcknowledgeLabel">
+      <tuv xml:lang="pl">
+        <seg>Wybrany</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selected</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AlarmAcknowledgeAllLabel">
+      <tuv xml:lang="pl">
+        <seg>Wszystkie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>All</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

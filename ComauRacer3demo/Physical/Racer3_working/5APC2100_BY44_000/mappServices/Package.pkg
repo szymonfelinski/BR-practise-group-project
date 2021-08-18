@@ -4,6 +4,8 @@
   <Objects>
     <Object Type="File">Config.mpaudittrail</Object>
     <Object Type="File">Config_1.mpalarmxcore</Object>
+    <Object Type="File">Config_2.mpalarmxhistory</Object>
+    <Object Type="File">Config_3.mpuserx</Object>
     <Object Type="File">FileMngMap.mpfilemanager</Object>
     <Object Type="File">FileMngUI.mpfilemanagerui</Object>
   </Objects>

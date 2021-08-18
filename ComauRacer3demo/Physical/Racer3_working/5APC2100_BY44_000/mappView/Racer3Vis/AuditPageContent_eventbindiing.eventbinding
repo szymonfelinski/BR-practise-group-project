@@ -11,5 +11,25 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="AuditPageContent.btnAuditContentPrevious.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AuditPageContent" widgetRefId="btnAuditContentPrevious" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="AuditPageContent" widgetRefId="LstAudit">
+            <Method xsi:type="widgets.brease.AuditList.Action.GoToPreviousPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AuditPageContent.btnAuditContentNext.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AuditPageContent" widgetRefId="btnAuditContentNext" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="AuditPageContent" widgetRefId="LstAudit">
+            <Method xsi:type="widgets.brease.AuditList.Action.GoToNextPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

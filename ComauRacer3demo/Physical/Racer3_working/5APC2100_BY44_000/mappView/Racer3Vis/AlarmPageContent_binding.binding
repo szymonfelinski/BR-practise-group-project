@@ -3,7 +3,7 @@
   <Bindings>
 <Binding mode="twoWay">
 <Source xsi:type="mapp" refId="gAlarmXCoreLink" attribute="link" />
-<Target xsi:type="brease" contentRefId="AlarmPageContent" widgetRefId="AlarmList" attribute="mpLink" />
+<Target xsi:type="brease" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList" attribute="mpLink" />
 </Binding>
 </Bindings>
 </BindingsSet>

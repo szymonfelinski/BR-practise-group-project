@@ -1,4 +1,8 @@
 VAR
 	TriggerAlarm : BOOL;
 	MpAlarmXCoreObject : MpAlarmXCore;
+	MpAlarmXHistory_0 : MpAlarmXHistory;
+	MC_GroupReadError_0 : MC_GroupReadError;
+	ErrorID : DINT;
+	RecordID : UDINT;
 END_VAR
