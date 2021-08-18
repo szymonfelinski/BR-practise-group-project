@@ -29,6 +29,7 @@
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.JogVelocity" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="NumericInput1" attribute="value" />
 </Binding>
+<!--
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[0]" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ1" attribute="visible" />
@@ -53,6 +54,7 @@
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[5]" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ6" attribute="visible" />
 </Binding>
+-->
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[5]" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image6" attribute="visible" />
