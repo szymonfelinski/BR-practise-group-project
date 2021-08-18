@@ -11,5 +11,6 @@
     <Object Type="File">AlarmPageContent_binding.binding</Object>
     <Object Type="File">AuditPageContent_eventbindiing.eventbinding</Object>
     <Object Type="File">ManualControlPageContent.binding</Object>
+    <Object Type="File">UserManagmentPageContent_eventbinding.eventbinding</Object>
   </Objects>
 </Package>

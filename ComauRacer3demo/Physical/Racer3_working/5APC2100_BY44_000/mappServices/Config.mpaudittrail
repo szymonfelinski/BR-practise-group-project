@@ -8,13 +8,14 @@
         <Property ID="[1]" Value="2" />
         <Property ID="[2]" Value="18" />
       </Group>
-      <Selector ID="TextSource">
-        <Property ID="OutputFormat" Value="[%[TIME=%c]] [%msg]" />
+      <Selector ID="TextSource" Value="TXT">
+        <Property ID="Name" Value="MpAudit" />
+        <Property ID="OutputFormat" Value="SysF/Event/Root" />
       </Selector>
       <Group ID="Export">
         <Property ID="Encrypt" Value="FALSE" />
       </Group>
     </Group>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>
