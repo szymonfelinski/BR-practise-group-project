@@ -32,6 +32,7 @@
 		<BindingsSet refId="DocsBrowserPageContent_binding" />
 		<BindingsSet refId="DialogNewFolderContent_binding" />
 		<BindingsSet refId="ControlPageContent_binding"/>
+		<BindingsSet refId="CalibrationPageContent_binding"/>
   </BindingsSets>
 
   <EventBindingsSets>
