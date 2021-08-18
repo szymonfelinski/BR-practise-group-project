@@ -267,7 +267,9 @@
       <Task Name="FileManage">
         <Variable Name="aux">
           <Variable Name="TableConfigurationStr" />
-          <Variable Name="errorNameExists" />
+          <Variable Name="prevNewName" />
+          <Variable Name="btnSort" />
+          <Variable Name="btnSortStr" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />
