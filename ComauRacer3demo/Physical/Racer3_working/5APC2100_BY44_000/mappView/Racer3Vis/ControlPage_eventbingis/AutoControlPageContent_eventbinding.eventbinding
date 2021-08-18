@@ -71,5 +71,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnRigh1AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnRigh1AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticCurrentLanguage">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

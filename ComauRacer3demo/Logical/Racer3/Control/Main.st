@@ -174,25 +174,31 @@ PROGRAM _CYCLIC
 				ControlSelector:=changeModePending;
 				State:=STATE_READY;
 			END_IF
-			IF Pause AND NOT Stop THEN
-				AutomaticModePara.Parameters.Pause:=TRUE;
-			END_IF
-			IF NOT Pause AND AutomaticModePara.Parameters.Pause AND NOT Stop THEN
-				AutomaticModePara.Parameters.Continue:=TRUE;
-			END_IF
-			IF Stop THEN
-				AutomaticModePara.Parameters.Abort:=TRUE;
-				Stop:=FALSE;
-			END_IF
-
-			AutomaticModePara.Parameters;
-			AutomaticModePara.Parameters.ProgramName;
-			//AutomaticModePara.Parameters.Execute := TRUE;
-			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
-			//AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
 			
-			//AutomaticModePara.Cmds.ExecuteProgram(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Name := AutomaticModePara.Parameters.ProgramName);
-		
+			IF AutomaticCurrentLanguage THEN
+					
+				IF Pause AND NOT Stop THEN
+					AutomaticModePara.Parameters.Pause:=TRUE;
+				END_IF
+				IF NOT Pause AND AutomaticModePara.Parameters.Pause AND NOT Stop THEN
+					AutomaticModePara.Parameters.Continue:=TRUE;
+				END_IF
+				IF Stop THEN
+					AutomaticModePara.Parameters.Abort:=TRUE;
+					Stop:=FALSE;
+				END_IF
+	
+				AutomaticModePara.Parameters;
+				AutomaticModePara.Parameters.ProgramName;
+				//AutomaticModePara.Parameters.Execute := TRUE;
+				//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
+				//AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
+				
+				//AutomaticModePara.Cmds.ExecuteProgram(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Name := AutomaticModePara.Parameters.ProgramName);
+			ELSE
+				//everything here happens in the widget
+			END_IF
+							
 		STATE_CALIBRATION:
 			
 			//perform initial homing to trick ACOPOS into thinking axes are homed, basically set home to current position.

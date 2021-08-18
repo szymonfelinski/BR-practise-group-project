@@ -288,6 +288,7 @@
         </Variable>
         <Variable Name="CalibrationStateBtn" />
         <Variable Name="Axis_1to5_calibrated" />
+        <Variable Name="AutomaticCurrentLanguage" />
       </Task>
       <Task Name="FileManage">
         <Variable Name="aux">
