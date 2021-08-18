@@ -12,20 +12,24 @@
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="8" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="9" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="10" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ1CalibrationControlContent" top="260" left="178" zIndex="11" text="1" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ2CalibrationControlContent" top="260" left="340" zIndex="12" text="2" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ3CalibrationControlContent" top="260" left="498" zIndex="13" text="3" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4CalibrationControlContent" top="260" left="680" zIndex="14" text="4" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5CalibrationControlContent" top="260" left="840" zIndex="15" text="5" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6CalibrationControlContent" top="260" left="998" zIndex="16" text="6" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="SelectAxisCalibrationPageLabel" top="180" left="460" width="360" zIndex="17" text="$IAT/ControlPage/CalibrationControl.Label" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="500" left="500" width="300" zIndex="18" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="460" left="500" width="300" zIndex="19" text="$IAT/ControlPage/ManualControl.JogVelocity" textAlign="center bottom" />
-    <Widget xsi:type="widgets.brease.Image" id="Image1" top="300" left="220" width="20" height="20" zIndex="20" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image2" top="300" left="380" width="20" height="20" zIndex="21" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image3" top="300" left="540" width="20" height="20" zIndex="22" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image4" top="300" left="720" width="20" height="20" zIndex="23" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image5" top="300" left="880" width="20" height="20" zIndex="24" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image6" top="300" left="1040" width="20" height="20" zIndex="25" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="SelectAxisCalibrationPageLabel" top="180" left="460" width="360" zIndex="11" text="$IAT/ControlPage/CalibrationControl.Label" textAlign="center bottom" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="500" left="500" width="300" zIndex="12" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="460" left="500" width="300" zIndex="13" text="$IAT/ControlPage/ManualControl.JogVelocity" textAlign="center bottom" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="300" left="220" width="20" height="20" zIndex="14" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="300" left="380" width="20" height="20" zIndex="15" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image3" top="300" left="540" width="20" height="20" zIndex="16" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image4" top="300" left="720" width="20" height="20" zIndex="17" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image5" top="300" left="880" width="20" height="20" zIndex="18" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image6" top="300" left="1040" width="20" height="20" zIndex="19" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="260" left="160" width="960" height="40" zIndex="20">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ1CalibrationControlContent" top="0" left="18" zIndex="0" text="1" bold="true" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ2CalibrationControlContent" top="0" left="180" zIndex="1" text="2" bold="true" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ3CalibrationControlContent" top="0" left="338" zIndex="2" text="3" bold="true" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4CalibrationControlContent" top="0" left="520" zIndex="3" text="4" bold="true" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5CalibrationControlContent" top="0" left="680" zIndex="4" text="5" bold="true" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6CalibrationControlContent" top="0" left="838" zIndex="5" text="6" bold="true" enable="false" />
+      </Widgets>
+    </Widget>
   </Widgets>
 </Content>

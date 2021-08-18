@@ -163,6 +163,9 @@ FUNCTION_BLOCK R3AutomaticMode
 							
 				AutoMode.Cmds.GroupStop(AxesGroup := ADR(AxesGroup), Execute := TRUE, StopMode := mcSTOPMODE_JERK_LIMIT); //take into account jerk limit as it's a noncritical stop
 			END_IF
+			
+			//D edit
+			AutoMode.Parameters.Abort:=FALSE;
 						
 		autoSTATE_ERROR: //error state, ErrorReset is reset automatically. reset state control variables
 			AutoMode.Parameters.Execute := FALSE;
