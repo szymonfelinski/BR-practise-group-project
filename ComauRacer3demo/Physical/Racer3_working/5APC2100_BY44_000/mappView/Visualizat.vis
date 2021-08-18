@@ -33,6 +33,7 @@
 		<BindingsSet refId="DialogNewFolderContent_binding" />
 		<BindingsSet refId="ControlPageContent_binding"/>
 		<BindingsSet refId="CalibrationPageContent_binding"/>
+		<BindingsSet refId="TopPageContent_binding"/>
   </BindingsSets>
 
   <EventBindingsSets>
