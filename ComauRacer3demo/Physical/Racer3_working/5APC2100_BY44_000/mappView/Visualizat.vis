@@ -29,6 +29,7 @@
 		<BindingsSet refId="AlarmPageContent_binding" />
 		<BindingsSet refId="ManualControlPageContent_binding" />
 		<BindingsSet refId="HalfAutoControlPageContent_binding"/>
+		<BindingsSet refId="ControlPageContent_binding"/>
   </BindingsSets>
 
   <EventBindingsSets>
