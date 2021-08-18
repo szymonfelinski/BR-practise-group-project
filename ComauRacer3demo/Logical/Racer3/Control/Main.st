@@ -4,7 +4,7 @@ PROGRAM _INIT
 	RoboArm6Axis.Enable := TRUE;
 
 	RoboArm6Axis.Override  := 100.0;
-	RoboArm6AxisPara.ProgramName := 'Robotic.st';    //File stored on FileDevice
+	RoboArm6AxisPara.ProgramName := 'Point.st';    //File stored on FileDevice, default program (Point.st moves TCP to -200, 300, 800)
 	RoboArm6Axis.MpLink     := ADR(gAxesGroupRacer3);
 	RoboArm6Axis.Parameters := ADR(RoboArm6AxisPara);
 	RoboArm6AxisPara.Acceleration := 1000.0;
@@ -52,18 +52,22 @@ PROGRAM _CYCLIC
 	CASE State OF
 		STATE_ERROR:
 			txt_State_out:="Error";
+
 			IF NOT RoboArm6Axis.Error THEN
+				RoboArm6Axis.ErrorReset := FALSE;
 				State := STATE_INIT;
 			END_IF
 			
 		STATE_INIT:
 			txt_State_out:="Initialization";
+			
 			RoboArm6Axis.Enable := TRUE;
 			
 			IF Power THEN
 				State := STATE_POWER_ON;
 			END_IF		
 		STATE_POWER_ON:
+			
 			txt_State_out:="Power";
 			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
 				RoboArm6Axis.Power := TRUE;
@@ -85,7 +89,7 @@ PROGRAM _CYCLIC
 					RoboArm6Axis.Home := TRUE;
 					//Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, HomingMode := Calibration.Para.HomingModeEnum);
 					(*IF Calibration.Cmds.GroupHome.Done THEN
-						State := STATE_READY;
+					State := STATE_READY;
 					END_IF*)
 					
 				END_IF
@@ -110,13 +114,14 @@ PROGRAM _CYCLIC
 			
 			IF ControlSelector = ManualJog THEN
 				State := STATE_MANUAL_CONTROL;
-			END_IF
-			IF ControlSelector = SemiAutomatic THEN
+			ELSIF ControlSelector = SemiAutomatic THEN
 				State := STATE_SEMI_AUTOMATIC;
+			ELSIF ControlSelector = Automatic THEN
+				State := STATE_AUTOMATIC;
 			END_IF
-			
+						
 			ControlSelector:=changeModePending;
-			// TODO think what happend when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
+			// TODO think what happens when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
 			// maybe do something similar to exit mode in manual
 		
 		STATE_MANUAL_CONTROL:
@@ -161,6 +166,15 @@ PROGRAM _CYCLIC
 		
 		STATE_AUTOMATIC:
 			txt_State_out:="AutoControl";
+			
+			AutomaticModePara.Parameters;
+			
+			AutomaticModePara.Parameters.ProgramName;
+			//AutomaticModePara.Parameters.Execute := TRUE;
+			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
+			AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
+			
+			//AutomaticModePara.Cmds.ExecuteProgram(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Name := AutomaticModePara.Parameters.ProgramName);
 		
 		STATE_CALIBRATION:
 			
@@ -260,17 +274,19 @@ PROGRAM _CYCLIC
 			END_CASE
 				
 			txt_State_out:="Calibration";
+			
+		STATE_UPDATE:
+			
+			IF RoboArm6Axis.UpdateDone THEN
+				RoboArm6Axis.Update := FALSE;
+				State := LastState;
+			END_IF
+						
+			RoboArm6Axis.Update := TRUE;
 		
 	END_CASE
 	
 	
-	IF RoboArm6Axis.UpdateDone THEN
-		RoboArm6Axis.Update := FALSE;
-	END_IF
-	
-	IF NOT RoboArm6Axis.Error THEN
-		RoboArm6Axis.ErrorReset := FALSE;
-	END_IF
 	
 	RoboArm6Axis();
 	
@@ -285,5 +301,7 @@ PROGRAM _EXIT
 	(* Insert code here *)
 	RoboArm6Axis.Power := FALSE;
 	RoboArm6Axis.Enable := FALSE;
+	
+	RoboArm6Axis(); //this will free up MpLink (possibly)
 END_PROGRAM
 

@@ -16,9 +16,6 @@
 END_FUNCTION_BLOCK
 
 {REDUND_ERROR} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
-	VAR
-		SemiAutoModePara_memory : R3SemiAutoModeType;
-	END_VAR
 	VAR_IN_OUT
 		SemiAutoModePara : R3SemiAutoModeType;
 		RoboArm : MpRoboArm6Axis;
@@ -27,6 +24,7 @@ END_FUNCTION_BLOCK
 		ControlSelector : ControlSelectEnum;
 	END_VAR
 	VAR
+		SemiAutoModePara_memory : R3SemiAutoModeType;
 		WeNeedToGoBack : BOOL;
 		IsPaused : BOOL;
 	END_VAR
@@ -56,3 +54,15 @@ END_FUNCTION_BLOCK
 		RoboArm : MpRoboArm6Axis; (*needed for current axis position*)
 	END_VAR
 END_FUNCTION
+
+{REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3AutomaticMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR_INPUT
+		AxesGroup : REFERENCE TO UDINT; (*AxesGroup to execute program on*)
+	END_VAR
+	VAR_IN_OUT
+		AutoMode : R3AutomaticModeType; (*Main type variable*)
+	END_VAR
+	VAR
+		UnloadMode : {REDUND_UNREPLICABLE} McUnloadProgramModeEnum; (*defines unload mode behaviour*)
+	END_VAR
+END_FUNCTION_BLOCK
