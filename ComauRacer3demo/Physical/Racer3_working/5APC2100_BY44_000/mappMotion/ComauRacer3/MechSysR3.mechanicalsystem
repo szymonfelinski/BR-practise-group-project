@@ -73,7 +73,7 @@
         </Selector>
         <Selector ID="WireFrameModel" Value="Standard">
           <Selector ID="Q1ToQ2" Value="ConnectionLine">
-            <Property ID="Distance" Value="1500" />
+            <Property ID="Distance" Value="5" />
           </Selector>
           <Selector ID="Q2ToQ3" Value="ConnectionLine">
             <Property ID="Distance" Value="5" />
