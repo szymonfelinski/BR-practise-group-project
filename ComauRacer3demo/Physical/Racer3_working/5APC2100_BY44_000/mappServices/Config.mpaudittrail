@@ -10,7 +10,7 @@
       </Group>
       <Selector ID="TextSource" Value="TXT">
         <Property ID="Name" Value="MpAudit" />
-        <Property ID="OutputFormat" Value="EventF/Root" />
+        <Property ID="OutputFormat" Value="SysF/Event/Root" />
       </Selector>
       <Group ID="Export">
         <Property ID="Encrypt" Value="FALSE" />
