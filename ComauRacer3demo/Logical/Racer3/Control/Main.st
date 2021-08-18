@@ -139,11 +139,11 @@ PROGRAM _CYCLIC
 			END_IF
 		
 			txt_State_out:="ManualControl";
-			ManualControlPara.PathLimits.Acceleration;
-			ManualControlPara.PathLimits.Deceleration;
-			ManualControlPara.PathLimits.Jerk;
-			ManualControlPara.PathLimits.Velocity;
-			ManualControlPara; //main struct to be bound in mapp view
+			//ManualControlPara.PathLimits.Acceleration;
+			//ManualControlPara.PathLimits.Deceleration;
+			//ManualControlPara.PathLimits.Jerk;
+			//ManualControlPara.PathLimits.Velocity;
+			//ManualControlPara; //main struct to be bound in mapp view
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara,MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_SEMI_AUTOMATIC:
@@ -161,7 +161,6 @@ PROGRAM _CYCLIC
 			END_IF
 			
 			txt_State_out:="SemiAutoControl";
-			//SemiAutoControlPara.Flag :=TRUE;
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_AUTOMATIC:
