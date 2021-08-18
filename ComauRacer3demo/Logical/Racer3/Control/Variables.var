@@ -9,6 +9,7 @@ VAR
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
 	i : USINT;
+	Axis_1to5_calibrated : BOOL; (*If value TRUE then axis 6 can be calibrated*)
 	Calibration : R3CalibrationMainType; (*Main calibration variable.*)
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;
@@ -21,5 +22,5 @@ VAR
 	PathSystem : BOOL := TRUE; (*0 for direct, 1 for linear*)
 	ModeSystem : BOOL := TRUE; (*0 for absolute, 1 for relative*)
 	LastState : R3StateMachineEnum; (*Stores last machine state.*)
-	CalibrationStateBtn : BOOL;
+	CalibrationStateBtn : BOOL; (*TRUE when in state STATE_CALIBRATION *)
 END_VAR

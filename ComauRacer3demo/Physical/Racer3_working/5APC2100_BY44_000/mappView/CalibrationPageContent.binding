@@ -77,5 +77,10 @@
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[0]" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image1" attribute="visible" />
 </Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Axis_1to5_calibrated" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ6CalibrationControlContent" attribute="enable" />
+</Binding>
 </Bindings>
 </BindingsSet>
