@@ -25,6 +25,8 @@ ACTION UpdateCheck:
 		SemiAutoControlPara.UpdatePending :=TRUE;
 		// TODO Auto too
 	END_IF
+	IF RoboArmPara.Distance[0] <>  SemiAutoModePara.AxisDistance.Q1 OR RoboArmPara.Distance[1] <>  SemiAutoModePara.AxisDistance.Q2 OR RoboArmPara.Distance[2] <>  SemiAutoModePara.AxisDistance.Q3 OR RoboArmPara.Distance[3] <>  SemiAutoModePara.AxisDistance.Q4 OR RoboArmPara.Distance[4] <>  SemiAutoModePara.AxisDistance.Q5 OR RoboArmPara.Distance[5] <>  SemiAutoModePara.AxisDistance.Q6 THEN
+		SemiAutoControlPara.UpdatePending :=TRUE;
+	END_IF
 	
-	//TODO make action with all these updates
 END_ACTION
