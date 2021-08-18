@@ -52,14 +52,6 @@ FUNCTION_BLOCK R3SemiAutoMode
 				WeNeedToGoBack:=FALSE;
 			END_IF
 		START:
-			IF RoboArmPara.Distance[0] <>  SemiAutoModePara.AxisDistance.Q1 OR RoboArmPara.Distance[1] <>  SemiAutoModePara.AxisDistance.Q2 OR RoboArmPara.Distance[2] <>  SemiAutoModePara.AxisDistance.Q3 OR RoboArmPara.Distance[3] <>  SemiAutoModePara.AxisDistance.Q4 OR RoboArmPara.Distance[4] <>  SemiAutoModePara.AxisDistance.Q5 OR RoboArmPara.Distance[5] <>  SemiAutoModePara.AxisDistance.Q6 THEN
-				RoboArmPara.Distance[0] := SemiAutoModePara.AxisDistance.Q1;
-				RoboArmPara.Distance[1] := SemiAutoModePara.AxisDistance.Q2;
-				RoboArmPara.Distance[2] := SemiAutoModePara.AxisDistance.Q3;
-				RoboArmPara.Distance[3] := SemiAutoModePara.AxisDistance.Q4;
-				RoboArmPara.Distance[4] := SemiAutoModePara.AxisDistance.Q5;
-				RoboArmPara.Distance[5] := SemiAutoModePara.AxisDistance.Q6;
-			END_IF
 			IF SemiAutoModePara.UpdatePending THEN
 				SemiAutoModePara.State:=UPDATE;
 				WeNeedToGoBack := TRUE;
