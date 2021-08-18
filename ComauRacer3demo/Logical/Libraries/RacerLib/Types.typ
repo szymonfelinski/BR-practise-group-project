@@ -1,5 +1,58 @@
 
 TYPE
+	R3AutomaticModeErrorEnum : 
+		(
+		autoNO_ERROR := 0,
+		autoLOAD_PROGRAM_ERROR := 1,
+		autoUNLOAD_PROGRAM_ERROR := 2,
+		autoEXECUTE_PROGRAM_ERROR := 3,
+		autoPAUSE_ERROR := 4,
+		autoCONTINUE_ERROR := 5,
+		autoABORT_ERROR := 6
+		);
+	R3AutomaticModeCmds : 	STRUCT  (*Automatic mode commands*)
+		LoadProgram : MC_BR_LoadProgram;
+		ExecuteProgram : MC_BR_MoveProgram;
+		UnloadProgram : MC_BR_UnloadProgram;
+		PauseProgram : MC_GroupInterrupt;
+		ContinueProgram : MC_GroupContinue;
+		GroupStop : MC_GroupStop;
+	END_STRUCT;
+	R3AutomaticModeState : 
+		( (*Automatic mode state machine*)
+		autoSTATE_WAIT, (*waiting for instruction*)
+		autoSTATE_LOAD, (*loading program*)
+		autoSTATE_UNLOAD, (*Unloading program state*)
+		autoSTATE_EXECUTE, (*executing program*)
+		autoSTATE_DONE, (*execution done*)
+		autoSTATE_PAUSE, (*program paused*)
+		autoSTATE_CONTINUE, (*Continues paused program*)
+		autoSTATE_ABORT, (*Abort current program*)
+		autoSTATE_ERROR (*error state*)
+		);
+	R3AutomaticModePara : 	STRUCT  (*Automatic mode parameters*)
+		ProgramName : STRING[260]; (*Program name to load/execute*)
+		Load : BOOL; (*Load a program*)
+		Execute : BOOL; (*Executes a program*)
+		Unload : BOOL; (*Unloads a program*)
+		ErrorReset : BOOL; (*Resets errors*)
+		Abort : BOOL; (*Aborts execution.*)
+		UnloadAll : BOOL; (*tells the program to unload all programs from memory (used with Unload)*)
+		Pause : BOOL; (*Pauses execution*)
+		Continue : BOOL; (*Continues execution*)
+		Continuous : BOOL; (*Defines whether the program will be called continuously*)
+	END_STRUCT;
+	R3AutomaticModeInfo : 	STRUCT 
+		CurrentState : R3AutomaticModeState; (*Current automode state*)
+		Error : R3AutomaticModeErrorEnum;
+		ErrorID : DINT;
+		Paused : BOOL;
+	END_STRUCT;
+	R3AutomaticModeType : 	STRUCT  (*Automatic mode main structure*)
+		Parameters : R3AutomaticModePara;
+		Info : R3AutomaticModeInfo;
+		Cmds : R3AutomaticModeCmds;
+	END_STRUCT;
 	R3ManualModeType : 	STRUCT  (*Manual mode type*)
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
@@ -32,7 +85,8 @@ TYPE
 		STATE_SEMI_AUTOMATIC, (*Semi automatic mode*)
 		STATE_AUTOMATIC, (*Automatic mode (script execution)*)
 		STATE_CALIBRATION, (*Calibration mode*)
-		STATE_HOMING (*Homing mode*)
+		STATE_HOMING, (*Homing mode*)
+		STATE_UPDATE (*This will update the robot parameters on demand*)
 		);
 	R3CalibrationType : 	STRUCT 
 		CalibrationState : R3CalibrationStateEnum; (*State machine used to control Calibration behaviour*)
@@ -65,9 +119,8 @@ TYPE
 		START := 1,
 		UPDATE := 2,
 		GO := 3,
-		STATE_EXIT := 4,
 		STATE_STOP := 5,
-		STATE_PAUSE := 6
+		STATE_PAUSE := 4
 		);
 	R3SemiAutoModeType : 	STRUCT 
 		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
@@ -80,6 +133,7 @@ TYPE
 		PathMode : BOOL; (*Switches between direct and linear path mode, 1 for linear , 0 for direct*)
 		PathModeForThisMove : BOOL;
 		ExitSemiAuto : BOOL;
+		Pause : BOOL;
 	END_STRUCT;
 	ControlSelectEnum : 
 		(

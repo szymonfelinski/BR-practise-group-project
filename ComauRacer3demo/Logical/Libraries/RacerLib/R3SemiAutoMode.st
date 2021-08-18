@@ -4,6 +4,15 @@ FUNCTION_BLOCK R3SemiAutoMode
 	IF SemiAutoModePara.ExitSemiAuto THEN
 		SemiAutoModePara.State := STATE_STOP;
 	END_IF
+	
+	(*
+	IF SemiAutoModePara.Pause THEN
+		SemiAutoModePara_memory := SemiAutoModePara;
+		RoboArm.MoveDirect:=FALSE;
+		RoboArm.MoveLinear:=FALSE;
+		SemiAutoModePara.Flag:=FALSE;
+	END_IF
+	*)
 	CASE SemiAutoModePara.State OF
 		INIT:
 			IF SemiAutoModePara.UpdatePending THEN
@@ -75,6 +84,9 @@ FUNCTION_BLOCK R3SemiAutoMode
 			SemiAutoModePara.Flag:=FALSE;
 			SemiAutoModePara.State:=INIT;
 			SemiAutoModePara.ExitSemiAuto:=FALSE;
-		//TODO Pause
+		STATE_PAUSE:
+			//TODO count movement deegrees in relative and substract so unpause in relative mode "continues"
+
+			
 	END_CASE
 END_FUNCTION_BLOCK
