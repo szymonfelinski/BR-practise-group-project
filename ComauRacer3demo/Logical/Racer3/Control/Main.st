@@ -9,11 +9,11 @@ PROGRAM _INIT
 	RoboArm6Axis.Parameters := ADR(RoboArm6AxisPara);
 	RoboArm6AxisPara.Acceleration := 1000.0;
 	RoboArm6AxisPara.Deceleration := 1000.0;
-	RoboArm6AxisPara.Velocity := 100.0;
+	RoboArm6AxisPara.Velocity := 69.0;
 	
 	ManualControlPara.PathLimits.Acceleration := 100.0;
 	ManualControlPara.PathLimits.Deceleration := 100.0;
-	ManualControlPara.PathLimits.Velocity := 10.0;
+	ManualControlPara.PathLimits.Velocity := 100.0;
 	ManualControlPara.PathLimits.Jerk := 0.0;
 	ManualControlPara.Direction := -1;
 	
@@ -47,33 +47,7 @@ PROGRAM _CYCLIC
 		State:= STATE_READY;
 	END_IF
 	
-	IF CoordinateSystem THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
-		ManualControlPara.CoordinateSystem := 9;
-		IF SemiAutoControlPara.CoordinateSystem <> 9 THEN
-			SemiAutoControlPara.CoordinateSystem := 9;
-			SemiAutoControlPara.UpdatePending := TRUE;
-		END_IF
-	ELSE
-		ManualControlPara.CoordinateSystem := 0;
-		IF SemiAutoControlPara.CoordinateSystem <> 0 THEN
-			SemiAutoControlPara.CoordinateSystem := 0;
-			SemiAutoControlPara.UpdatePending := TRUE;
-		END_IF
-	END_IF
-	
-	IF SemiAutoControlPara.PathMode <> PathSystem THEN
-		SemiAutoControlPara.PathMode := PathSystem;
-		SemiAutoControlPara.UpdatePending :=TRUE;
-		// TODO Auto too
-	END_IF
-	
-	IF SemiAutoControlPara.Mode <> ModeSystem THEN
-		SemiAutoControlPara.Mode := ModeSystem;
-		SemiAutoControlPara.UpdatePending :=TRUE;
-		// TODO Auto too
-	END_IF
-	
-	//TODO make action with all these updates
+	UpdateCheck;
 	
 	CASE State OF
 		STATE_ERROR:

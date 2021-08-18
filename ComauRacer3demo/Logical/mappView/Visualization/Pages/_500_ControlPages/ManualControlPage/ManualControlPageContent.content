@@ -25,7 +25,7 @@
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="21" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="22" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="599" left="539" width="180" zIndex="23" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="639" left="539" width="180" zIndex="24" text="$IAT/ControlPage/ManualControl.maxDecceleration" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="639" left="539" width="180" zIndex="24" text="$IAT/ControlPage/ManualControl.JogVelocity" textAlign="center" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ1HalfAuto" top="179" left="177" zIndex="25" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ2HalfAuto" top="179" left="340" zIndex="26" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ3HalfAuto" top="179" left="497" zIndex="27" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />

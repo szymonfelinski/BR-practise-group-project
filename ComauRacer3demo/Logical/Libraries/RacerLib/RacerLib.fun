@@ -16,6 +16,9 @@
 END_FUNCTION_BLOCK
 
 {REDUND_ERROR} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR
+		SemiAutoModePara_memory : R3SemiAutoModeType;
+	END_VAR
 	VAR_IN_OUT
 		SemiAutoModePara : R3SemiAutoModeType;
 		RoboArm : MpRoboArm6Axis;
@@ -25,6 +28,7 @@ END_FUNCTION_BLOCK
 	END_VAR
 	VAR
 		WeNeedToGoBack : BOOL;
+		IsPaused : BOOL;
 	END_VAR
 END_FUNCTION_BLOCK
 
