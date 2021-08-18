@@ -7,9 +7,9 @@
         <Group ID="Cuboid[1]">
           <Property ID="ID" Value="0" />
           <Group ID="Translation">
-            <Property ID="X" Value="-500" />
-            <Property ID="Y" Value="-250" />
-            <Property ID="Z" Value="0.0" />
+            <Property ID="X" Value="-190" />
+            <Property ID="Y" Value="-480" />
+            <Property ID="Z" Value="10" />
           </Group>
           <Group ID="Orientation">
             <Property ID="Angle1" Value="0.0" />
@@ -17,9 +17,9 @@
             <Property ID="Angle3" Value="0.0" />
           </Group>
           <Group ID="Dimension">
-            <Property ID="X" Value="1000" />
-            <Property ID="Y" Value="1000" />
-            <Property ID="Z" Value="700" />
+            <Property ID="X" Value="900" />
+            <Property ID="Y" Value="960" />
+            <Property ID="Z" Value="1300" />
           </Group>
         </Group>
       </Group>

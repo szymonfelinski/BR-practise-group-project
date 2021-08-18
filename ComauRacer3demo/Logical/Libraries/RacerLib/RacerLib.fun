@@ -15,13 +15,16 @@
 	END_VAR
 END_FUNCTION_BLOCK
 
-{REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+{REDUND_ERROR} FUNCTION_BLOCK R3SemiAutoMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_IN_OUT
 		SemiAutoModePara : R3SemiAutoModeType;
 		RoboArm : MpRoboArm6Axis;
 		RoboArmPara : MpRoboArm6AxisParType;
 		MainState : R3StateMachineEnum;
 		ControlSelector : ControlSelectEnum;
+	END_VAR
+	VAR
+		WeNeedToGoBack : BOOL;
 	END_VAR
 END_FUNCTION_BLOCK
 

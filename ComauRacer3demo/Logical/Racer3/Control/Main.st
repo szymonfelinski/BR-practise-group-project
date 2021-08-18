@@ -11,20 +11,11 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 100.0;
 	
-	ManualControlPara.CoordinateSystem := 0;
-	//SemiAutoControlPara.CoordinateSystem := 0;
-	//SemiAutoControlPara.UpdatePending := TRUE;
-	CoordinateSystem := FALSE;
-	//RoboArm6AxisPara.Distance[0] := 50.0;
-	(*ManualMode.PathLimits.Acceleration := 100.0;
-	ManualMode.CoordinateSystem := 9;
-	ManualMode.PathLimits.Deceleration := 100.0;
-	ManualMode.PathLimits.Velocity := 10.0;
-	ManualMode.PathLimits.Jerk := 0.0;
-	ManualMode.Direction := POSITIVE;*)
-	
-	//ManualControl();
-	//R3ManualMode(
+	ManualControlPara.PathLimits.Acceleration := 100.0;
+	ManualControlPara.PathLimits.Deceleration := 100.0;
+	ManualControlPara.PathLimits.Velocity := 10.0;
+	ManualControlPara.PathLimits.Jerk := 0.0;
+	ManualControlPara.Direction := -1;
 	
 	State := STATE_INIT;
 	Power := FALSE;
@@ -58,19 +49,31 @@ PROGRAM _CYCLIC
 	
 	IF CoordinateSystem THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
 		ManualControlPara.CoordinateSystem := 9;
-		//SemiAutoControlPara.CoordinateSystem := 9;
-		//SemiAutoControlPara.UpdatePending := TRUE;
+		IF SemiAutoControlPara.CoordinateSystem <> 9 THEN
+			SemiAutoControlPara.CoordinateSystem := 9;
+			SemiAutoControlPara.UpdatePending := TRUE;
+		END_IF
 	ELSE
 		ManualControlPara.CoordinateSystem := 0;
-		//SemiAutoControlPara.CoordinateSystem := 0;
-		//SemiAutoControlPara.UpdatePending := TRUE;
+		IF SemiAutoControlPara.CoordinateSystem <> 0 THEN
+			SemiAutoControlPara.CoordinateSystem := 0;
+			SemiAutoControlPara.UpdatePending := TRUE;
+		END_IF
 	END_IF
 	
-	IF PathSystem THEN
+	IF SemiAutoControlPara.PathMode <> PathSystem THEN
 		SemiAutoControlPara.PathMode := PathSystem;
 		SemiAutoControlPara.UpdatePending :=TRUE;
 		// TODO Auto too
 	END_IF
+	
+	IF SemiAutoControlPara.Mode <> ModeSystem THEN
+		SemiAutoControlPara.Mode := ModeSystem;
+		SemiAutoControlPara.UpdatePending :=TRUE;
+		// TODO Auto too
+	END_IF
+	
+	//TODO make action with all these updates
 	
 	CASE State OF
 		STATE_ERROR:
@@ -144,6 +147,19 @@ PROGRAM _CYCLIC
 			// maybe do something similar to exit mode in manual
 		
 		STATE_MANUAL_CONTROL:
+			
+			//ChangeMode
+			IF ControlSelector = ManualJog AND changeModePending <> 1 THEN
+				// exit from MANUAL
+				ManualControlPara.ExitManual:=TRUE;
+				ControlSelector:=changeModePending;
+				State:=STATE_READY;
+			END_IF
+			IF Stop THEN
+				ManualControlPara.ExitManual:=TRUE;
+				Stop:=FALSE;
+			END_IF
+		
 			txt_State_out:="ManualControl";
 			ManualControlPara.PathLimits.Acceleration;
 			ManualControlPara.PathLimits.Deceleration;
@@ -151,14 +167,24 @@ PROGRAM _CYCLIC
 			ManualControlPara.PathLimits.Velocity;
 			ManualControlPara; //main struct to be bound in mapp view
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara,MainState := State, ControlSelector := ControlSelector);
-			//TODO wyjscie z Manual
 		
 		STATE_SEMI_AUTOMATIC:
+			
+			//ChangeMode
+			IF ControlSelector = SemiAutomatic AND changeModePending <> 2 THEN
+				// exit from SemiAuto
+				SemiAutoControlPara.ExitSemiAuto:=TRUE;
+				ControlSelector:=changeModePending;
+				State:=STATE_READY;
+			END_IF
+			IF Stop THEN
+				SemiAutoControlPara.ExitSemiAuto:=TRUE;
+				Stop:=FALSE;
+			END_IF
+			
 			txt_State_out:="SemiAutoControl";
 			//SemiAutoControlPara.Flag :=TRUE;
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
-			//testowo alarm
-			//MpAlarmXSet(gAlarmXCore, 'OutOfLimits');
 		
 		STATE_AUTOMATIC:
 			txt_State_out:="AutoControl";
@@ -282,9 +308,13 @@ PROGRAM _CYCLIC
 		RoboArm6Axis.ErrorReset := FALSE;
 	END_IF
 	
-	
-	
 	RoboArm6Axis();
+	
+	
+	////////////Visualization Variables/////////////
+	
+	NOTCoordinateSystem	:= NOT CoordinateSystem;
+
 END_PROGRAM
 
 PROGRAM _EXIT

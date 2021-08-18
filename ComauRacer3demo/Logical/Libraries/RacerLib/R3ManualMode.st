@@ -10,17 +10,21 @@ FUNCTION_BLOCK R3ManualMode
 		JogVelocityActual := 0;
 	END_IF
 	
-	RoboArmPara.Jog.CoordSystem := ManualModePara.CoordinateSystem;
+	IF RoboArmPara.Jog.CoordSystem <> ManualModePara.CoordinateSystem THEN
+		RoboArmPara.Jog.CoordSystem := ManualModePara.CoordinateSystem;
+	END_IF
 	RoboArmPara.Jog.PathLimits := ManualModePara.PathLimits;
 	
 	IF ManualModePara.ActivateMove THEN
 		
 		IF ManualModePara.AxisButton.Q1 THEN // if a button is pressed, write corresponding velocity to the jog velocity array
-			RoboArmPara.Jog.Velocity[0] := JogVelocityActual;
-			
+			IF RoboArmPara.Jog.Velocity[0] <> JogVelocityActual THEN
+				RoboArmPara.Jog.Velocity[0] := JogVelocityActual;
+			END_IF
 		ELSIF ManualModePara.AxisButton.Q2 THEN
-			RoboArmPara.Jog.Velocity[1] := JogVelocityActual;
-			
+			IF RoboArmPara.Jog.Velocity[1] <> JogVelocityActual THEN
+				RoboArmPara.Jog.Velocity[1] := JogVelocityActual;
+			END_IF	
 		ELSIF ManualModePara.AxisButton.Q3 THEN
 			RoboArmPara.Jog.Velocity[2] := JogVelocityActual;
 			
@@ -54,7 +58,6 @@ FUNCTION_BLOCK R3ManualMode
 		ManualModePara.ActivateMove:=FALSE;
 		RoboArm.Jog:=FALSE;
 		//go out
-		MainState := STATE_READY;
 	END_IF
 	
 		
