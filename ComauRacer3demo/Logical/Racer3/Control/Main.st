@@ -179,6 +179,7 @@ PROGRAM _CYCLIC
 		STATE_CALIBRATION:
 			
 			//perform initial homing to trick ACOPOS into thinking axes are homed, basically set home to current position.
+			CalibrationStateBtn := TRUE;
 			CASE Calibration.Info.CurrentState OF
 				STATE_BEGIN:
 					IF RoboArm6Axis.IsHomed THEN
@@ -269,6 +270,7 @@ PROGRAM _CYCLIC
 				
 				STATE_DONE:
 					gIsCalibrated := TRUE;
+					CalibrationStateBtn := FALSE;
 					State:=STATE_HOMING;
 
 			END_CASE

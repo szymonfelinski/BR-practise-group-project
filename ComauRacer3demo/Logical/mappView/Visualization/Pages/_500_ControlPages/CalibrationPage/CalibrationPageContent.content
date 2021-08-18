@@ -18,14 +18,14 @@
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4CalibrationControlContent" top="260" left="680" zIndex="14" text="4" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5CalibrationControlContent" top="260" left="840" zIndex="15" text="5" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6CalibrationControlContent" top="260" left="998" zIndex="16" text="6" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="CalibrationPageLabelQ1" top="300" left="178" width="100" zIndex="17" text="(un)saved" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="CalibrationPageLabelQ2" top="300" left="338" width="100" zIndex="18" text="(un)saved" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="CalibrationPageLabelQ3" top="300" left="498" width="100" zIndex="19" text="(un)saved" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="CalibrationPageLabelQ4" top="300" left="678" width="100" zIndex="20" text="(un)saved" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="CalibrationPageLabelQ5" top="300" left="838" width="100" zIndex="21" text="(un)saved" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="CalibrationPageLabelQ6" top="300" left="998" width="100" zIndex="22" text="(un)saved" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="SelectAxisCalibrationPageLabel" top="180" left="460" width="360" zIndex="23" text="$IAT/ControlPage/CalibrationControl.Label" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="500" left="500" width="300" zIndex="24" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="460" left="500" width="300" zIndex="25" text="$IAT/ControlPage/ManualContol.maxVelocity" textAlign="center bottom" />
+    <Widget xsi:type="widgets.brease.Label" id="SelectAxisCalibrationPageLabel" top="180" left="460" width="360" zIndex="17" text="$IAT/ControlPage/CalibrationControl.Label" textAlign="center bottom" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="500" left="500" width="300" zIndex="18" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="460" left="500" width="300" zIndex="19" text="$IAT/ControlPage/ManualControl.JogVelocity" textAlign="center bottom" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="300" left="220" width="20" height="20" zIndex="20" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="300" left="380" width="20" height="20" zIndex="21" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image3" top="300" left="540" width="20" height="20" zIndex="22" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image4" top="300" left="720" width="20" height="20" zIndex="23" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image5" top="300" left="880" width="20" height="20" zIndex="24" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image6" top="300" left="1040" width="20" height="20" zIndex="25" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
   </Widgets>
 </Content>

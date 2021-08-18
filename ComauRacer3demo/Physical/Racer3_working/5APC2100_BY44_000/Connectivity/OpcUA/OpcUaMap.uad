@@ -263,6 +263,30 @@
         <Variable Name="NOTCoordinateSystem" />
         <Variable Name="PathSystem" />
         <Variable Name="ModeSystem" />
+        <Variable Name="Calibration">
+          <Variable Name="Info" />
+          <Variable Name="Cmds" />
+          <Variable Name="Para">
+            <Variable Name="Parameters">
+              <Variable Name="AxisCalibrated" EnableArrayElements="True" />
+              <Variable Name="AxisSaveBtn" />
+              <Variable Name="CalibrationModePara">
+                <Variable Name="AxisButton">
+                  <Variable Name="Q1" />
+                  <Variable Name="Q2" />
+                  <Variable Name="Q3" />
+                  <Variable Name="Q4" />
+                  <Variable Name="Q5" />
+                  <Variable Name="Q6" />
+                </Variable>
+                <Variable Name="JogVelocity" />
+                <Variable Name="Direction" />
+                <Variable Name="ActivateMove" />
+              </Variable>
+            </Variable>
+          </Variable>
+        </Variable>
+        <Variable Name="CalibrationStateBtn" />
       </Task>
       <Task Name="FileManage">
         <Variable Name="aux">
