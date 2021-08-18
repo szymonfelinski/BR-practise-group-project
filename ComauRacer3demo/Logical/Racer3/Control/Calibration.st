@@ -1,5 +1,5 @@
 
-ACTION Calibration: 
+ACTION CalibrationAction: 
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
 			IF RoboArm6Axis.IsHomed THEN
