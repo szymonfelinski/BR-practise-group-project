@@ -25,6 +25,8 @@ PROGRAM _INIT
 	gRacer3HomeRestorePos; //call home restore position variable to init it in memory
 	//MpAlarmXCore_Control(MpLink := ADR(gAlarmXCore), Enable := TRUE);
 	
+	AutomaticCurrentLanguage; //variable used for changing script language
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -177,7 +179,7 @@ PROGRAM _CYCLIC
 			
 			IF AutomaticCurrentLanguage THEN
 					
-				IF Pause AND NOT Stop THEN
+				(*IF Pause AND NOT Stop THEN
 					AutomaticModePara.Parameters.Pause:=TRUE;
 				END_IF
 				IF NOT Pause AND AutomaticModePara.Parameters.Pause AND NOT Stop THEN
@@ -186,8 +188,8 @@ PROGRAM _CYCLIC
 				IF Stop THEN
 					AutomaticModePara.Parameters.Abort:=TRUE;
 					Stop:=FALSE;
-				END_IF
-	
+				END_IF*) // this is probably not needed.
+				
 				AutomaticModePara.Parameters;
 				AutomaticModePara.Parameters.ProgramName;
 				//AutomaticModePara.Parameters.Execute := TRUE;
