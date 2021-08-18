@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="DocsBrowserPageContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="DocsBrowserPageContent.btnDelete.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnDelete" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.Delete">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="DialogConfirm" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnCopy.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnCopy" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.Copy">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnCut.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnCut" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.Cut">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnPaste.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnPaste" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.Paste">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnRename.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnRename" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="DialogRename" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnDevice1.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.ToggleButton2.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="ToggleButton2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnNewFolder.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnNewFolder" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="DialogNewFolder" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnRefresh.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnRefresh" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.Refresh">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnEnterFolder.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnEnterFolder" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.EnterFolder">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnFolderUp.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnFolderUp" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.FolderUp">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

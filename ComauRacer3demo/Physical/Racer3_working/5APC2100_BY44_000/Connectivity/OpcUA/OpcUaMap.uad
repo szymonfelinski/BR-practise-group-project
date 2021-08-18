@@ -8,12 +8,16 @@
         <ACE RoleId="3" RoleName="Operator" Access="0x005F" />
         <ACE RoleId="1" RoleName="Administrators" Access="0x017F" />
       </ACL>
+      <ACL Id="2">
+        <ACE RoleId="2" RoleName="Everyone" Access="0x007F" />
+        <ACE RoleId="3" RoleName="Operator" Access="0x007F" />
+      </ACL>
     </ACLAliases>
     <EURangeViolationAliases />
     <EURangesAliases />
     <EngineeringUnitAliases />
   </Aliases>
-  <DefaultView>
+  <DefaultView AclId="2">
     <Module Name="&lt;Default&gt;">
       <Task Name="Control">
         <Variable Name="RoboArm6Axis">
@@ -283,6 +287,23 @@
           </Variable>
         </Variable>
         <Variable Name="CalibrationStateBtn" />
+      </Task>
+      <Task Name="FileManage">
+        <Variable Name="aux">
+          <Variable Name="TableConfigurationStr" />
+          <Variable Name="errorNameExists" />
+        </Variable>
+        <Variable Name="cmd">
+          <Variable Name="MpFileManagerUI_0" />
+          <Variable Name="MpFileManagerUIConnectType" AutomaticEnable="True" />
+        </Variable>
+        <Variable Name="tabInfo">
+          <Variable Name="Name" />
+          <Variable Name="Size" />
+          <Variable Name="Type" />
+          <Variable Name="LastModified" />
+          <Variable Name="SelectedRow" />
+        </Variable>
       </Task>
     </Module>
   </DefaultView>

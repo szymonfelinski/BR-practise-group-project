@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="DialogNameExistContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="DialogNameExistContent.btnYes.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DialogNameExistContent" widgetRefId="btnYes" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="DialogNameExist" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUI_0.ErrorReset">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

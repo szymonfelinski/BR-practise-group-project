@@ -62,6 +62,7 @@
         <Property ID="FeatureRef[1]" Value="FeatureProgramsRacer3" />
         <Property ID="FeatureRef[2]" Value="FeatureFeedForwardRacer3" />
         <Property ID="FeatureRef[3]" Value="FeatureJoggingRacer3" />
+        <Property ID="FeatureRef[4]" Value="Feature_WorkspaceMonitoring" />
       </Group>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
