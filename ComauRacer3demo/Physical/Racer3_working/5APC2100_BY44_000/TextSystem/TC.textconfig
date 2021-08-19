@@ -24,7 +24,7 @@
       <Property ID="TargetFile[11]" Value="Libraries.MpAudit.TxtCustom.tmx" />
       <Property ID="TargetFile[12]" Value="Libraries.MpAudit.TxtDatapoints.tmx" />
       <Property ID="TargetFile[13]" Value="mappView.Resources.Texts.VisualizationDocsBrowserTexts.tmx" />
-
+      <Property ID="TargetFile[14]" Value="mappView.Resources.Texts.SystemDialog.tmx" />
     </Group>
   </Element>
 </Configuration>

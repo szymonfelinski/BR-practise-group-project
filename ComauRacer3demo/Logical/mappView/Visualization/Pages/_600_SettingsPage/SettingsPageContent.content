@@ -10,5 +10,6 @@
     <Widget xsi:type="widgets.brease.LanguageSelector" id="LanguageSelector1" top="338" left="239" width="782" height="60" zIndex="6" />
     <Widget xsi:type="widgets.brease.MeasurementSystemSelector" id="MeasurementSystemSelector1" top="219" left="239" width="782" height="60" zIndex="7" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonUserManagmentPage" top="86" left="1190" width="80" height="80" zIndex="8" image="Media/SymbolLib/User/User.svg" pageId="UserManagmentPage" permissionOperate="['Administrators']" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSettingsPageChangePassword" top="193" left="1190" width="80" height="80" zIndex="9" text="PWD" margin="0px" />
   </Widgets>
 </Content>

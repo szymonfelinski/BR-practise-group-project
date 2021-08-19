@@ -46,7 +46,7 @@
 		<EventBindingsSet refId="AutoControlPageContent_eventbinding" />
 		<EventBindingsSet refId="ManualControlPageContent_eventbinding" />
 		<EventBindingsSet refId="HalfAutoControlPageContent_eventbinding" />
-		<EventBindingsSet refId="CalibrationControlPageContent_eventbinding" />
+		<EventBindingsSet refId="CalibrationPageContent_eventbinding" />
 		<EventBindingsSet refId="AuditPageContent_eventbinding" />
 		<EventBindingsSet refId="UserManagmentPageContent_eventbinding" />
 		<EventBindingsSet refId="DocsBrowserPageContent_eventbinding" />
