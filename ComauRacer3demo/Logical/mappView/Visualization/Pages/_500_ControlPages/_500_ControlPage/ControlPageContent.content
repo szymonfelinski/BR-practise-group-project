@@ -22,5 +22,6 @@
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="18" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="280" left="460" width="340" zIndex="19" text="$IAT/ControlPage/ControlPage.PowerON" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="120" left="720" width="40" height="40" zIndex="20" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="580" left="460" width="340" zIndex="21" text="$IAT/ControlPage/Control.ErrorReset" />
   </Widgets>
 </Content>

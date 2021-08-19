@@ -7,9 +7,9 @@ PROGRAM _INIT
 	cmd.MpFileManagerUI_0.UIConnect := ADR(cmd.MpFileManagerUIConnectType);
 
 	(* define of device names *) 
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[0] := 'USB';
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[0] := 'UserPart';
 	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[1] := 'AUDIT';	
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[2] := 'C:\CNC_PrgDir\';	
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[2] := 'CNC_PrgDir';		
 	
 	cmd.MpFileManagerUIConnectType.File.NewName := '';
 	
@@ -46,31 +46,35 @@ PROGRAM _CYCLIC
 	
 	(* dynamic change of the existing name *)
 	aux.NumberOfElementsMinus := tabInfo.NumberOfElements - 1;
-	aux.NewNamePlus := 0;
-	aux.newNewName := '';
-	aux.prevNewName := cmd.MpFileManagerUIConnectType.File.NewName;
-	aux.newNewName := aux.prevNewName;
-//	FOR iFile := 0 TO aux.NumberOfElementsMinus BY 1 DO
-//		IF tabInfo.Name[iFile] = aux.newNewName THEN
-//			aux.newNewName := aux.prevNewName;
-//			aux.NewNamePlus := aux.NewNamePlus + 1;
-//			brsitoa(aux.NewNamePlus, ADR(aux.NewNamePlusStr));
-//			aux.NewNameTextOne := '(';
-//			aux.NewNameTextTwo := ')';
-//			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextOne));
-//			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNamePlusStr));
-//			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextTwo));
-//			iFile := 0;	
-//		ELSE
-//			cmd.MpFileManagerUIConnectType.File.NewName := aux.newNewName;
-//		END_IF
-//	END_FOR
-	
+
+	IF tabInfo.NumberOfElements >= 1 THEN
+		
+		aux.NewNamePlus := 0;
+		aux.newNewName := '';
+		aux.prevNewName := cmd.MpFileManagerUIConnectType.File.NewName;
+		aux.newNewName := aux.prevNewName;
+		FOR iFile := 0 TO aux.NumberOfElementsMinus BY 1 DO
+			IF tabInfo.Name[iFile] = aux.newNewName THEN
+				aux.newNewName := aux.prevNewName;
+				aux.NewNamePlus := aux.NewNamePlus + 1;
+				brsitoa(aux.NewNamePlus, ADR(aux.NewNamePlusStr));
+				aux.NewNameTextOne := '(';
+				aux.NewNameTextTwo := ')';
+				brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextOne));
+				brsstrcat(ADR(aux.newNewName), ADR(aux.NewNamePlusStr));
+				brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextTwo));
+				//iFile := 0;	
+			ELSE
+				cmd.MpFileManagerUIConnectType.File.NewName := aux.newNewName;
+			END_IF
+		END_FOR
+	END_IF
+		
 	//zmiana metody sortowania 
 	CASE aux.btnSort OF
 		0: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
-			//	aux.btnSortStr := 'SortByNameUp'; jak bindowaæ adres tekstu lokalizowanego?
+			//	aux.btnSortStr := 'SortByNameUp'; jak bindowaÃ¦ adres tekstu lokalizowanego?
 		1: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_DESC;
 		2: 

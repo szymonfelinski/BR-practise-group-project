@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="Package">SymbolLib</Object>
     <Object Type="Package">SVGs</Object>
+    <Object Type="File">SzareTlo.svg</Object>
+    <Object Type="File">PomaranczoweTlo.svg</Object>
   </Objects>
 </Package>

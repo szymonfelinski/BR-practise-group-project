@@ -5,7 +5,7 @@
       <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="CalibrationPageContent" widgetRefId="btnNavigationAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.changeModePending">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
           </Target>
         </Action>
@@ -15,7 +15,7 @@
       <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="CalibrationPageContent" widgetRefId="btnNavigationHalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.changeModePending">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
           </Target>
         </Action>
@@ -25,7 +25,7 @@
       <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="CalibrationPageContent" widgetRefId="btnNavigationManualControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.changeModePending">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
           </Target>
         </Action>

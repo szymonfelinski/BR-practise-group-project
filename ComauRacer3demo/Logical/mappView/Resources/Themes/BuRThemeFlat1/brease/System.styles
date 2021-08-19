@@ -35,10 +35,13 @@
 		mouseDownButtonTextColor="#ffffff" />
 	
 	<Style id="default" xsi:type="system.brease.Area" 
-		backColor="#e6e6e6" />
+		backGround="Media/SzareTlo.svg" />
 	
 	<Style id="transparent" xsi:type="system.brease.Area" 
 		backColor="transparent" />
+		
+	<Style id="TopGrey" xsi:type="system.brease.Area" 
+	backColor="rgba(126, 126, 126, 1)" />
 	
 	<Style id="default" xsi:type="system.brease.Scrollbar"
 		backColor="rgba(0,0,0,0.5)"

@@ -20,8 +20,14 @@ PROGRAM _INIT
 	State := STATE_INIT;
 	Communication.Power := FALSE;
 	
+	//FileMgmt(MpLink := ADR(FileManagement), Enable := TRUE, Configuration := ADR(FileMgmtConfig));
+	
 	gRacer3HomeRestorePos; //call home restore position variable to init it in memory
 	//MpAlarmXCore_Control(MpLink := ADR(gAlarmXCore), Enable := TRUE);
+	
+	AutomaticCurrentLanguage; //variable used for changing script language
+	
+	RoboArm6Axis();
 	
 END_PROGRAM
 
@@ -66,7 +72,7 @@ PROGRAM _CYCLIC
 		STATE_INIT:
 			Communication.txt_State_out:="Initialization";
 			
-			RoboArm6Axis.Enable := TRUE;
+			//RoboArm6Axis.Enable := TRUE;
 			
 			IF Communication.Power THEN
 				State := STATE_POWER_ON;
@@ -106,7 +112,7 @@ PROGRAM _CYCLIC
 			
 		STATE_READY:
 			
-
+			Communication.txt_State_out:="Ready";
 			
 			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
 			
@@ -119,15 +125,13 @@ PROGRAM _CYCLIC
 			
 			IF ControlSelector = ManualJog THEN
 				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
-				Communication.txt_State_out:="Ready";
+				
 				State := STATE_MANUAL_CONTROL;
 			ELSIF ControlSelector = SemiAutomatic THEN
 				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="SemiAutoControl", Identifier := 'ControlMode');
-				Communication.txt_State_out:="Ready";
 				State := STATE_SEMI_AUTOMATIC;
 			ELSIF ControlSelector = Automatic THEN
 				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="AutoControl", Identifier := 'ControlMode');
-				Communication.txt_State_out:="Ready";
 				State := STATE_AUTOMATIC;
 			END_IF
 						
@@ -183,7 +187,7 @@ PROGRAM _CYCLIC
 				ControlSelector:=Communication.changeModePending;
 				State:=STATE_READY;
 			END_IF
-			IF Communication.Pause AND NOT Communication.Stop THEN
+			(*IF Communication.Pause AND NOT Communication.Stop THEN
 				AutomaticModePara.Parameters.Pause:=TRUE;
 			END_IF
 			IF NOT Communication.Pause AND AutomaticModePara.Parameters.Pause AND NOT Communication.Stop THEN
@@ -191,17 +195,39 @@ PROGRAM _CYCLIC
 			END_IF
 			IF Communication.Stop THEN
 				AutomaticModePara.Parameters.Abort:=TRUE;
-				Stop:=FALSE;
+				Communication.Stop:=FALSE;
 			END_IF
 
 			AutomaticModePara.Parameters;
 			AutomaticModePara.Parameters.ProgramName;
 			//AutomaticModePara.Parameters.Execute := TRUE;
 			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
-			AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
+			AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));*)
 			
-			//AutomaticModePara.Cmds.ExecuteProgram(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Name := AutomaticModePara.Parameters.ProgramName);
-		
+			IF AutomaticCurrentLanguage THEN
+					
+				(*IF Pause AND NOT Stop THEN
+					AutomaticModePara.Parameters.Pause:=TRUE;
+				END_IF
+				IF NOT Pause AND AutomaticModePara.Parameters.Pause AND NOT Stop THEN
+					AutomaticModePara.Parameters.Continue:=TRUE;
+				END_IF
+				IF Stop THEN
+					AutomaticModePara.Parameters.Abort:=TRUE;
+					Stop:=FALSE;
+				END_IF*) // this is probably not needed.
+				
+				AutomaticModePara.Parameters;
+				AutomaticModePara.Parameters.ProgramName;
+				//AutomaticModePara.Parameters.Execute := TRUE;
+				//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
+				AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
+				
+				//AutomaticModePara.Cmds.ExecuteProgram(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Name := AutomaticModePara.Parameters.ProgramName);
+			ELSE
+				//everything here happens in the widget
+			END_IF
+							
 		STATE_CALIBRATION:
 			
 			//perform initial homing to trick ACOPOS into thinking axes are homed, basically set home to current position.

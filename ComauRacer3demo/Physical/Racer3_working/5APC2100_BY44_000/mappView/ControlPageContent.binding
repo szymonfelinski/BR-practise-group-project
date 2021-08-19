@@ -9,5 +9,9 @@
 <Source xsi:type="opcUa" refId="::Control:CalibrationStateBtn" attribute="value" />
 <Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="Image1" attribute="visible" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Communication.ErrorReset" attribute="value" />
+<Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="btnErrorResetControlPanel" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>
