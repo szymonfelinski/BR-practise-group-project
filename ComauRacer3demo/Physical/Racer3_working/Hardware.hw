@@ -34,7 +34,7 @@
     <Parameter ID="FileDeviceName2" Value="AUDIT" />
     <Parameter ID="FileDevicePath2" Value="C:\Temp\Audit" />
     <Group ID="FileDevice3" />
-    <Parameter ID="FileDeviceName3" Value="USB" />
+    <Parameter ID="FileDeviceName3" Value="UserPart" />
     <Parameter ID="FileDevicePath3" Value="C:\Temp\UserPart\" Description="For HW config use F:\" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaActivateAuditEvents" Value="1" />

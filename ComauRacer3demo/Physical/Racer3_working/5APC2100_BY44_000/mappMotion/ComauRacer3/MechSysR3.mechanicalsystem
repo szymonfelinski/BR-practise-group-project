@@ -73,13 +73,13 @@
         </Selector>
         <Selector ID="WireFrameModel" Value="Standard">
           <Selector ID="Q1ToQ2" Value="ConnectionLine">
-            <Property ID="Distance" Value="5" />
+            <Property ID="Distance" Value="10" />
           </Selector>
           <Selector ID="Q2ToQ3" Value="ConnectionLine">
-            <Property ID="Distance" Value="5" />
+            <Property ID="Distance" Value="12" />
           </Selector>
           <Selector ID="Q3ToQ4" Value="ConnectionLine">
-            <Property ID="Distance" Value="5" />
+            <Property ID="Distance" Value="6" />
           </Selector>
           <Selector ID="Q4ToQ5" Value="ConnectionLine">
             <Property ID="Distance" Value="5" />
@@ -91,7 +91,7 @@
             <Property ID="Distance" Value="5" />
           </Selector>
           <Selector ID="FlangeToTcp" Value="ConnectionLine">
-            <Property ID="Distance" Value="5" />
+            <Property ID="Distance" Value="10" />
           </Selector>
         </Selector>
         <Selector ID="DynamicModel" Value="DynParTable">

@@ -123,7 +123,7 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
           </Target>
         </Action>
       </EventHandler>
