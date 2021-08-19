@@ -11,11 +11,11 @@
     <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Program1" Source="Program1.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
-  <TaskClass Name="Cyclic#5" />
-  <TaskClass Name="Cyclic#6" />
-  <TaskClass Name="Cyclic#7">
+  <TaskClass Name="Cyclic#5">
     <Task Name="FileManage" Source="FileManager.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <TaskClass Name="Cyclic#6" />
+  <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8" />
   <DataObjects>
     <DataObject Name="McAcpSys" Source="" Memory="UserROM" Language="Binary" />
