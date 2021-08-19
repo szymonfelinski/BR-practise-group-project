@@ -347,6 +347,7 @@
             <Variable Name="Paused" />
             <Variable Name="Error" />
           </Variable>
+		</Variable>
         <Variable Name="txt_State_out" />
         <Variable Name="Communication">
           <Variable Name="Pause" />
