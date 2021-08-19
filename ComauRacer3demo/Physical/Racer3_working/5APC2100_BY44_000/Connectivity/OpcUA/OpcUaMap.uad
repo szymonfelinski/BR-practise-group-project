@@ -323,6 +323,25 @@
         </Variable>
         <Variable Name="CalibrationStateBtn" />
         <Variable Name="Axis_1to5_calibrated" />
+        <Variable Name="AutomaticCurrentLanguage" />
+        <Variable Name="AutomaticModePara">
+          <Variable Name="Parameters">
+            <Variable Name="ProgramName" />
+            <Variable Name="Load" />
+            <Variable Name="Execute" />
+            <Variable Name="Unload" />
+            <Variable Name="ErrorReset" />
+            <Variable Name="Abort" />
+            <Variable Name="UnloadAll" />
+            <Variable Name="Pause" />
+            <Variable Name="Continue" />
+            <Variable Name="Continuous" />
+          </Variable>
+          <Variable Name="Info">
+            <Variable Name="Paused" />
+            <Variable Name="Error" />
+          </Variable>
+        </Variable>
         <Variable Name="Communication">
           <Variable Name="Pause" />
           <Variable Name="Stop" />

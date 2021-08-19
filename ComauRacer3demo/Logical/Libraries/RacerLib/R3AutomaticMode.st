@@ -152,6 +152,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Parameters.Unload := FALSE;
 				AutoMode.Parameters.Load := FALSE;
 				AutoMode.Parameters.Abort := FALSE;
+				AutoMode.Parameters.Continuous := FALSE;
 				AutoMode.Info.Paused := FALSE;
 				AutoMode.Info.CurrentState := autoSTATE_WAIT;
 					
@@ -171,6 +172,7 @@ FUNCTION_BLOCK R3AutomaticMode
 			AutoMode.Parameters.Execute := FALSE;
 			AutoMode.Parameters.Unload := FALSE;
 			AutoMode.Parameters.Load := FALSE;
+			AutoMode.Parameters.Continuous := FALSE;
 			
 			IF AutoMode.Parameters.ErrorReset THEN
 				AutoMode.Info.Error := autoNO_ERROR;

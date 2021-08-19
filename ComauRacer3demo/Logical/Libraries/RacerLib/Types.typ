@@ -157,9 +157,9 @@ TYPE
 	R3CalibrationMainType : 	STRUCT 
 		Info : CalibrationInfo; (*Information portion of calibration.*)
 		Cmds : CalibrationCmds; (*Calibration commands*)
-		Para : CalibrationPara; (*Calibration parameters*)
+		Para : CalibrationParaType; (*Calibration parameters*)
 	END_STRUCT;
-	CalibrationPara : 	STRUCT 
+	CalibrationParaType : 	STRUCT 
 		Parameters : R3CalibrationType;
 		HomingParameters : McAcpAxHomingParType;
 		FakeHomingModeEnum : ARRAY[0..14]OF McHomingModeEnum := [15(mcHOMING_DIRECT)];

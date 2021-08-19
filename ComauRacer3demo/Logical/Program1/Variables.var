@@ -1,0 +1,3 @@
+VAR
+	test : BOOL;
+END_VAR
