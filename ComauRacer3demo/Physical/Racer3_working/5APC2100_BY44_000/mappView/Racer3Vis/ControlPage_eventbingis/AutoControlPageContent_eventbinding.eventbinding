@@ -324,5 +324,85 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTRight1AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight1AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticCurrentLanguage">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnGRight2AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnGRight2AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+            <Method xsi:type="widgets.brease.MotionPad.Action.Run" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnGRight3AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnGRight3AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+            <Method xsi:type="widgets.brease.MotionPad.Action.Pause" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnGRight4AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnGRight4AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+            <Method xsi:type="widgets.brease.MotionPad.Action.Stop" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTLeft1AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTLeft1AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+            <Method xsi:type="widgets.brease.MotionPad.Action.New" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTLeft2AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTLeft2AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+            <Method xsi:type="widgets.brease.MotionPad.Action.Open" filePath="" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTLeft3AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTLeft3AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+            <Method xsi:type="widgets.brease.MotionPad.Action.Save" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTLeft4AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTLeft4AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+            <Method xsi:type="widgets.brease.MotionPad.Action.SaveAs" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
