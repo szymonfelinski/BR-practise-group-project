@@ -32,8 +32,9 @@
         <Property ID="pv" Value="::Control:RoboArm6Axis.InMotion" />
       </Group>
       <Group ID="3">
-        <Property ID="pv" Value="::Control:ControlSelector" />
+        <Property ID="pv" Value="::Control:RoboArm6Axis.Error" />
       </Group>
+      <Group ID="4" />
     </Group>
     <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
