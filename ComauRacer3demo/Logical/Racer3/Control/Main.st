@@ -18,7 +18,7 @@ PROGRAM _INIT
 	ManualControlPara.Direction := -1;
 	
 	State := STATE_INIT;
-	Power := FALSE;
+	Communication.Power := FALSE;
 	
 	//FileMgmt(MpLink := ADR(FileManagement), Enable := TRUE, Configuration := ADR(FileMgmtConfig));
 	
@@ -35,12 +35,12 @@ PROGRAM _CYCLIC
 		State := STATE_ERROR;
 	END_IF
 	
-	IF NOT Power THEN
+	IF NOT Communication.Power THEN
 		RoboArm6Axis.Power := FALSE;
 		State:= STATE_INIT;
 	END_IF
 	
-	IF Stop THEN
+	IF Communication.Stop THEN
 		//stops and goes to standby
 		RoboArm6Axis.MoveLinear := FALSE;
 		RoboArm6Axis.MoveDirect := FALSE;
@@ -55,24 +55,29 @@ PROGRAM _CYCLIC
 	
 	CASE State OF
 		STATE_ERROR:
-			txt_State_out:="Error";
+			Communication.txt_State_out:="Error";
 
 			IF NOT RoboArm6Axis.Error THEN
 				RoboArm6Axis.ErrorReset := FALSE;
 				State := STATE_INIT;
 			END_IF
 			
+			IF Communication.ErrorReset THEN
+				RoboArm6Axis.ErrorReset := TRUE;
+				Communication.ErrorReset := FALSE;
+			END_IF
+			
 		STATE_INIT:
-			txt_State_out:="Initialization";
+			Communication.txt_State_out:="Initialization";
 			
 			RoboArm6Axis.Enable := TRUE;
 			
-			IF Power THEN
+			IF Communication.Power THEN
 				State := STATE_POWER_ON;
 			END_IF		
 		STATE_POWER_ON:
 			
-			txt_State_out:="Power";
+			Communication.txt_State_out:="Power";
 			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
 				RoboArm6Axis.Power := TRUE;
 			END_IF
@@ -83,7 +88,7 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		STATE_HOMING:
-			txt_State_out:="Homing";
+			Communication.txt_State_out:="Homing";
 			IF gIsCalibrated THEN
 				IF RoboArm6Axis.IsHomed THEN //autohoming after power on
 					RoboArm6Axis.Home := FALSE;
@@ -105,11 +110,11 @@ PROGRAM _CYCLIC
 			
 		STATE_READY:
 			
-
+			Communication.txt_State_out:="Ready";
 			
 			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
 			
-			IF ControlSelector = ManualJog AND changeModePending <> 1 THEN
+			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
 				// when exiting ManualMode from mappView bind ManualModePara.ExitMode := TRUE and pending state, both at once
 				// because we want to wait till semiAuto and Auto finishes and then goes to READY state, but for manual we have to go out manually
@@ -117,38 +122,36 @@ PROGRAM _CYCLIC
 			END_IF
 			
 			IF ControlSelector = ManualJog THEN
-				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
-				txt_State_out:="Ready";
+				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
+				
 				State := STATE_MANUAL_CONTROL;
 			ELSIF ControlSelector = SemiAutomatic THEN
-				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=txt_State_out,New:="SemiAutoControl", Identifier := 'ControlMode');
-				txt_State_out:="Ready";
+				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="SemiAutoControl", Identifier := 'ControlMode');
 				State := STATE_SEMI_AUTOMATIC;
 			ELSIF ControlSelector = Automatic THEN
-				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=txt_State_out,New:="AutoControl", Identifier := 'ControlMode');
-				txt_State_out:="Ready";
+				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="AutoControl", Identifier := 'ControlMode');
 				State := STATE_AUTOMATIC;
 			END_IF
 						
-			ControlSelector:=changeModePending;
+			ControlSelector:=Communication.changeModePending;
 			// TODO think what happens when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
 			// maybe do something similar to exit mode in manual
 		
 		STATE_MANUAL_CONTROL:
 			
 			//ChangeMode
-			IF ControlSelector = ManualJog AND changeModePending <> 1 THEN
+			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
 				ManualControlPara.ExitManual:=TRUE;
-				ControlSelector:=changeModePending;
+				ControlSelector:=Communication.changeModePending;
 				State:=STATE_READY;
 			END_IF
-			IF Stop THEN
+			IF Communication.Stop THEN
 				ManualControlPara.ExitManual:=TRUE;
-				Stop:=FALSE;
+				Communication.Stop:=FALSE;
 			END_IF
 		
-			txt_State_out:="ManualControl";
+			Communication.txt_State_out:="ManualControl";
 			//ManualControlPara.PathLimits.Acceleration;
 			//ManualControlPara.PathLimits.Deceleration;
 			//ManualControlPara.PathLimits.Jerk;
@@ -159,29 +162,45 @@ PROGRAM _CYCLIC
 		STATE_SEMI_AUTOMATIC:
 			
 			//ChangeMode
-			IF ControlSelector = SemiAutomatic AND changeModePending <> 2 THEN
+			IF ControlSelector = SemiAutomatic AND Communication.changeModePending <> 2 THEN
 				// exit from SemiAuto
 				SemiAutoControlPara.ExitSemiAuto:=TRUE;
-				ControlSelector:=changeModePending;
+				ControlSelector:=Communication.changeModePending;
 				State:=STATE_READY;
 			END_IF
-			IF Stop THEN
+			IF Communication.Stop THEN
 				SemiAutoControlPara.ExitSemiAuto:=TRUE;
-				Stop:=FALSE;
+				Communication.Stop:=FALSE;
 			END_IF
 			
-			txt_State_out:="SemiAutoControl";
+			Communication.txt_State_out:="SemiAutoControl";
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_AUTOMATIC:
-			txt_State_out:="AutoControl";
+			Communication.txt_State_out:="AutoControl";
 			
-			IF ControlSelector = Automatic AND changeModePending <> 3 THEN
+			IF ControlSelector = Automatic AND Communication.changeModePending <> 3 THEN
 				// exit from Auto
 				AutomaticModePara.Parameters.Abort:=TRUE;
-				ControlSelector:=changeModePending;
+				ControlSelector:=Communication.changeModePending;
 				State:=STATE_READY;
 			END_IF
+			(*IF Communication.Pause AND NOT Communication.Stop THEN
+				AutomaticModePara.Parameters.Pause:=TRUE;
+			END_IF
+			IF NOT Communication.Pause AND AutomaticModePara.Parameters.Pause AND NOT Communication.Stop THEN
+				AutomaticModePara.Parameters.Continue:=TRUE;
+			END_IF
+			IF Communication.Stop THEN
+				AutomaticModePara.Parameters.Abort:=TRUE;
+				Stop:=FALSE;
+			END_IF
+
+			AutomaticModePara.Parameters;
+			AutomaticModePara.Parameters.ProgramName;
+			//AutomaticModePara.Parameters.Execute := TRUE;
+			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
+			AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));*)
 			
 			IF AutomaticCurrentLanguage THEN
 					
@@ -212,7 +231,7 @@ PROGRAM _CYCLIC
 			//perform initial homing to trick ACOPOS into thinking axes are homed, basically set home to current position.
 			CalibrationAction;
 				
-			txt_State_out:="Calibration";
+			Communication.txt_State_out:="Calibration";
 			
 		STATE_UPDATE:
 			
@@ -229,13 +248,7 @@ PROGRAM _CYCLIC
 	
 	
 	////////////Visualization Variables/////////////
-	
-	NOTCoordinateSystem	:= NOT CoordinateSystem;
-	IF Calibration.Para.Parameters.AxisCalibrated[4] AND Calibration.Para.Parameters.AxisCalibrated[0] AND Calibration.Para.Parameters.AxisCalibrated[1] AND Calibration.Para.Parameters.AxisCalibrated[2] AND Calibration.Para.Parameters.AxisCalibrated[3] AND Calibration.Para.Parameters.AxisCalibrated[4] THEN
-		Axis_1to5_calibrated :=TRUE;
-	ELSE
-		Axis_1to5_calibrated :=FALSE;
-	END_IF
+	VisAction;
 		
 		
 END_PROGRAM

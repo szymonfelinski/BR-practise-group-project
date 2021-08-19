@@ -292,6 +292,10 @@
             <Variable Name="Q3" EURangesId="3" />
             <Variable Name="Q4" EURangesId="2" />
             <Variable Name="Q5" EURangesId="1" />
+            <Variable Name="Velocity" />
+            <Variable Name="Acceleration" />
+            <Variable Name="Deceleration" />
+            <Variable Name="Jerk" />
           </Variable>
         </Variable>
         <Variable Name="Stop" />
@@ -343,6 +347,29 @@
             <Variable Name="Paused" />
             <Variable Name="Error" />
           </Variable>
+        <Variable Name="txt_State_out" />
+        <Variable Name="Communication">
+          <Variable Name="Pause" />
+          <Variable Name="Stop" />
+          <Variable Name="NOTPathSystem" />
+          <Variable Name="PathSystem" />
+          <Variable Name="NOTModeSystem" />
+          <Variable Name="ModeSystem" />
+          <Variable Name="CoordinateSystem" />
+          <Variable Name="NOTCoordinateSystem" />
+          <Variable Name="Power" />
+          <Variable Name="txt_State_out" />
+          <Variable Name="AskedMaxVelocity" />
+          <Variable Name="AskedMaxAcc" />
+          <Variable Name="AskedMaxDeAcc" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="AskedAutoJerk" />
+          <Variable Name="AskedAutoDeAcc" />
+          <Variable Name="AskedAutoAcc" />
+          <Variable Name="AskedAutoVelocity" />
+          <Variable Name="AskedManualVelocity" />
+          <Variable Name="UpdateSemiAutoVars" />
+          <Variable Name="changeModePending" />
         </Variable>
       </Task>
       <Task Name="FileManage">
