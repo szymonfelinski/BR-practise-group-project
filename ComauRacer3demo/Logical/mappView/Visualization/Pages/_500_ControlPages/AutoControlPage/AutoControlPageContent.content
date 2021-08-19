@@ -24,8 +24,8 @@
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight5AutoControlContent" top="514" left="1190" width="80" height="80" zIndex="20" text="$IAT/Automatic/Continuous" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight31AutoControlContent" top="300" left="1190" width="80" height="80" zIndex="21" multiLine="true" text="$IAT/Automatic/Resume" wordWrap="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Label" id="txtCurFileAutoControlContent" top="200" left="700" width="140" height="40" zIndex="22" text="Current file" textAlign="right" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtFileNameAutoControlContent" top="200" left="860" width="220" height="40" zIndex="23" text="Label1" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtFileNameAutoControlContent" top="200" left="860" width="220" height="40" zIndex="23" text="" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="txtCurLangAutoControlContent" top="140" left="720" width="140" height="40" zIndex="24" text="Current language" textAlign="right" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtCurLangNameAutoControlContent" top="140" left="860" width="220" height="40" zIndex="25" text="Label1" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtCurLangNameAutoControlContent" top="140" left="860" width="220" height="40" zIndex="25" text="" fontSize="16px" />
   </Widgets>
 </Content>

@@ -448,7 +448,7 @@
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.Open" filePath="" />
+            <Method xsi:type="widgets.brease.MotionPad.Action.Open" filePath="CNC_PrgDir/Point.st" />
           </Target>
         </Action>
       </EventHandler>
@@ -558,6 +558,21 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Execute">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="FileNameG">
+      <Source xsi:type="widgets.brease.MotionPad.Event" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad" event="FileOpened" />
+      <Operand datatype="ANY_STRING" name="FileName">
+        <ReadTarget xsi:type="widgets.brease.MotionPad.ReadAction" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+          <Method xsi:type="widgets.brease.MotionPad.Action.GetCurrentFileOpened" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtFileNameAutoControlContent">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="=filePath" />
           </Target>
         </Action>
       </EventHandler>
