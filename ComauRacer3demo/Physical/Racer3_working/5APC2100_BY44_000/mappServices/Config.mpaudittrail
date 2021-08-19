@@ -10,6 +10,7 @@
         <Property ID="[3]" Value="33" />
         <Property ID="[4]" Value="113" />
         <Property ID="[5]" Value="48" />
+        <Property ID="[6]" Value="2457" />
       </Group>
       <Selector ID="TextSource" Value="TXT">
         <Property ID="Name" Value="MpAudit" />
@@ -17,6 +18,21 @@
       </Selector>
       <Group ID="Export">
         <Property ID="Encrypt" Value="FALSE" />
+      </Group>
+    </Group>
+    <Group ID="Monitor">
+      <Group ID="0">
+        <Property ID="pv" Value="::Control:RoboArm6Axis.IsHomed" />
+        <Property ID="id" Value="" />
+      </Group>
+      <Group ID="1">
+        <Property ID="pv" Value="::Control:RoboArm6Axis.PowerOn" />
+      </Group>
+      <Group ID="2">
+        <Property ID="pv" Value="::Control:RoboArm6Axis.InMotion" />
+      </Group>
+      <Group ID="3">
+        <Property ID="pv" Value="::Control:ControlSelector" />
       </Group>
     </Group>
     <Selector ID="Alarms" Value="MpAlarmX" />
