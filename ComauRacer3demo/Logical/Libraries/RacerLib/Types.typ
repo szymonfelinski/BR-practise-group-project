@@ -149,6 +149,10 @@ TYPE
 		Q3 : REAL := 69;
 		Q4 : REAL := 20;
 		Q5 : REAL := 0.420;
+		Velocity : REAL := 69;
+		Acceleration : REAL := 100;
+		Deceleration : REAL := 100;
+		Jerk : REAL := 0;
 	END_STRUCT;
 	R3CalibrationMainType : 	STRUCT 
 		Info : CalibrationInfo; (*Information portion of calibration.*)
@@ -178,4 +182,27 @@ TYPE
 		STATE_SAVING_POSITION,
 		STATE_DONE
 		);
+	CommunicationType : 	STRUCT 
+		Pause : BOOL := FALSE;
+		Stop : BOOL := FALSE;
+		NOTPathSystem : BOOL;
+		PathSystem : BOOL := TRUE;
+		NOTModeSystem : BOOL;
+		ModeSystem : BOOL := TRUE;
+		CoordinateSystem : BOOL := FALSE;
+		NOTCoordinateSystem : BOOL;
+		Power : BOOL := FALSE;
+		txt_State_out : WSTRING[80];
+		AskedMaxVelocity : REAL; (*not needed*)
+		AskedMaxAcc : REAL; (*not needed*)
+		AskedMaxDeAcc : REAL; (*not needed*)
+		ErrorReset : BOOL := FALSE;
+		AskedAutoJerk : REAL; (*not needed*)
+		AskedAutoDeAcc : REAL; (*not needed*)
+		AskedAutoAcc : REAL; (*not needed*)
+		AskedAutoVelocity : REAL; (*not needed*)
+		AskedManualVelocity : REAL; (*not needed*)
+		UpdateSemiAutoVars : BOOL := FALSE;
+		changeModePending : USINT := 0; (*1-Manual       2-SemiManual      3-Auto 0-none*)
+	END_STRUCT;
 END_TYPE

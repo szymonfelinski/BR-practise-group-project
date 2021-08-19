@@ -30,21 +30,27 @@ FUNCTION_BLOCK R3SemiAutoMode
 			// check for singular point and send alarm
 				
 		UPDATE:
-				RoboArmPara.Distance[0] := SemiAutoModePara.AskedValue.Q0;
-				RoboArmPara.Distance[1] := SemiAutoModePara.AskedValue.Q1;
-				RoboArmPara.Distance[2] := SemiAutoModePara.AskedValue.Q2;
-				RoboArmPara.Distance[3] := SemiAutoModePara.AskedValue.Q3;
-				RoboArmPara.Distance[4] := SemiAutoModePara.AskedValue.Q4;
-				RoboArmPara.Distance[5] := SemiAutoModePara.AskedValue.Q5;
-				
-				RoboArmPara.Position[0] := SemiAutoModePara.AskedValue.Q0;
-				RoboArmPara.Position[1] := SemiAutoModePara.AskedValue.Q1;
-				RoboArmPara.Position[2] := SemiAutoModePara.AskedValue.Q2;
-				RoboArmPara.Position[3] := SemiAutoModePara.AskedValue.Q3;
-				RoboArmPara.Position[4] := SemiAutoModePara.AskedValue.Q4;
-				RoboArmPara.Position[5] := SemiAutoModePara.AskedValue.Q5;
+			RoboArmPara.Distance[0] := SemiAutoModePara.AskedValue.Q0;
+			RoboArmPara.Distance[1] := SemiAutoModePara.AskedValue.Q1;
+			RoboArmPara.Distance[2] := SemiAutoModePara.AskedValue.Q2;
+			RoboArmPara.Distance[3] := SemiAutoModePara.AskedValue.Q3;
+			RoboArmPara.Distance[4] := SemiAutoModePara.AskedValue.Q4;
+			RoboArmPara.Distance[5] := SemiAutoModePara.AskedValue.Q5;
+			
+			RoboArmPara.Position[0] := SemiAutoModePara.AskedValue.Q0;
+			RoboArmPara.Position[1] := SemiAutoModePara.AskedValue.Q1;
+			RoboArmPara.Position[2] := SemiAutoModePara.AskedValue.Q2;
+			RoboArmPara.Position[3] := SemiAutoModePara.AskedValue.Q3;
+			RoboArmPara.Position[4] := SemiAutoModePara.AskedValue.Q4;
+			RoboArmPara.Position[5] := SemiAutoModePara.AskedValue.Q5;
 
 			RoboArmPara.CoordSystem := SemiAutoModePara.CoordinateSystem;
+			
+			RoboArmPara.Velocity := SemiAutoModePara.AskedValue.Velocity;
+			RoboArmPara.Acceleration := SemiAutoModePara.AskedValue.Acceleration;
+			RoboArmPara.Deceleration := SemiAutoModePara.AskedValue.Deceleration;
+			RoboArmPara.Jerk := SemiAutoModePara.AskedValue.Jerk;
+			
 			SemiAutoModePara.ModeForThisMove:=SemiAutoModePara.Mode;
 			SemiAutoModePara.PathModeForThisMove:=SemiAutoModePara.PathMode;
 			IF SemiAutoModePara.Mode THEN
