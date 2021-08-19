@@ -193,7 +193,7 @@ PROGRAM _CYCLIC
 			END_IF
 			IF Communication.Stop THEN
 				AutomaticModePara.Parameters.Abort:=TRUE;
-				Stop:=FALSE;
+				Communication.Stop:=FALSE;
 			END_IF
 
 			AutomaticModePara.Parameters;
