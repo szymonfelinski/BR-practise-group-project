@@ -16,6 +16,20 @@
 		cornerRadius="5px"
 		mouseDownBackColor="#F56416" 
 		disabledBackColor="#d1d1d1" />
+		
+	<Style id="defaultTurnedOn" xsi:type="widgets.brease.Button" 
+		fontSize="16px" 
+		bold="false" 
+		textColor="#FFF" 
+		mouseDownTextColor="#FFFFFF" 
+		borderWidth="0px 0px 0px 0px" 
+		mouseDownBorderWidth="0px 0px 0px 0px" 
+		borderColor="#000" 
+		mouseDownBorderColor="#ff8800" 
+		backColor="#F56416" 
+		cornerRadius="5px"
+		mouseDownBackColor="#FFB100" 
+		disabledBackColor="#d1d1d1" />
 	
 	<Style id="defaultSmall" xsi:type="widgets.brease.Button" 
 		fontSize="16px" 

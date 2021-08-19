@@ -14,6 +14,19 @@
 		backColor="#273868" 
 		mouseDownBackColor="#271D52" 
 		disabledBackColor="#d1d1d1" />
+		
+	<Style id="defaultTurnedOn" xsi:type="widgets.brease.Button" 
+		fontSize="16px" 
+		bold="false" 
+		textColor="#ccc" 
+		mouseDownTextColor="#CCC" 
+		borderWidth="0px 0px 0px 0px" 
+		mouseDownBorderWidth="0px 0px 0px 0px" 
+		borderColor="#808080" 
+		mouseDownBorderColor="#ff9900" 
+		backColor="#271D52" 
+		mouseDownBackColor="#273868" 
+		disabledBackColor="#d1d1d1" />
 	
 	<Style id="defaultSmall" xsi:type="widgets.brease.Button" 
 		fontSize="16px" 
