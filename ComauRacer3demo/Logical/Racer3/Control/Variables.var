@@ -1,5 +1,6 @@
 VAR
-	AutomaticMode : R3AutomaticMode; (*automatic mode Fb*)
+	AutomaticCurrentLanguage : BOOL; (*selects which language to use (0 - G-Code, 1 - ST)*)
+	AutomaticMode : R3AutomaticMode; (*automatic mode FB*)
 	AutomaticModePara : R3AutomaticModeType; (*Main automatic mode variable*)
 	RoboArm6AxisPara : MpRoboArm6AxisParType; (*This variable defines parameters of the robot*)
 	RoboArm6Axis : MpRoboArm6Axis; (*This is the robot in question*)
