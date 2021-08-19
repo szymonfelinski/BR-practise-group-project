@@ -27,6 +27,8 @@ PROGRAM _INIT
 	
 	AutomaticCurrentLanguage; //variable used for changing script language
 	
+	RoboArm6Axis();
+	
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -70,7 +72,7 @@ PROGRAM _CYCLIC
 		STATE_INIT:
 			Communication.txt_State_out:="Initialization";
 			
-			RoboArm6Axis.Enable := TRUE;
+			//RoboArm6Axis.Enable := TRUE;
 			
 			IF Communication.Power THEN
 				State := STATE_POWER_ON;

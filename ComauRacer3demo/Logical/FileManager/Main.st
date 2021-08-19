@@ -50,7 +50,7 @@ PROGRAM _CYCLIC
 	aux.newNewName := '';
 	aux.prevNewName := cmd.MpFileManagerUIConnectType.File.NewName;
 	aux.newNewName := aux.prevNewName;
-	FOR iFile := 0 TO aux.NumberOfElementsMinus BY 1 DO
+	(*FOR iFile := 0 TO aux.NumberOfElementsMinus BY 1 DO
 		IF tabInfo.Name[iFile] = aux.newNewName THEN
 			aux.newNewName := aux.prevNewName;
 			aux.NewNamePlus := aux.NewNamePlus + 1;
@@ -60,11 +60,11 @@ PROGRAM _CYCLIC
 			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextOne));
 			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNamePlusStr));
 			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextTwo));
-			iFile := 0;	
+			//iFile := 0;	
 		ELSE
 			cmd.MpFileManagerUIConnectType.File.NewName := aux.newNewName;
 		END_IF
-	END_FOR
+	END_FOR*)
 	
 	//zmiana metody sortowania 
 	CASE aux.btnSort OF
