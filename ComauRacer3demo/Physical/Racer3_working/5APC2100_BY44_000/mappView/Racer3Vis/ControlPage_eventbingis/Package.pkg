@@ -5,7 +5,7 @@
     <Object Type="File">ControlPageContent_eventbinding.eventbinding</Object>
     <Object Type="File">AutoControlPageContent_eventbinding.eventbinding</Object>
     <Object Type="File">HalfAutoControlPageContent_eventbinding1.eventbinding</Object>
-    <Object Type="File">CalibrationControlPageContent_eventbinding.eventbinding</Object>
     <Object Type="File">ManualControlPageContent.eventbinding</Object>
+    <Object Type="File">CalibrationPageContent.eventbinding</Object>
   </Objects>
 </Package>
