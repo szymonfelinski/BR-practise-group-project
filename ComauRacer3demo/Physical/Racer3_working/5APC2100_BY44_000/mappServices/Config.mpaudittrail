@@ -6,11 +6,9 @@
       <Group ID="Events">
         <Property ID="[0]" Value="16" />
         <Property ID="[1]" Value="2" />
-        <Property ID="[2]" Value="18" />
-        <Property ID="[3]" Value="33" />
-        <Property ID="[4]" Value="113" />
-        <Property ID="[5]" Value="48" />
-        <Property ID="[6]" Value="2457" />
+        <Property ID="[2]" Value="33" />
+        <Property ID="[3]" Value="113" />
+        <Property ID="[4]" Value="48" />
       </Group>
       <Selector ID="TextSource" Value="TXT">
         <Property ID="Name" Value="MpAudit" />
@@ -22,19 +20,17 @@
     </Group>
     <Group ID="Monitor">
       <Group ID="0">
-        <Property ID="pv" Value="::Control:RoboArm6Axis.IsHomed" />
-        <Property ID="id" Value="" />
+        <Property ID="pv" Value="::Control:RoboArm6Axis.PowerOn" />
       </Group>
       <Group ID="1">
-        <Property ID="pv" Value="::Control:RoboArm6Axis.PowerOn" />
+        <Property ID="pv" Value="::Control:RoboArm6Axis.IsHomed" />
       </Group>
       <Group ID="2">
         <Property ID="pv" Value="::Control:RoboArm6Axis.InMotion" />
       </Group>
       <Group ID="3">
-        <Property ID="pv" Value="::Control:RoboArm6Axis.Error" />
+        <Property ID="pv" Value="::Control:RoboArm6Axis.Stopped" />
       </Group>
-      <Group ID="4" />
     </Group>
     <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
