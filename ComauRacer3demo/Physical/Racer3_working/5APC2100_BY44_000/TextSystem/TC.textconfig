@@ -17,6 +17,15 @@
       <Property ID="TargetFile[4]" Value="mappView.Resources.Texts.ControlPageTexts.tmx" />
       <Property ID="TargetFile[5]" Value="mappView.Resources.Texts.VisualizationDocsBrowserTexts.tmx" />
       <Property ID="TargetFile[6]" Value="mappView.Resources.Texts.AutoControlTexts.tmx" />
+      <Property ID="TargetFile[5]" Value="Libraries.MpAudit.TxtEventF.tmx" />
+      <Property ID="TargetFile[6]" Value="Libraries.MpAudit.TxtUserF.tmx" />
+      <Property ID="TargetFile[7]" Value="Libraries.MpAudit.TxtRecipeF.tmx" />
+      <Property ID="TargetFile[8]" Value="mappView.Resources.Texts.UserList.tmx" />
+      <Property ID="TargetFile[9]" Value="mappView.Resources.Texts.AlarmList.tmx" />
+      <Property ID="TargetFile[10]" Value="mappView.Resources.Texts.AuditList.tmx" />
+      <Property ID="TargetFile[11]" Value="Libraries.MpAudit.TxtCustom.tmx" />
+      <Property ID="TargetFile[12]" Value="Libraries.MpAudit.TxtDatapoints.tmx" />
+      <Property ID="TargetFile[13]" Value="mappView.Resources.Texts.SystemDialog.tmx" />
     </Group>
   </Element>
 </Configuration>

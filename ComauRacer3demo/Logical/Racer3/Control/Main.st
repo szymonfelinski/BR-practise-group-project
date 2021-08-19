@@ -104,7 +104,7 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		STATE_READY:
-			txt_State_out:="Ready";
+			
 
 			
 			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
@@ -117,10 +117,16 @@ PROGRAM _CYCLIC
 			END_IF
 			
 			IF ControlSelector = ManualJog THEN
+				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
+				txt_State_out:="Ready";
 				State := STATE_MANUAL_CONTROL;
 			ELSIF ControlSelector = SemiAutomatic THEN
+				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=txt_State_out,New:="SemiAutoControl", Identifier := 'ControlMode');
+				txt_State_out:="Ready";
 				State := STATE_SEMI_AUTOMATIC;
 			ELSIF ControlSelector = Automatic THEN
+				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=txt_State_out,New:="AutoControl", Identifier := 'ControlMode');
+				txt_State_out:="Ready";
 				State := STATE_AUTOMATIC;
 			END_IF
 						

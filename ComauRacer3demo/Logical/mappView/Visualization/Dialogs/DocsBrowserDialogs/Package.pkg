@@ -4,7 +4,6 @@
   <Objects>
     <Object Type="Package">DialogNewFolder</Object>
     <Object Type="Package">DialogRename</Object>
-    <Object Type="Package">DialogNameExist</Object>
     <Object Type="Package">DialogConfirm</Object>
   </Objects>
 </Package>

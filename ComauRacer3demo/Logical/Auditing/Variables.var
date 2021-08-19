@@ -5,4 +5,8 @@ VAR
 	CommentVar : WSTRING[100] := "Comment";
 	CustomEventStatus : DINT;
 	MpAuditTrail_0 : MpAuditTrail;
+	NewValue : LREAL;
+	OldValue : LREAL;
+	Identifier : STRING[100];
+	ClearBufferBool : BOOL;
 END_VAR

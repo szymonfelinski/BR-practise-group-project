@@ -22,7 +22,7 @@ FUNCTION_BLOCK R3SemiAutoMode
 			END_IF
 
 			//TODO CHECK AXIS LIMITS AND SINGULAR POINT AND SEND ERROR (ALARM) AND AVOID MOVING
-			IF checkAxisLimits(Q1:=SemiAutoModePara.AxisDistance.Q1,Q2:=SemiAutoModePara.AxisDistance.Q2,Q3:=SemiAutoModePara.AxisDistance.Q3,Q4:=SemiAutoModePara.AxisDistance.Q4,Q5:=SemiAutoModePara.AxisDistance.Q5,Q6:=SemiAutoModePara.AxisDistance.Q6,Mode := SemiAutoModePara.ModeForThisMove, RoboArm:=RoboArm) THEN
+			IF checkAxisLimits(Q1:=SemiAutoModePara.AskedValue.Q0,Q2:=SemiAutoModePara.AskedValue.Q1,Q3:=SemiAutoModePara.AskedValue.Q2,Q4:=SemiAutoModePara.AskedValue.Q3,Q5:=SemiAutoModePara.AskedValue.Q4,Q6:=SemiAutoModePara.AskedValue.Q5,Mode := SemiAutoModePara.ModeForThisMove, RoboArm:=RoboArm) THEN
 			// send alarm out of bounds
 			//MpAlarmXSet(gAlarmXCore, 'OutOfLimits');
 			END_IF
@@ -30,12 +30,20 @@ FUNCTION_BLOCK R3SemiAutoMode
 			// check for singular point and send alarm
 				
 		UPDATE:
-			RoboArmPara.Distance[0] := SemiAutoModePara.AxisDistance.Q1;
-			RoboArmPara.Distance[1] := SemiAutoModePara.AxisDistance.Q2;
-			RoboArmPara.Distance[2] := SemiAutoModePara.AxisDistance.Q3;
-			RoboArmPara.Distance[3] := SemiAutoModePara.AxisDistance.Q4;
-			RoboArmPara.Distance[4] := SemiAutoModePara.AxisDistance.Q5;
-			RoboArmPara.Distance[5] := SemiAutoModePara.AxisDistance.Q6;
+				RoboArmPara.Distance[0] := SemiAutoModePara.AskedValue.Q0;
+				RoboArmPara.Distance[1] := SemiAutoModePara.AskedValue.Q1;
+				RoboArmPara.Distance[2] := SemiAutoModePara.AskedValue.Q2;
+				RoboArmPara.Distance[3] := SemiAutoModePara.AskedValue.Q3;
+				RoboArmPara.Distance[4] := SemiAutoModePara.AskedValue.Q4;
+				RoboArmPara.Distance[5] := SemiAutoModePara.AskedValue.Q5;
+				
+				RoboArmPara.Position[0] := SemiAutoModePara.AskedValue.Q0;
+				RoboArmPara.Position[1] := SemiAutoModePara.AskedValue.Q1;
+				RoboArmPara.Position[2] := SemiAutoModePara.AskedValue.Q2;
+				RoboArmPara.Position[3] := SemiAutoModePara.AskedValue.Q3;
+				RoboArmPara.Position[4] := SemiAutoModePara.AskedValue.Q4;
+				RoboArmPara.Position[5] := SemiAutoModePara.AskedValue.Q5;
+
 			RoboArmPara.CoordSystem := SemiAutoModePara.CoordinateSystem;
 			SemiAutoModePara.ModeForThisMove:=SemiAutoModePara.Mode;
 			SemiAutoModePara.PathModeForThisMove:=SemiAutoModePara.PathMode;
@@ -52,14 +60,6 @@ FUNCTION_BLOCK R3SemiAutoMode
 				WeNeedToGoBack:=FALSE;
 			END_IF
 		START:
-			IF RoboArmPara.Distance[0] <>  SemiAutoModePara.AxisDistance.Q1 OR RoboArmPara.Distance[1] <>  SemiAutoModePara.AxisDistance.Q2 OR RoboArmPara.Distance[2] <>  SemiAutoModePara.AxisDistance.Q3 OR RoboArmPara.Distance[3] <>  SemiAutoModePara.AxisDistance.Q4 OR RoboArmPara.Distance[4] <>  SemiAutoModePara.AxisDistance.Q5 OR RoboArmPara.Distance[5] <>  SemiAutoModePara.AxisDistance.Q6 THEN
-				RoboArmPara.Distance[0] := SemiAutoModePara.AxisDistance.Q1;
-				RoboArmPara.Distance[1] := SemiAutoModePara.AxisDistance.Q2;
-				RoboArmPara.Distance[2] := SemiAutoModePara.AxisDistance.Q3;
-				RoboArmPara.Distance[3] := SemiAutoModePara.AxisDistance.Q4;
-				RoboArmPara.Distance[4] := SemiAutoModePara.AxisDistance.Q5;
-				RoboArmPara.Distance[5] := SemiAutoModePara.AxisDistance.Q6;
-			END_IF
 			IF SemiAutoModePara.UpdatePending THEN
 				SemiAutoModePara.State:=UPDATE;
 				WeNeedToGoBack := TRUE;

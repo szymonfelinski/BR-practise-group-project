@@ -3,9 +3,10 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.Table" id="Table1" top="60" left="100" width="1083" height="520" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="600" text="Name" />
-        <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="280" text="Size" />
-        <Widget xsi:type="widgets.brease.TableItem" id="tabType" zIndex="2" columnWidth="200" text="Type" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="400" text="Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="220" text="Size" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabType" zIndex="2" columnWidth="140" text="Type" />
+        <Widget xsi:type="widgets.brease.TableItemDateTime" id="tabLastModified" zIndex="3" columnWidth="320" text="$IAT/Browser/FIle_LastModified" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Button" id="btnEnterFolder" top="86" left="1190" width="80" height="80" zIndex="1" breakWord="true" multiLine="true" text="$IAT/Browser/Do_FolderEnter" margin="0px" />
@@ -17,13 +18,14 @@
     <Widget xsi:type="widgets.brease.Button" id="btnCut" top="620" left="297" height="40" zIndex="7" text="$IAT/Browser/Do_Cut" />
     <Widget xsi:type="widgets.brease.Button" id="btnPaste" top="620" left="691" height="40" zIndex="8" text="$IAT/Browser/Do_Paste" />
     <Widget xsi:type="widgets.brease.Button" id="btnRename" top="620" left="888" height="40" zIndex="9" breakWord="true" multiLine="true" text="$IAT/Browser/Do_Rename" />
-    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="0" left="0" width="100" height="280" zIndex="10">
+    <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="0" left="0" width="100" height="420" zIndex="10">
       <Widgets>
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice1" top="86" left="10" width="80" height="80" zIndex="0" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device1" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="193" left="10" width="80" height="80" zIndex="1" text="$IAT/Browser/Device2" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice3" top="300" left="10" width="80" height="80" zIndex="2" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device3" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="100" width="1080" zIndex="11" fontSize="19px" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice3" top="300" left="10" width="80" height="80" zIndex="12" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device3" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="580" width="600" zIndex="11" fontSize="19px" bold="true" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="120" zIndex="12" text="$IAT/Browser/Do_sort" />
   </Widgets>
 </Content>

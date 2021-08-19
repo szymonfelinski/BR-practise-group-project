@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="DialogNameExistContent" height="150" width="400" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="txtRename" top="30" left="40" width="320" height="51" zIndex="0" text="$IAT/Browser/Info_NameExist" textAlign="center" fontSize="19px" bold="true" />
-    <Widget xsi:type="widgets.brease.Button" id="btnYes" top="100" left="140" width="120" zIndex="1" text="OK" />
-  </Widgets>
-</Content>

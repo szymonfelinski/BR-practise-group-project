@@ -14,7 +14,44 @@
       </ACL>
     </ACLAliases>
     <EURangeViolationAliases />
-    <EURangesAliases />
+    <EURangesAliases>
+      <EURanges Id="1">
+        <EURange>
+          <Low ValueProvider="Const">-270</Low>
+          <High ValueProvider="Const">270</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="2">
+        <EURange>
+          <Low ValueProvider="Const">-125</Low>
+          <High ValueProvider="Const">125</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="3">
+        <EURange>
+          <Low ValueProvider="Const">-200</Low>
+          <High ValueProvider="Const">200</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="4">
+        <EURange>
+          <Low ValueProvider="Const">-155</Low>
+          <High ValueProvider="Const">90</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="5">
+        <EURange>
+          <Low ValueProvider="Const">-95</Low>
+          <High ValueProvider="Const">135</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="6">
+        <EURange>
+          <Low ValueProvider="Const">-170</Low>
+          <High ValueProvider="Const">170</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
     <EngineeringUnitAliases />
   </Aliases>
   <DefaultView AclId="2">
@@ -247,15 +284,15 @@
         </Variable>
         <Variable Name="State" />
         <Variable Name="SemiAutoControlPara">
-          <Variable Name="AxisDistance">
-            <Variable Name="Q2" />
-            <Variable Name="Q3" />
-            <Variable Name="Q4" />
-            <Variable Name="Q5" />
-            <Variable Name="Q6" />
-            <Variable Name="Q1" />
-          </Variable>
           <Variable Name="Flag" />
+          <Variable Name="AskedValue">
+            <Variable Name="Q0" EURangesId="6" />
+            <Variable Name="Q1" EURangesId="5" />
+            <Variable Name="Q2" EURangesId="4" />
+            <Variable Name="Q3" EURangesId="3" />
+            <Variable Name="Q4" EURangesId="2" />
+            <Variable Name="Q5" EURangesId="1" />
+          </Variable>
         </Variable>
         <Variable Name="Stop" />
         <Variable Name="changeModePending" />
@@ -311,7 +348,9 @@
       <Task Name="FileManage">
         <Variable Name="aux">
           <Variable Name="TableConfigurationStr" />
-          <Variable Name="errorNameExists" />
+          <Variable Name="prevNewName" />
+          <Variable Name="btnSort" />
+          <Variable Name="btnSortStr" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />
@@ -324,6 +363,9 @@
           <Variable Name="LastModified" />
           <Variable Name="SelectedRow" />
         </Variable>
+      </Task>
+      <Task Name="Auditing">
+        <Variable Name="ClearBufferBool" />
       </Task>
     </Module>
   </DefaultView>

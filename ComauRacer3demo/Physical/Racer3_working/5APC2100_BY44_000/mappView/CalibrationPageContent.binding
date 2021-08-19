@@ -29,32 +29,6 @@
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.JogVelocity" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="NumericInput1" attribute="value" />
 </Binding>
-<!--
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[0]" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ1" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[1]" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ2" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[2]" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ3" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[3]" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ4" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[4]" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ5" attribute="visible" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[5]" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="CalibrationPageLabelQ6" attribute="visible" />
-</Binding>
--->
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[5]" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image6" attribute="visible" />

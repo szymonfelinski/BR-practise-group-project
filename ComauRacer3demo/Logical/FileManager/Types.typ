@@ -24,6 +24,14 @@ TYPE
 		Config3str : STRING[160];
 		TableConfigurationStr : STRING[255];
 		NumberOfElementsStr : STRING[80];
-		errorNameExists : BOOL;
+		NewNamePlus : USINT;
+		NewNamePlusStr : STRING[80];
+		NewNameTextOne : STRING[80];
+		NewNameTextTwo : STRING[80];
+		prevNewName : STRING[255];
+		NumberOfElementsMinus : USINT;
+		newNewName : STRING[255];
+		btnSort : USINT;
+		btnSortStr : STRING[80];
 	END_STRUCT;
 END_TYPE

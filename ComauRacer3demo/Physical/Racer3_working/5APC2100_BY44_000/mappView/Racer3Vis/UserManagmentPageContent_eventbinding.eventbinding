@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="UserManagmentPageContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="UserManagmentPageContent.btnUserManagmentAddUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserManagmentPageContent" widgetRefId="btnUserManagmentAddUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenAddUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="UserManagmentPageContent.btnUserManagmentDeleteUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserManagmentPageContent" widgetRefId="btnUserManagmentDeleteUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.DeleteUser" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="UserManagmentPageContent.btnUserManagmentEditUser.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserManagmentPageContent" widgetRefId="btnUserManagmentEditUser" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenModifyUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="UserManagmentPageContent.btnUserManagmentContentPrevious.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserManagmentPageContent" widgetRefId="btnUserManagmentContentPrevious" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.GoToPreviousPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="UserManagmentPageContent.btn3UserManagmenContentNext.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserManagmentPageContent" widgetRefId="btn3UserManagmenContentNext" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.GoToNextPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

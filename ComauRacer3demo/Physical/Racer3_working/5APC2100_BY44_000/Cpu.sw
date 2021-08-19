@@ -95,6 +95,9 @@
     <LibraryObject Name="asepl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brsystem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpUserX" Source="Libraries.MpUserX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpFile" Source="Libraries.MpFile.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="asbrstr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asusb" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

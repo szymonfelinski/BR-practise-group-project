@@ -12,7 +12,8 @@
 		<Page refId="AutoControlPage"/>
 		<Page refId="HalfAutoControlPage"/>
 		<Page refId="ManualControlPage"/>
-		<Page refId="AuditPage"/>	
+		<Page refId="AuditPage"/>
+		<Page refId="UserManagmentPage"/>	
 		
 	</Pages>
 	<StartTheme themeRefId="BuRThemeFlat1" />
@@ -45,21 +46,20 @@
 		<EventBindingsSet refId="AutoControlPageContent_eventbinding" />
 		<EventBindingsSet refId="ManualControlPageContent_eventbinding" />
 		<EventBindingsSet refId="HalfAutoControlPageContent_eventbinding" />
-		<EventBindingsSet refId="CalibrationControlPageContent_eventbinding" />
+		<EventBindingsSet refId="CalibrationPageContent_eventbinding" />
 		<EventBindingsSet refId="AuditPageContent_eventbinding" />
+		<EventBindingsSet refId="UserManagmentPageContent_eventbinding" />
 		<EventBindingsSet refId="DocsBrowserPageContent_eventbinding" />
 		<EventBindingsSet refId="DialogRenameContent_eventbinding" />
 		<EventBindingsSet refId="DialogNewFolderContent_eventbinding" />
 		<EventBindingsSet refId="DialogConfirmContent_eventbinding" />
-		<!--<EventBindingsSet refId="DialogNameExistContent_eventbinding" /> -->
 	</EventBindingsSets>
   <Dialogs>
 		<Dialog refId="DialogLogin" />
 		<Dialog refId="DialogRename" />
 		<Dialog refId="DialogNewFolder" />
 		<Dialog refId="DialogConfirm" />
-		<Dialog refId="DialogNameExist" />
-  </Dialogs>
+	</Dialogs>
   <Contents>
 		<Content refId="MainPageContent" />
 		<Content refId="AlarmPageContent" />
@@ -71,14 +71,13 @@
 		<Content refId="AutoControlPageContent"/>
 		<Content refId="HalfAutoControlPageContent"/>
 		<Content refId="ManualControlPageContent"/>
+		<Content refId="UserManagmentPageContent"/>	
 		<Content refId="AuditPageContent"/>	
 		<Content refId="DocsBrowserPageContent"/>	
 		<Content refId="DialogRenameContent"/>
 		<Content refId="DialogNewFolderContent"/>
-		<Content refId="DialogConfirmContent"/>
-		<Content refId="DialogNameExistContent"/>	
-		
-  </Contents>
+		<Content refId="DialogConfirmContent"/>	
+	</Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
   </SnippetsSets>
