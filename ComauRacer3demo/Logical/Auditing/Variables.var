@@ -7,6 +7,6 @@ VAR
 	MpAuditTrail_0 : MpAuditTrail;
 	NewValue : LREAL;
 	OldValue : LREAL;
-	Identifier : STRING[100];
 	ClearBufferBool : BOOL;
+	PvTest : BOOL;
 END_VAR
