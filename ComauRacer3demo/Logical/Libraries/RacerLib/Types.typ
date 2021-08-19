@@ -20,15 +20,15 @@ TYPE
 	END_STRUCT;
 	R3AutomaticModeState : 
 		( (*Automatic mode state machine*)
-		autoSTATE_WAIT, (*waiting for instruction*)
-		autoSTATE_LOAD, (*loading program*)
-		autoSTATE_UNLOAD, (*Unloading program state*)
-		autoSTATE_EXECUTE, (*executing program*)
-		autoSTATE_DONE, (*execution done*)
-		autoSTATE_PAUSE, (*program paused*)
-		autoSTATE_CONTINUE, (*Continues paused program*)
-		autoSTATE_ABORT, (*Abort current program*)
-		autoSTATE_ERROR (*error state*)
+		autoSTATE_WAIT := 1, (*waiting for instruction*)
+		autoSTATE_LOAD := 2, (*loading program*)
+		autoSTATE_UNLOAD := 3, (*Unloading program state*)
+		autoSTATE_EXECUTE := 4, (*executing program*)
+		autoSTATE_DONE := 5, (*execution done*)
+		autoSTATE_PAUSE := 6, (*program paused*)
+		autoSTATE_CONTINUE := 7, (*Continues paused program*)
+		autoSTATE_ABORT := 8, (*Abort current program*)
+		autoSTATE_ERROR := 0 (*error state*)
 		);
 	R3AutomaticModePara : 	STRUCT  (*Automatic mode parameters*)
 		ProgramName : STRING[260]; (*Program name to load/execute*)
@@ -47,6 +47,7 @@ TYPE
 		Error : R3AutomaticModeErrorEnum;
 		ErrorID : DINT;
 		Paused : BOOL;
+		IsError : BOOL; (*Only for visualisation.*)
 	END_STRUCT;
 	R3AutomaticModeType : 	STRUCT  (*Automatic mode main structure*)
 		Parameters : R3AutomaticModePara;

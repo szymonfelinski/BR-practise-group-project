@@ -27,6 +27,6 @@
     </Widget>
     <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="580" width="600" zIndex="11" fontSize="19px" bold="true" />
     <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="120" zIndex="12" text="$IAT/Browser/Do_sort" />
-    <Widget xsi:type="widgets.brease.Button" id="btnOpenSTFile" top="407" left="1190" width="80" height="80" zIndex="13" multiLine="true" text="$IAT/Browser/OpenFile" wordWrap="true" fontSize="15px" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnOpenFile" top="407" left="1190" width="80" height="80" zIndex="13" multiLine="true" text="$IAT/Browser/OpenFile" wordWrap="true" fontSize="15px" margin="0px" />
   </Widgets>
 </Content>

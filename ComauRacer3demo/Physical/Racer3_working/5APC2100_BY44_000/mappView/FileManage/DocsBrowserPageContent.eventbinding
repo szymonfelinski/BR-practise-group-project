@@ -139,7 +139,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="DocsBrowserPageContent.btnOpenSTFile.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnOpenSTFile" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnOpenFile" event="Click" />
       <Operand datatype="ANY_STRING" name="SelectedFileName">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fileName" serverAlias="">
           <Method xsi:type="opcUa.NodeAction.GetValue" />

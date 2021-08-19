@@ -471,27 +471,56 @@
               </Target>
             </Action>
           </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Load">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTLeft3AutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTLeft3AutoControlContent" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.Save" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+                <Method xsi:type="widgets.brease.MotionPad.Action.Save" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Load">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTLeft4AutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTLeft4AutoControlContent" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.SaveAs" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+                <Method xsi:type="widgets.brease.MotionPad.Action.SaveAs" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Load">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTRight5.Click">
