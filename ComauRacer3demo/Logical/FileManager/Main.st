@@ -69,7 +69,7 @@ PROGRAM _CYCLIC
 		END_FOR
 	END_IF
 		
-	//zmiana metody sortowania 
+	//change sorting method
 	CASE aux.btnSort OF
 		0: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
@@ -87,6 +87,14 @@ PROGRAM _CYCLIC
 		6:
 			aux.btnSort := 0;
 	END_CASE
+	
+	//variables used to load files
+	aux.fileName := tabInfo.Name[tabInfo.SelectedRow];
+	aux.NewNameTextOne := '/';
+	aux.fullFilePath := '';
+	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex]));
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne));
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName));
 	
 	cmd.MpFileManagerUI_0();
 END_PROGRAM

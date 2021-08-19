@@ -237,5 +237,13 @@
         <seg>Sort by name up</seg>
       </tuv>
     </tu>
+    <tu tuid="OpenFile">
+      <tuv xml:lang="pl">
+        <seg>Otwórz plik</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Open file</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

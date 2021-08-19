@@ -18,4 +18,9 @@ VAR
 	LastState : R3StateMachineEnum; (*Stores last machine state.*)
 	CalibrationStateBtn : BOOL; (*TRUE when in state STATE_CALIBRATION *)
 	Communication : CommunicationType;
+	PathName : STRING[260];
+	FileName : STRING[260];
+	NameLength : UDINT;
+	PrefixLength : UDINT;
+	AutoPrefix : STRING[80];
 END_VAR

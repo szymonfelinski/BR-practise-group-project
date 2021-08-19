@@ -365,6 +365,7 @@
           <Variable Name="UpdateSemiAutoVars" />
           <Variable Name="changeModePending" />
         </Variable>
+        <Variable Name="FileName" />
       </Task>
       <Task Name="FileManage">
         <Variable Name="aux">
@@ -372,6 +373,8 @@
           <Variable Name="prevNewName" />
           <Variable Name="btnSort" />
           <Variable Name="btnSortStr" />
+          <Variable Name="fileName" />
+          <Variable Name="fullFilePath" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />

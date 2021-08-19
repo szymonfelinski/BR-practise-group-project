@@ -33,5 +33,7 @@ TYPE
 		newNewName : STRING[255];
 		btnSort : USINT;
 		btnSortStr : STRING[80];
+		fileName : STRING[260];
+		fullFilePath : STRING[260];
 	END_STRUCT;
 END_TYPE

@@ -445,12 +445,33 @@
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTLeft2AutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTLeft2AutoControlContent" event="Click" />
+      <Operand datatype="ANY_STRING" name="FilePath">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="selectedFileFullPath">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="ANY_STRING" name="FileName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="selectedFileName">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
       <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
-            <Method xsi:type="widgets.brease.MotionPad.Action.Open" filePath="CNC_PrgDir/Point.st" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
+                <Method xsi:type="widgets.brease.MotionPad.Action.Open" filePath="=FilePath" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:FileName">
+                <Method xsi:type="opcUa.NodeAction.SetValueString" value="=FileName" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTLeft3AutoControlContent.Click">
@@ -570,22 +591,11 @@
         </ReadTarget>
       </Operand>
       <EventHandler>
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtFileNameAutoControlContent">
-                <Method xsi:type="widgets.brease.Label.Action.SetText" text="=filePath" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.ProgramName">
-                <Method xsi:type="opcUa.NodeAction.SetValueString" value="=FileName" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtFileNameAutoControlContent">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="=filePath" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>

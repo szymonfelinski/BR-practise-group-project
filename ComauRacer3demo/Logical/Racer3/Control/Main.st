@@ -1,6 +1,6 @@
 
 PROGRAM _INIT
-
+	
 	RoboArm6Axis.Enable := TRUE;
 
 	RoboArm6Axis.Override  := 100.0;
@@ -217,8 +217,14 @@ PROGRAM _CYCLIC
 					Stop:=FALSE;
 				END_IF*) // this is probably not needed.
 				
+				PathName;
+				NameLength := SIZEOF(PathName);
+				PrefixLength := SIZEOF('CNC_PrgDir/');
+				FileName;
+				//brsmemcpy(ADR(FileName)+PrefixLength, ADR(PathName), NameLength-PrefixLength);
+				
 				AutomaticModePara.Parameters;
-				AutomaticModePara.Parameters.ProgramName;
+				AutomaticModePara.Parameters.ProgramName := FileName;
 				//AutomaticModePara.Parameters.Execute := TRUE;
 				//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
 				AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));
