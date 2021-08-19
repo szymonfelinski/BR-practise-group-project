@@ -155,5 +155,13 @@
         <seg>Set velocity</seg>
       </tuv>
     </tu>
+    <tu tuid="Control.ErrorReset">
+      <tuv xml:lang="pl">
+        <seg>Wyłącz tryb błędu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error reset</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

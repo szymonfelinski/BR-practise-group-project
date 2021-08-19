@@ -14,14 +14,14 @@ ACTION UpdateCheck:
 		END_IF
 	END_IF
 	
-	IF SemiAutoControlPara.PathMode <> PathSystem THEN
-		SemiAutoControlPara.PathMode := PathSystem;
+	IF SemiAutoControlPara.PathMode <> Communication.PathSystem THEN
+		SemiAutoControlPara.PathMode := Communication.PathSystem;
 		SemiAutoControlPara.UpdatePending :=TRUE;
 		// TODO Auto too
 	END_IF
 	
-	IF SemiAutoControlPara.Mode <> ModeSystem THEN
-		SemiAutoControlPara.Mode := ModeSystem;
+	IF SemiAutoControlPara.Mode <> Communication.ModeSystem THEN
+		SemiAutoControlPara.Mode := Communication.ModeSystem;
 		SemiAutoControlPara.UpdatePending :=TRUE;
 		// TODO Auto too
 	END_IF
