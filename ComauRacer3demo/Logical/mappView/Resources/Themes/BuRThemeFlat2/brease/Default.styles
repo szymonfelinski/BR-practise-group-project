@@ -25,7 +25,7 @@
 		borderColor="#808080" 
 		mouseDownBorderColor="#ff9900" 
 		backColor="#271D52" 
-		mouseDownBackColor="#273868" 
+		mouseDownBackColor="#271D52" 
 		disabledBackColor="#d1d1d1" />
 	
 	<Style id="defaultSmall" xsi:type="widgets.brease.Button" 
