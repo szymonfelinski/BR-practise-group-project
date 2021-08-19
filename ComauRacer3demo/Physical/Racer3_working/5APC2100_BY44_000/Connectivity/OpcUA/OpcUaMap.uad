@@ -248,7 +248,6 @@
           <Variable Name="ActivateMove" />
           <Variable Name="Direction" />
         </Variable>
-        <Variable Name="Power" />
         <Variable Name="RoboArm6AxisPara">
           <Variable Name="ProgramName" />
           <Variable Name="MoveProgramOptions">
@@ -298,12 +297,7 @@
             <Variable Name="Jerk" />
           </Variable>
         </Variable>
-        <Variable Name="Stop" />
-        <Variable Name="changeModePending" />
         <Variable Name="CoordinateSystem" />
-        <Variable Name="NOTCoordinateSystem" />
-        <Variable Name="PathSystem" />
-        <Variable Name="ModeSystem" />
         <Variable Name="Calibration">
           <Variable Name="Info" />
           <Variable Name="Cmds" />
@@ -347,8 +341,7 @@
             <Variable Name="Paused" />
             <Variable Name="Error" />
           </Variable>
-		</Variable>
-        <Variable Name="txt_State_out" />
+        </Variable>
         <Variable Name="Communication">
           <Variable Name="Pause" />
           <Variable Name="Stop" />
