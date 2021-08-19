@@ -12,5 +12,6 @@
     <Object Type="File">VisualizationDocsBrowserTexts.tmx</Object>
     <Object Type="File">AutoControlTexts.tmx</Object>
     <Object Type="File">SystemDialog.tmx</Object>
+    <Object Type="Package">Audit</Object>
   </Objects>
 </Package>
