@@ -104,5 +104,29 @@
         <seg>G-Code</seg>
       </tuv>
     </tu>
+    <tu tuid="Continuous">
+      <tuv xml:lang="pl">
+        <seg>Praca ciągła</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Continuous</seg>
+      </tuv>
+    </tu>
+    <tu tuid="GSwitch">
+      <tuv xml:lang="pl">
+        <seg>Przełącz na G-Code</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Switch to G-Code</seg>
+      </tuv>
+    </tu>
+    <tu tuid="STSwitch">
+      <tuv xml:lang="pl">
+        <seg>Przełącz na ST</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Switch to ST</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
