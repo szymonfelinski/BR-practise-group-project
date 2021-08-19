@@ -562,7 +562,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="FileNameG">
+    <EventBinding id="FileName">
       <Source xsi:type="widgets.brease.MotionPad.Event" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad" event="FileOpened" />
       <Operand datatype="ANY_STRING" name="FileName">
         <ReadTarget xsi:type="widgets.brease.MotionPad.ReadAction" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
@@ -570,11 +570,22 @@
         </ReadTarget>
       </Operand>
       <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtFileNameAutoControlContent">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="=filePath" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtFileNameAutoControlContent">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="=filePath" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.ProgramName">
+                <Method xsi:type="opcUa.NodeAction.SetValueString" value="=FileName" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>

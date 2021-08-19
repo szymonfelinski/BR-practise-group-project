@@ -15,7 +15,7 @@
     <Widget xsi:type="widgets.brease.Button" id="btnSTLeft4AutoControlContent" top="407" left="10" width="80" height="80" zIndex="15" text="$IAT/Automatic/SaveAs" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight1AutoControlContent" top="86" left="1190" width="80" height="80" zIndex="16" multiLine="true" text="$IAT/Automatic/GSwitch" wordWrap="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight2AutoControlContent" top="193" left="1190" width="80" height="80" zIndex="17" text="$IAT/Automatic/Run" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSTRight3AutoControlContent" top="300" left="1190" width="80" height="80" zIndex="18" multiLine="true" text="Pause (ST)" wordWrap="true" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSTRight3AutoControlContent" top="300" left="1190" width="80" height="80" zIndex="18" multiLine="true" text="$IAT/Automatic/Pause" wordWrap="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight4AutoControlContent" top="407" left="1190" width="80" height="80" zIndex="19" text="$IAT/Automatic/Stop" margin="0px" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="8" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="9" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
