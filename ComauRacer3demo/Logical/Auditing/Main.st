@@ -8,11 +8,10 @@ END_PROGRAM
 PROGRAM _CYCLIC
 
 	MpAuditTrail_0.Enable := TRUE;	
-	
 	//Triggering User custom event used for testing audit system.
 	IF(TriggerEvent)THEN
-		//CustomEventStatus := MpAuditCustomEvent(MpLink := gAuditTrailLink, Type := TypeVar, Message := MessageVar, Comment := CommentVar);
-		MpAuditStringChange(MpLink:= gAuditTrailLink, Old :='MANUAL',New:='AUTO', Identifier := 'MODE');
+		CustomEventStatus := MpAuditCustomEvent(MpLink := gAuditTrailLink, Type := TypeVar, Message := MessageVar, Comment := CommentVar);
+		//MpAuditStringChange(MpLink:= gAuditTrailLink, Old :='MANUAL',New:='AUTO', Identifier := 'MODE');
  
 		TriggerEvent := FALSE;
 	END_IF
@@ -22,7 +21,7 @@ PROGRAM _CYCLIC
 		ClearBufferBool := FALSE;
 	END_IF
 	
-		MpAuditTrail_0();
+	MpAuditTrail_0();
 	
 END_PROGRAM
 

@@ -2,5 +2,7 @@
 <Content id="MainPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Button" id="BtnTest" top="380" left="360" zIndex="0" text="Button1" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="160" left="200" zIndex="1" text="ToggleButton1" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="160" left="400" zIndex="2" text="ToggleButton2" />
   </Widgets>
 </Content>
