@@ -10,5 +10,6 @@
     <Object Type="File">AlarmList.tmx</Object>
     <Object Type="File">AuditList.tmx</Object>
     <Object Type="File">VisualizationDocsBrowserTexts.tmx</Object>
+    <Object Type="File">SystemDialog.tmx</Object>
   </Objects>
 </Package>
