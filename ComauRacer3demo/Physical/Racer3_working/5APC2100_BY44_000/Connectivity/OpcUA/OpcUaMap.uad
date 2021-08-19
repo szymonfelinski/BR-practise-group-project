@@ -302,6 +302,10 @@
             <Variable Name="Continue" />
             <Variable Name="Continuous" />
           </Variable>
+          <Variable Name="Info">
+            <Variable Name="Paused" />
+            <Variable Name="Error" />
+          </Variable>
         </Variable>
       </Task>
       <Task Name="FileManage">

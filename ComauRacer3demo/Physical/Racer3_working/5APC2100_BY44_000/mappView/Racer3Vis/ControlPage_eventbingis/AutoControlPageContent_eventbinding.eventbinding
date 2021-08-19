@@ -83,6 +83,11 @@
     </EventBinding>
     <EventBinding id="ToggleLanguage">
       <Source xsi:type="opcUa.Event" refId="::Control:AutomaticCurrentLanguage" event="ValueChanged" />
+      <Operand datatype="BOOL" name="CheckPaused">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Control:AutomaticModePara.Info.Paused" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
       <EventHandler condition="newValue = TRUE">
         <Sequence>
           <Step order="0">
@@ -138,6 +143,13 @@
             <Action>
               <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnGRight4AutoControlContent">
                 <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtCurLangNameAutoControlContent">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Automatic/ST" />
               </Target>
             </Action>
           </Step>
@@ -201,6 +213,13 @@
               </Target>
             </Action>
           </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtCurLangNameAutoControlContent">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Automatic/G-Code" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
@@ -256,7 +275,21 @@
           </Step>
           <Step order="7">
             <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight31AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
               <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight4AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight5AutoControlContent">
                 <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
               </Target>
             </Action>
@@ -307,16 +340,52 @@
               </Target>
             </Action>
           </Step>
-          <Step order="6">
+          <Step order="8">
             <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight3AutoControlContent">
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight4AutoControlContent">
                 <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
-          <Step order="7">
+          <Step order="9">
             <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight4AutoControlContent">
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight5AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="CheckPaused = TRUE AND newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight31AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight3AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="CheckPaused = FALSE AND newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight31AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight3AutoControlContent">
                 <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
               </Target>
             </Action>
@@ -400,6 +469,95 @@
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.SaveAs" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTRight5.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight5AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Continuous">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTRight4AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight4AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Abort">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTRight3AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight3AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Pause">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="TogglePauseControl">
+      <Source xsi:type="opcUa.Event" refId="::Control:AutomaticModePara.Info.Paused" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight31AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight3AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight31AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight3AutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTRight31AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight31AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Continue">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTRight2AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight2AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Execute">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
