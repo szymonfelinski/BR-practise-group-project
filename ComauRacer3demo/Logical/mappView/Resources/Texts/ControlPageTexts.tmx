@@ -123,5 +123,37 @@
         <seg>Power ON</seg>
       </tuv>
     </tu>
+    <tu tuid="HalfManualControl.Jerk">
+      <tuv xml:lang="pl">
+        <seg>Ustaw zryw</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set jerk</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HalfManualControl.Deceleration">
+      <tuv xml:lang="pl">
+        <seg>Ustaw zwolnienie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set deceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HalfManualControl.Acceleration">
+      <tuv xml:lang="pl">
+        <seg>Ustaw przyśpieszenie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set acceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HalfManualControl.Velocity">
+      <tuv xml:lang="pl">
+        <seg>Ustaw prędkość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set velocity</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

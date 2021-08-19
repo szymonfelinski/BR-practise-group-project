@@ -24,4 +24,5 @@ VAR
 	LastState : R3StateMachineEnum; (*Stores last machine state.*)
 	CalibrationStateBtn : BOOL; (*TRUE when in state STATE_CALIBRATION *)
 	Pause : BOOL := FALSE;
+	Communication : CommunicationType;
 END_VAR

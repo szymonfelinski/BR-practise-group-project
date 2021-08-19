@@ -17,7 +17,7 @@
         <Sequence>
           <Step order="0">
             <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Stop">
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.Stop">
                 <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
@@ -36,7 +36,7 @@
       <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnNavigationAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.changeModePending">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
           </Target>
         </Action>
@@ -46,7 +46,7 @@
       <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnNavigationHalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.changeModePending">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
           </Target>
         </Action>
@@ -56,7 +56,7 @@
       <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnNavigationManualControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:changeModePending">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.changeModePending">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
           </Target>
         </Action>
@@ -66,7 +66,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh2HalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -76,7 +76,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:CoordinateSystem">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
           </Target>
         </Action>
@@ -86,7 +86,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:PathSystem">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -96,7 +96,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:PathSystem">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
           </Target>
         </Action>
@@ -106,7 +106,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:ModeSystem">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -116,8 +116,48 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:ModeSystem">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.nmiVelocityHalfAutoControlContent.ValueChanged" comment="inform that update is needed">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiVelocityHalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.nmiAccelerationHalfAutoControlContent.ValueChanged" comment="inform that update is needed">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiAccelerationHalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.nmiDecelerationHalfAutoControlContent.ValueChanged" comment="inform that update is needed">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiDecelerationHalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.nmiJerkHalfAutoControlContent.ValueChanged" comment="inform that update is needed">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiJerkHalfAutolControlContent1" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
