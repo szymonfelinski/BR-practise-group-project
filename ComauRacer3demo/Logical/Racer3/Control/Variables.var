@@ -20,7 +20,4 @@ VAR
 	Communication : CommunicationType;
 	PathName : STRING[260];
 	FileName : STRING[260];
-	NameLength : UDINT;
-	PrefixLength : UDINT;
-	AutoPrefix : STRING[80];
 END_VAR

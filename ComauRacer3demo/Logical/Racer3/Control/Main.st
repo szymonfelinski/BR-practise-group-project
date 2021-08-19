@@ -203,25 +203,9 @@ PROGRAM _CYCLIC
 			//AutomaticModePara.Parameters.Execute := TRUE;
 			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
 			AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));*)
-			
+			PathName;
+			FileName;
 			IF AutomaticCurrentLanguage THEN
-					
-				(*IF Pause AND NOT Stop THEN
-					AutomaticModePara.Parameters.Pause:=TRUE;
-				END_IF
-				IF NOT Pause AND AutomaticModePara.Parameters.Pause AND NOT Stop THEN
-					AutomaticModePara.Parameters.Continue:=TRUE;
-				END_IF
-				IF Stop THEN
-					AutomaticModePara.Parameters.Abort:=TRUE;
-					Stop:=FALSE;
-				END_IF*) // this is probably not needed.
-				
-				PathName;
-				NameLength := SIZEOF(PathName);
-				PrefixLength := SIZEOF('CNC_PrgDir/');
-				FileName;
-				//brsmemcpy(ADR(FileName)+PrefixLength, ADR(PathName), NameLength-PrefixLength);
 				
 				AutomaticModePara.Parameters;
 				AutomaticModePara.Parameters.ProgramName := FileName;
