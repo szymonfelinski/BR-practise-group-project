@@ -627,5 +627,32 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="AutoControlPageContent.btnSTRight51AutoControlContent.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight51AutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.ErrorReset">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ErrorButtonToggle">
+      <Source xsi:type="opcUa.Event" refId="::Control:AutomaticModePara.Info.IsError" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight51AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight51AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

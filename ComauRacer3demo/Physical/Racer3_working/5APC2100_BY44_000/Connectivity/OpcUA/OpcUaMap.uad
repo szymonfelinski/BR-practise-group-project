@@ -342,6 +342,7 @@
             <Variable Name="Error" />
             <Variable Name="CurrentState" />
             <Variable Name="ErrorID" />
+            <Variable Name="IsError" />
           </Variable>
         </Variable>
         <Variable Name="Communication">
