@@ -1,4 +1,8 @@
 VAR
+	BrakeStatus : ARRAY[0..5] OF McBrakeStatusEnum; (*Brake information*)
+	ReadBrakes : BOOL;
+	Brake : R3Brake;
+	BrakePara : R3BrakeParaType; (*Brake parameters*)
 	AutomaticCurrentLanguage : BOOL; (*selects which language to use (0 - G-Code, 1 - ST)*)
 	AutomaticMode : R3AutomaticMode; (*automatic mode FB*)
 	AutomaticModePara : R3AutomaticModeType; (*Main automatic mode variable*)

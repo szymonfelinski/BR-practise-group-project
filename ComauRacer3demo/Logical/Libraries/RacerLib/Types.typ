@@ -87,7 +87,8 @@ TYPE
 		STATE_AUTOMATIC, (*Automatic mode (script execution)*)
 		STATE_CALIBRATION, (*Calibration mode*)
 		STATE_HOMING, (*Homing mode*)
-		STATE_UPDATE (*This will update the robot parameters on demand*)
+		STATE_UPDATE, (*This will update the robot parameters on demand*)
+		STATE_READ_BRAKES (*This will read brakes' status.*)
 		);
 	R3CalibrationType : 	STRUCT 
 		CalibrationState : R3CalibrationStateEnum; (*State machine used to control Calibration behaviour*)
@@ -205,5 +206,37 @@ TYPE
 		AskedAutoVelocity : REAL; (*not needed*)
 		AskedManualVelocity : REAL; (*not needed*)
 		UpdateSemiAutoVars : BOOL := FALSE;
+	END_STRUCT;
+	R3BrakeParaType : 	STRUCT 
+		BrakeParameters : MC_BR_BrakeSetPar_AcpAx;
+		BrakeTestParameters : McAcpAxBrakeTestParType;
+		BrakeTest : McAcpAxBrakeTestCmdEnum;
+		Hold : BOOL;
+		Release : BOOL;
+		ReadState : BOOL;
+	END_STRUCT;
+	R3BrakeCmdsType : 	STRUCT 
+		SetParameters : MC_BR_BrakeSetPar_AcpAx;
+		BrakeTest : MC_BR_BrakeTest_AcpAx;
+		BrakeOperation : MC_BR_BrakeOperation;
+	END_STRUCT;
+	R3BrakeStateEnum : 
+		(
+		brakeSTATE_WAIT,
+		brakeSTATE_HOLD,
+		brakeSTATE_RELEASE,
+		brakeSTATE_ERROR
+		);
+	R3BrakeInfoType : 	STRUCT 
+		BrakeStatus : McBrakeStatusEnum;
+		PLCOpenState : McAxisPLCopenStateEnum;
+		State : R3BrakeStateEnum;
+		BrakeOp : McBrakeCmdEnum;
+		Done : BOOL;
+	END_STRUCT;
+	R3BrakeType : 	STRUCT 
+		Parameters : R3BrakeParaType;
+		Info : R3BrakeInfoType;
+		Cmds : R3BrakeCmdsType;
 	END_STRUCT;
 END_TYPE

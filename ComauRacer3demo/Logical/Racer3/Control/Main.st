@@ -27,6 +27,8 @@ PROGRAM _INIT
 	
 	AutomaticCurrentLanguage; //variable used for changing script language
 	
+	ReadBrakes := FALSE;
+	
 	RoboArm6Axis();
 	
 END_PROGRAM
@@ -119,11 +121,16 @@ PROGRAM _CYCLIC
 			
 			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
 			
+			IF ReadBrakes THEN
+				i := 0;
+				State := STATE_READ_BRAKES;
+			END_IF
+						
 			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
 				// when exiting ManualMode from mappView bind ManualModePara.ExitMode := TRUE and pending state, both at once
 				// because we want to wait till semiAuto and Auto finishes and then goes to READY state, but for manual we have to go out manually
-				ManualControlPara.ExitManual:=TRUE;
+				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			
 			IF ControlSelector = ManualJog THEN
@@ -236,6 +243,37 @@ PROGRAM _CYCLIC
 			END_IF
 						
 			RoboArm6Axis.Update := TRUE;
+		
+		STATE_READ_BRAKES:
+			
+			IF i = 0 THEN
+				BrakePara.ReadState := TRUE;
+				Brake(Parameters := BrakePara, Axis := ADR(gAxisQ1));
+			ELSIF i = 1 THEN
+				BrakePara.ReadState := TRUE;
+				Brake(Parameters := BrakePara, Axis := ADR(gAxisQ2));
+			ELSIF i = 2 THEN
+				BrakePara.ReadState := TRUE;
+				Brake(Parameters := BrakePara, Axis := ADR(gAxisQ3));
+			ELSIF i = 3 THEN
+				BrakePara.ReadState := TRUE;
+				Brake(Parameters := BrakePara, Axis := ADR(gAxisQ4));
+			ELSIF i = 4 THEN
+				BrakePara.ReadState := TRUE;
+				Brake(Parameters := BrakePara, Axis := ADR(gAxisQ5));
+			ELSIF i = 5 THEN
+				BrakePara.ReadState := TRUE;
+				Brake(Parameters := BrakePara, Axis := ADR(gAxisQ6));
+			ELSIF i = 6 THEN
+				ReadBrakes := FALSE;
+				State := STATE_READY;
+			END_IF
+						
+			IF Brake.Info.Done THEN
+				BrakeStatus[i] := Brake.Info.BrakeStatus;
+				i := i + 1;
+			END_IF
+				
 		
 	END_CASE
 	

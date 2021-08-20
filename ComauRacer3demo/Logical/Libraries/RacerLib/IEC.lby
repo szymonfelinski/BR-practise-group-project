@@ -10,5 +10,6 @@
     <File>R3CalibrationMode.st</File>
     <File>checkAxisLimits.st</File>
     <File>R3AutomaticMode.st</File>
+    <File>R3Brake.st</File>
   </Files>
 </Library>

@@ -36,6 +36,8 @@
     <Group ID="FileDevice3" />
     <Parameter ID="FileDeviceName3" Value="UserPart" />
     <Parameter ID="FileDevicePath3" Value="C:\Temp\UserPart\" Description="For HW config use F:\" />
+    <Parameter ID="TimeZone" Value="160" />
+    <Parameter ID="ActivateDaylightSavingTime" Value="1" />
     <Group ID="FtpUser1" />
     <Parameter ID="FtpUsername1" Value="Admin" />
     <Parameter ID="FtpUserPassword1" Value="dPVRvIP+UG4zebJ0O0hf643aLF5yFibVmkrUfiZ9rkg=" />
