@@ -184,26 +184,26 @@ TYPE
 		STATE_DONE
 		);
 	CommunicationType : 	STRUCT 
+		Power : BOOL := FALSE;
 		Pause : BOOL := FALSE;
 		Stop : BOOL := FALSE;
-		NOTPathSystem : BOOL;
-		PathSystem : BOOL := TRUE;
-		NOTModeSystem : BOOL;
+		ErrorReset : BOOL := FALSE;
 		ModeSystem : BOOL := TRUE;
+		PathSystem : BOOL := TRUE;
+		changeModePending : USINT := 0; (*1-Manual       2-SemiManual      3-Auto 0-none*)
+		NOTPathSystem : BOOL;
+		NOTModeSystem : BOOL;
 		CoordinateSystem : BOOL := FALSE;
 		NOTCoordinateSystem : BOOL;
-		Power : BOOL := FALSE;
 		txt_State_out : WSTRING[80];
 		AskedMaxVelocity : REAL; (*not needed*)
 		AskedMaxAcc : REAL; (*not needed*)
 		AskedMaxDeAcc : REAL; (*not needed*)
-		ErrorReset : BOOL := FALSE;
 		AskedAutoJerk : REAL; (*not needed*)
 		AskedAutoDeAcc : REAL; (*not needed*)
 		AskedAutoAcc : REAL; (*not needed*)
 		AskedAutoVelocity : REAL; (*not needed*)
 		AskedManualVelocity : REAL; (*not needed*)
 		UpdateSemiAutoVars : BOOL := FALSE;
-		changeModePending : USINT := 0; (*1-Manual       2-SemiManual      3-Auto 0-none*)
 	END_STRUCT;
 END_TYPE
