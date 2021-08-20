@@ -128,10 +128,10 @@
     </tu>
     <tu tuid="2457">
       <tuv xml:lang="pl">
-        <seg>-buffer został zresetowany</seg>
+        <seg>Buffer został zresetowany</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>-Buffer was reset</seg>
+        <seg>Buffer was reset</seg>
       </tuv>
     </tu>
   </body>
