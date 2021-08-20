@@ -138,24 +138,46 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="PDFButtonToggle">
+    <EventBinding id="PDFButtonToggle" comment="Currently it hides Device 4 and &quot;View PDF&quot; buttons.">
       <Source xsi:type="opcUa.Event" refId="::FileManage:aux.IsPDF" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer">
-            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice4">
+                <Method xsi:type="widgets.brease.ToggleButton.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer">
-            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer">
+                <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice4">
+                <Method xsi:type="widgets.brease.ToggleButton.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="DocsBrowserPageContent.btnPDFViewer.Click">
+    <EventBinding id="DocsBrowserPageContent.btnPDFViewer.Click" comment="It doesn't work. needs access to web server directory.">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer" event="Click" />
       <EventHandler>
         <Action>
@@ -194,6 +216,16 @@
             </Action>
           </Step>
         </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnDevice4.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice4" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>
