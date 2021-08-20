@@ -17,6 +17,7 @@
 		fontSize="16px" 
 		bold="false" 
 		textColor="#d6d6d6"
+		imageColor="#d6d6d6"
 		mouseDownTextColor="#d6d6d6" 
 		borderWidth="1px 1px 1px 1px" 
 		borderColor="#646464" 

@@ -32,18 +32,18 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ4HalfAuto" top="179" left="680" zIndex="28" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ5HalfAuto" top="179" left="840" zIndex="29" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ6HalfAuto" top="179" left="997" zIndex="30" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label6" top="139" left="175" width="100" zIndex="34" text="Q1" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label7" top="139" left="496" width="100" zIndex="35" text="Q3" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label8" top="139" left="340" width="100" zIndex="36" text="Q2" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label9" top="139" left="680" width="100" zIndex="31" text="Q4" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label10" top="139" left="840" width="100" zIndex="32" text="Q5" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label11" top="139" left="996" width="100" zIndex="33" text="Q6" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label12" top="261" left="177" width="100" zIndex="39" text="X" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label13" top="259" left="340" width="100" zIndex="40" text="Y" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label14" top="259" left="497" width="100" zIndex="41" text="Z" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label15" top="259" left="680" width="100" zIndex="42" text="A" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label16" top="259" left="840" width="100" zIndex="37" text="B" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label17" top="259" left="997" width="100" zIndex="38" text="C" textAlign="center bottom" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="139" left="175" width="100" zIndex="34" text="Q1" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="139" left="496" width="100" zIndex="35" text="Q3" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="139" left="340" width="100" zIndex="36" text="Q2" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="139" left="680" width="100" zIndex="31" text="Q4" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="139" left="840" width="100" zIndex="32" text="Q5" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label11" top="139" left="996" width="100" zIndex="33" text="Q6" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label12" top="261" left="177" width="100" zIndex="39" text="X" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label13" top="259" left="340" width="100" zIndex="40" text="Y" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label14" top="259" left="497" width="100" zIndex="41" text="Z" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label15" top="259" left="680" width="100" zIndex="42" text="A" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label16" top="259" left="840" width="100" zIndex="37" text="B" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label17" top="259" left="997" width="100" zIndex="38" text="C" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto7" top="294" left="178" zIndex="43" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto8" top="294" left="340" zIndex="44" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto9" top="294" left="498" zIndex="45" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />

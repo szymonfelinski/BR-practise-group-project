@@ -13,9 +13,10 @@
 		<Page refId="HalfAutoControlPage"/>
 		<Page refId="ManualControlPage"/>
 		<Page refId="AuditPage"/>
-		<Page refId="UserManagmentPage"/>	
-		
+		<Page refId="UserManagmentPage"/>
+		<Page refId="SDMPage"/>	
 	</Pages>
+	
 	<StartTheme themeRefId="BuRThemeFlat1" />
 	<Themes>
 		<Theme refId="BuRThemeFlat1"/>
@@ -76,7 +77,8 @@
 		<Content refId="DocsBrowserPageContent"/>	
 		<Content refId="DialogRenameContent"/>
 		<Content refId="DialogNewFolderContent"/>
-		<Content refId="DialogConfirmContent"/>	
+		<Content refId="DialogConfirmContent"/>
+		<Content refId="SDMPageContent"/>	
 	</Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
