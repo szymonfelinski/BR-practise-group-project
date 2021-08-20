@@ -74,17 +74,22 @@ PROGRAM _CYCLIC
 	CASE aux.btnSort OF
 		0: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
-			//	aux.btnSortStr := 'SortByNameUp'; jak bindowaæ adres tekstu lokalizowanego?
+			aux.btnSortStr := '$$IAT/Browser/SortByNameAsc'; 
 		1: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_DESC;
+			aux.btnSortStr := '$$IAT/Browser/SortByNameDesc'; 
 		2: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_SIZE_ASC;
+			aux.btnSortStr := '$$IAT/Browser/SortBySizeAsc'; 
 		3: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_SIZE_DES;
+			aux.btnSortStr := '$$IAT/Browser/SortBySizeDesc'; 
 		4: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_ASC;
+			aux.btnSortStr := '$$IAT/Browser/SortByLastModAsc'; 
 		5: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_DESC;
+			aux.btnSortStr := '$$IAT/Browser/SortByLastModDesc'; 
 		6:
 			aux.btnSort := 0;
 	END_CASE
