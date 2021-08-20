@@ -13,5 +13,13 @@
 <Source xsi:type="opcUa" refId="::Control:Communication.ErrorReset" attribute="value" />
 <Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="btnErrorResetControlPanel" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Egg.event_achieved" attribute="value" />
+<Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="Image2" attribute="visible" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Egg.event_achieved" attribute="value" />
+<Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="Image3" attribute="visible" />
+</Binding>
 </Bindings>
 </BindingsSet>

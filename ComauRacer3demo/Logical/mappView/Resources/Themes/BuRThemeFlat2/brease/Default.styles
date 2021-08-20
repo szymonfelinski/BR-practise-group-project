@@ -361,7 +361,7 @@
 		bold="false" 
 		textColor="#CCC" 
 		mouseDownTextColor="#FFFFFF" 
-		cornerRadius="0px" 
+		cornerRadius="5px" 
 		borderWidth="0px 0px 0px 0px" 
 		mouseDownBorderWidth="0px 0px 0px 0px" 
 		backColor="#273868" 

@@ -1,4 +1,5 @@
 VAR
+	Egg : EasterEgg;
 	AutomaticCurrentLanguage : BOOL; (*selects which language to use (0 - G-Code, 1 - ST)*)
 	AutomaticMode : R3AutomaticMode; (*automatic mode FB*)
 	AutomaticModePara : R3AutomaticModeType; (*Main automatic mode variable*)
