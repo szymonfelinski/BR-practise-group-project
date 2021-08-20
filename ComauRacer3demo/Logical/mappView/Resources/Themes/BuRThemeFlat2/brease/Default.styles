@@ -92,12 +92,6 @@
 		mouseDownBackColor="#C39C0F" 
 		checkedBackColor="#C39C0F" 
 		checkedBorderColor="#C87E16" 
-		mouseDownBorderColor="#00001E" 
-		backColor="#273868" 
-		cornerRadius="5px" 
-		mouseDownBackColor="#271D52" 
-		checkedBackColor="#271D52" 
-		checkedBorderColor="#00001E" 
 		disabledBackColor="#d1d1d1" />
 		
 	<Style id="default" xsi:type="widgets.brease.SystemNavButton" 
