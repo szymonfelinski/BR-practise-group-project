@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="AlarmPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Button" id="btnAlarmContentPrevious" top="193" left="10" width="80" height="80" zIndex="0" image="Media/SymbolLib/Arrow/Back.svg" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnAlarmContentNext" top="300" left="10" width="80" height="80" zIndex="1" image="Media/SymbolLib/Arrow/Forward.svg" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AlarmContentAcknowledge" top="193" left="1190" width="80" height="80" zIndex="2" image="Media/SymbolLib/Alarm/Acknowledge.svg" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh4AlarmContentAcknowledgeAll" top="300" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/Alarm/Acknowledge.svg" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAlarmContentPrevious" top="193" left="10" width="80" height="80" zIndex="0" image="Media/SymbolLib/Arrow/Back.svg" imageHeight="60" imageWidth="60" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAlarmContentNext" top="300" left="10" width="80" height="80" zIndex="1" image="Media/SymbolLib/Arrow/Forward.svg" imageHeight="60" imageWidth="60" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AlarmContentAcknowledge" top="193" left="1190" width="80" height="80" zIndex="2" image="Media/SymbolLib/Alarm/Acknowledge.svg" imageHeight="60" imageWidth="60" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4AlarmContentAcknowledgeAll" top="300" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/Alarm/Acknowledge.svg" imageHeight="60" imageWidth="60" margin="0px" />
     <Widget xsi:type="widgets.brease.AlarmList" id="LstAlarmList" top="20" left="140" width="1000" height="660" zIndex="4" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
       <Widgets>
         <Widget xsi:type="widgets.brease.AlarmListItem" id="LstAlarmTimestamp" width="320" zIndex="0" columnType="timestamp" text="$IAT/AlarmListItemTimestampText" />
@@ -12,7 +12,7 @@
         <Widget xsi:type="widgets.brease.AlarmListItem" id="LstAlarmState" width="160" zIndex="2" columnType="state" text="$IAT/AlarmListItemStateText" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="txtAcknowledgeAll" top="400" left="1140" width="140" zIndex="5" text="$IAT/AlarmAcknowledgeAllLabel" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="txtAcknowledge" top="140" left="1140" width="140" zIndex="6" text="$IAT/AlarmAcknowledgeLabel" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="txtAcknowledgeAll" top="380" left="1160" width="100" zIndex="5" text="$IAT/AlarmAcknowledgeAllLabel" textAlign="right" fontSize="15px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtAcknowledge" top="160" left="1160" width="100" zIndex="6" text="$IAT/AlarmAcknowledgeLabel" textAlign="right" fontSize="15px" />
   </Widgets>
 </Content>
