@@ -1,6 +1,6 @@
 
 PROGRAM _INIT
-
+	
 	RoboArm6Axis.Enable := TRUE;
 
 	RoboArm6Axis.Override  := 100.0;
@@ -11,8 +11,8 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 69.0;
 	
-	ManualControlPara.PathLimits.Acceleration := 100.0;
-	ManualControlPara.PathLimits.Deceleration := 100.0;
+	ManualControlPara.PathLimits.Acceleration := 1000.0;
+	ManualControlPara.PathLimits.Deceleration := 1000.0;
 	ManualControlPara.PathLimits.Velocity := 100.0;
 	ManualControlPara.PathLimits.Jerk := 0.0;
 	ManualControlPara.Direction := -1;
@@ -203,22 +203,12 @@ PROGRAM _CYCLIC
 			//AutomaticModePara.Parameters.Execute := TRUE;
 			//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
 			AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));*)
-			
+			PathName;
+			FileName;
 			IF AutomaticCurrentLanguage THEN
-					
-				(*IF Pause AND NOT Stop THEN
-					AutomaticModePara.Parameters.Pause:=TRUE;
-				END_IF
-				IF NOT Pause AND AutomaticModePara.Parameters.Pause AND NOT Stop THEN
-					AutomaticModePara.Parameters.Continue:=TRUE;
-				END_IF
-				IF Stop THEN
-					AutomaticModePara.Parameters.Abort:=TRUE;
-					Stop:=FALSE;
-				END_IF*) // this is probably not needed.
 				
 				AutomaticModePara.Parameters;
-				AutomaticModePara.Parameters.ProgramName;
+				AutomaticModePara.Parameters.ProgramName := FileName;
 				//AutomaticModePara.Parameters.Execute := TRUE;
 				//AutomaticModePara.Info.CurrentState := autoSTATE_WAIT;
 				AutomaticMode(AutoMode := AutomaticModePara, AxesGroup := ADR(gAxesGroupRacer3));

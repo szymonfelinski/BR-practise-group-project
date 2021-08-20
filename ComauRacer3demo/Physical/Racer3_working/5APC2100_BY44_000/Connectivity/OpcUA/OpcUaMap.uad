@@ -340,6 +340,9 @@
           <Variable Name="Info">
             <Variable Name="Paused" />
             <Variable Name="Error" />
+            <Variable Name="CurrentState" />
+            <Variable Name="ErrorID" />
+            <Variable Name="IsError" />
           </Variable>
         </Variable>
         <Variable Name="Communication">
@@ -365,6 +368,15 @@
           <Variable Name="UpdateSemiAutoVars" />
           <Variable Name="changeModePending" />
         </Variable>
+        <Variable Name="FileName" />
+        <Variable Name="KeyCheck">
+          <Variable Name="original_combo" />
+          <Variable Name="pending_combo" />
+          <Variable Name="i" />
+          <Variable Name="temp_value" />
+          <Variable Name="value_changed" />
+          <Variable Name="event_achieved" />
+        </Variable>
       </Task>
       <Task Name="FileManage">
         <Variable Name="aux">
@@ -372,6 +384,8 @@
           <Variable Name="prevNewName" />
           <Variable Name="btnSort" />
           <Variable Name="btnSortStr" />
+          <Variable Name="fileName" />
+          <Variable Name="fullFilePath" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />

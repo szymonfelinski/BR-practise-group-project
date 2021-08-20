@@ -12,7 +12,7 @@
     <Task Name="Program1" Source="Program1.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5">
-    <Task Name="FileManage" Source="FileManager.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="FileManage" Source="FileManager.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />

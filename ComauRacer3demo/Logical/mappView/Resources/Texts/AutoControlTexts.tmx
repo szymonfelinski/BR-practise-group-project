@@ -128,5 +128,13 @@
         <seg>Switch to ST</seg>
       </tuv>
     </tu>
+    <tu tuid="ResetError">
+      <tuv xml:lang="pl">
+        <seg>Wyczyść błędy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Reset errors</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

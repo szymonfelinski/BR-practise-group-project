@@ -9,4 +9,5 @@ VAR
 	OldValue : LREAL;
 	ClearBufferBool : BOOL;
 	PvTest : BOOL;
+	Language : STRING[20] := 'pl|metric';
 END_VAR
