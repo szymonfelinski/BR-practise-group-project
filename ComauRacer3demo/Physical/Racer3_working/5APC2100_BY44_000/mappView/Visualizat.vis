@@ -85,7 +85,7 @@
     <!--<ExpressionsSet refId=""/>-->
   </ExpressionsSets>
   <VariablesSets>
-    <!--<VariablesSet refId="" />-->
+    <VariablesSet refId="sessionVariables" />
   </VariablesSets>
   <!--<StartTheme themeRefId="" />
   <Themes>

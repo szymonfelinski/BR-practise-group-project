@@ -12,7 +12,7 @@
     <Widget xsi:type="widgets.brease.Button" id="btnSTLeft1AutoControlContent" top="86" left="10" width="80" height="80" zIndex="12" text="$IAT/Automatic/New" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTLeft2AutoControlContent" top="193" left="10" width="80" height="80" zIndex="13" text="$IAT/Automatic/Open" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTLeft3AutoControlContent" top="300" left="10" width="80" height="80" zIndex="14" text="$IAT/Automatic/Save" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSTLeft4AutoControlContent" top="407" left="10" width="80" height="80" zIndex="15" text="$IAT/Automatic/SaveAs" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSTLeft4AutoControlContent" top="407" left="10" width="80" height="80" zIndex="15" multiLine="true" text="$IAT/Automatic/SaveAs" wordWrap="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight1AutoControlContent" top="86" left="1190" width="80" height="80" zIndex="16" multiLine="true" text="$IAT/Automatic/GSwitch" wordWrap="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight2AutoControlContent" top="193" left="1190" width="80" height="80" zIndex="17" text="$IAT/Automatic/Run" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight3AutoControlContent" top="300" left="1190" width="80" height="80" zIndex="18" multiLine="true" text="$IAT/Automatic/Pause" wordWrap="true" margin="0px" />
@@ -21,11 +21,12 @@
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="9" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="10" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
     <Widget xsi:type="widgets.brease.MotionPad" id="padAutoModeMotionPad" top="140" left="140" width="540" height="540" zIndex="11" keyboard="true" mpLink="gAxesGroupRacer3" permissionOperate="['Administrators', 'Operator']" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSTRight5AutoControlContent" top="514" left="1190" width="80" height="80" zIndex="20" text="$IAT/Automatic/Continuous" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSTRight5AutoControlContent" top="514" left="1190" width="80" height="80" zIndex="20" breakWord="true" multiLine="true" text="$IAT/Automatic/Continuous" wordWrap="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight31AutoControlContent" top="300" left="1190" width="80" height="80" zIndex="21" multiLine="true" text="$IAT/Automatic/Resume" wordWrap="true" margin="0px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtCurFileAutoControlContent" top="200" left="700" width="140" height="40" zIndex="22" text="Current file" textAlign="right" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtCurFileAutoControlContent" top="200" left="720" width="140" height="40" zIndex="22" text="Current file" textAlign="right" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="txtFileNameAutoControlContent" top="200" left="860" width="220" height="40" zIndex="23" text="" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="txtCurLangAutoControlContent" top="140" left="720" width="140" height="40" zIndex="24" text="Current language" textAlign="right" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="txtCurLangNameAutoControlContent" top="140" left="860" width="220" height="40" zIndex="25" text="" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSTRight51AutoControlContent" top="514" left="1100" width="80" height="80" zIndex="26" breakWord="true" multiLine="true" text="$IAT/Automatic/ResetError" wordWrap="true" margin="0px" />
   </Widgets>
 </Content>

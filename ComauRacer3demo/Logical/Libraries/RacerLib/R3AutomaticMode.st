@@ -150,7 +150,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Cmds.GroupStop();
 				AutoMode.Parameters.Execute := FALSE;
 				AutoMode.Parameters.Unload := FALSE;
-				AutoMode.Parameters.Load := FALSE;
+				//AutoMode.Parameters.Load := TRUE; //for some reason loading a program after stopping is good.
 				AutoMode.Parameters.Abort := FALSE;
 				AutoMode.Parameters.Continuous := FALSE;
 				AutoMode.Info.Paused := FALSE;
@@ -169,6 +169,7 @@ FUNCTION_BLOCK R3AutomaticMode
 			AutoMode.Parameters.Abort:=FALSE;
 						
 		autoSTATE_ERROR: //error state, ErrorReset is reset automatically. reset state control variables
+			AutoMode.Info.IsError := TRUE;
 			AutoMode.Parameters.Execute := FALSE;
 			AutoMode.Parameters.Unload := FALSE;
 			AutoMode.Parameters.Load := FALSE;
@@ -177,6 +178,7 @@ FUNCTION_BLOCK R3AutomaticMode
 			IF AutoMode.Parameters.ErrorReset THEN
 				AutoMode.Info.Error := autoNO_ERROR;
 				AutoMode.Info.ErrorID := 0;
+				AutoMode.Info.IsError := FALSE;
 			END_IF
 			
 			IF AutoMode.Info.Error = autoNO_ERROR THEN

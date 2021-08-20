@@ -7,9 +7,9 @@ PROGRAM _INIT
 	cmd.MpFileManagerUI_0.UIConnect := ADR(cmd.MpFileManagerUIConnectType);
 
 	(* define of device names *) 
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[0] := 'UserPart';
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[1] := 'AUDIT';	
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[2] := 'CNC_PrgDir';		
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[0] := 'CNC_PrgDir';
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[1] := 'UserPart';	
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[2] := 'AUDIT';		
 	
 	cmd.MpFileManagerUIConnectType.File.NewName := '';
 	
@@ -70,7 +70,7 @@ PROGRAM _CYCLIC
 		END_FOR
 	END_IF
 		
-	//zmiana metody sortowania 
+	//change sorting method
 	CASE aux.btnSort OF
 		0: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
@@ -88,6 +88,15 @@ PROGRAM _CYCLIC
 		6:
 			aux.btnSort := 0;
 	END_CASE
+	
+	//variables used to load files
+	aux.fileName := tabInfo.Name[tabInfo.SelectedRow];
+	aux.NewNameTextOne := '/';
+	aux.fullFilePath := '';
+	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex])); //device name
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne)); // '/'
+	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir)); //this adds subfolder compatibility
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName)); // file name
 	
 	cmd.MpFileManagerUI_0();
 END_PROGRAM

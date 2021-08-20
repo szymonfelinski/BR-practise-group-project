@@ -21,11 +21,12 @@
     <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="0" left="0" width="100" height="420" zIndex="10">
       <Widgets>
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice1" top="86" left="10" width="80" height="80" zIndex="0" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device1" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="193" left="10" width="80" height="80" zIndex="1" text="$IAT/Browser/Device2" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice2" top="193" left="10" width="80" height="80" zIndex="1" text="$IAT/Browser/Device2" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice3" top="300" left="10" width="80" height="80" zIndex="2" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device3" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="580" width="600" zIndex="11" fontSize="19px" bold="true" />
     <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="120" zIndex="12" text="$IAT/Browser/Do_sort" />
+    <Widget xsi:type="widgets.brease.Button" id="btnOpenFile" top="407" left="1190" width="80" height="80" zIndex="13" multiLine="true" text="$IAT/Browser/OpenFile" wordWrap="true" fontSize="15px" margin="0px" />
   </Widgets>
 </Content>
