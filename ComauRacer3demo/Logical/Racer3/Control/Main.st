@@ -76,7 +76,8 @@ PROGRAM _CYCLIC
 			
 			IF Communication.Power THEN
 				State := STATE_POWER_ON;
-			END_IF		
+			END_IF
+			
 		STATE_POWER_ON:
 			
 			Communication.txt_State_out:="Power";

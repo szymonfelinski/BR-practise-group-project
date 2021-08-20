@@ -239,10 +239,10 @@
     </tu>
     <tu tuid="OpenFile">
       <tuv xml:lang="pl">
-        <seg>Otwórz plik</seg>
+        <seg>Wybierz plik</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Open file</seg>
+        <seg>Select file</seg>
       </tuv>
     </tu>
   </body>
