@@ -46,6 +46,31 @@ PROGRAM _CYCLIC
 	
 	(* dynamic change of the existing name *)
 	aux.NumberOfElementsMinus := tabInfo.NumberOfElements - 1;
+	aux.NewNamePlus := 0;
+	aux.newNewName := '';
+	aux.prevNewName := cmd.MpFileManagerUIConnectType.File.NewName;
+	aux.newNewName := aux.prevNewName;
+	FOR iFile := 0 TO aux.NumberOfElementsMinus BY 1 DO
+		IF tabInfo.Name[iFile] = aux.newNewName THEN
+			aux.newNewName := aux.prevNewName;
+			aux.NewNamePlus := aux.NewNamePlus + 1;
+			brsitoa(aux.NewNamePlus, ADR(aux.NewNamePlusStr));
+			aux.NewNameTextOne := '(';
+			aux.NewNameTextTwo := ')';
+			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextOne));
+			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNamePlusStr));
+			brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextTwo));
+			iFile := 0;	
+		ELSE
+			cmd.MpFileManagerUIConnectType.File.NewName := aux.newNewName;
+		END_IF
+	END_FOR
+	
+	(* changing the sorting method *)
+	CASE aux.btnSort OF
+		0: 
+			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
+			aux.btnSortStr := '$$IAT/Browser/SortByNameAsc';
 
 	IF tabInfo.NumberOfElements >= 1 THEN
 		
@@ -70,22 +95,21 @@ PROGRAM _CYCLIC
 		END_FOR
 	END_IF
 		
-	//change sorting method
+	(* changing the sorting method *)
 	CASE aux.btnSort OF
 		0: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
-			//	aux.btnSortStr := 'SortByNameUp'; jak bindowaæ adres tekstu lokalizowanego?
+			aux.btnSortStr := '$$IAT/Browser/SortByNameAsc'
 		1: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_DESC;
+			aux.btnSortStr := '$$IAT/Browser/SortByNameDesc';
 		2: 
-			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_SIZE_ASC;
-		3: 
-			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_SIZE_DES;
-		4: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_ASC;
-		5: 
+			aux.btnSortStr := '$$IAT/Browser/SortByLastModAsc';
+		3: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_DESC;
-		6:
+			aux.btnSortStr := '$$IAT/Browser/SortByLastModDesc';
+		4:
 			aux.btnSort := 0;
 	END_CASE
 	
