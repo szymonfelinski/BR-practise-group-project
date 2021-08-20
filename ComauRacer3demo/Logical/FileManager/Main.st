@@ -66,22 +66,21 @@ PROGRAM _CYCLIC
 		END_IF
 	END_FOR
 	
-	//zmiana metody sortowania 
+	(* changing the sorting method *)
 	CASE aux.btnSort OF
 		0: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
-			//	aux.btnSortStr := 'SortByNameUp'; jak bindowaæ adres tekstu lokalizowanego?
+			aux.btnSortStr := '$$IAT/Browser/SortByNameAsc';
 		1: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_DESC;
+			aux.btnSortStr := '$$IAT/Browser/SortByNameDesc';
 		2: 
-			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_SIZE_ASC;
-		3: 
-			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_SIZE_DES;
-		4: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_ASC;
-		5: 
+			aux.btnSortStr := '$$IAT/Browser/SortByLastModAsc';
+		3: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_MOD_TIME_DESC;
-		6:
+			aux.btnSortStr := '$$IAT/Browser/SortByLastModDesc';
+		4:
 			aux.btnSort := 0;
 	END_CASE
 	
