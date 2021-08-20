@@ -3,8 +3,8 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.Table" id="Table1" top="60" left="100" width="1083" height="520" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="540" text="Name" />
-        <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="200" text="Size" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="540" text="$IAT/Browser/File_Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="200" text="$IAT/Browser/File_Size" />
         <Widget xsi:type="widgets.brease.TableItemDateTime" id="tabLastModified" zIndex="2" columnWidth="340" text="$IAT/Browser/FIle_LastModified" />
       </Widgets>
     </Widget>
