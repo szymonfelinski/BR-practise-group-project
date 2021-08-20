@@ -6,5 +6,7 @@
     <Object Type="Package">SVGs</Object>
     <Object Type="File">SzareTlo.svg</Object>
     <Object Type="File">PomaranczoweTlo.svg</Object>
+    <Object Type="File">glass_broke.png</Object>
+    <Object Type="File">comedy.PNG</Object>
   </Objects>
 </Package>
