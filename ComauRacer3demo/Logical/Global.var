@@ -1,7 +1,5 @@
 VAR RETAIN
 	gIsCalibrated : BOOL;
 	gRacer3HomeRestorePos : ARRAY[0..5] OF McAcpAxRestorePosType; (*Permanent - stores home position, set in calibration process*)
-END_VAR
-VAR
-	gRacer3BasePosition : USINT; (*Position of axes saved after calibration*)
+	gRacer3BasePosition : ARRAY[0..5] OF LREAL; (*Position of axes saved after calibration*)
 END_VAR

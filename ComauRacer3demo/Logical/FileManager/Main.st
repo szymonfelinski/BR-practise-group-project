@@ -93,11 +93,26 @@ PROGRAM _CYCLIC
 	aux.fileName := tabInfo.Name[tabInfo.SelectedRow];
 	aux.NewNameTextOne := '/';
 	aux.fullFilePath := '';
-	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex])); //device name
-	brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne)); // '/'
-	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir)); //this adds subfolder compatibility
-	brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName)); // file name
+	IF brsstrcmp(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir)) = 0 THEN //theoritically it works without it, but adds two '//' when not in a subfolder
+		brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex])); //device name
+		brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne)); // '/'
+		brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName)); // file name, this gives full file path in subsystem.
+	ELSE
+		brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex])); //device name
+		brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne)); // '/'
+		brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir)); //this adds subfolder compatibility
+		brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne)); // '/'
+		brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName)); // file name, this gives full file path in subsystem.
+	END_IF
 	
+	aux.fileExtension3Chars; //PDF detection
+	brsmemcpy(ADR(aux.fileExtension3Chars), ADR(aux.fileName)+brsstrlen(ADR(aux.fileName))-4, 4);
+	IF (brsstrcmp(ADR(aux.fileExtension3Chars), ADR(aux.fileExtensionPDF)) = 0) OR (brsstrcmp(ADR(aux.fileExtension3Chars), ADR(aux.fileExtensionpdf)) = 0) THEN
+		aux.IsPDF := TRUE;
+	ELSE
+		aux.IsPDF := FALSE;
+	END_IF
+		
 	cmd.MpFileManagerUI_0();
 END_PROGRAM
 

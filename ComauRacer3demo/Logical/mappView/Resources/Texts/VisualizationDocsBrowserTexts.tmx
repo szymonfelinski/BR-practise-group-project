@@ -245,5 +245,29 @@
         <seg>Select file</seg>
       </tuv>
     </tu>
+    <tu tuid="SelectedFile">
+      <tuv xml:lang="pl">
+        <seg>Wybrany plik:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selected file:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PDFViewer">
+      <tuv xml:lang="pl">
+        <seg>Wyświetl PDF</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>View PDF</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OpenPDF">
+      <tuv xml:lang="pl">
+        <seg>Wyświetl wybrany PDF</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>View selected PDF</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -378,6 +378,7 @@
           <Variable Name="btnSortStr" />
           <Variable Name="fileName" />
           <Variable Name="fullFilePath" />
+          <Variable Name="IsPDF" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />

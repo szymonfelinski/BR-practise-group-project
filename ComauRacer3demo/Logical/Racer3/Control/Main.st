@@ -93,6 +93,7 @@ PROGRAM _CYCLIC
 		STATE_HOMING:
 			Communication.txt_State_out:="Homing";
 			IF gIsCalibrated THEN
+				CalibrationStateBtn := FALSE;
 				IF RoboArm6Axis.IsHomed THEN //autohoming after power on
 					RoboArm6Axis.Home := FALSE;
 					State := STATE_READY;
@@ -106,6 +107,7 @@ PROGRAM _CYCLIC
 					
 				END_IF
 			ELSE
+				CalibrationStateBtn := TRUE;
 				State := STATE_CALIBRATION; //if the system wasn't calibrated before, make it be calibrated
 				Calibration.Info.CurrentState := STATE_BEGIN;
 				

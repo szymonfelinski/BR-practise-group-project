@@ -53,12 +53,14 @@
 		<EventBindingsSet refId="DialogRenameContent_eventbinding" />
 		<EventBindingsSet refId="DialogNewFolderContent_eventbinding" />
 		<EventBindingsSet refId="DialogConfirmContent_eventbinding" />
+		<EventBindingsSet refId="PDFViewerContent_eventbinding" />
 	</EventBindingsSets>
   <Dialogs>
 		<Dialog refId="DialogLogin" />
 		<Dialog refId="DialogRename" />
 		<Dialog refId="DialogNewFolder" />
 		<Dialog refId="DialogConfirm" />
+		<Dialog refId="PDFViewerDialog" />
 	</Dialogs>
   <Contents>
 		<Content refId="MainPageContent" />
@@ -77,6 +79,7 @@
 		<Content refId="DialogRenameContent"/>
 		<Content refId="DialogNewFolderContent"/>
 		<Content refId="DialogConfirmContent"/>	
+		<Content refId="PDFViewerContent" />
 	</Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
