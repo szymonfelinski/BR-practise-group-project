@@ -3,10 +3,9 @@
   <Widgets>
     <Widget xsi:type="widgets.brease.Table" id="Table1" top="60" left="100" width="1083" height="520" zIndex="0">
       <Widgets>
-        <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="400" text="Name" />
-        <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="220" text="Size" />
-        <Widget xsi:type="widgets.brease.TableItem" id="tabType" zIndex="2" columnWidth="140" text="Type" />
-        <Widget xsi:type="widgets.brease.TableItemDateTime" id="tabLastModified" zIndex="3" columnWidth="320" text="$IAT/Browser/FIle_LastModified" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="540" text="Name" />
+        <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="200" text="Size" />
+        <Widget xsi:type="widgets.brease.TableItemDateTime" id="tabLastModified" zIndex="2" columnWidth="340" text="$IAT/Browser/FIle_LastModified" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.Button" id="btnEnterFolder" top="86" left="1190" width="80" height="80" zIndex="1" breakWord="true" multiLine="true" text="$IAT/Browser/Do_FolderEnter" margin="0px" />
@@ -25,8 +24,8 @@
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice3" top="300" left="10" width="80" height="80" zIndex="2" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device3" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="580" width="600" zIndex="11" fontSize="19px" bold="true" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="120" zIndex="12" text="$IAT/Browser/Do_sort" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="500" width="680" zIndex="11" fontSize="19px" bold="true" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="100" width="400" zIndex="12" />
     <Widget xsi:type="widgets.brease.Button" id="btnOpenFile" top="407" left="1190" width="80" height="80" zIndex="13" multiLine="true" text="$IAT/Browser/OpenFile" wordWrap="true" fontSize="15px" margin="0px" />
   </Widgets>
 </Content>
