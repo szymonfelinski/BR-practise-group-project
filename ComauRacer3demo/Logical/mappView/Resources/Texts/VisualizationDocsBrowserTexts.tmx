@@ -229,13 +229,12 @@
         <seg>Last modified</seg>
       </tuv>
     </tu>
-    <tu tuid="SortByNameAsc">
+    <tu tuid="SortByNameUp">
       <tuv xml:lang="pl">
-        <seg>Sortowanie wg nazwy rosnąco</seg>
+        <seg>Sortowanie po nazwie rosnąco</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Sort by name ascending
-</seg>
+        <seg>Sort by name up</seg>
       </tuv>
     </tu>
     <tu tuid="OpenFile">
@@ -244,46 +243,6 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Open file</seg>
-      </tuv>
-    </tu>
-    <tu tuid="SortByNameDesc">
-      <tuv xml:lang="pl">
-        <seg>Sortowanie wg nazwy malejąco</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Sort by name descending</seg>
-      </tuv>
-    </tu>
-    <tu tuid="SortBySizeAsc">
-      <tuv xml:lang="pl">
-        <seg>Sortowanie wg rozmiaru rosnąco</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Sort by size ascending</seg>
-      </tuv>
-    </tu>
-    <tu tuid="SortBySizeDesc">
-      <tuv xml:lang="pl">
-        <seg>Sortowanie wg rozmiaru malejąco</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Sort by size descending</seg>
-      </tuv>
-    </tu>
-    <tu tuid="SortByLastModAsc">
-      <tuv xml:lang="pl">
-        <seg>Sortowanie wg daty ostatniej modyfikacji rosnąco</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Sort by date last modified ascending</seg>
-      </tuv>
-    </tu>
-    <tu tuid="SortByLastModDesc">
-      <tuv xml:lang="pl">
-        <seg>Sortowanie wg daty ostatniej modyfikacji malejąco</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Sort by date last modified descending</seg>
       </tuv>
     </tu>
   </body>
