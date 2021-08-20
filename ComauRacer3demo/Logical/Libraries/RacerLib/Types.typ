@@ -206,7 +206,7 @@ TYPE
 		AskedManualVelocity : REAL; (*not needed*)
 		UpdateSemiAutoVars : BOOL := FALSE;
 	END_STRUCT;
-	EasterEgg : 	STRUCT 
+	R3KeyCheckType : 	STRUCT 
 		original_combo : ARRAY[0..5]OF USINT := [1,1,2,3,0,17];
 		pending_combo : ARRAY[0..5]OF USINT;
 		i : USINT := 0;

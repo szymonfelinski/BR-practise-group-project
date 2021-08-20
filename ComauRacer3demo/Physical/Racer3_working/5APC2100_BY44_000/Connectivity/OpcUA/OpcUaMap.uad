@@ -369,10 +369,10 @@
           <Variable Name="changeModePending" />
         </Variable>
         <Variable Name="FileName" />
-        <Variable Name="Egg">
-          <Variable Name="i" />
+        <Variable Name="KeyCheck">
           <Variable Name="original_combo" />
           <Variable Name="pending_combo" />
+          <Variable Name="i" />
           <Variable Name="temp_value" />
           <Variable Name="value_changed" />
           <Variable Name="event_achieved" />
