@@ -16,6 +16,8 @@
 		cornerRadius="5px"
 		mouseDownBackColor="#F56416" 
 		disabledBackColor="#d1d1d1" />
+
+	
 		
 	<Style id="defaultTurnedOn" xsi:type="widgets.brease.Button" 
 		fontSize="16px" 
@@ -78,9 +80,10 @@
 		fontSize="16px" 
 		bold="false" 
 		textColor="#FFF"
-		mouseDownTextColor="#ff8800" 
+		mouseDownTextColor="#FFF" 
 		borderWidth="0px 0px 0px 6px" 
 		borderColor="#646464" 
+		cornerRadius="5px"
 		mouseDownBorderWidth="0px 6px 0px 6px" 
 		mouseDownBorderColor="#ff8800" 
 		backColor="#FFB100" 
@@ -193,7 +196,8 @@
 	<Style id="default" xsi:type="widgets.brease.Label" 
 		fontSize="12px" 
 		textColor="#646464" 
-		backColor="transparent" 
+		backColor="transparent"
+		cornerRadius="5px" 
 		borderStyle="none" 
 		padding="5px" />
 	
@@ -362,7 +366,7 @@
 		bold="false" 
 		textColor="#FFF" 
 		mouseDownTextColor="#FFFFFF" 
-		cornerRadius="0px" 
+		cornerRadius="5px" 
 		borderWidth="0px 0px 0px 0px" 
 		mouseDownBorderWidth="0px 0px 0px 0px" 
 		backColor="#FFB100" 
@@ -454,8 +458,8 @@
 		borderWidth="0px 0px 0px 0px" 
 		listBorderWidth="0px 0px 0px 0px" 
 		mouseDownBorderWidth="0px 0px 0px 0px" 
-		backColor="#C6C6C6" 
-		activeBackColor="#4A4A4A"  
+		backColor="#FFB100"
+		activeBackColor="#F56416"  
 		disabledBackColor="#D1D1D1" />
 	
 	<!--measurement system selector-->
@@ -469,8 +473,8 @@
 		borderWidth="0px 0px 0px 0px" 
 		listBorderWidth="0px 0px 0px 0px" 
 		mouseDownBorderWidth="0px 0px 0px 0px" 
-		backColor="#C6C6C6" 
-		activeBackColor="#4A4A4A"  
+		backColor="#FFB100"
+		activeBackColor="#F56416" 
 		disabledBackColor="#D1D1D1" />
 	
 	<!--fly out-->

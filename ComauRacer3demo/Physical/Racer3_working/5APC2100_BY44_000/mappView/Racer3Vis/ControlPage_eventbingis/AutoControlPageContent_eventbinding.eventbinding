@@ -404,11 +404,28 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnGRight2AutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnGRight2AutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnGRight2AutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.Run" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnGRight2AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="opcUa.Event" refId="::Control:AutomaticModePara.Parameters.Execute" event="ValueChanged" />
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight2AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
           </Target>
         </Action>
       </EventHandler>
@@ -424,11 +441,18 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnGRight4AutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnGRight4AutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnGRight4AutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.Stop" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnGRight2AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
           </Target>
         </Action>
       </EventHandler>
@@ -474,7 +498,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTRight5.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight5AutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight5AutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Continuous">
@@ -482,13 +506,37 @@
           </Target>
         </Action>
       </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight5AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_5">
+      <Source xsi:type="opcUa.Event" refId="::Control:AutomaticModePara.Parameters.Continuous" event="ValueChanged" />
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight5AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTRight4AutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight4AutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight4AutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Abort">
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight2AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
           </Target>
         </Action>
       </EventHandler>
@@ -553,11 +601,18 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoControlPageContent.btnSTRight2AutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight2AutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight2AutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Execute">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="AutoControlPageContent" widgetRefId="btnSTRight2AutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
           </Target>
         </Action>
       </EventHandler>
