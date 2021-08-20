@@ -32,13 +32,13 @@
 	/>
 	
 	<Style id="default" xsi:type="system.brease.Area" 
-		backColor="#3D4E52" />
+	backGround="Media/NocneTlo.svg" />
 	
 	<Style id="transparent" xsi:type="system.brease.Area" 
 		backColor="transparent" />
 		
 	<Style id="TopGrey" xsi:type="system.brease.Area" 
-	backColor="#30372F" />
+	backColor="#4E4E4E" />
 	
 	<Style id="default" xsi:type="system.brease.Scrollbar"
 		backColor="rgba(100,100,100,0.5)"
