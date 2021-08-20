@@ -93,9 +93,10 @@ PROGRAM _CYCLIC
 	aux.fileName := tabInfo.Name[tabInfo.SelectedRow];
 	aux.NewNameTextOne := '/';
 	aux.fullFilePath := '';
-	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex]));
-	brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne));
-	brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName));
+	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex])); //device name
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne)); // '/'
+	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir)); //this adds subfolder compatibility
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName)); // file name
 	
 	cmd.MpFileManagerUI_0();
 END_PROGRAM
