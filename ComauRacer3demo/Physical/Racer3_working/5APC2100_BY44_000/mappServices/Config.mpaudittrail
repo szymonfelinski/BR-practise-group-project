@@ -9,9 +9,10 @@
         <Property ID="[2]" Value="33" />
         <Property ID="[3]" Value="113" />
         <Property ID="[4]" Value="48" />
+        <Property ID="[5]" Value="2457" />
       </Group>
       <Selector ID="TextSource" Value="TXT">
-        <Property ID="Name" Value="MpAudit" />
+        <Property ID="Name" Value="Audit" />
         <Property ID="OutputFormat" Value="SysF/Event/Root" />
       </Selector>
       <Group ID="Export">

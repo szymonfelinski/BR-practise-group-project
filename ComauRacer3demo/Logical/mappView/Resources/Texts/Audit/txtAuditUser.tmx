@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">Audit/SysF/User</prop>
+  </header>
+  <body>
+    <tu tuid="1">
+      <tuv xml:lang="pl">
+        <seg>zalogował się</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>logged in</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Angemeldet</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="pl">
+        <seg>wylogował się</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>logged out</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Abgemeldet</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="pl">
+        <seg>został wylogowany (upłynął czas)</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>was logged out (timeout)</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Abgemeldet (Timeout)</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="pl">
+        <seg>dodano użytkownika {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>added user {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Anwender {&amp;usr} zugefügt</seg>
+      </tuv>
+    </tu>
+    <tu tuid="5">
+      <tuv xml:lang="pl">
+        <seg>usunięto użytkownika {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>deleted user {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Anwender {&amp;usr} gelöscht</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6">
+      <tuv xml:lang="pl">
+        <seg>zablokowano użytkownika {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>locked user {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Anwender {&amp;usr} gesperrt</seg>
+      </tuv>
+    </tu>
+    <tu tuid="7">
+      <tuv xml:lang="pl">
+        <seg>odblokowano użytkownika {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>unlocked user {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Anwender {&amp;usr} entsperrt</seg>
+      </tuv>
+    </tu>
+    <tu tuid="8">
+      <tuv xml:lang="pl">
+        <seg>został zablokowany (niepoprawne hasło)</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>got locked (incorrect password)</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Gesperrt (inkorrektes Passwort)</seg>
+      </tuv>
+    </tu>
+    <tu tuid="9">
+      <tuv xml:lang="pl">
+        <seg>zmienił hasło</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>has changed password</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Passwort geändert</seg>
+      </tuv>
+    </tu>
+    <tu tuid="10">
+      <tuv xml:lang="pl">
+        <seg>Została wprowadzona niepoprawna nazwa</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Incorrect name was entered</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Falscher Name eingegeben</seg>
+      </tuv>
+    </tu>
+    <tu tuid="11">
+      <tuv xml:lang="pl">
+        <seg>Zostało wprowadzone niepoprawne hasło</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Incorrect password was entered</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Falsches Passwort eingegeben</seg>
+      </tuv>
+    </tu>
+    <tu tuid="12">
+      <tuv xml:lang="pl">
+        <seg>dodano nową rolę {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>added new role {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Neue Rolle {&amp;usr} zugefügt</seg>
+      </tuv>
+    </tu>
+    <tu tuid="13">
+      <tuv xml:lang="pl">
+        <seg>usunięto rolę {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>deleted role {&amp;usr}</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Rolle {&amp;usr} gelöscht</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
