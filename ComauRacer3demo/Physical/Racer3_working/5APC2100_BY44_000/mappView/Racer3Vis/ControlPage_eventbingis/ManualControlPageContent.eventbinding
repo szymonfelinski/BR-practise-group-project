@@ -112,7 +112,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="ManualControlPageContent.btnRigh2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
@@ -120,13 +120,41 @@
           </Target>
         </Action>
       </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="ManualControlPageContent.btnLeft2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
           </Target>
         </Action>
       </EventHandler>
