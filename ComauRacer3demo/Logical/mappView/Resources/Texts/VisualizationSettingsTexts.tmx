@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/Visualization/Settings</prop>
+  </header>
+  <body>
+    <tu tuid="SettingsLabel">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Settings</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LanguageSelectedLabel">
+      <tuv xml:lang="pl">
+        <seg>Język:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Language:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UnitSystemSelectedLabel">
+      <tuv xml:lang="pl">
+        <seg>System jednostek:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Measurement system:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UnitSystemMetricLabel">
+      <tuv xml:lang="pl">
+        <seg>Metryczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Metric</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UnitSystemImperialLabel">
+      <tuv xml:lang="pl">
+        <seg>Imperialny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Imperial</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LanguageEnglishLabel">
+      <tuv xml:lang="pl">
+        <seg>Angielski</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>English</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LanguagePolishLabel">
+      <tuv xml:lang="pl">
+        <seg>Polski</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Polish</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ThemeSelectedLabel">
+      <tuv xml:lang="pl">
+        <seg>Motyw:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Theme:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ThemeDarkLabel">
+      <tuv xml:lang="pl">
+        <seg>Ciemny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Dark</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ThemeLightLabel">
+      <tuv xml:lang="pl">
+        <seg>Jasny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Light</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
