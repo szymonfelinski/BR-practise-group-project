@@ -23,7 +23,7 @@
     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="280" left="460" width="340" zIndex="19" text="$IAT/ControlPage/ControlPage.PowerON" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="120" left="720" width="40" height="40" zIndex="20" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" imageColor="rgba(100, 100, 100, 1)" visible="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="580" left="460" width="340" zIndex="21" text="$IAT/ControlPage/Control.ErrorReset" />
-    <Widget xsi:type="widgets.brease.Image" id="Image2" top="0" left="0" width="1280" height="700" zIndex="22" image="Media/glass_broke.png" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image3" top="320" left="740" width="460" height="280" zIndex="23" image="Media/comedy.PNG" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="0" left="100" width="1080" height="580" zIndex="22" image="Media/glass_broke.png" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image3" top="360" left="720" width="460" height="280" zIndex="23" image="Media/comedy.PNG" visible="false" />
   </Widgets>
 </Content>

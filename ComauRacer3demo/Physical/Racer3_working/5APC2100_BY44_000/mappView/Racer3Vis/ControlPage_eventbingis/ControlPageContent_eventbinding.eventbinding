@@ -35,14 +35,14 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnRigh1ControlContent" event="DisabledClick" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.temp_value">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.value_changed">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -52,14 +52,14 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnLeft2ControlContent" event="DisabledClick" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.temp_value">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.value_changed">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -69,14 +69,14 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnRigh2ControlContent" event="DisabledClick" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.temp_value">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.value_changed">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -86,14 +86,14 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnLeft1ControlContent" event="DisabledClick" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.temp_value">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.value_changed">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -103,14 +103,14 @@
       <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ControlPageContent" widgetRefId="btnErrorResetControlPanel" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.temp_value">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="17" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Egg.value_changed">
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>

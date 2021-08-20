@@ -82,6 +82,7 @@
 		mouseDownBorderWidth="0px 6px 0px 6px"
 		mouseDownBorderColor="#00001E" 
 		backColor="#273868" 
+		cornerRadius="5px" 
 		mouseDownBackColor="#271D52" 
 		checkedBackColor="#271D52" 
 		checkedBorderColor="#00001E" 
