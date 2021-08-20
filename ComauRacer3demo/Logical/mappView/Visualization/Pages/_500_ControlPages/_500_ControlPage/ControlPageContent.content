@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ControlPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft1ControlContent" top="86" left="10" width="80" height="80" zIndex="0" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft2ControlContent" top="193" left="10" width="80" height="80" zIndex="1" text="Velocity up" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft3ControlContent" top="300" left="10" width="80" height="80" zIndex="2" text="Acceleration up" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft4ControlContent" top="407" left="10" width="80" height="80" zIndex="3" text="Decceleration up" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh1ControlContent" top="86" left="1190" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh2ControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="Velocity down" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh3ControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Acceleration down" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Decceleration down" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1ControlContent" top="86" left="10" width="80" height="80" zIndex="0" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft2ControlContent" top="193" left="10" width="80" height="80" zIndex="1" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft3ControlContent" top="300" left="10" width="80" height="80" zIndex="2" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4ControlContent" top="407" left="10" width="80" height="80" zIndex="3" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1ControlContent" top="86" left="1190" width="80" height="80" zIndex="4" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh2ControlContent" top="193" left="1190" width="80" height="80" zIndex="5" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh3ControlContent" top="300" left="1190" width="80" height="80" zIndex="6" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnHomingControlContent" top="180" left="460" width="140" zIndex="8" text="$IAT/ControlPage/Control.Homing" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1ControlContent" top="440" left="540" width="160" zIndex="9" maxValue="750" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2ControlContent" top="440" left="860" width="160" zIndex="10" maxValue="750" />
@@ -23,5 +23,7 @@
     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="280" left="460" width="340" zIndex="19" text="$IAT/ControlPage/ControlPage.PowerON" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="120" left="720" width="40" height="40" zIndex="20" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" imageColor="rgba(100, 100, 100, 1)" visible="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="580" left="460" width="340" zIndex="21" text="$IAT/ControlPage/Control.ErrorReset" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="0" left="0" width="1280" height="700" zIndex="22" image="Media/glass_broke.png" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image3" top="320" left="740" width="460" height="280" zIndex="23" image="Media/comedy.PNG" visible="false" />
   </Widgets>
 </Content>
