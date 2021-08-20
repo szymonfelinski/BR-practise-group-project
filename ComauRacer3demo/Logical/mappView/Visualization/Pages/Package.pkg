@@ -10,6 +10,7 @@
     <Object Type="Package">_600_SettingsPage</Object>
     <Object Type="Package">_500_ControlPages</Object>
     <Object Type="Package">_700_AuditPage</Object>
-    <Object Type="Package">UserManagmentPage</Object>
+    <Object Type="Package">_800_UserManagmentPage</Object>
+    <Object Type="Package">_900_SDMPage</Object>
   </Objects>
 </Package>

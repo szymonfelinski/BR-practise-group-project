@@ -23,5 +23,6 @@
     <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutput" top="10" left="940" width="320" zIndex="9" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonDocsBrowserPage" top="10" left="710" width="80" height="80" zIndex="10" image="Media/SymbolLib/File/File.svg" pageId="DocsBrowserPage" imageHeight="60" imageWidth="60" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="60" left="580" width="40" height="40" zIndex="11" image="Media/SymbolLib/Symbols/TouchMe.svg" visible="false" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationButtonSDMPage" top="10" left="170" width="80" height="80" zIndex="12" image="Media/SymbolLib/Diagnostic/Diagnostics.svg" pageId="SDMPage" imageHeight="60" imageWidth="60" />
   </Widgets>
 </Content>
