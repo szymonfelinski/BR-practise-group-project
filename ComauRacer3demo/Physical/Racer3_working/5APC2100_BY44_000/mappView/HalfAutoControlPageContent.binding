@@ -3,70 +3,27 @@
   <Bindings>
 
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q2" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2HalfAutoControlContent" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q3" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ3HalfAutoControlContent" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q4" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ4HalfAutoControlContent" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q5" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ5HalfAutoControlContent" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q6" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ6HalfAutoControlContent" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AxisDistance.Q1" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" attribute="value" />
-</Binding>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Source xsi:type="opcUa" refId="::Control:Communication.NOTCoordinateSystem" attribute="value" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ4HalfAutoControlContent" attribute="enable" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Source xsi:type="opcUa" refId="::Control:Communication.NOTCoordinateSystem" attribute="value" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" attribute="enable" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Source xsi:type="opcUa" refId="::Control:Communication.NOTCoordinateSystem" attribute="value" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ3HalfAutoControlContent" attribute="enable" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Source xsi:type="opcUa" refId="::Control:Communication.NOTCoordinateSystem" attribute="value" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2HalfAutoControlContent" attribute="enable" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Source xsi:type="opcUa" refId="::Control:Communication.NOTCoordinateSystem" attribute="value" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ5HalfAutoControlContent" attribute="enable" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:NOTCoordinateSystem" attribute="value" />
+<Source xsi:type="opcUa" refId="::Control:Communication.NOTCoordinateSystem" attribute="value" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ6HalfAutoControlContent" attribute="enable" />
 </Binding>
 
@@ -119,28 +76,49 @@
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmoHalfAuto12" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPAHalfAutoControlContent" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Q5" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ6HalfAutoControlContent" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPCHalfAutoControlContent" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Q4" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ5HalfAutoControlContent" attribute="node" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Q2" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ3HalfAutoControlContent" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPZHalfAutoControlContent" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Q1" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2HalfAutoControlContent" attribute="node" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Q3" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ4HalfAutoControlContent" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPBHalfAutoControlContent" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Q0" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPXHalfAutoControlContent" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Velocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiVelocityHalfAutoControlContent" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:CoordinateSystem" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniTCPYHalfAutoControlContent" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Acceleration" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiAccelerationHalfAutoControlContent" attribute="node" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Jerk" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiJerkHalfAutolControlContent1" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Deceleration" attribute="node" />
+<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiDecelerationHalfAutoControlContent" attribute="node" />
 </Binding>
 </Bindings>
 </BindingsSet>

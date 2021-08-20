@@ -5,4 +5,9 @@ VAR
 	CommentVar : WSTRING[100] := "Comment";
 	CustomEventStatus : DINT;
 	MpAuditTrail_0 : MpAuditTrail;
+	NewValue : LREAL;
+	OldValue : LREAL;
+	ClearBufferBool : BOOL;
+	PvTest : BOOL;
+	Language : STRING[20] := 'pl|metric';
 END_VAR

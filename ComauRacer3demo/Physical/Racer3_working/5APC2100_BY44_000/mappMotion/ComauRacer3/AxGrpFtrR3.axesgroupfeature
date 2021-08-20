@@ -38,8 +38,8 @@
   </Element>
   <Element ID="Feature_WorkspaceMonitoring" Type="axesgroupfeature">
     <Selector ID="Type" Value="WorkspaceMonitoring">
-      <Selector ID="ModalDataBehaviour" Value="ResetToDefault" />
-      <Property ID="WorkspaceRef" Value="R3WorkSpace" />
+      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
+      <Property ID="WorkspaceRef" Value="" />
       <Selector ID="SelfCollisionDetection" Value="Enabled" />
       <Selector ID="FlangeWorkspace" Value="NotUsed" />
     </Selector>

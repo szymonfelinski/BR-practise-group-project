@@ -10,13 +10,9 @@
         <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditOld" width="100" zIndex="4" columnType="old" text="$IAT/AuditListOldText" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft1AuditContent" top="150" left="10" width="80" height="80" zIndex="1" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft2AuditContent" top="257" left="10" width="80" height="80" zIndex="2" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft3AuditContent" top="364" left="10" width="80" height="80" zIndex="3" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft4AuditContent" top="471" left="10" width="80" height="80" zIndex="4" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditExport" top="150" left="1190" width="80" height="80" zIndex="5" text="$IAT/AuditButtonExportText" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh2AuditContent" top="257" left="1190" width="80" height="80" zIndex="6" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh3AuditContent" top="364" left="1190" width="80" height="80" zIndex="7" text="Button1" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh4AuditContentAcknowledgeAll" top="471" left="1190" width="80" height="80" zIndex="8" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAuditContentPrevious" top="193" left="10" width="80" height="80" zIndex="1" image="Media/SymbolLib/Arrow/Back.svg" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAuditContentNext" top="300" left="10" width="80" height="80" zIndex="2" image="Media/SymbolLib/Arrow/Forward.svg" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditExport" top="193" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/File/File.svg" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAuditClearBuffor" top="300" left="1190" width="80" height="80" zIndex="4" image="Media/SymbolLib/Edit/Delete.svg" margin="0px" />
   </Widgets>
 </Content>

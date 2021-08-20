@@ -10,19 +10,18 @@
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3ControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="Acceleration down" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Decceleration down" margin="0px" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnHomingControlContent" top="180" left="460" width="140" zIndex="8" text="$IAT/ControlPage/Control.Homing" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1ControlContent" top="440" left="540" width="160" zIndex="9" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2ControlContent" top="440" left="860" width="160" zIndex="10" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3ControlContent" top="440" left="240" width="160" zIndex="11" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="480" left="540" width="160" zIndex="12" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="480" left="860" width="160" zIndex="13" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="480" left="240" width="160" zIndex="14" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="180" left="660" width="140" zIndex="15" pageId="CaibrationPage" text="$IAT/ControlPage/Control.Calibration" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="400" left="860" width="160" height="40" zIndex="16" text="$IAT/ControlPage/ManualControl.maxDecceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="400" left="540" width="160" height="40" zIndex="17" text="$IAT/ControlPage/ManualControl.maxAcceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="400" left="240" width="160" height="40" zIndex="18" text="$IAT/ControlPage/ManualContol.maxVelocity" textAlign="center" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="19" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="20" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="21" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="280" left="460" width="340" zIndex="22" text="$IAT/ControlPage/ControlPage.PowerON" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1ControlContent" top="440" left="540" width="160" zIndex="9" maxValue="750" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2ControlContent" top="440" left="860" width="160" zIndex="10" maxValue="750" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3ControlContent" top="440" left="240" width="160" zIndex="11" maxValue="420" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="180" left="660" width="140" zIndex="12" pageId="CaibrationPage" text="$IAT/ControlPage/Control.Calibration" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="400" left="860" width="160" height="40" zIndex="13" text="$IAT/ControlPage/ManualControl.maxDecceleration" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="400" left="540" width="160" height="40" zIndex="14" text="$IAT/ControlPage/ManualControl.maxAcceleration" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="400" left="240" width="160" height="40" zIndex="15" text="$IAT/ControlPage/ManualContol.maxVelocity" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="16" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="17" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="18" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="280" left="460" width="340" zIndex="19" text="$IAT/ControlPage/ControlPage.PowerON" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="120" left="720" width="40" height="40" zIndex="20" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="580" left="460" width="340" zIndex="21" text="$IAT/ControlPage/Control.ErrorReset" />
   </Widgets>
 </Content>

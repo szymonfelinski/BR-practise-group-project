@@ -63,17 +63,17 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
           </Target>
         </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="DocsBrowserPageContent.ToggleButton2.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="ToggleButton2" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice2" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
           </Target>
         </Action>
       </EventHandler>
@@ -123,7 +123,7 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
           </Target>
         </Action>
       </EventHandler>
@@ -136,6 +136,37 @@
             <Method xsi:type="opcUa.NodeAction.AddValue" value="1" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnOpenSTFile.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnOpenFile" event="Click" />
+      <Operand datatype="ANY_STRING" name="SelectedFileName">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fileName" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="ANY_STRING" name="SelectedFilePath">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fullFilePath" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler>
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="session.VariableAction" refId="selectedFileName">
+                <Method xsi:type="session.VariableAction.SetValueString" value="=SelectedFileName" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="session.VariableAction" refId="selectedFileFullPath">
+                <Method xsi:type="session.VariableAction.SetValueString" value="=SelectedFilePath" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>

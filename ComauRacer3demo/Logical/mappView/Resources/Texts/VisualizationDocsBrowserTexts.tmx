@@ -238,8 +238,6 @@
 </seg>
       </tuv>
     </tu>
-<<<<<<< Updated upstream
-=======
     <tu tuid="OpenFile">
       <tuv xml:lang="pl">
         <seg>Otwórz plik</seg>
@@ -288,6 +286,5 @@
         <seg>Sort by date last modified descending</seg>
       </tuv>
     </tu>
->>>>>>> Stashed changes
   </body>
 </tmx>

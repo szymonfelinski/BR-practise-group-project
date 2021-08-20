@@ -12,7 +12,8 @@
 		<Page refId="AutoControlPage"/>
 		<Page refId="HalfAutoControlPage"/>
 		<Page refId="ManualControlPage"/>
-		<Page refId="AuditPage"/>	
+		<Page refId="AuditPage"/>
+		<Page refId="UserManagmentPage"/>	
 		
 	</Pages>
 	<StartTheme themeRefId="BuRThemeFlat1" />
@@ -32,6 +33,8 @@
 		<BindingsSet refId="DocsBrowserPageContent_binding" />
 		<BindingsSet refId="DialogNewFolderContent_binding" />
 		<BindingsSet refId="ControlPageContent_binding"/>
+		<BindingsSet refId="CalibrationPageContent_binding"/>
+		<BindingsSet refId="TopPageContent_binding"/>
   </BindingsSets>
 
   <EventBindingsSets>
@@ -43,8 +46,9 @@
 		<EventBindingsSet refId="AutoControlPageContent_eventbinding" />
 		<EventBindingsSet refId="ManualControlPageContent_eventbinding" />
 		<EventBindingsSet refId="HalfAutoControlPageContent_eventbinding" />
-		<EventBindingsSet refId="CalibrationControlPageContent_eventbinding" />
+		<EventBindingsSet refId="CalibrationPageContent_eventbinding" />
 		<EventBindingsSet refId="AuditPageContent_eventbinding" />
+		<EventBindingsSet refId="UserManagmentPageContent_eventbinding" />
 		<EventBindingsSet refId="DocsBrowserPageContent_eventbinding" />
 		<EventBindingsSet refId="DialogRenameContent_eventbinding" />
 		<EventBindingsSet refId="DialogNewFolderContent_eventbinding" />
@@ -67,6 +71,7 @@
 		<Content refId="AutoControlPageContent"/>
 		<Content refId="HalfAutoControlPageContent"/>
 		<Content refId="ManualControlPageContent"/>
+		<Content refId="UserManagmentPageContent"/>	
 		<Content refId="AuditPageContent"/>	
 		<Content refId="DocsBrowserPageContent"/>	
 		<Content refId="DialogRenameContent"/>
@@ -80,7 +85,7 @@
     <!--<ExpressionsSet refId=""/>-->
   </ExpressionsSets>
   <VariablesSets>
-    <!--<VariablesSet refId="" />-->
+    <VariablesSet refId="sessionVariables" />
   </VariablesSets>
   <!--<StartTheme themeRefId="" />
   <Themes>

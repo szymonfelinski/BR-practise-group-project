@@ -20,15 +20,15 @@ TYPE
 	END_STRUCT;
 	R3AutomaticModeState : 
 		( (*Automatic mode state machine*)
-		autoSTATE_WAIT, (*waiting for instruction*)
-		autoSTATE_LOAD, (*loading program*)
-		autoSTATE_UNLOAD, (*Unloading program state*)
-		autoSTATE_EXECUTE, (*executing program*)
-		autoSTATE_DONE, (*execution done*)
-		autoSTATE_PAUSE, (*program paused*)
-		autoSTATE_CONTINUE, (*Continues paused program*)
-		autoSTATE_ABORT, (*Abort current program*)
-		autoSTATE_ERROR (*error state*)
+		autoSTATE_WAIT := 1, (*waiting for instruction*)
+		autoSTATE_LOAD := 2, (*loading program*)
+		autoSTATE_UNLOAD := 3, (*Unloading program state*)
+		autoSTATE_EXECUTE := 4, (*executing program*)
+		autoSTATE_DONE := 5, (*execution done*)
+		autoSTATE_PAUSE := 6, (*program paused*)
+		autoSTATE_CONTINUE := 7, (*Continues paused program*)
+		autoSTATE_ABORT := 8, (*Abort current program*)
+		autoSTATE_ERROR := 0 (*error state*)
 		);
 	R3AutomaticModePara : 	STRUCT  (*Automatic mode parameters*)
 		ProgramName : STRING[260]; (*Program name to load/execute*)
@@ -47,6 +47,7 @@ TYPE
 		Error : R3AutomaticModeErrorEnum;
 		ErrorID : DINT;
 		Paused : BOOL;
+		IsError : BOOL; (*Only for visualisation.*)
 	END_STRUCT;
 	R3AutomaticModeType : 	STRUCT  (*Automatic mode main structure*)
 		Parameters : R3AutomaticModePara;
@@ -123,7 +124,7 @@ TYPE
 		STATE_PAUSE := 4
 		);
 	R3SemiAutoModeType : 	STRUCT 
-		AxisDistance : R3AxisDistanceType; (*Stores given axis distance for relative move*)
+		AskedValue : R3AskedValueType; (*Stores given axis distance for relative move*)
 		Flag : BOOL; (*Flag between READY and SEMIAUTO*)
 		Mode : BOOL; (*Switches between relative and absolute modes, 1 for Relative, 0 for Absolute*)
 		UpdatePending : BOOL; (*if UpdatePending then updates before starting move*)
@@ -142,20 +143,24 @@ TYPE
 		Automatic := 3,
 		None := 0
 		);
-	R3AxisDistanceType : 	STRUCT  (*todo axis position for absolute*)
-		Q2 : REAL;
-		Q3 : REAL;
-		Q4 : REAL;
-		Q5 : REAL;
-		Q6 : REAL;
-		Q1 : REAL;
+	R3AskedValueType : 	STRUCT  (*for SemiAuto*)
+		Q0 : REAL := 69;
+		Q1 : REAL := 20;
+		Q2 : REAL := -7;
+		Q3 : REAL := 69;
+		Q4 : REAL := 20;
+		Q5 : REAL := 0.420;
+		Velocity : REAL := 69;
+		Acceleration : REAL := 100;
+		Deceleration : REAL := 100;
+		Jerk : REAL := 0;
 	END_STRUCT;
 	R3CalibrationMainType : 	STRUCT 
 		Info : CalibrationInfo; (*Information portion of calibration.*)
 		Cmds : CalibrationCmds; (*Calibration commands*)
-		Para : CalibrationPara; (*Calibration parameters*)
+		Para : CalibrationParaType; (*Calibration parameters*)
 	END_STRUCT;
-	CalibrationPara : 	STRUCT 
+	CalibrationParaType : 	STRUCT 
 		Parameters : R3CalibrationType;
 		HomingParameters : McAcpAxHomingParType;
 		FakeHomingModeEnum : ARRAY[0..14]OF McHomingModeEnum := [15(mcHOMING_DIRECT)];
@@ -178,4 +183,27 @@ TYPE
 		STATE_SAVING_POSITION,
 		STATE_DONE
 		);
+	CommunicationType : 	STRUCT 
+		Power : BOOL := FALSE;
+		Pause : BOOL := FALSE;
+		Stop : BOOL := FALSE;
+		ErrorReset : BOOL := FALSE;
+		ModeSystem : BOOL := TRUE;
+		PathSystem : BOOL := TRUE;
+		changeModePending : USINT := 0; (*1-Manual       2-SemiManual      3-Auto 0-none*)
+		NOTPathSystem : BOOL;
+		NOTModeSystem : BOOL;
+		CoordinateSystem : BOOL := FALSE;
+		NOTCoordinateSystem : BOOL;
+		txt_State_out : WSTRING[80];
+		AskedMaxVelocity : REAL; (*not needed*)
+		AskedMaxAcc : REAL; (*not needed*)
+		AskedMaxDeAcc : REAL; (*not needed*)
+		AskedAutoJerk : REAL; (*not needed*)
+		AskedAutoDeAcc : REAL; (*not needed*)
+		AskedAutoAcc : REAL; (*not needed*)
+		AskedAutoVelocity : REAL; (*not needed*)
+		AskedManualVelocity : REAL; (*not needed*)
+		UpdateSemiAutoVars : BOOL := FALSE;
+	END_STRUCT;
 END_TYPE

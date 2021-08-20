@@ -5,5 +5,8 @@
     <Object Type="File">Calibrate.svg</Object>
     <Object Type="File">Contrast.svg</Object>
     <Object Type="File">Lightness.svg</Object>
+    <Object Type="File">moon.svg</Object>
+    <Object Type="File">sun.svg</Object>
+    <Object Type="File">sun-moon.svg</Object>
   </Objects>
 </Package>

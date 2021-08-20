@@ -5,7 +5,7 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmPageContent" widgetRefId="btnRigh1AlarmContentAcknowledge" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="AlarmList">
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
             <Method xsi:type="widgets.brease.AlarmList.Action.Acknowledge" />
           </Target>
         </Action>
@@ -15,8 +15,28 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmPageContent" widgetRefId="btnRigh4AlarmContentAcknowledgeAll" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="AlarmList">
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
             <Method xsi:type="widgets.brease.AlarmList.Action.AcknowledgeAll" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AlarmPageContent.btnAlarmContentPrevious.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmPageContent" widgetRefId="btnAlarmContentPrevious" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
+            <Method xsi:type="widgets.brease.AlarmList.Action.GoToPreviousPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AlarmPageContent.btnAlarmContentNext.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="AlarmPageContent" widgetRefId="btnAlarmContentNext" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
+            <Method xsi:type="widgets.brease.AlarmList.Action.GoToNextPage" />
           </Target>
         </Action>
       </EventHandler>

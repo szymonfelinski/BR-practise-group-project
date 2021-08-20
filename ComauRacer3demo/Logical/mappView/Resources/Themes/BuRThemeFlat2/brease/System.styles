@@ -32,10 +32,13 @@
 	/>
 	
 	<Style id="default" xsi:type="system.brease.Area" 
-		backColor="#222" />
+		backColor="#3D4E52" />
 	
 	<Style id="transparent" xsi:type="system.brease.Area" 
 		backColor="transparent" />
+		
+	<Style id="TopGrey" xsi:type="system.brease.Area" 
+	backColor="#30372F" />
 	
 	<Style id="default" xsi:type="system.brease.Scrollbar"
 		backColor="rgba(100,100,100,0.5)"

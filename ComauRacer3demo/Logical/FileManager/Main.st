@@ -7,9 +7,9 @@ PROGRAM _INIT
 	cmd.MpFileManagerUI_0.UIConnect := ADR(cmd.MpFileManagerUIConnectType);
 
 	(* define of device names *) 
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[0] := 'USB';
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[1] := 'AUDIT';	
-	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[2] := 'C:\CNC_PrgDir\';	
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[0] := 'CNC_PrgDir';
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[1] := 'UserPart';	
+	cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[2] := 'AUDIT';		
 	
 	cmd.MpFileManagerUIConnectType.File.NewName := '';
 	
@@ -71,6 +71,35 @@ PROGRAM _CYCLIC
 		0: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
 			aux.btnSortStr := '$$IAT/Browser/SortByNameAsc';
+
+	IF tabInfo.NumberOfElements >= 1 THEN
+		
+		aux.NewNamePlus := 0;
+		aux.newNewName := '';
+		aux.prevNewName := cmd.MpFileManagerUIConnectType.File.NewName;
+		aux.newNewName := aux.prevNewName;
+		FOR iFile := 0 TO aux.NumberOfElementsMinus BY 1 DO
+			IF tabInfo.Name[iFile] = aux.newNewName THEN
+				aux.newNewName := aux.prevNewName;
+				aux.NewNamePlus := aux.NewNamePlus + 1;
+				brsitoa(aux.NewNamePlus, ADR(aux.NewNamePlusStr));
+				aux.NewNameTextOne := '(';
+				aux.NewNameTextTwo := ')';
+				brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextOne));
+				brsstrcat(ADR(aux.newNewName), ADR(aux.NewNamePlusStr));
+				brsstrcat(ADR(aux.newNewName), ADR(aux.NewNameTextTwo));
+				//iFile := 0;	
+			ELSE
+				cmd.MpFileManagerUIConnectType.File.NewName := aux.newNewName;
+			END_IF
+		END_FOR
+	END_IF
+		
+	(* changing the sorting method *)
+	CASE aux.btnSort OF
+		0: 
+			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_ASC;
+			aux.btnSortStr := '$$IAT/Browser/SortByNameAsc'
 		1: 
 			cmd.MpFileManagerUIConnectType.File.SortOrder := mpFILE_SORT_BY_NAME_DESC;
 			aux.btnSortStr := '$$IAT/Browser/SortByNameDesc';
@@ -83,6 +112,15 @@ PROGRAM _CYCLIC
 		4:
 			aux.btnSort := 0;
 	END_CASE
+	
+	//variables used to load files
+	aux.fileName := tabInfo.Name[tabInfo.SelectedRow];
+	aux.NewNameTextOne := '/';
+	aux.fullFilePath := '';
+	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.DeviceList.DeviceNames[cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex])); //device name
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.NewNameTextOne)); // '/'
+	brsstrcat(ADR(aux.fullFilePath), ADR(cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir)); //this adds subfolder compatibility
+	brsstrcat(ADR(aux.fullFilePath), ADR(aux.fileName)); // file name
 	
 	cmd.MpFileManagerUI_0();
 END_PROGRAM

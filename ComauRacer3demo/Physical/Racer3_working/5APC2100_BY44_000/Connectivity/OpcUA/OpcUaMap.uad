@@ -14,7 +14,44 @@
       </ACL>
     </ACLAliases>
     <EURangeViolationAliases />
-    <EURangesAliases />
+    <EURangesAliases>
+      <EURanges Id="1">
+        <EURange>
+          <Low ValueProvider="Const">-270</Low>
+          <High ValueProvider="Const">270</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="2">
+        <EURange>
+          <Low ValueProvider="Const">-125</Low>
+          <High ValueProvider="Const">125</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="3">
+        <EURange>
+          <Low ValueProvider="Const">-200</Low>
+          <High ValueProvider="Const">200</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="4">
+        <EURange>
+          <Low ValueProvider="Const">-155</Low>
+          <High ValueProvider="Const">90</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="5">
+        <EURange>
+          <Low ValueProvider="Const">-95</Low>
+          <High ValueProvider="Const">135</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="6">
+        <EURange>
+          <Low ValueProvider="Const">-170</Low>
+          <High ValueProvider="Const">170</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
     <EngineeringUnitAliases />
   </Aliases>
   <DefaultView AclId="2">
@@ -203,7 +240,7 @@
           <Variable Name="CoordinateSystem" />
           <Variable Name="JogVelocity" />
           <Variable Name="PathLimits">
-            <Variable Name="Velocity" />
+            <Variable AuditEvents="True" Name="Velocity" />
             <Variable Name="Acceleration" />
             <Variable Name="Deceleration" />
             <Variable Name="Jerk" />
@@ -211,7 +248,6 @@
           <Variable Name="ActivateMove" />
           <Variable Name="Direction" />
         </Variable>
-        <Variable Name="Power" />
         <Variable Name="RoboArm6AxisPara">
           <Variable Name="ProgramName" />
           <Variable Name="MoveProgramOptions">
@@ -247,22 +283,92 @@
         </Variable>
         <Variable Name="State" />
         <Variable Name="SemiAutoControlPara">
-          <Variable Name="AxisDistance">
-            <Variable Name="Q2" />
-            <Variable Name="Q3" />
-            <Variable Name="Q4" />
-            <Variable Name="Q5" />
-            <Variable Name="Q6" />
-            <Variable Name="Q1" />
-          </Variable>
           <Variable Name="Flag" />
+          <Variable Name="AskedValue">
+            <Variable Name="Q0" EURangesId="6" />
+            <Variable Name="Q1" EURangesId="5" />
+            <Variable Name="Q2" EURangesId="4" />
+            <Variable Name="Q3" EURangesId="3" />
+            <Variable Name="Q4" EURangesId="2" />
+            <Variable Name="Q5" EURangesId="1" />
+            <Variable Name="Velocity" />
+            <Variable Name="Acceleration" />
+            <Variable Name="Deceleration" />
+            <Variable Name="Jerk" />
+          </Variable>
         </Variable>
-        <Variable Name="Stop" />
-        <Variable Name="changeModePending" />
         <Variable Name="CoordinateSystem" />
-        <Variable Name="NOTCoordinateSystem" />
-        <Variable Name="PathSystem" />
-        <Variable Name="ModeSystem" />
+        <Variable Name="Calibration">
+          <Variable Name="Info" />
+          <Variable Name="Cmds" />
+          <Variable Name="Para">
+            <Variable Name="Parameters">
+              <Variable Name="AxisCalibrated" EnableArrayElements="True" />
+              <Variable Name="AxisSaveBtn" />
+              <Variable Name="CalibrationModePara">
+                <Variable Name="AxisButton">
+                  <Variable Name="Q1" />
+                  <Variable Name="Q2" />
+                  <Variable Name="Q3" />
+                  <Variable Name="Q4" />
+                  <Variable Name="Q5" />
+                  <Variable Name="Q6" />
+                </Variable>
+                <Variable Name="JogVelocity" />
+                <Variable Name="Direction" />
+                <Variable Name="ActivateMove" />
+              </Variable>
+            </Variable>
+          </Variable>
+        </Variable>
+        <Variable Name="CalibrationStateBtn" />
+        <Variable Name="Axis_1to5_calibrated" />
+        <Variable Name="AutomaticCurrentLanguage" />
+        <Variable Name="AutomaticModePara">
+          <Variable Name="Parameters">
+            <Variable Name="ProgramName" />
+            <Variable Name="Load" />
+            <Variable Name="Execute" />
+            <Variable Name="Unload" />
+            <Variable Name="ErrorReset" />
+            <Variable Name="Abort" />
+            <Variable Name="UnloadAll" />
+            <Variable Name="Pause" />
+            <Variable Name="Continue" />
+            <Variable Name="Continuous" />
+          </Variable>
+          <Variable Name="Info">
+            <Variable Name="Paused" />
+            <Variable Name="Error" />
+            <Variable Name="CurrentState" />
+            <Variable Name="ErrorID" />
+            <Variable Name="IsError" />
+          </Variable>
+        </Variable>
+        <Variable Name="Communication">
+          <Variable Name="Pause" />
+          <Variable Name="Stop" />
+          <Variable Name="NOTPathSystem" />
+          <Variable Name="PathSystem" />
+          <Variable Name="NOTModeSystem" />
+          <Variable Name="ModeSystem" />
+          <Variable Name="CoordinateSystem" />
+          <Variable Name="NOTCoordinateSystem" />
+          <Variable Name="Power" />
+          <Variable Name="txt_State_out" />
+          <Variable Name="AskedMaxVelocity" />
+          <Variable Name="AskedMaxAcc" />
+          <Variable Name="AskedMaxDeAcc" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="AskedAutoJerk" />
+          <Variable Name="AskedAutoDeAcc" />
+          <Variable Name="AskedAutoAcc" />
+          <Variable Name="AskedAutoVelocity" />
+          <Variable Name="AskedManualVelocity" />
+          <Variable Name="UpdateSemiAutoVars" />
+          <Variable Name="changeModePending" />
+        </Variable>
+        <Variable Name="FileName" />
       </Task>
       <Task Name="FileManage">
         <Variable Name="aux">
@@ -270,6 +376,8 @@
           <Variable Name="prevNewName" />
           <Variable Name="btnSort" />
           <Variable Name="btnSortStr" />
+          <Variable Name="fileName" />
+          <Variable Name="fullFilePath" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />
@@ -282,6 +390,9 @@
           <Variable Name="LastModified" />
           <Variable Name="SelectedRow" />
         </Variable>
+      </Task>
+      <Task Name="Auditing">
+        <Variable Name="ClearBufferBool" />
       </Task>
     </Module>
   </DefaultView>

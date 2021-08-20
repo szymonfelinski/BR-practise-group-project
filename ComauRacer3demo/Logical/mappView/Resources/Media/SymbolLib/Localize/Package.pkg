@@ -15,5 +15,7 @@
     <Object Type="File">Spain.svg</Object>
     <Object Type="File">UK.svg</Object>
     <Object Type="File">USA.svg</Object>
+    <Object Type="File">poland.svg</Object>
+    <Object Type="File">united-kingdom.svg</Object>
   </Objects>
 </Package>

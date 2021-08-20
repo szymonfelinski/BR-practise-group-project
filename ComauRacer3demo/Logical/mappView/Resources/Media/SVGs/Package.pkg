@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File">Direct (1).png</Object>
     <Object Type="File">Linear (1).png</Object>
+    <Object Type="File">BR.png</Object>
+    <Object Type="File">b-r-automation-and-williams-f1.png</Object>
   </Objects>
 </Package>
