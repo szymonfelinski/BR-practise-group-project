@@ -66,16 +66,3 @@ END_FUNCTION
 		UnloadMode : {REDUND_UNREPLICABLE} McUnloadProgramModeEnum; (*defines unload mode behaviour*)
 	END_VAR
 END_FUNCTION_BLOCK
-
-{REDUND_ERROR} FUNCTION_BLOCK R3Brake (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
-	VAR_INPUT
-		Parameters : R3BrakeParaType;
-		Axis : REFERENCE TO UDINT;
-	END_VAR
-	VAR_OUTPUT
-		Info : R3BrakeInfoType;
-	END_VAR
-	VAR
-		Brake : R3BrakeType;
-	END_VAR
-END_FUNCTION_BLOCK
