@@ -19,6 +19,7 @@ PROGRAM _INIT
 	
 	State := STATE_INIT;
 	Communication.Power := FALSE;
+	i;
 	
 	//FileMgmt(MpLink := ADR(FileManagement), Enable := TRUE, Configuration := ADR(FileMgmtConfig));
 	
@@ -38,8 +39,9 @@ PROGRAM _CYCLIC
 	END_IF
 	
 	IF NOT Communication.Power THEN
-		RoboArm6Axis.Power := FALSE;
-		State:= STATE_INIT;
+		//RoboArm6Axis.Power := FALSE;
+		GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE);
+		State := STATE_INIT;
 	END_IF
 	
 	IF Communication.Stop THEN
@@ -55,20 +57,8 @@ PROGRAM _CYCLIC
 	
 	UpdateCheck;
 	
-	// brake operation functions
-	IF Communication.BrakeClose THEN
-		i := 1;
-		State := STATE_BRAKES;
-		Brakes.Info.State := brakeCLOSE;
-	ELSIF Communication.BrakeOpen THEN
-		i := 1;
-		State := STATE_BRAKES;
-		Brakes.Info.State := brakeOPEN;
-	ELSIF Communication.BrakeReadStatus THEN
-		i := 1;
-		State := STATE_BRAKES;
-		Brakes.Info.State := brakeREAD;
-	END_IF
+	
+	
 	
 	CASE State OF
 		STATE_ERROR:
@@ -87,6 +77,20 @@ PROGRAM _CYCLIC
 		STATE_INIT:
 			Communication.txt_State_out:="Initialization";
 			
+			// brake operation functions
+			IF Communication.BrakeClose THEN
+				i := 1;
+				State := STATE_BRAKES;
+				Brakes.Info.State := brakeCLOSE;
+			ELSIF Communication.BrakeOpen THEN
+				i := 1;
+				State := STATE_BRAKES;
+				Brakes.Info.State := brakeOPEN;
+			ELSIF Communication.BrakeReadStatus THEN
+				i := 1;
+				State := STATE_BRAKES;
+				Brakes.Info.State := brakeREAD;
+			END_IF
 			//RoboArm6Axis.Enable := TRUE;
 			
 			IF Communication.Power THEN
@@ -97,13 +101,18 @@ PROGRAM _CYCLIC
 			
 			Communication.txt_State_out:="Power";
 			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
-				RoboArm6Axis.Power := TRUE;
+				GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := TRUE);
+				//RoboArm6Axis.Power := TRUE;
 			END_IF
 			
-			IF RoboArm6Axis.PowerOn THEN
+			IF GroupPower.Status AND GroupPower.Enable THEN
+				State := STATE_HOMING;
+			END_IF
+						
+			(*IF RoboArm6Axis.PowerOn THEN
 				State := STATE_HOMING;
 				
-			END_IF
+			END_IF*)
 			
 		STATE_HOMING:
 			Communication.txt_State_out:="Homing";
@@ -260,16 +269,18 @@ PROGRAM _CYCLIC
 					Communication.BrakeClose := FALSE;
 					Communication.BrakeOpen := FALSE;
 					Communication.BrakeReadStatus := FALSE;
-					State := STATE_READY;
+					State := STATE_INIT;
 				
 				brakeOPEN:
 					Brakes.Parameters.BrakeCmd := mcBRAKE_OPEN;
 					Brakes.Parameters.Identifier := i;
-					IF Brakes.Cmds.BrakeOperation.Done AND i = 1 THEN
+					IF Brakes.Cmds.BrakeOperation.Done AND (i = 1) THEN
 						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
 						i := 2;
-					ELSIF Brakes.Cmds.BrakeOperation.Done AND i = 2 THEN
+					ELSIF Brakes.Cmds.BrakeOperation.Done AND (i = 2) THEN
 						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
 						Brakes.Info.State := brakeDONE;
 					ELSE
 						Brakes.Cmds.BrakeOperation.Command := Brakes.Parameters.BrakeCmd;
@@ -282,11 +293,13 @@ PROGRAM _CYCLIC
 				brakeCLOSE:
 					Brakes.Parameters.BrakeCmd := mcBRAKE_CLOSE;
 					Brakes.Parameters.Identifier := i;
-					IF Brakes.Cmds.BrakeOperation.Done AND i = 1 THEN
+					IF Brakes.Cmds.BrakeOperation.Done AND (i = 1) THEN
 						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
 						i := 2;
-					ELSIF Brakes.Cmds.BrakeOperation.Done AND i = 2 THEN
+					ELSIF Brakes.Cmds.BrakeOperation.Done AND (i = 2) THEN
 						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
 						Brakes.Info.State := brakeDONE;
 					ELSE
 						Brakes.Cmds.BrakeOperation.Command := Brakes.Parameters.BrakeCmd;
@@ -298,13 +311,15 @@ PROGRAM _CYCLIC
 				brakeREAD:
 					Brakes.Parameters.BrakeCmd := mcBRAKE_GET_STATUS;
 					Brakes.Parameters.Identifier := i;
-					IF Brakes.Cmds.BrakeOperation.Done AND i = 1 THEN
+					IF Brakes.Cmds.BrakeOperation.Done AND (i = 1) THEN
 						Brakes.Info.BrakeStatus[i] := Brakes.Cmds.BrakeOperation.BrakeStatus;
 						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
 						i := 2;
-					ELSIF Brakes.Cmds.BrakeOperation.Done AND i = 2 THEN
+					ELSIF Brakes.Cmds.BrakeOperation.Done AND (i = 2) THEN
 						Brakes.Info.BrakeStatus[i] := Brakes.Cmds.BrakeOperation.BrakeStatus;
 						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
 						Brakes.Info.State := brakeDONE;
 					ELSE
 						Brakes.Cmds.BrakeOperation.Command := Brakes.Parameters.BrakeCmd;

@@ -22,4 +22,5 @@ VAR
 	Communication : CommunicationType;
 	PathName : STRING[260];
 	FileName : STRING[260];
+	GroupPower : MC_BR_GroupPower;
 END_VAR
