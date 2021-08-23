@@ -58,6 +58,7 @@ PROGRAM _CYCLIC
 	CASE State OF
 		STATE_ERROR:
 			Communication.txt_State_out:="Error";
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Error';
 
 			IF NOT RoboArm6Axis.Error THEN
 				RoboArm6Axis.ErrorReset := FALSE;
@@ -71,15 +72,16 @@ PROGRAM _CYCLIC
 			
 		STATE_INIT:
 			Communication.txt_State_out:="Initialization";
-			
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Init';
 			//RoboArm6Axis.Enable := TRUE;
 			
 			IF Communication.Power THEN
 				State := STATE_POWER_ON;
 			END_IF		
 		STATE_POWER_ON:
-			
 			Communication.txt_State_out:="Power";
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Power';
+			
 			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
 				RoboArm6Axis.Power := TRUE;
 			END_IF
@@ -91,6 +93,8 @@ PROGRAM _CYCLIC
 			
 		STATE_HOMING:
 			Communication.txt_State_out:="Homing";
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Homing';
+			
 			IF gIsCalibrated THEN
 				IF RoboArm6Axis.IsHomed THEN //autohoming after power on
 					RoboArm6Axis.Home := FALSE;
@@ -112,7 +116,8 @@ PROGRAM _CYCLIC
 			
 		STATE_READY:
 			
-			Communication.txt_State_out:="Ready";
+			
+			
 			
 			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
 			
@@ -133,6 +138,9 @@ PROGRAM _CYCLIC
 			ELSIF ControlSelector = Automatic THEN
 				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="AutoControl", Identifier := 'ControlMode');
 				State := STATE_AUTOMATIC;
+			ELSE 
+				Communication.txt_State_out:="Ready";
+				Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Ready';
 			END_IF
 						
 			ControlSelector:=Communication.changeModePending;
@@ -140,7 +148,7 @@ PROGRAM _CYCLIC
 			// maybe do something similar to exit mode in manual
 		
 		STATE_MANUAL_CONTROL:
-			
+			//Communication.LastControlState := 'Manual';
 			//ChangeMode
 			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
@@ -154,6 +162,7 @@ PROGRAM _CYCLIC
 			END_IF
 		
 			Communication.txt_State_out:="ManualControl";
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Manual';
 			//ManualControlPara.PathLimits.Acceleration;
 			//ManualControlPara.PathLimits.Deceleration;
 			//ManualControlPara.PathLimits.Jerk;
@@ -162,6 +171,7 @@ PROGRAM _CYCLIC
 			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara,MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_SEMI_AUTOMATIC:
+			//Communication.LastControlState := 'SemiAuto';
 			
 			//ChangeMode
 			IF ControlSelector = SemiAutomatic AND Communication.changeModePending <> 2 THEN
@@ -176,10 +186,13 @@ PROGRAM _CYCLIC
 			END_IF
 			
 			Communication.txt_State_out:="SemiAutoControl";
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.SemiAuto';
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_AUTOMATIC:
+			//Communication.LastControlState := 'Automatic';
 			Communication.txt_State_out:="AutoControl";
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Auto';
 			
 			IF ControlSelector = Automatic AND Communication.changeModePending <> 3 THEN
 				// exit from Auto
@@ -224,6 +237,7 @@ PROGRAM _CYCLIC
 			CalibrationAction;
 				
 			Communication.txt_State_out:="Calibration";
+			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Calibration';
 			
 		STATE_UPDATE:
 			

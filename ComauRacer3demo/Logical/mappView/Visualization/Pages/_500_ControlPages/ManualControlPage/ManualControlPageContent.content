@@ -50,6 +50,5 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto10" top="294" left="680" zIndex="46" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto11" top="294" left="840" zIndex="47" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto12" top="294" left="998" zIndex="48" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="40" left="1120" zIndex="49" />
   </Widgets>
 </Content>

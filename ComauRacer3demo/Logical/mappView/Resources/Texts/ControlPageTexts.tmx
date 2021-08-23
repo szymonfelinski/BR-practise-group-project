@@ -163,5 +163,179 @@
         <seg>Error reset</seg>
       </tuv>
     </tu>
+    <tu tuid="Calibration.Restore">
+      <tuv xml:lang="pl">
+        <seg>Przywróć oś 5</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Restore Axis 5</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.7">
+      <tuv xml:lang="pl">
+        <seg>Naciśnij przycisk "Przywróć oś 5"</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Click "Restore Axis 5"</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.6">
+      <tuv xml:lang="pl">
+        <seg>Ustaw oś 6 zgodnie z rysunkiem i zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set axis 6 accordingly 
+to the image and click save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.5">
+      <tuv xml:lang="pl">
+        <seg>Ustaw oś 5 zgodnie z rysunkiem i zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set axis 5 accordingly 
+to the image and click save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.4">
+      <tuv xml:lang="pl">
+        <seg>Ustaw oś 4 zgodnie z rysunkiem i zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set axis 4 accordingly 
+to the image and click save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.3">
+      <tuv xml:lang="pl">
+        <seg>Ustaw oś 3 zgodnie z rysunkiem i zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set axis 3 accordingly 
+to the image and click save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.2">
+      <tuv xml:lang="pl">
+        <seg>Ustaw oś 2 zgodnie z rysunkiem i zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set axis 2 accordingly 
+to the image and click save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.1">
+      <tuv xml:lang="pl">
+        <seg>Ustaw oś 1 zgodnie z rysunkiem i zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set axis 1 accordingly 
+to the image and click save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Helper.8">
+      <tuv xml:lang="pl">
+        <seg>Racer 3 skalibrowany</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Racer 3 has been calibrated</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.CalibrateAgain">
+      <tuv xml:lang="pl">
+        <seg>Skalibruj ponownie (po restarcie)</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Calibrate again (after restart)</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Calibration.Reccomendation">
+      <tuv xml:lang="pl">
+        <seg>Wybierz oś, ustaw zgodnie z rysunkiem, zapisz i przejdź do następnej osi. Musisz ustawić osie 1-5 zanim przejdziesz do osi 6.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select axis, set accordingly to image, save and proceed with next axis. You have t set axis 1-5 before you try to set axis 6.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Init">
+      <tuv xml:lang="pl">
+        <seg>Inicjalizacja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Initialization</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Power">
+      <tuv xml:lang="pl">
+        <seg>Zasilanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Error">
+      <tuv xml:lang="pl">
+        <seg>Błąd</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Manual">
+      <tuv xml:lang="pl">
+        <seg>Tryb ręczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.SemiAuto">
+      <tuv xml:lang="pl">
+        <seg>Tryb półautomatyczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>SemiAuto</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Auto">
+      <tuv xml:lang="pl">
+        <seg>Tryb automatyczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Homing">
+      <tuv xml:lang="pl">
+        <seg>Bazowanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Homing</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Calibration">
+      <tuv xml:lang="pl">
+        <seg>Kalibracja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Calibration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="txt_State_out_front.Ready">
+      <tuv xml:lang="pl">
+        <seg>Tryb gotowości</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Ready</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Control.CurrentState">
+      <tuv xml:lang="pl">
+        <seg>Obecny stan: </seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current State:</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -25,6 +25,7 @@
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="580" left="460" width="340" zIndex="21" text="$IAT/ControlPage/Control.ErrorReset" />
     <Widget xsi:type="widgets.brease.Image" id="Image2" top="0" left="100" width="1080" height="580" zIndex="22" image="Media/glass_broke.png" visible="false" />
     <Widget xsi:type="widgets.brease.Image" id="Image3" top="360" left="720" width="460" height="280" zIndex="23" image="Media/comedy.PNG" visible="false" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="20" left="1120" zIndex="24" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="200" left="1020" width="160" height="60" zIndex="24" multiLine="true" wordWrap="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="200" left="880" width="140" height="60" zIndex="25" text="$IAT/ControlPage/Control.CurrentState" fontSize="16px" />
   </Widgets>
 </Content>

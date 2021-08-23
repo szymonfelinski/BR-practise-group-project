@@ -205,6 +205,12 @@ TYPE
 		AskedAutoVelocity : REAL; (*not needed*)
 		AskedManualVelocity : REAL; (*not needed*)
 		UpdateSemiAutoVars : BOOL := FALSE;
+		CalibBtn1To5 : BOOL := FALSE;
+		CalibrationImage : STRING[80];
+		TextManager : TextManagerType;
+		RestoreAxis5 : BOOL := FALSE;
+		CalibrateAgain : BOOL := FALSE;
+		txt_State_out_front : STRING[80];
 	END_STRUCT;
 	R3KeyCheckType : 	STRUCT 
 		original_combo : ARRAY[0..5]OF USINT := [1,1,2,3,0,17];
@@ -213,5 +219,8 @@ TYPE
 		temp_value : USINT;
 		value_changed : BOOL := FALSE;
 		event_achieved : BOOL := FALSE;
+	END_STRUCT;
+	TextManagerType : 	STRUCT 
+		CalibHelper : STRING[80];
 	END_STRUCT;
 END_TYPE

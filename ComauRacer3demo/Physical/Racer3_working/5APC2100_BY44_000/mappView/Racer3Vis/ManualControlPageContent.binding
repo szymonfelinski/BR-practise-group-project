@@ -97,9 +97,5 @@
 <Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.C" attribute="value" />
 <Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto12" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Communication.txt_State_out" attribute="value" />
-<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="txt_StateOut" attribute="value" />
-</Binding>
 </Bindings>
 </BindingsSet>
