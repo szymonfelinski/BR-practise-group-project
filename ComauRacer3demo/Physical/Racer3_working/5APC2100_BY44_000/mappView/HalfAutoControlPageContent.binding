@@ -176,6 +176,7 @@
 <Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.ACS[1]" attribute="node" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2HalfAutoControlContent" attribute="node" />
 </Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.ACS[0]" attribute="node" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" attribute="node" />
