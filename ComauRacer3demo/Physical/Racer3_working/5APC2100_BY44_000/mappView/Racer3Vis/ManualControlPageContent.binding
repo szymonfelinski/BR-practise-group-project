@@ -86,10 +86,6 @@
 <Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoHalfAuto12" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Communication.txt_State_out" attribute="value" />
-<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="txt_StateOut" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:ManualControlPara.PathLimits.Velocity" attribute="node" />
 <Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmiVelocityManualControlContent" attribute="node" />
 </Binding>
