@@ -209,13 +209,16 @@ TYPE
 		BrakeOpen : BOOL; (*open the brakes*)
 		BrakeClose : BOOL; (*close the brakes*)
 		BrakeReadStatus : BOOL; (*read status of brakes*)
+		BrakesSet : BOOL;
 	END_STRUCT;
 	R3BrakeStateMachineEnum : 
 		(
 		brakeREAD,
 		brakeOPEN,
 		brakeCLOSE,
-		brakeDONE
+		brakeDONE,
+		brakeFIRST,
+		brakeSECOND
 		);
 	R3BrakeParaType : 	STRUCT 
 		BrakeCmd : McBrakeCmdEnum;

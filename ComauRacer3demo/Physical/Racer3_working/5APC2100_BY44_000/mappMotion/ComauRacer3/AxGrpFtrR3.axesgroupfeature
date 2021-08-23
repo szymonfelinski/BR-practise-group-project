@@ -48,9 +48,9 @@
     <Selector ID="Type" Value="SharedBrakesSignals">
       <Group ID="BrakeComposite[1]">
         <Group ID="Axes">
-          <Property ID="AxisRef[1]" Value="gAxisQ1" />
-          <Property ID="AxisRef[2]" Value="gAxisQ2" />
-          <Property ID="AxisRef[3]" Value="gAxisQ3" />
+          <Property ID="AxisRef[1]" Value="gAxisQ2" />
+          <Property ID="AxisRef[2]" Value="gAxisQ3" />
+          <Property ID="AxisRef[3]" Value="gAxisQ1" />
         </Group>
         <Selector ID="ErrorBehavior" Value="CloseAfterStop" />
         <Selector ID="Output" Value="Axis">
@@ -60,9 +60,9 @@
       </Group>
       <Group ID="BrakeComposite[2]">
         <Group ID="Axes">
-          <Property ID="AxisRef[1]" Value="gAxisQ4" />
-          <Property ID="AxisRef[2]" Value="gAxisQ5" />
-          <Property ID="AxisRef[3]" Value="gAxisQ6" />
+          <Property ID="AxisRef[1]" Value="gAxisQ5" />
+          <Property ID="AxisRef[2]" Value="gAxisQ6" />
+          <Property ID="AxisRef[3]" Value="gAxisQ4" />
         </Group>
         <Selector ID="ErrorBehavior" Value="CloseAfterStop" />
         <Selector ID="Output" Value="Axis">
