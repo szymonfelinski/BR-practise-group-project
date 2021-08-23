@@ -38,6 +38,10 @@
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="tabLastModified" attribute="value" />
 </Binding>
 
+<Binding mode="twoWay">
+<Source xsi:type="session" refId="selectedFileFullPath" attribute="value" />
+<Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="txtSelectedFile" attribute="value" />
+</Binding>
 
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::FileManage:aux.btnSortStr" attribute="value" />

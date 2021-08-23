@@ -19,6 +19,8 @@ PROGRAM _INIT
 	
 	State := STATE_INIT;
 	Communication.Power := FALSE;
+	i;
+	Brakes;
 	
 	//FileMgmt(MpLink := ADR(FileManagement), Enable := TRUE, Configuration := ADR(FileMgmtConfig));
 	
@@ -37,11 +39,6 @@ PROGRAM _CYCLIC
 		State := STATE_ERROR;
 	END_IF
 	
-	IF NOT Communication.Power THEN
-		RoboArm6Axis.Power := FALSE;
-		State:= STATE_INIT;
-	END_IF
-	
 	IF Communication.Stop THEN
 		//stops and goes to standby
 		RoboArm6Axis.MoveLinear := FALSE;
@@ -54,6 +51,29 @@ PROGRAM _CYCLIC
 	END_IF
 	
 	UpdateCheck;
+	
+	// brake operation functions
+	IF Communication.BrakeClose THEN
+		i := 1;
+		Brakes.Info.State := brakeCLOSE;
+		State := STATE_BRAKES;
+		
+	ELSIF Communication.BrakeOpen THEN
+		i := 1;
+		Brakes.Info.State := brakeOPEN;
+		State := STATE_BRAKES;
+		
+	ELSIF Communication.BrakeReadStatus THEN
+		i := 1;
+		Brakes.Info.State := brakeREAD;
+		State := STATE_BRAKES;
+		
+	ELSIF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN
+		//RoboArm6Axis.Power := FALSE;
+		GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE);
+		State := STATE_INIT;
+	END_IF
+	
 	
 	CASE State OF
 		STATE_ERROR:
@@ -73,29 +93,51 @@ PROGRAM _CYCLIC
 		STATE_INIT:
 			Communication.txt_State_out:="Initialization";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Init';
-			//RoboArm6Axis.Enable := TRUE;
 			
-			IF Communication.Power THEN
-				State := STATE_POWER_ON;
-			END_IF		
+			IF NOT Communication.BrakesSet THEN
+				SetBrakes.Axis1 := ADR(gAxisQ1);
+				SetBrakes.Axis2 := ADR(gAxisQ2);
+				SetBrakes.Axis3 := ADR(gAxisQ3);
+				SetBrakes.Axis4 := ADR(gAxisQ4);
+				SetBrakes.Axis5 := ADR(gAxisQ5);
+				SetBrakes.Axis6 := ADR(gAxisQ6);
+				SetBrakes();
+				IF SetBrakes.Done THEN
+					Communication.BrakesSet := TRUE;
+				END_IF
+				
+				
+			//RoboArm6Axis.Enable := TRUE;
+			ELSE //if brake parameters have been set
+				IF Communication.Power THEN
+					State := STATE_POWER_ON;
+				END_IF
+			END_IF
+			
 		STATE_POWER_ON:
 			Communication.txt_State_out:="Power";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Power';
 			
 			IF NOT RoboArm6Axis.PowerOn AND RoboArm6Axis.Info.ReadyToPowerOn THEN
-				RoboArm6Axis.Power := TRUE;
+				GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := TRUE);
+				//RoboArm6Axis.Power := TRUE;
 			END_IF
 			
-			IF RoboArm6Axis.PowerOn THEN
+			IF GroupPower.Status AND GroupPower.Enable THEN
+				State := STATE_HOMING;
+			END_IF
+						
+			(*IF RoboArm6Axis.PowerOn THEN
 				State := STATE_HOMING;
 				
-			END_IF
+			END_IF*)
 			
 		STATE_HOMING:
 			Communication.txt_State_out:="Homing";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Homing';
 			
 			IF gIsCalibrated THEN
+				CalibrationStateBtn := FALSE;
 				IF RoboArm6Axis.IsHomed THEN //autohoming after power on
 					RoboArm6Axis.Home := FALSE;
 					State := STATE_READY;
@@ -109,6 +151,7 @@ PROGRAM _CYCLIC
 					
 				END_IF
 			ELSE
+				CalibrationStateBtn := TRUE;
 				State := STATE_CALIBRATION; //if the system wasn't calibrated before, make it be calibrated
 				Calibration.Info.CurrentState := STATE_BEGIN;
 				
@@ -125,7 +168,7 @@ PROGRAM _CYCLIC
 				// exit from MANUAL
 				// when exiting ManualMode from mappView bind ManualModePara.ExitMode := TRUE and pending state, both at once
 				// because we want to wait till semiAuto and Auto finishes and then goes to READY state, but for manual we have to go out manually
-				ManualControlPara.ExitManual:=TRUE;
+				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			
 			IF ControlSelector = ManualJog THEN
@@ -247,6 +290,98 @@ PROGRAM _CYCLIC
 			END_IF
 						
 			RoboArm6Axis.Update := TRUE;
+		
+		STATE_BRAKES:
+			//Brakes.Cmds.BrakeOperation.SelectMode := 0;
+			IF Brakes.Cmds.BrakeOperation.Error THEN
+				Brakes.Info.State := brakeERROR;
+			ELSE
+				Brakes.Info.Error := FALSE;
+			END_IF
+						
+			CASE Brakes.Info.State OF
+				brakeERROR:
+					Communication.BrakeClose := FALSE;
+					Communication.BrakeOpen := FALSE;
+					Communication.BrakeReadStatus := FALSE;
+					Brakes.Cmds.BrakeOperation.Execute := FALSE;
+					Brakes.Info.Error := TRUE;
+					Brakes.Cmds.BrakeOperation();
+					State := STATE_INIT;
+				brakeDONE:
+					Brakes.Cmds.BrakeOperation.Execute := FALSE;
+					
+					Brakes.Cmds.BrakeOperation();
+					State := STATE_INIT;
+					
+				brakeOPEN:
+					Communication.BrakeOpen := FALSE;
+					Brakes.Cmds.BrakeOperation.AxesGroup := ADR(gAxesGroupRacer3);
+					Brakes.Parameters.BrakeCmd := mcBRAKE_OPEN;
+					IF Brakes.Cmds.BrakeOperation.Done AND (i = 1) THEN
+						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
+						i := 2;
+					ELSIF Brakes.Cmds.BrakeOperation.Done AND (i = 2) THEN
+						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
+						i := 3;
+						Communication.BrakeReadStatus := TRUE;
+						Brakes.Info.State := brakeDONE;
+					ELSIF (i < 3) THEN
+						Brakes.Cmds.BrakeOperation.Command := Brakes.Parameters.BrakeCmd;
+						Brakes.Cmds.BrakeOperation.Identifier := i;
+						Brakes.Cmds.BrakeOperation.Execute := TRUE;
+						
+						Brakes.Cmds.BrakeOperation();
+					END_IF
+				
+				brakeCLOSE:
+					Communication.BrakeClose := FALSE;
+					Brakes.Cmds.BrakeOperation.AxesGroup := ADR(gAxesGroupRacer3);
+					Brakes.Parameters.BrakeCmd := mcBRAKE_CLOSE;
+					IF Brakes.Cmds.BrakeOperation.Done AND (i = 1) THEN
+						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
+						i := 2;
+					ELSIF Brakes.Cmds.BrakeOperation.Done AND (i = 2) THEN
+						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
+						i := 3;
+						Communication.BrakeReadStatus := TRUE;
+						Brakes.Info.State := brakeDONE;
+					ELSIF (i < 3) THEN
+						Brakes.Cmds.BrakeOperation.Command := Brakes.Parameters.BrakeCmd;
+						Brakes.Cmds.BrakeOperation.Identifier := i;
+						Brakes.Cmds.BrakeOperation.Execute := TRUE;
+						
+						Brakes.Cmds.BrakeOperation();
+					END_IF
+				
+				brakeREAD:
+					Communication.BrakeReadStatus := FALSE;
+					Brakes.Parameters.BrakeCmd := mcBRAKE_GET_STATUS;
+					Brakes.Cmds.BrakeOperation.AxesGroup := ADR(gAxesGroupRacer3);
+					IF Brakes.Cmds.BrakeOperation.Done AND (i = 1) THEN
+						Brakes.Info.BrakeStatus[i] := Brakes.Cmds.BrakeOperation.BrakeStatus;
+						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
+						i := 2;
+					ELSIF Brakes.Cmds.BrakeOperation.Done AND (i = 2) THEN
+						Brakes.Info.BrakeStatus[i] := Brakes.Cmds.BrakeOperation.BrakeStatus;
+						Brakes.Cmds.BrakeOperation.Execute := FALSE;
+						Brakes.Cmds.BrakeOperation();
+						i := 3;
+						Brakes.Info.State := brakeDONE;
+					ELSIF (i < 3) THEN
+						Brakes.Cmds.BrakeOperation.Command := Brakes.Parameters.BrakeCmd;
+						Brakes.Cmds.BrakeOperation.Identifier := i;
+						Brakes.Cmds.BrakeOperation.Execute := TRUE;
+						
+						Brakes.Cmds.BrakeOperation();
+					END_IF
+				
+				END_CASE
 		
 	END_CASE
 	

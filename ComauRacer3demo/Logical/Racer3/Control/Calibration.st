@@ -1,6 +1,5 @@
 
-ACTION CalibrationAction: 
-	CalibrationStateBtn := TRUE;
+ACTION CalibrationAction:
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
 			IF RoboArm6Axis.IsHomed THEN
@@ -90,8 +89,9 @@ ACTION CalibrationAction:
 			END_IF
 		
 		STATE_DONE:
+			gRacer3BasePosition := RoboArm6Axis.Info.JointAxisPosition;
 			gIsCalibrated := TRUE;
-			CalibrationStateBtn :=FALSE;
+			
 			State:=STATE_HOMING;
 
 	END_CASE
