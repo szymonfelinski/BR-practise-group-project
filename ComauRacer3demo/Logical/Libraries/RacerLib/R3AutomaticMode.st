@@ -55,6 +55,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.LoadProgram.ErrorID;
 				AutoMode.Info.Error := autoLOAD_PROGRAM_ERROR;
+				AutoMode.Parameters.Load := FALSE;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
 			END_IF
 			
@@ -76,6 +77,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.UnloadProgram.ErrorID;
 				AutoMode.Info.Error := autoUNLOAD_PROGRAM_ERROR;
+				AutoMode.Parameters.Unload := FALSE;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
 			END_IF
 			
@@ -97,7 +99,8 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.ErrorID := AutoMode.Cmds.ExecuteProgram.ErrorID;
 				AutoMode.Info.Error := autoEXECUTE_PROGRAM_ERROR;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
-				
+				AutoMode.Parameters.Execute := FALSE;
+				AutoMode.Parameters.Continuous := FALSE;				
 			END_IF
 			(*RoboArmPara.ProgramName := AutoMode.Parameters.ProgramName;
 			RoboArm.Update := TRUE;
