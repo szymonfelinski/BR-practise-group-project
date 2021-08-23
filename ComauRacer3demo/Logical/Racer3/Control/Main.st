@@ -200,7 +200,7 @@ PROGRAM _CYCLIC
 			//ManualControlPara.PathLimits.Jerk;
 			//ManualControlPara.PathLimits.Velocity;
 			//ManualControlPara; //main struct to be bound in mapp view
-			IF Communication.ReturnToZero THEN
+			IF Communication.ReturnToZero AND ManualControlPara.JogVelocity > 1.0 THEN
 				RoboArm6AxisPara.Position := gRacer3ZeroPosition;
 				RoboArm6AxisPara.CoordSystem := 0;
 				RoboArm6AxisPara.ManualMoveType := mcMOVE_ABSOLUTE;
