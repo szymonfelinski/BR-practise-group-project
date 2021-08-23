@@ -11,6 +11,5 @@
     <Object Type="Program" Language="IEC">Auditing</Object>
     <Object Type="Program" Language="IEC">Alarm</Object>
     <Object Type="Program" Language="IEC">FileManager</Object>
-    <Object Type="Program" Language="IEC">Program1</Object>
   </Objects>
 </Package>
