@@ -87,7 +87,8 @@ TYPE
 		STATE_AUTOMATIC, (*Automatic mode (script execution)*)
 		STATE_CALIBRATION, (*Calibration mode*)
 		STATE_HOMING, (*Homing mode*)
-		STATE_UPDATE (*This will update the robot parameters on demand*)
+		STATE_UPDATE, (*This will update the robot parameters on demand*)
+		STATE_BRAKES (*This will read brakes' status.*)
 		);
 	R3CalibrationType : 	STRUCT 
 		CalibrationState : R3CalibrationStateEnum; (*State machine used to control Calibration behaviour*)
@@ -95,6 +96,7 @@ TYPE
 		AxisCalibrated : ARRAY[0..5]OF BOOL := [6(0)]; (*Saves which axes have been calibrated (defaults to 0 upon creation)*)
 		AxisSaveBtn : BOOL; (*Button to save current position as calibrated*)
 		Axis5To6Para : R3Axis5To6Type; (*Stores axis 5 settings for axis 6 calibration*)
+		SavedPositions : ARRAY[0..5]OF LREAL;
 	END_STRUCT;
 	R3CalibrationStateEnum : 
 		(
@@ -205,6 +207,44 @@ TYPE
 		AskedAutoVelocity : REAL; (*not needed*)
 		AskedManualVelocity : REAL; (*not needed*)
 		UpdateSemiAutoVars : BOOL := FALSE;
+		CalibBtn1To5 : BOOL := FALSE;
+		CalibrationImage : STRING[80];
+		TextManager : TextManagerType;
+		RestoreAxis5 : BOOL := FALSE;
+		CalibrateAgain : BOOL := FALSE;
+		txt_State_out_front : STRING[80];
+		BrakeOpen : BOOL; (*open the brakes*)
+		BrakeClose : BOOL; (*close the brakes*)
+		BrakeReadStatus : BOOL; (*read status of brakes*)
+		BrakesSet : BOOL; (*This variable tells the program if brake parameters have been set.*)
+		ToolOutput : BOOL; (*This variable enables tool control*)
+		ReturnToZero : BOOL; (*This variable allows returning to zero position in manual mode.*)
+	END_STRUCT;
+	R3BrakeStateMachineEnum : 
+		(
+		brakeREAD,
+		brakeOPEN,
+		brakeCLOSE,
+		brakeDONE,
+		brakeERROR
+		);
+	R3BrakeParaType : 	STRUCT 
+		BrakeCmd : McBrakeCmdEnum;
+		Identifier : UDINT;
+	END_STRUCT;
+	R3BrakeCmdsType : 	STRUCT 
+		BrakeOperation : MC_BR_GroupBrakeOperation;
+	END_STRUCT;
+	R3BrakeInfoType : 	STRUCT 
+		BrakeStatus : ARRAY[1..2]OF McBrakeStatusEnum;
+		Done : BOOL;
+		State : R3BrakeStateMachineEnum;
+		Error : BOOL;
+	END_STRUCT;
+	R3BrakeType : 	STRUCT 
+		Parameters : R3BrakeParaType;
+		Info : R3BrakeInfoType;
+		Cmds : R3BrakeCmdsType;
 	END_STRUCT;
 	R3KeyCheckType : 	STRUCT 
 		original_combo : ARRAY[0..5]OF USINT := [1,1,2,3,0,17];
@@ -213,5 +253,8 @@ TYPE
 		temp_value : USINT;
 		value_changed : BOOL := FALSE;
 		event_achieved : BOOL := FALSE;
+	END_STRUCT;
+	TextManagerType : 	STRUCT 
+		CalibHelper : STRING[80];
 	END_STRUCT;
 END_TYPE

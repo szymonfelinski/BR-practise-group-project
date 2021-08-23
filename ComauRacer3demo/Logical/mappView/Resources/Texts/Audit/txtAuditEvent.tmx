@@ -29,10 +29,10 @@
     </tu>
     <tu tuid="16">
       <tuv xml:lang="pl">
-        <seg>zmiana wartości {&amp;dpid} z {&amp;old|.f0} na {&amp;new|.f0}</seg>
+        <seg>zmiana wartości {&amp;dpid} z {&amp;old} na {&amp;new}</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>changed value of {&amp;dpid} from {&amp;old|.f0} to {&amp;new|.f0}</seg>
+        <seg>changed value of {&amp;dpid} from {&amp;old} to {&amp;new}</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>hat Wert {&amp;dpid} von {&amp;old} auf {&amp;new} geändert</seg>
@@ -62,10 +62,10 @@
     </tu>
     <tu tuid="19">
       <tuv xml:lang="pl">
-        <seg>zmiana wartości {=$Audit/DP/{&amp;dpid}} z {&amp;old} na {&amp;new}</seg>
+        <seg>zmiana wartości {&amp;dpid} z {&amp;old|.2f} na {&amp;new|.2f}</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>changed value of {=$Audit/DP/{&amp;dpid}} from {&amp;old} to {&amp;new}</seg>
+        <seg>changed value of {&amp;dpid} from {&amp;old|.2f} to {&amp;new|.2f}</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>hat Wert {=$MpAudit/DP/{&amp;dpid}} von {&amp;old} auf {&amp;new} geändert</seg>

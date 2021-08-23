@@ -5,5 +5,6 @@
     <Object Type="Package">DialogNewFolder</Object>
     <Object Type="Package">DialogRename</Object>
     <Object Type="Package">DialogConfirm</Object>
+    <Object Type="Package">DialogPDF</Object>
   </Objects>
 </Package>

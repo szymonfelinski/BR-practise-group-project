@@ -1,4 +1,6 @@
 VAR
+	BrakeStatus : ARRAY[0..5] OF McBrakeStatusEnum; (*Brake information*)
+	Brakes : R3BrakeType;
 	KeyCheck : R3KeyCheckType;
 	AutomaticCurrentLanguage : BOOL; (*selects which language to use (0 - G-Code, 1 - ST)*)
 	AutomaticMode : R3AutomaticMode; (*automatic mode FB*)
@@ -9,7 +11,7 @@ VAR
 	ControlSelector : ControlSelectEnum := None;
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
-	i : USINT;
+	i : USINT; (*Counter.*)
 	Axis_1to5_calibrated : BOOL; (*If value TRUE then axis 6 can be calibrated*)
 	Calibration : R3CalibrationMainType; (*Main calibration variable.*)
 	SemiAutoControl : R3SemiAutoMode;
@@ -21,4 +23,6 @@ VAR
 	Communication : CommunicationType;
 	PathName : STRING[260];
 	FileName : STRING[260];
+	GroupPower : MC_BR_GroupPower;
+	SetBrakes : R3BrakeSet; (*Setting brake parameters*)
 END_VAR

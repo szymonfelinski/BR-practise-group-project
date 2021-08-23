@@ -1,6 +1,5 @@
 
-ACTION CalibrationAction: 
-	CalibrationStateBtn := TRUE;
+ACTION CalibrationAction:
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
 			IF RoboArm6Axis.IsHomed THEN
@@ -22,8 +21,8 @@ ACTION CalibrationAction:
 						
 		STATE_MOVING:
 			
-			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Acceleration := 100.0; //set low acceleration, deceleration and velocity limits for calibration purposes
-			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Deceleration := 100.0;
+			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Acceleration := 1000.0; //set low acceleration, deceleration and velocity limits for calibration purposes
+			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Deceleration := 1000.0;
 			//CalibrationModePara.CalibrationModePara.PathLimits.Jerk := 1000.0; //no need to limit jerk
 			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Velocity := 100.0;
 			Calibration.Para.Parameters.Axis5To6Para.Axis5Angle := 118.0; //angle defined in calibration pdf (see page 100 of _lb-rc-RACER3-STM_en)
@@ -32,13 +31,15 @@ ACTION CalibrationAction:
 			//CalibrationModePara.CalibrationState := STATE_START; //reset calibration state everytime after jog
 			
 			Calibration.Cmds.Mode(CalibrationPara := Calibration.Para.Parameters, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara); //call FB with set values
-			
+						
 			IF Calibration.Para.Parameters.Axis5To6Para.Axis5Restored AND Calibration.Para.Parameters.AxisCalibrated[5] THEN
 				Calibration.Info.CurrentState := STATE_SAVING_POSITION;
 				i := 1;
 			END_IF
 
 		STATE_SAVING_POSITION:
+			
+			gRacer3ZeroPosition := Calibration.Para.Parameters.SavedPositions; //saving calibrated joint values to PV, might be used for zeroing robot position.
 			
 			//common values used for homing, will be saved under gRacer3HomeRestorePos[0..5]
 			Calibration.Para.HomingParameters.HomingMode := mcHOMING_RESTORE_POSITION;
@@ -90,8 +91,9 @@ ACTION CalibrationAction:
 			END_IF
 		
 		STATE_DONE:
+			//gRacer3BasePosition := RoboArm6Axis.Info.JointAxisPosition; //replaced by assignment at the beginning of STATE_SAVING_POSITIONS
 			gIsCalibrated := TRUE;
-			CalibrationStateBtn :=FALSE;
+			
 			State:=STATE_HOMING;
 
 	END_CASE

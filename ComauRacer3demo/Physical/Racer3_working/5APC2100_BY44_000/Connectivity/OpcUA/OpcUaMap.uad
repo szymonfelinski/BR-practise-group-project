@@ -51,15 +51,39 @@
           <High ValueProvider="Const">170</High>
         </EURange>
       </EURanges>
+      <EURanges Id="7">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">420</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="8">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">750</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
-    <EngineeringUnitAliases />
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
+      <EngineeringUnit Id="2" UnitId="5059633" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second squared" Symbol="mm/s²" />
+      <EngineeringUnit Id="3" UnitId="17476" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree [unit of angle]" Symbol="°" />
+      <EngineeringUnit Id="4" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
+    </EngineeringUnitAliases>
   </Aliases>
-  <DefaultView AclId="2">
+  <DefaultView AuditEvents="True" AclId="2">
     <Module Name="&lt;Default&gt;">
       <Task Name="Control">
         <Variable Name="RoboArm6Axis">
           <Variable Name="Info">
-            <Variable Name="JointAxisPosition" EnableArrayElements="True" />
+            <Variable Name="JointAxisPosition" EnableArrayElements="True">
+              <Variable Name="JointAxisPosition[0]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[1]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[2]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[3]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[4]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[5]" EngineeringUnitId="3" />
+            </Variable>
             <Variable Name="CommunicationReady" />
             <Variable Name="ReadyToPowerOn" />
             <Variable Name="WaitForContinue" />
@@ -119,12 +143,12 @@
           <Variable Name="Error" />
           <Variable Name="StatusID" />
           <Variable Name="UpdateDone" />
-          <Variable Name="X" />
-          <Variable Name="Y" />
-          <Variable Name="Z" />
-          <Variable Name="A" />
-          <Variable Name="B" />
-          <Variable Name="C" />
+          <Variable Name="X" EngineeringUnitId="4" />
+          <Variable Name="Y" EngineeringUnitId="4" />
+          <Variable Name="Z" EngineeringUnitId="4" />
+          <Variable Name="A" EngineeringUnitId="4" />
+          <Variable Name="B" EngineeringUnitId="4" />
+          <Variable Name="C" EngineeringUnitId="4" />
           <Variable Name="PathVelocity" />
           <Variable Name="CommandBusy" />
           <Variable Name="CommandAborted" />
@@ -238,11 +262,11 @@
             <Variable Name="Q6" />
           </Variable>
           <Variable Name="CoordinateSystem" />
-          <Variable Name="JogVelocity" />
+          <Variable Name="JogVelocity" EURangesId="7" EngineeringUnitId="1" />
           <Variable Name="PathLimits">
-            <Variable AuditEvents="True" Name="Velocity" />
-            <Variable Name="Acceleration" />
-            <Variable Name="Deceleration" />
+            <Variable AuditEvents="True" Name="Velocity" EURangesId="7" EngineeringUnitId="1" />
+            <Variable Name="Acceleration" EURangesId="8" EngineeringUnitId="2" />
+            <Variable Name="Deceleration" EURangesId="8" EngineeringUnitId="2" />
             <Variable Name="Jerk" />
           </Variable>
           <Variable Name="ActivateMove" />
@@ -318,6 +342,9 @@
                 <Variable Name="Direction" />
                 <Variable Name="ActivateMove" />
               </Variable>
+              <Variable Name="Axis5To6Para">
+                <Variable Name="Axis5Return" />
+              </Variable>
             </Variable>
           </Variable>
         </Variable>
@@ -367,6 +394,13 @@
           <Variable Name="AskedManualVelocity" />
           <Variable Name="UpdateSemiAutoVars" />
           <Variable Name="changeModePending" />
+          <Variable Name="CalibrationImage" />
+          <Variable Name="TextManager">
+            <Variable Name="CalibHelper" />
+          </Variable>
+          <Variable Name="RestoreAxis5" />
+          <Variable Name="CalibrateAgain" />
+          <Variable Name="txt_State_out_front" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">
@@ -386,6 +420,8 @@
           <Variable Name="btnSortStr" />
           <Variable Name="fileName" />
           <Variable Name="fullFilePath" />
+          <Variable Name="IsPDF" />
+          <Variable Name="fullFilePathWithFileDevice" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />

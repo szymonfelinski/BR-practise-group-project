@@ -120,9 +120,5 @@
 <Source xsi:type="opcUa" refId="::Control:SemiAutoControlPara.AskedValue.Deceleration" attribute="node" />
 <Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="nmiDecelerationHalfAutoControlContent" attribute="node" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Communication.txt_State_out" attribute="value" />
-<Target xsi:type="brease" contentRefId="HalfAutoControlPageContent" widgetRefId="txt_StateOut" attribute="value" />
-</Binding>
 </Bindings>
 </BindingsSet>

@@ -50,6 +50,5 @@
     <Widget xsi:type="widgets.brease.Label" id="txtDecelerationHalfAutoControlContent" top="561" left="700" width="180" zIndex="46" text="$IAT/ControlPage/HalfManualControl.Deceleration" textAlign="center" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiJerkHalfAutolControlContent1" top="520" left="980" width="180" zIndex="47" maxValue="750" />
     <Widget xsi:type="widgets.brease.Label" id="txtJerkHalfAutoControlContent" top="561" left="980" width="180" zIndex="48" text="$IAT/ControlPage/HalfManualControl.Jerk" textAlign="center" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="40" left="1120" zIndex="49" />
   </Widgets>
 </Content>
