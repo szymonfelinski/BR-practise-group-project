@@ -35,7 +35,11 @@
 		mouseDownButtonTextColor="#ffffff" />
 	
 	<Style id="default" xsi:type="system.brease.Area" 
-		backGround="Media/SzareTlo.svg" />
+	backGround="Media/SzareTlo.svg" />
+	
+	<Style id="Dialog" xsi:type="system.brease.Area" 
+	backGround="Media/DialogBoxDay.svg" />
+	
 	
 	<Style id="transparent" xsi:type="system.brease.Area" 
 		backColor="transparent" />
@@ -56,9 +60,9 @@
 	<!-- version 5.14 configuration dialog style -->
 	
 	<Style id="default" xsi:type="system.brease.TableConfigurationDialog"
-		headerBackColor="#dbdbdb"
+		headerBackColor="#646464" 
+		headerTextColor="#FFFFFF"
 		headerFontSize="20px" 
-		headerTextColor="#646464" 
 		cornerRadius="0px 0px 0px 0px" 
 		headerBorderWidth="0px" 
 		borderWidth="0px" 

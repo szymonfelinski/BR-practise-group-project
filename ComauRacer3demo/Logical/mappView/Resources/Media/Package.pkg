@@ -10,5 +10,7 @@
     <Object Type="File">NocneTlo.svg</Object>
     <Object Type="File">glass_broke.png</Object>
     <Object Type="File">comedy.PNG</Object>
+    <Object Type="File">DialogBoxNight.svg</Object>
+    <Object Type="File">DialogBoxDay.svg</Object>
   </Objects>
 </Package>
