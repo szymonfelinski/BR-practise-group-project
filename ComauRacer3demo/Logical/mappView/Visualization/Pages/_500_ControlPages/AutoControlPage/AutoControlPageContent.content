@@ -28,5 +28,6 @@
     <Widget xsi:type="widgets.brease.Label" id="txtCurLangAutoControlContent" top="140" left="720" width="140" height="40" zIndex="24" text="Current language" textAlign="right" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="txtCurLangNameAutoControlContent" top="140" left="860" width="220" height="40" zIndex="25" text="" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight51AutoControlContent" top="514" left="1100" width="80" height="80" zIndex="26" breakWord="true" multiLine="true" text="$IAT/Automatic/ResetError" wordWrap="true" margin="0px" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="40" left="1120" zIndex="27" />
   </Widgets>
 </Content>

@@ -111,17 +111,31 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnLeft3HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
           </Target>
         </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnRigh3HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
@@ -129,9 +143,23 @@
           </Target>
         </Action>
       </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnLeft4HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
@@ -139,13 +167,41 @@
           </Target>
         </Action>
       </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnRigh4HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
+            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
           </Target>
         </Action>
       </EventHandler>

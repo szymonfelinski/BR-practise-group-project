@@ -1,18 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="AuditPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AuditList" id="LstAudit" top="20" left="140" width="1000" height="660" zIndex="0" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
+    <Widget xsi:type="widgets.brease.AuditList" id="LstAudit" top="20" left="100" width="1080" height="660" zIndex="0" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
       <Widgets>
-        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditTimestamp" width="240" zIndex="0" columnType="timestamp" text="$IAT/AlarmListItemTimestampText" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditMsg" width="460" zIndex="1" text="$IAT/AlarmListItemMessageText" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditType" width="100" zIndex="2" columnType="type" text="$IAT/AuditListTypeText" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditNew" width="100" zIndex="3" columnType="new" text="$IAT/AuditListNewText" />
-        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditOld" width="100" zIndex="4" columnType="old" text="$IAT/AuditListOldText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditTimestamp" width="260" zIndex="0" columnType="timestamp" text="$IAT/AlarmListItemTimestampText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditMsg" width="620" zIndex="1" text="$IAT/AlarmListItemMessageText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditType" width="80" zIndex="2" columnType="type" text="$IAT/AuditListTypeText" />
+        <Widget xsi:type="widgets.brease.AuditListItem" id="LstAuditUser" width="120" zIndex="3" columnType="operator name" text="$IAT/AuditListUserText" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="btnAuditContentPrevious" top="193" left="10" width="80" height="80" zIndex="1" image="Media/SymbolLib/Arrow/Back.svg" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnAuditContentNext" top="300" left="10" width="80" height="80" zIndex="2" image="Media/SymbolLib/Arrow/Forward.svg" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditExport" top="193" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/File/File.svg" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnAuditClearBuffor" top="300" left="1190" width="80" height="80" zIndex="4" image="Media/SymbolLib/Edit/Delete.svg" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAuditContentPrevious" top="193" left="10" width="80" height="80" zIndex="1" image="Media/SymbolLib/Arrow/Back.svg" imageHeight="60" imageWidth="60" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAuditContentNext" top="300" left="10" width="80" height="80" zIndex="2" image="Media/SymbolLib/Arrow/Forward.svg" imageHeight="60" imageWidth="60" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditExport" top="193" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/File/File.svg" imageHeight="60" imageWidth="60" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnAuditClearBuffor" top="300" left="1190" width="80" height="80" zIndex="4" image="Media/SymbolLib/Edit/Delete.svg" imageHeight="60" imageWidth="60" margin="0px" />
   </Widgets>
 </Content>

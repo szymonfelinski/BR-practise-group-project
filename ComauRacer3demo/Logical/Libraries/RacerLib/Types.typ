@@ -237,4 +237,12 @@ TYPE
 		Info : R3BrakeInfoType;
 		Cmds : R3BrakeCmdsType;
 	END_STRUCT;
+	R3KeyCheckType : 	STRUCT 
+		original_combo : ARRAY[0..5]OF USINT := [1,1,2,3,0,17];
+		pending_combo : ARRAY[0..5]OF USINT;
+		i : USINT := 0;
+		temp_value : USINT;
+		value_changed : BOOL := FALSE;
+		event_achieved : BOOL := FALSE;
+	END_STRUCT;
 END_TYPE

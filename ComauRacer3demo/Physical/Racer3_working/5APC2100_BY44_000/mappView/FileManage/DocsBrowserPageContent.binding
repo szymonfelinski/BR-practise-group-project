@@ -9,10 +9,6 @@
 <Source xsi:type="opcUa" refId="::FileManage:tabInfo.Size" attribute="value" />
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="tabSize" attribute="value" />
 		</Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::FileManage:tabInfo.Type" attribute="value" />
-<Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="tabType" attribute="stringValue" />
-</Binding>
 
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir" attribute="value" />
@@ -45,6 +41,10 @@
 <Binding mode="twoWay">
 <Source xsi:type="session" refId="selectedFileFullPath" attribute="value" />
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="txtSelectedFile" attribute="value" />
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::FileManage:aux.btnSortStr" attribute="value" />
+<Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="btnSort" attribute="text" />
 </Binding>
 </Bindings>
 </BindingsSet>

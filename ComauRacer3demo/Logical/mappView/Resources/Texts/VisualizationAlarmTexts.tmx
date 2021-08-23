@@ -139,5 +139,13 @@
         <seg>All</seg>
       </tuv>
     </tu>
+    <tu tuid="AuditListUserText">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
