@@ -92,7 +92,7 @@
 		mouseDownBackColor="#C39C0F" 
 		checkedBackColor="#C39C0F" 
 		checkedBorderColor="#C87E16" 
-		disabledBackColor="#d1d1d1" />
+	disabledBackColor="#d1d1d1" />
 		
 	<Style id="default" xsi:type="widgets.brease.SystemNavButton" 
 		fontSize="16px" 
