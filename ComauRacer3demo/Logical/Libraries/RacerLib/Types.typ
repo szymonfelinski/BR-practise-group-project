@@ -145,16 +145,12 @@ TYPE
 		None := 0
 		);
 	R3AskedValueType : 	STRUCT  (*for SemiAuto*)
-		Q0 : REAL := 69;
-		Q1 : REAL := 20;
-		Q2 : REAL := -7;
-		Q3 : REAL := 69;
-		Q4 : REAL := 20;
-		Q5 : REAL := 0.420;
 		Velocity : REAL := 69;
 		Acceleration : REAL := 100;
 		Deceleration : REAL := 100;
 		Jerk : REAL := 0;
+		TCS : ARRAY[0..5]OF REAL := [420,420,420,69,69,69];
+		ACS : ARRAY[0..5]OF REAL := [-69,69,69,69,-69,69];
 	END_STRUCT;
 	R3CalibrationMainType : 	STRUCT 
 		Info : CalibrationInfo; (*Information portion of calibration.*)

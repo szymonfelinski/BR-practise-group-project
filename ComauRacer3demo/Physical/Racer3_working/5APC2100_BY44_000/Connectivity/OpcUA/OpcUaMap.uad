@@ -57,9 +57,41 @@
           <High ValueProvider="Const">420</High>
         </EURange>
       </EURanges>
+      <EURanges Id="8">
+        <EURange>
+          <Low ValueProvider="Const">-220</Low>
+          <High ValueProvider="Const">730</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="9">
+        <EURange>
+          <Low ValueProvider="Const">-500</Low>
+          <High ValueProvider="Const">450</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="10">
+        <EURange>
+          <Low ValueProvider="Const">10</Low>
+          <High ValueProvider="Const">1295</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="11">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">360</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="13">
+        <EURange>
+          <Low ValueProvider="Const">-170</Low>
+          <High ValueProvider="Const">90</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
+      <EngineeringUnit Id="2" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
+      <EngineeringUnit Id="3" UnitId="17476" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree [unit of angle]" Symbol="°" />
     </EngineeringUnitAliases>
   </Aliases>
   <DefaultView AuditEvents="True" AclId="2">
@@ -67,7 +99,14 @@
       <Task Name="Control">
         <Variable Name="RoboArm6Axis">
           <Variable Name="Info">
-            <Variable Name="JointAxisPosition" EnableArrayElements="True" />
+            <Variable Name="JointAxisPosition" EnableArrayElements="True">
+              <Variable Name="JointAxisPosition[0]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[1]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[2]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[3]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[4]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[5]" EngineeringUnitId="3" />
+            </Variable>
             <Variable Name="CommunicationReady" />
             <Variable Name="ReadyToPowerOn" />
             <Variable Name="WaitForContinue" />
@@ -127,12 +166,12 @@
           <Variable Name="Error" />
           <Variable Name="StatusID" />
           <Variable Name="UpdateDone" />
-          <Variable Name="X" />
-          <Variable Name="Y" />
-          <Variable Name="Z" />
-          <Variable Name="A" />
-          <Variable Name="B" />
-          <Variable Name="C" />
+          <Variable Name="X" EngineeringUnitId="2" />
+          <Variable Name="Y" EngineeringUnitId="2" />
+          <Variable Name="Z" EngineeringUnitId="2" />
+          <Variable Name="A" EngineeringUnitId="3" />
+          <Variable Name="B" EngineeringUnitId="3" />
+          <Variable Name="C" EngineeringUnitId="3" />
           <Variable Name="PathVelocity" />
           <Variable Name="CommandBusy" />
           <Variable Name="CommandAborted" />
@@ -293,16 +332,26 @@
         <Variable Name="SemiAutoControlPara">
           <Variable Name="Flag" />
           <Variable Name="AskedValue">
-            <Variable Name="Q0" EURangesId="6" />
-            <Variable Name="Q1" EURangesId="5" />
-            <Variable Name="Q2" EURangesId="4" />
-            <Variable Name="Q3" EURangesId="3" />
-            <Variable Name="Q4" EURangesId="2" />
-            <Variable Name="Q5" EURangesId="1" />
             <Variable Name="Velocity" />
             <Variable Name="Acceleration" />
             <Variable Name="Deceleration" />
             <Variable Name="Jerk" />
+            <Variable Name="TCS" EnableArrayElements="True">
+              <Variable Name="TCS[0]" EURangesId="8" EngineeringUnitId="2" />
+              <Variable Name="TCS[1]" EURangesId="9" EngineeringUnitId="2" />
+              <Variable Name="TCS[2]" EURangesId="10" EngineeringUnitId="2" />
+              <Variable Name="TCS[3]" EURangesId="11" EngineeringUnitId="3" />
+              <Variable Name="TCS[4]" EURangesId="11" EngineeringUnitId="3" />
+              <Variable Name="TCS[5]" EURangesId="11" EngineeringUnitId="3" />
+            </Variable>
+            <Variable Name="ACS" EnableArrayElements="True">
+              <Variable Name="ACS[0]" EURangesId="13" EngineeringUnitId="3" />
+              <Variable Name="ACS[1]" EURangesId="5" EngineeringUnitId="3" />
+              <Variable Name="ACS[2]" EURangesId="4" EngineeringUnitId="3" />
+              <Variable Name="ACS[3]" EURangesId="3" EngineeringUnitId="3" />
+              <Variable Name="ACS[4]" EURangesId="2" EngineeringUnitId="3" />
+              <Variable Name="ACS[5]" EURangesId="1" EngineeringUnitId="3" />
+            </Variable>
           </Variable>
         </Variable>
         <Variable Name="CoordinateSystem" />
