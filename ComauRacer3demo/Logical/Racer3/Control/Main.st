@@ -200,8 +200,21 @@ PROGRAM _CYCLIC
 			//ManualControlPara.PathLimits.Jerk;
 			//ManualControlPara.PathLimits.Velocity;
 			//ManualControlPara; //main struct to be bound in mapp view
-			ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara,MainState := State, ControlSelector := ControlSelector);
-		
+			IF Communication.ReturnToZero THEN
+				RoboArm6AxisPara.Position := gRacer3ZeroPosition;
+				RoboArm6AxisPara.CoordSystem := 0;
+				RoboArm6AxisPara.ManualMoveType := mcMOVE_ABSOLUTE;
+				RoboArm6AxisPara.Velocity := ManualControlPara.JogVelocity;
+				RoboArm6Axis.MoveDirect := TRUE;
+				IF RoboArm6Axis.MoveDone THEN
+					RoboArm6Axis.MoveDirect := FALSE;
+					Communication.ReturnToZero := FALSE;
+				END_IF
+				
+			ELSE
+				ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara,MainState := State, ControlSelector := ControlSelector);
+			END_IF
+			
 		STATE_SEMI_AUTOMATIC:
 			
 			//ChangeMode
