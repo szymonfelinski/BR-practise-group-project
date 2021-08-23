@@ -44,4 +44,32 @@
       <Selector ID="FlangeWorkspace" Value="NotUsed" />
     </Selector>
   </Element>
+  <Element ID="FeatureSharedBrakesRacer3" Type="axesgroupfeature">
+    <Selector ID="Type" Value="SharedBrakesSignals">
+      <Group ID="BrakeComposite[1]">
+        <Group ID="Axes">
+          <Property ID="AxisRef[1]" Value="gAxisQ2" />
+          <Property ID="AxisRef[2]" Value="gAxisQ3" />
+          <Property ID="AxisRef[3]" Value="gAxisQ1" />
+        </Group>
+        <Selector ID="ErrorBehavior" Value="CloseAfterStop" />
+        <Selector ID="Output" Value="Axis">
+          <Property ID="AxisRef" Value="gAxisQ1" />
+        </Selector>
+        <Selector ID="Feedback" Value="TimeBased" />
+      </Group>
+      <Group ID="BrakeComposite[2]">
+        <Group ID="Axes">
+          <Property ID="AxisRef[1]" Value="gAxisQ5" />
+          <Property ID="AxisRef[2]" Value="gAxisQ6" />
+          <Property ID="AxisRef[3]" Value="gAxisQ4" />
+        </Group>
+        <Selector ID="ErrorBehavior" Value="CloseAfterStop" />
+        <Selector ID="Output" Value="Axis">
+          <Property ID="AxisRef" Value="gAxisQ4" />
+        </Selector>
+        <Selector ID="Feedback" Value="TimeBased" />
+      </Group>
+    </Selector>
+  </Element>
 </Configuration>

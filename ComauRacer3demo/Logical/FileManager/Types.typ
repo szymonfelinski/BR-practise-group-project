@@ -35,5 +35,10 @@ TYPE
 		btnSortStr : STRING[80];
 		fileName : STRING[260];
 		fullFilePath : STRING[260];
+		fileExtension3Chars : STRING[4];
+		fileExtensionpdf : STRING[4] := '.pdf';
+		fileExtensionPDF : STRING[4] := '.PDF';
+		IsPDF : BOOL;
+		fullFilePathWithFileDevice : STRING[260];
 	END_STRUCT;
 END_TYPE

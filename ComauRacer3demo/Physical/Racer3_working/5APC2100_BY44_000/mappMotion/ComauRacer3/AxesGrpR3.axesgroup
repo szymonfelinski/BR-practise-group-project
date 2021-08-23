@@ -59,10 +59,11 @@
         </Selector>
       </Group>
       <Group ID="AxesGroupFeatures">
-        <Property ID="FeatureRef[1]" Value="FeatureProgramsRacer3" />
-        <Property ID="FeatureRef[2]" Value="FeatureFeedForwardRacer3" />
-        <Property ID="FeatureRef[3]" Value="FeatureJoggingRacer3" />
-        <Property ID="FeatureRef[4]" Value="Feature_WorkspaceMonitoring" />
+        <Property ID="FeatureRef[1]" Value="FeatureProgramsRacer3" Description="Programs feature" />
+        <Property ID="FeatureRef[2]" Value="FeatureFeedForwardRacer3" Description="Feed Forward feature" />
+        <Property ID="FeatureRef[3]" Value="FeatureJoggingRacer3" Description="This feature enables jogging" />
+        <Property ID="FeatureRef[4]" Value="Feature_WorkspaceMonitoring" Description="This feature enables workspace monitoring" />
+        <Property ID="FeatureRef[5]" Value="FeatureSharedBrakesRacer3" Description="This feature enables shared brake operation" />
       </Group>
     </Selector>
     <Selector ID="Alarms" Value="MpAlarmX" />
