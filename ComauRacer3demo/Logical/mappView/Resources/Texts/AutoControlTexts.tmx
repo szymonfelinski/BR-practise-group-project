@@ -136,5 +136,29 @@
         <seg>Reset errors</seg>
       </tuv>
     </tu>
+    <tu tuid="SelectedFile">
+      <tuv xml:lang="pl">
+        <seg>Wybrany plik</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selected file</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurrentFile">
+      <tuv xml:lang="pl">
+        <seg>Otwarty plik</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current file</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurrentLang">
+      <tuv xml:lang="pl">
+        <seg>Język</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Language</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
