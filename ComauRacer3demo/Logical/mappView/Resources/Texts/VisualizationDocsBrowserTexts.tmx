@@ -7,10 +7,10 @@
   <body>
     <tu tuid="File_Size">
       <tuv xml:lang="pl">
-        <seg>Rozmiar</seg>
+        <seg>Rozmiar [B]</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Size</seg>
+        <seg>Size [B]</seg>
       </tuv>
     </tu>
     <tu tuid="File_Name">

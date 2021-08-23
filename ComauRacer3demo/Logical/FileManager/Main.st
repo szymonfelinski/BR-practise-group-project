@@ -29,12 +29,13 @@ PROGRAM _CYCLIC
 			cmd.MpFileManagerUIConnectType.File.List.Items[iFile].IsSelected := TRUE;
 		END_IF
 		
-		(* dynamic change of the array size *)
+		(* numbers of elements in the table *)
 		IF tabInfo.Type[iFile] <> mpFILE_ITEM_TYPE_NONE THEN
 			tabInfo.NumberOfElements := tabInfo.NumberOfElements + 1;
 		END_IF
 	END_FOR
 	
+	(* dynamic change of the array size *)
 	brsitoa(tabInfo.NumberOfElements, ADR(aux.NumberOfElementsStr));
 	aux.TableConfigurationStr := '{"specRows": [ {"from":0, "to":';
 	aux.One := ', "visible":true}, {"from":';
