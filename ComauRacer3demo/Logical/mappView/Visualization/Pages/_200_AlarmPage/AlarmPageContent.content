@@ -14,5 +14,9 @@
     </Widget>
     <Widget xsi:type="widgets.brease.Label" id="txtAcknowledgeAll" top="380" left="1160" width="100" zIndex="5" text="$IAT/AlarmAcknowledgeAllLabel" textAlign="right" fontSize="15px" />
     <Widget xsi:type="widgets.brease.Label" id="txtAcknowledge" top="160" left="1160" width="100" zIndex="6" text="$IAT/AlarmAcknowledgeLabel" textAlign="right" fontSize="15px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1AlarmPageContent" top="86" left="10" width="80" height="80" zIndex="9" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4AlarmPageContent" top="407" left="10" width="80" height="80" zIndex="10" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AlarmPageContent" top="86" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4AlarmPageContent" top="407" left="1190" width="80" height="80" zIndex="8" margin="0px" enable="false" />
   </Widgets>
 </Content>
