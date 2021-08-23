@@ -62,10 +62,10 @@
     </tu>
     <tu tuid="19">
       <tuv xml:lang="pl">
-        <seg>zmiana wartości {&amp;dpid} z {&amp;old.|f2} na {&amp;new.|f2}</seg>
+        <seg>zmiana wartości {&amp;dpid} z {&amp;old|.2f} na {&amp;new|.2f}</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>changed value of {&amp;dpid} from {&amp;old.|f2} to {&amp;new.|f2}</seg>
+        <seg>changed value of {&amp;dpid} from {&amp;old|.2f} to {&amp;new|.2f}</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>hat Wert {=$MpAudit/DP/{&amp;dpid}} von {&amp;old} auf {&amp;new} geändert</seg>
