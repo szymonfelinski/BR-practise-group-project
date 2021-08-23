@@ -4,14 +4,23 @@
   <Module Name="5ACCIF01.FPSC-000" Type="5ACCIF01.FPSC-000" Version="1.9.0.3">
     <Connection Connector="SL" TargetModule="5APC2100_BY44_000" TargetConnector="SL1" />
   </Module>
+  <Module Name="5ACCLI01.SDL0-000" Type="5ACCLI01.SDL0-000" Version="2.0.0.0">
+    <Connection Connector="SL" TargetModule="5APC2100_BY44_000" TargetConnector="SL2" />
+  </Module>
   <Module Name="5APC2100_BY44_000" Type="5APC2100.BY44-000" Version="2.1.0.0">
     <Connector Name="IF3">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
       <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="192.168.0.111" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
     <Connector Name="IF4">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
       <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="192.168.1.111" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
     <Connector Name="IF5">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />

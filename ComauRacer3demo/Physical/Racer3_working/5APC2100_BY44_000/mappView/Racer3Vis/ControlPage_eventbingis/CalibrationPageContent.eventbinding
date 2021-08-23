@@ -125,5 +125,32 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="CalibrationPageContent.Button1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="Button1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.Axis5To6Para.Axis5Return">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q6">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="CalibrationPageContent.Button2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="Button2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CalibrateAgain">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
