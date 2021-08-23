@@ -4,61 +4,169 @@
     <EventBinding id="SettingsPageContent.btnLeft1SettingsContentSetBuRThemeFlat1Theme.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnLeft1SettingsContentSetBuRThemeFlat1Theme" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.ChangeTheme" theme="BuRThemeFlat1" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeDark">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.ChangeTheme" theme="BuRThemeFlat1" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeLight">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnLeft2SettingsContentSetBuRThemeFlat2Theme.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnLeft2SettingsContentSetBuRThemeFlat2Theme" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.ChangeTheme" theme="BuRThemeFlat2" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.ChangeTheme" theme="BuRThemeFlat2" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeDark">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeLight">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnLeft3SettingsContentSetLanguageEn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnLeft3SettingsContentSetLanguageEn" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.SetLanguage" value="en" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguageEnglish">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.SetLanguage" value="en" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguagePolish">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnLeft4SettingsContentSetLanguagePl.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnLeft4SettingsContentSetLanguagePl" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.SetLanguage" value="pl" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.SetLanguage" value="pl" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguageEnglish">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguagePolish">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnRigh3SettingsContentSetMeasurementSystemMetric.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnRigh3SettingsContentSetMeasurementSystemMetric" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.SetMeasurementSystem" value="metric" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.SetMeasurementSystem" value="metric" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemImperialLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemMetricLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnRigh4SettingsContentSetMeasurementSystemImperial.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnRigh4SettingsContentSetMeasurementSystemImperial" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.SetMeasurementSystem" value="imperial" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.SetMeasurementSystem" value="imperial" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemImperialLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemMetricLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnSettingsPageChangePassword.Click">
