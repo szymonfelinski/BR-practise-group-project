@@ -184,7 +184,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				
 			END_IF
 			
-			IF AutoMode.Info.Error = autoNO_ERROR THEN
+			IF AutoMode.Info.ErrorID = 0 THEN
 				AutoMode.Info.IsError := FALSE;
 				AutoMode.Parameters.ErrorReset := FALSE;
 				AutoMode.Info.CurrentState := autoSTATE_WAIT;
