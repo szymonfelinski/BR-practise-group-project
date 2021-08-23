@@ -11,5 +11,6 @@
     <Object Type="File">glass_broke.png</Object>
     <Object Type="File">comedy.PNG</Object>
     <Object Type="File">SzareTloPDF.svg</Object>
+    <Object Type="Package">calibration</Object>
   </Objects>
 </Package>

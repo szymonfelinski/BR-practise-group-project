@@ -23,8 +23,9 @@
 <Source xsi:type="opcUa" refId="::Control:KeyCheck.event_achieved" attribute="value" />
 <Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="Image3" attribute="visible" />
 </Binding>
+
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Communication.txt_State_out" attribute="value" />
+<Source xsi:type="opcUa" refId="::Control:Communication.txt_State_out_front" attribute="value" />
 <Target xsi:type="brease" contentRefId="ControlPageContent" widgetRefId="txt_StateOut" attribute="value" />
 </Binding>
 </Bindings>

@@ -58,5 +58,18 @@
 <Source xsi:type="opcUa" refId="::Control:Axis_1to5_calibrated" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ6CalibrationControlContent" attribute="enable" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Communication.CalibrationImage" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image7" attribute="image" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Communication.RestoreAxis5" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Button1" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Communication.TextManager.CalibHelper" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="TextOutput1" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>
