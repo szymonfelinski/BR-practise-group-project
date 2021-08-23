@@ -13,6 +13,9 @@ FUNCTION_BLOCK R3AutomaticMode
 	CASE AutoMode.Info.CurrentState OF				
 		autoSTATE_WAIT:
 			IF NOT AutoMode.Info.Paused THEN
+				AutoMode.Cmds.ExecuteProgram(AxesGroup := ADR(AxesGroup), Execute := FALSE);
+				AutoMode.Cmds.UnloadProgram(AxesGroup := ADR(AxesGroup), Execute := FALSE);
+				AutoMode.Cmds.LoadProgram(AxesGroup := ADR(AxesGroup), Execute := FALSE);
 				
 				AutoMode.Info.Error := autoNO_ERROR; //reset error status in case it didn't reset. also useful for first-time execution
 				AutoMode.Info.ErrorID := 0;
