@@ -96,6 +96,7 @@ TYPE
 		AxisCalibrated : ARRAY[0..5]OF BOOL := [6(0)]; (*Saves which axes have been calibrated (defaults to 0 upon creation)*)
 		AxisSaveBtn : BOOL; (*Button to save current position as calibrated*)
 		Axis5To6Para : R3Axis5To6Type; (*Stores axis 5 settings for axis 6 calibration*)
+		SavedPositions : ARRAY[0..5]OF LREAL;
 	END_STRUCT;
 	R3CalibrationStateEnum : 
 		(
@@ -215,7 +216,9 @@ TYPE
 		BrakeOpen : BOOL; (*open the brakes*)
 		BrakeClose : BOOL; (*close the brakes*)
 		BrakeReadStatus : BOOL; (*read status of brakes*)
-		BrakesSet : BOOL;
+		BrakesSet : BOOL; (*This variable tells the program if brake parameters have been set.*)
+		ToolOutput : BOOL; (*This variable enables tool control*)
+		ReturnToZero : BOOL; (*This variable allows returning to zero position in manual mode.*)
 	END_STRUCT;
 	R3BrakeStateMachineEnum : 
 		(
