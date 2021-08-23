@@ -15,7 +15,7 @@
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4ManualControlContent" top="399" left="681" zIndex="11" text="q4" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5ManualControlContent" top="399" left="841" zIndex="12" text="q5" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6ManualControlContent" top="399" left="999" zIndex="13" text="q6" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="479" left="260" width="180" zIndex="14" maxValue="420" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="479" left="260" width="180" zIndex="14" maxValue="1000" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiAccelerationManualControlContent" top="479" left="539" width="180" zIndex="15" maxValue="750" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiDeccelerationManualControlContent" top="479" left="840" width="180" zIndex="16" maxValue="750" />
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="520" left="260" width="180" zIndex="17" text="$IAT/ControlPage/ManualContol.maxVelocity" textAlign="center" bold="false" />
