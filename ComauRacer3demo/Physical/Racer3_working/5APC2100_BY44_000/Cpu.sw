@@ -8,8 +8,7 @@
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="Auditing" Source="Auditing.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
-    <Task Name="Program1" Source="Program1.prg" Memory="UserROM" Language="IEC" Debugging="true" Disabled="true" />
+    <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5">
     <Task Name="FileManage" Source="FileManager.prg" Memory="UserROM" Language="IEC" Debugging="true" />
