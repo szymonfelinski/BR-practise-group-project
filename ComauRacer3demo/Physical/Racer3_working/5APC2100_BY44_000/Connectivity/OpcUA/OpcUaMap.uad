@@ -67,6 +67,8 @@
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
       <EngineeringUnit Id="2" UnitId="5059633" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second squared" Symbol="mm/s²" />
+      <EngineeringUnit Id="3" UnitId="17476" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree [unit of angle]" Symbol="°" />
+      <EngineeringUnit Id="4" UnitId="5066068" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre" Symbol="mm" />
     </EngineeringUnitAliases>
   </Aliases>
   <DefaultView AuditEvents="True" AclId="2">
@@ -74,7 +76,14 @@
       <Task Name="Control">
         <Variable Name="RoboArm6Axis">
           <Variable Name="Info">
-            <Variable Name="JointAxisPosition" EnableArrayElements="True" />
+            <Variable Name="JointAxisPosition" EnableArrayElements="True">
+              <Variable Name="JointAxisPosition[0]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[1]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[2]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[3]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[4]" EngineeringUnitId="3" />
+              <Variable Name="JointAxisPosition[5]" EngineeringUnitId="3" />
+            </Variable>
             <Variable Name="CommunicationReady" />
             <Variable Name="ReadyToPowerOn" />
             <Variable Name="WaitForContinue" />
@@ -134,12 +143,12 @@
           <Variable Name="Error" />
           <Variable Name="StatusID" />
           <Variable Name="UpdateDone" />
-          <Variable Name="X" />
-          <Variable Name="Y" />
-          <Variable Name="Z" />
-          <Variable Name="A" />
-          <Variable Name="B" />
-          <Variable Name="C" />
+          <Variable Name="X" EngineeringUnitId="4" />
+          <Variable Name="Y" EngineeringUnitId="4" />
+          <Variable Name="Z" EngineeringUnitId="4" />
+          <Variable Name="A" EngineeringUnitId="4" />
+          <Variable Name="B" EngineeringUnitId="4" />
+          <Variable Name="C" EngineeringUnitId="4" />
           <Variable Name="PathVelocity" />
           <Variable Name="CommandBusy" />
           <Variable Name="CommandAborted" />
