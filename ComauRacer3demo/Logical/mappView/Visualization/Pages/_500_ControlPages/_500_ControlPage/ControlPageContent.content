@@ -8,7 +8,7 @@
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1ControlContent" top="86" left="1190" width="80" height="80" zIndex="4" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh2ControlContent" top="193" left="1190" width="80" height="80" zIndex="5" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3ControlContent" top="300" left="1190" width="80" height="80" zIndex="6" margin="0px" enable="false" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
+		<Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnHomingControlContent" top="180" left="460" width="140" zIndex="8" text="$IAT/ControlPage/Control.Homing" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1ControlContent" top="440" left="540" width="160" zIndex="9" maxValue="750" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2ControlContent" top="440" left="860" width="160" zIndex="10" maxValue="750" />
@@ -21,10 +21,10 @@
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="17" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="18" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="280" left="460" width="340" zIndex="19" text="$IAT/ControlPage/ControlPage.PowerON" />
-    <Widget xsi:type="widgets.brease.Image" id="Image1" top="120" left="720" width="40" height="40" zIndex="20" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" imageColor="rgba(100, 100, 100, 1)" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="120" left="720" width="40" height="40" zIndex="20" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" visible="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="580" left="460" width="340" zIndex="21" text="$IAT/ControlPage/Control.ErrorReset" />
-    <Widget xsi:type="widgets.brease.Image" id="Image2" top="0" left="100" width="1080" height="580" zIndex="22" image="Media/glass_broke.png" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image3" top="360" left="720" width="460" height="280" zIndex="23" image="Media/comedy.PNG" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="0" left="100" width="1080" height="580" zIndex="22" image="Media/calibration/calb_axis_A.png" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image3" top="360" left="720" width="460" height="280" zIndex="23" image="Media/calibration/calib_axis_B.png" visible="false" />
     <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="200" left="1020" width="160" height="60" zIndex="24" multiLine="true" wordWrap="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label_current_state" top="200" left="880" width="140" height="60" zIndex="25" text="$IAT/ControlPage/ControlPage.Current" fontSize="16px" />
   </Widgets>

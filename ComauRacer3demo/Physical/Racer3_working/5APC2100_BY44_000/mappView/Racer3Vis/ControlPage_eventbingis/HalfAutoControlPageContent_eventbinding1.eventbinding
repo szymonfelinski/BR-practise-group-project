@@ -246,5 +246,125 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ1HalfAutoControlContent.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1HalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ2HalfAutoControlContent.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2HalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ3HalfAutoControlContent.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ3HalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ4HalfAutoControlContent.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ4HalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ5HalfAutoControlContent.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ5HalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ6HalfAutoControlContent.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ6HalfAutoControlContent" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ1.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ1" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ2.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ2" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ3.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ3" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ4.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ4" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ5.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ5" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.mniQ6.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="mniQ6" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

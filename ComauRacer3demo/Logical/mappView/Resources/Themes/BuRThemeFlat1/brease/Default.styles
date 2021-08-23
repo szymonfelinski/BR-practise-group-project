@@ -218,7 +218,7 @@
 	<!--date time output-->
 	
 	<Style id="default" xsi:type="widgets.brease.DateTimeOutput" 
-		textColor="#646464" 
+		textColor="#474747" 
 		borderWidth="0px" 
 		fontSize="16px" 
 		backColor="transparent" 
