@@ -9,6 +9,7 @@
   <TaskClass Name="Cyclic#4">
     <Task Name="Auditing" Source="Auditing.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="Recipe" Source="Recipe.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5">
     <Task Name="FileManage" Source="FileManager.prg" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -48,18 +49,23 @@
     <BinaryObject Name="TC" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwd" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Config" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Config_1" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="FileMngMap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Workspace" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="FileMngUI" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Config_3" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Config_2" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AlarmXCore" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="RecipeMng" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AlarmXHis" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="UserMng" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AuditMng" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ConfigF" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ConfigAlmH" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ConfigAdt" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ConfigAlm" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Config_4" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_1" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_3" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config_2" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="Config" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="operator" Source="Libraries.operator.lby" Memory="UserROM" Language="binary" Debugging="true" />
@@ -87,6 +93,7 @@
     <LibraryObject Name="MpFile" Source="Libraries.MpFile.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MpUserX" Source="Libraries.MpUserX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MpRecipe" Source="Libraries.MpRecipe.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asarprof" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
