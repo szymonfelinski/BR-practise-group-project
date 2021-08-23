@@ -138,15 +138,47 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="DocsBrowserPageContent.btnOpenSTFile.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnOpenFile" event="Click" />
+    <EventBinding id="PDFButtonToggle" comment="Currently it hides Device 4 and &quot;View PDF&quot; buttons.">
+      <Source xsi:type="opcUa.Event" refId="::FileManage:aux.IsPDF" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer">
+            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnPDFViewer.Click" comment="It doesn't work. needs access to web server directory.">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnPDFViewer" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PDFViewerDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="SelectedFile">
+      <Source xsi:type="opcUa.Event" refId="::FileManage:aux.fullFilePath" event="ValueChanged" />
       <Operand datatype="ANY_STRING" name="SelectedFileName">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fileName" serverAlias="">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fileName">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="ANY_STRING" name="SelectedFilePath">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fullFilePath" serverAlias="">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fullFilePath">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="ANY_STRING" name="SelectedFileWithDevice">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.fullFilePathWithFileDevice" serverAlias="">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -166,7 +198,24 @@
               </Target>
             </Action>
           </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="session.VariableAction" refId="selectedFileWithDevice">
+                <Method xsi:type="session.VariableAction.SetValueString" value="=SelectedFileWithDevice" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DocsBrowserPageContent.btnDevice4.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="DocsBrowserPageContent" widgetRefId="btnDevice4" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>

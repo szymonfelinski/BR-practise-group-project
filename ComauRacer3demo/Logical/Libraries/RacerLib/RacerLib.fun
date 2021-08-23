@@ -1,4 +1,24 @@
 
+FUNCTION_BLOCK R3BrakeSet
+	VAR_INPUT
+		Axis1 : REFERENCE TO UDINT;
+		Axis2 : REFERENCE TO UDINT;
+		Axis3 : REFERENCE TO UDINT;
+		Axis4 : REFERENCE TO UDINT;
+		Axis5 : REFERENCE TO UDINT;
+		Axis6 : REFERENCE TO UDINT;
+	END_VAR
+	VAR_OUTPUT
+		Done : BOOL;
+		Error : BOOL;
+	END_VAR
+	VAR
+		BrakePara : McAcpAxBrakeParType;
+		CurrentAxis : USINT := 1;
+		BrakeSet : MC_BR_BrakeSetPar_AcpAx;
+	END_VAR
+END_FUNCTION_BLOCK
+
 {REDUND_ERROR} FUNCTION_BLOCK R3ManualMode (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_INPUT
 		ManualModePara : R3ManualModeType;

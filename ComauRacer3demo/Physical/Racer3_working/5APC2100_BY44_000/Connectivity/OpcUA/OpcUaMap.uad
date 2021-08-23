@@ -54,7 +54,7 @@
     </EURangesAliases>
     <EngineeringUnitAliases />
   </Aliases>
-  <DefaultView AclId="2">
+  <DefaultView AuditEvents="True" AclId="2">
     <Module Name="&lt;Default&gt;">
       <Task Name="Control">
         <Variable Name="RoboArm6Axis">
@@ -386,6 +386,8 @@
           <Variable Name="btnSortStr" />
           <Variable Name="fileName" />
           <Variable Name="fullFilePath" />
+          <Variable Name="IsPDF" />
+          <Variable Name="fullFilePathWithFileDevice" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />

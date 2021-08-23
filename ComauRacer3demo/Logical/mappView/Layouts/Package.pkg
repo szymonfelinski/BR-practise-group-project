@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">MobilePanelLayout.layout</Object>
     <Object Type="File">DIalogLoginLayout.layout</Object>
+    <Object Type="File">PDFViewerLayout.layout</Object>
   </Objects>
 </Package>
