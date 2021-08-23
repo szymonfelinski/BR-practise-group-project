@@ -34,7 +34,7 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ6HalfAuto" top="179" left="997" zIndex="30" unit="{'metric':'C81','imperial':'DD','imperial-us':'DD'}" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label6" top="139" left="175" width="100" zIndex="34" text="Q1" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label7" top="139" left="496" width="100" zIndex="35" text="Q3" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label8" top="139" left="340" width="100" zIndex="36" text="Q2" textAlign="center bottom" fontSize="15px" bold="true" />
+		<Widget xsi:type="widgets.brease.Label" id="Label8" top="139" left="340" width="100" zIndex="36" text="Q2" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label9" top="139" left="680" width="100" zIndex="31" text="Q4" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label10" top="139" left="840" width="100" zIndex="32" text="Q5" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label11" top="139" left="996" width="100" zIndex="33" text="Q6" textAlign="center bottom" fontSize="15px" bold="true" />
