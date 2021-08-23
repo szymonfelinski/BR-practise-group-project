@@ -51,8 +51,16 @@
           <High ValueProvider="Const">170</High>
         </EURange>
       </EURanges>
+      <EURanges Id="7">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">420</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
-    <EngineeringUnitAliases />
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
+    </EngineeringUnitAliases>
   </Aliases>
   <DefaultView AuditEvents="True" AclId="2">
     <Module Name="&lt;Default&gt;">
@@ -240,7 +248,7 @@
           <Variable Name="CoordinateSystem" />
           <Variable Name="JogVelocity" />
           <Variable Name="PathLimits">
-            <Variable AuditEvents="True" Name="Velocity" />
+            <Variable AuditEvents="True" Name="Velocity" EURangesId="7" EngineeringUnitId="1" />
             <Variable Name="Acceleration" />
             <Variable Name="Deceleration" />
             <Variable Name="Jerk" />
