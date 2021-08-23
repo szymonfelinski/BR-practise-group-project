@@ -329,7 +329,7 @@ to the image and click save</seg>
         <seg>Ready</seg>
       </tuv>
     </tu>
-    <tu tuid="Control.CurrentState">
+    <tu tuid="ControlPage.Current">
       <tuv xml:lang="pl">
         <seg>Obecny stan: </seg>
       </tuv>
