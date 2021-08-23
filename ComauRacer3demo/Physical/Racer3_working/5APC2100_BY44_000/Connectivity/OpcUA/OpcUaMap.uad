@@ -45,12 +45,6 @@
           <High ValueProvider="Const">135</High>
         </EURange>
       </EURanges>
-      <EURanges Id="6">
-        <EURange>
-          <Low ValueProvider="Const">-170</Low>
-          <High ValueProvider="Const">170</High>
-        </EURange>
-      </EURanges>
       <EURanges Id="7">
         <EURange>
           <Low ValueProvider="Const">0</Low>
