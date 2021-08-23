@@ -709,5 +709,20 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="SelectedFileText">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <Operand datatype="ANY_STRING" name="SelectedFile">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="selectedFileFullPath">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtSelectedFileNameAutoControlContent">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="=SelectedFile" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
