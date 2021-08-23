@@ -8,5 +8,7 @@
     <Object Type="File">calib_axis3.PNG</Object>
     <Object Type="File">calib_axis4.PNG</Object>
     <Object Type="File">calib_axis6.PNG</Object>
+    <Object Type="File">calb_axis_A.png</Object>
+    <Object Type="File">calib_axis_B.png</Object>
   </Objects>
 </Package>
