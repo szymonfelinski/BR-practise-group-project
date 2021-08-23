@@ -57,9 +57,16 @@
           <High ValueProvider="Const">420</High>
         </EURange>
       </EURanges>
+      <EURanges Id="8">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">750</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
+      <EngineeringUnit Id="2" UnitId="5059633" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second squared" Symbol="mm/s²" />
     </EngineeringUnitAliases>
   </Aliases>
   <DefaultView AuditEvents="True" AclId="2">
@@ -246,11 +253,11 @@
             <Variable Name="Q6" />
           </Variable>
           <Variable Name="CoordinateSystem" />
-          <Variable Name="JogVelocity" />
+          <Variable Name="JogVelocity" EURangesId="7" EngineeringUnitId="1" />
           <Variable Name="PathLimits">
             <Variable AuditEvents="True" Name="Velocity" EURangesId="7" EngineeringUnitId="1" />
-            <Variable Name="Acceleration" />
-            <Variable Name="Deceleration" />
+            <Variable Name="Acceleration" EURangesId="8" EngineeringUnitId="2" />
+            <Variable Name="Deceleration" EURangesId="8" EngineeringUnitId="2" />
             <Variable Name="Jerk" />
           </Variable>
           <Variable Name="ActivateMove" />
