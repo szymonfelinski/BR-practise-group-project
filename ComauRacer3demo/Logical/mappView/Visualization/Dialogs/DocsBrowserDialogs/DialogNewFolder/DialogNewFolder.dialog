@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="DialogNewFolder" layoutRefId="DialogLoginLayout" backGround="Media/SzareTloDialogBox.svg">
   <Assignments>
-    <Assignment type="Content" baseContentRefId="DialogNewFolderContent" areaRefId="AreaLogin" backGround="Media/SzareTloDialogBox.svg" />
+    <Assignment type="Content" baseContentRefId="DialogNewFolderContent" areaRefId="AreaLogin" styleRefId="Dialog" />
   </Assignments>
 </ddef:Dialog>

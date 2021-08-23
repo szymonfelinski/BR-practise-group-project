@@ -34,6 +34,9 @@
 	<Style id="default" xsi:type="system.brease.Area" 
 	backGround="Media/NocneTlo.svg" />
 	
+	<Style id="Dialog" xsi:type="system.brease.Area" 
+	backGround="Media/DialogBoxNight.svg" />
+	
 	<Style id="transparent" xsi:type="system.brease.Area" 
 		backColor="transparent" />
 		
@@ -56,9 +59,9 @@
 	<!-- version 5.14 configuration dialog style -->
 
 	<Style id="default" xsi:type="system.brease.TableConfigurationDialog"
-		headerBackColor="#808080" 
-		headerFontSize="20px" 
-		headerTextColor="#FFFFFF" 
+		headerBackColor="#4E4E4E" 
+		headerTextColor="#ccc"
+		headerFontSize="20px"  
 		headerBorderWidth="0px" 
 		borderWidth="0px" 
 		borderColor="#A899A0 #5F5F5F #5F5F5F #A899A0"
@@ -74,7 +77,7 @@
 		lineColor="#b4b4b4"
 	/>
 	<Style id="tableConfigurationDialogStyle" xsi:type="widgets.brease.Image" 
-		imageColor="#b4b4b4"
+		imageColor="#ccc"
 	/>
 
 	<Style id="tableConfigurationDialogStyle" xsi:type="widgets.brease.DropDownBox"

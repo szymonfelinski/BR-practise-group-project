@@ -1,6 +1,7 @@
 
 (* TODO: Add your comment here *)
 FUNCTION_BLOCK R3BrakeSet
+	(* SEE: 45ae2aa8-d38d-40c1-866a-6c119063ad8e for information on group brake control for Comau Racer 3 robot *)
 	//these settings are set to default values, may be changed later if needed.
 	BrakePara.AutomaticControl := mcSWITCH_ON;
 	BrakePara.AutomaticInductionStop := mcSWITCH_OFF;

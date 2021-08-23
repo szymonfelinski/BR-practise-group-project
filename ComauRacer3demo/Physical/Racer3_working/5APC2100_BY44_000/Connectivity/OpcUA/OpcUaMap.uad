@@ -84,7 +84,7 @@
       <EURanges Id="13">
         <EURange>
           <Low ValueProvider="Const">-170</Low>
-          <High ValueProvider="Const">90</High>
+          <High ValueProvider="Const">90</High
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -285,11 +285,11 @@
             <Variable Name="Q6" />
           </Variable>
           <Variable Name="CoordinateSystem" />
-          <Variable Name="JogVelocity" />
+          <Variable Name="JogVelocity" EURangesId="7" EngineeringUnitId="1" />
           <Variable Name="PathLimits">
             <Variable AuditEvents="True" Name="Velocity" EURangesId="7" EngineeringUnitId="1" />
-            <Variable Name="Acceleration" />
-            <Variable Name="Deceleration" />
+            <Variable Name="Acceleration" EURangesId="8" EngineeringUnitId="2" />
+            <Variable Name="Deceleration" EURangesId="8" EngineeringUnitId="2" />
             <Variable Name="Jerk" />
           </Variable>
           <Variable Name="ActivateMove" />

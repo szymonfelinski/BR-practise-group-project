@@ -71,6 +71,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[0] := TRUE;
+				CalibrationPara.SavedPositions[0] := RoboArm.Info.JointAxisPosition[0];
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -91,6 +92,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[1] := TRUE;
+				CalibrationPara.SavedPositions[1] := RoboArm.Info.JointAxisPosition[1];
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -110,6 +112,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[2] := TRUE;
+				CalibrationPara.SavedPositions[2] := RoboArm.Info.JointAxisPosition[2];
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -129,6 +132,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[3] := TRUE;
+				CalibrationPara.SavedPositions[3] := RoboArm.Info.JointAxisPosition[3];
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -148,6 +152,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[4] := TRUE;
+				CalibrationPara.SavedPositions[4] := RoboArm.Info.JointAxisPosition[4];
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -189,6 +194,7 @@ FUNCTION_BLOCK R3CalibrationMode
 				
 					IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 						CalibrationPara.AxisCalibrated[5] := TRUE;
+						CalibrationPara.SavedPositions[5] := RoboArm.Info.JointAxisPosition[5];
 						RoboArm.Jog := FALSE;
 						CalibrationPara.AxisSaveBtn := FALSE;
 					END_IF
