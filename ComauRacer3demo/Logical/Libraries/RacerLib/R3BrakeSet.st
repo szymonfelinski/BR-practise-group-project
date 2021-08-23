@@ -4,7 +4,7 @@ FUNCTION_BLOCK R3BrakeSet
 	//these settings are set to default values, may be changed later if needed.
 	BrakePara.AutomaticControl := mcSWITCH_ON;
 	BrakePara.AutomaticInductionStop := mcSWITCH_OFF;
-	BrakePara.ControlMonitoring := mcSWITCH_ON;
+	BrakePara.ControlMonitoring := mcSWITCH_OFF; //changed, it's a game changer.
 	BrakePara.EnableSBTRequestBySMC := mcSWITCH_OFF;
 	BrakePara.MovementMonitoring := mcSWITCH_ON;
 	BrakePara.RestrictedBrakeControl := mcSWITCH_OFF; //changed, it's a game changer.

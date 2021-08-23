@@ -217,8 +217,7 @@ TYPE
 		brakeOPEN,
 		brakeCLOSE,
 		brakeDONE,
-		brakeFIRST,
-		brakeSECOND
+		brakeERROR
 		);
 	R3BrakeParaType : 	STRUCT 
 		BrakeCmd : McBrakeCmdEnum;
@@ -231,6 +230,7 @@ TYPE
 		BrakeStatus : ARRAY[1..2]OF McBrakeStatusEnum;
 		Done : BOOL;
 		State : R3BrakeStateMachineEnum;
+		Error : BOOL;
 	END_STRUCT;
 	R3BrakeType : 	STRUCT 
 		Parameters : R3BrakeParaType;
