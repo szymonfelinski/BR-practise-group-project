@@ -19,6 +19,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				
 				AutoMode.Info.Error := autoNO_ERROR; //reset error status in case it didn't reset. also useful for first-time execution
 				AutoMode.Info.ErrorID := 0;
+				AutoMode.Info.IsError := FALSE;
 				
 				IF AutoMode.Parameters.Load THEN //if "Load" is set, reset others (only one button can be pressed at a time, with priority to whichever was first)
 					
@@ -51,6 +52,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
 				AutoMode.Parameters.Load := FALSE;
 			ELSIF AutoMode.Cmds.LoadProgram.Error THEN
+				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.LoadProgram.ErrorID;
 				AutoMode.Info.Error := autoLOAD_PROGRAM_ERROR;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
@@ -71,6 +73,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
 				AutoMode.Parameters.Unload := FALSE;
 			ELSIF AutoMode.Cmds.UnloadProgram.Error THEN
+				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.UnloadProgram.ErrorID;
 				AutoMode.Info.Error := autoUNLOAD_PROGRAM_ERROR;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
@@ -90,6 +93,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.CurrentState := autoSTATE_DONE;
 				
 			ELSIF AutoMode.Cmds.ExecuteProgram.Error THEN //save error ID and go to error state
+				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.ExecuteProgram.ErrorID;
 				AutoMode.Info.Error := autoEXECUTE_PROGRAM_ERROR;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
@@ -124,6 +128,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.Paused := TRUE;
 				AutoMode.Info.CurrentState := autoSTATE_WAIT;
 			ELSIF AutoMode.Cmds.PauseProgram.Error THEN
+				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.Error := autoPAUSE_ERROR;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.PauseProgram.ErrorID;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
@@ -140,6 +145,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.Paused := FALSE;
 				AutoMode.Info.CurrentState := autoSTATE_WAIT;
 			ELSIF AutoMode.Cmds.ContinueProgram.Error THEN
+				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.Error := autoCONTINUE_ERROR;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.ContinueProgram.ErrorID;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
@@ -160,6 +166,7 @@ FUNCTION_BLOCK R3AutomaticMode
 				AutoMode.Info.CurrentState := autoSTATE_WAIT;
 					
 			ELSIF AutoMode.Cmds.GroupStop.Error THEN
+				AutoMode.Info.IsError := TRUE;
 				AutoMode.Info.Error := autoABORT_ERROR;
 				AutoMode.Info.ErrorID := AutoMode.Cmds.GroupStop.ErrorID;
 				AutoMode.Info.CurrentState := autoSTATE_ERROR;
