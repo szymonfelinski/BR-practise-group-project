@@ -23,7 +23,7 @@
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice1" top="86" left="10" width="80" height="80" zIndex="0" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device1" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice2" top="193" left="10" width="80" height="80" zIndex="1" text="$IAT/Browser/Device2" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice3" top="300" left="10" width="80" height="80" zIndex="2" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device3" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice4" top="407" left="10" width="80" height="80" zIndex="3" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device3" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice4" top="407" left="10" width="80" height="80" zIndex="3" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device4" visible="false" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="320" width="180" zIndex="11" textAlign="center" fontSize="19px" bold="true" />

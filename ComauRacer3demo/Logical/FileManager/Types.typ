@@ -39,5 +39,6 @@ TYPE
 		fileExtensionpdf : STRING[4] := '.pdf';
 		fileExtensionPDF : STRING[4] := '.PDF';
 		IsPDF : BOOL;
+		fullFilePathWithFileDevice : STRING[260];
 	END_STRUCT;
 END_TYPE

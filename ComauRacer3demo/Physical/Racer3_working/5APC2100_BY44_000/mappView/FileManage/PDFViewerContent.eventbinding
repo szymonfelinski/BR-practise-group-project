@@ -4,7 +4,7 @@
     <EventBinding id="PDFViewerDialogOpened">
       <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
       <Operand datatype="ANY_STRING" name="PDFFile">
-        <ReadTarget xsi:type="session.VariableAction.Read" refId="selectedFileFullPath">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="selectedFileWithDevice">
           <Method xsi:type="session.VariableAction.GetValue" />
         </ReadTarget>
       </Operand>
