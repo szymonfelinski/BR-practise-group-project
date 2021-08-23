@@ -6,9 +6,11 @@
     <Object Type="Package">SVGs</Object>
     <Object Type="File">SzareTlo.svg</Object>
     <Object Type="File">PomaranczoweTlo.svg</Object>
-    <Object Type="File">SzareTloDialogBox1.svg</Object>
+    <Object Type="File">SzareTloDialogBox.svg</Object>
     <Object Type="File">NocneTlo.svg</Object>
     <Object Type="File">glass_broke.png</Object>
     <Object Type="File">comedy.PNG</Object>
+    <Object Type="File">SzareTloPDF.svg</Object>
+    <Object Type="Package">calibration</Object>
   </Objects>
 </Package>

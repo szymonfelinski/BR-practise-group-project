@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">calib_axis5.PNG</Object>
+    <Object Type="File">calib_axis1.PNG</Object>
+    <Object Type="File">calib_axis2.PNG</Object>
+    <Object Type="File">calib_axis3.PNG</Object>
+    <Object Type="File">calib_axis4.PNG</Object>
+    <Object Type="File">calib_axis6.PNG</Object>
+  </Objects>
+</Package>

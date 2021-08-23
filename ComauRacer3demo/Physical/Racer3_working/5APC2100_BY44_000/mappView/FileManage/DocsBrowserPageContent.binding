@@ -10,11 +10,6 @@
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="tabSize" attribute="value" />
 		</Binding>
 
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.PathInfo.CurrentDir" attribute="value" />
-<Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="txtPath" attribute="value" />
-</Binding>
-
 
 
 <Binding mode="twoWay">

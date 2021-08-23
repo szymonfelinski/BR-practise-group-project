@@ -25,10 +25,9 @@
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice4" top="407" left="10" width="80" height="80" zIndex="3" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device4" visible="false" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.TextOutput" id="txtPath" top="20" left="320" width="180" zIndex="11" textAlign="center" fontSize="19px" bold="true" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="120" zIndex="12" text="$IAT/Browser/Do_sort" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFileText" top="20" left="540" width="160" zIndex="13" value="$IAT/Browser/SelectedFile" textAlign="left" fontSize="19px" bold="true" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFile" top="20" left="720" width="540" zIndex="14" value="" textAlign="left" fontSize="19px" bold="true" />
-    <Widget xsi:type="widgets.brease.Button" id="btnPDFViewer" top="407" left="1190" width="80" height="80" zIndex="15" multiLine="true" text="$IAT/Browser/PDFViewer" wordWrap="true" fontSize="15px" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="100" width="420" zIndex="11" text="$IAT/Browser/Do_sort" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFileText" top="20" left="520" width="160" zIndex="12" value="$IAT/Browser/SelectedFile" textAlign="left" fontSize="19px" bold="true" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFile" top="20" left="640" width="620" zIndex="13" value="" textAlign="left" fontSize="19px" bold="true" />
+    <Widget xsi:type="widgets.brease.Button" id="btnPDFViewer" top="407" left="1190" width="80" height="80" zIndex="14" multiLine="true" text="$IAT/Browser/PDFViewer" wordWrap="true" fontSize="15px" margin="0px" />
   </Widgets>
 </Content>

@@ -342,6 +342,9 @@
                 <Variable Name="Direction" />
                 <Variable Name="ActivateMove" />
               </Variable>
+              <Variable Name="Axis5To6Para">
+                <Variable Name="Axis5Return" />
+              </Variable>
             </Variable>
           </Variable>
         </Variable>
@@ -391,6 +394,13 @@
           <Variable Name="AskedManualVelocity" />
           <Variable Name="UpdateSemiAutoVars" />
           <Variable Name="changeModePending" />
+          <Variable Name="CalibrationImage" />
+          <Variable Name="TextManager">
+            <Variable Name="CalibHelper" />
+          </Variable>
+          <Variable Name="RestoreAxis5" />
+          <Variable Name="CalibrateAgain" />
+          <Variable Name="txt_State_out_front" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">
