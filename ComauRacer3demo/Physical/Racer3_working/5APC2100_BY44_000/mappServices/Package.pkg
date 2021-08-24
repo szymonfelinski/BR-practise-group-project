@@ -8,6 +8,5 @@
     <Object Type="File">UserMng.mpuserx</Object>
     <Object Type="File">FileMngMap.mpfilemanager</Object>
     <Object Type="File">FileMngUI.mpfilemanagerui</Object>
-    <Object Type="File">RecipeMng.mprecipexml</Object>
   </Objects>
 </Package>

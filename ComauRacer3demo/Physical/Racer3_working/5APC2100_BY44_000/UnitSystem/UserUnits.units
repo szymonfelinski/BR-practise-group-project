@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="JerkMetric" Type="Units">
+    <Property ID="Namespace" Value="http://www.br-automation.com/units" />
+    <Property ID="UnitID" Value="4543793" />
+    <Property ID="CommonCode" Value="EU1" />
+    <Property ID="TextSystemNamespace" Value="Localization/Units/User" />
+    <Group ID="Classification[1]">
+      <Property ID="Group[1]" Value="Mechanics" />
+    </Group>
+  </Element>
+  <Element ID="JerkImperial" Type="Units">
+    <Property ID="Namespace" Value="http://www.br-automation.com/units" />
+    <Property ID="UnitID" Value="4543794" />
+    <Property ID="CommonCode" Value="EU2" />
+    <Property ID="TextSystemNamespace" Value="Localization/Units/User" />
+    <Group ID="Classification[1]">
+      <Property ID="Group[1]" Value="Mechanics" />
+    </Group>
+    <Selector ID="AtomicOrCompound">
+      <Property ID="AtomicFactor" Value="25.4" />
+      <Group ID="AtomicReference">
+        <Property ID="ReferenceUnitNamespace" Value="http://www.br-automation.com/units" />
+        <Property ID="ReferenceUnitID" Value="4543793" />
+      </Group>
+    </Selector>
+  </Element>
+</Configuration>
