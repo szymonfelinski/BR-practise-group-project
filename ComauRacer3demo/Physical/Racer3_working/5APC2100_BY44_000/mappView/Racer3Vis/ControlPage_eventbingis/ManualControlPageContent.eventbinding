@@ -264,14 +264,14 @@
       <EventHandler condition="newValue &gt;=1.0">
         <Action>
           <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight1ManualControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="true" />
+            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue &lt;1.0">
         <Action>
           <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight1ManualControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetVisible" value="false" />
+            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
           </Target>
         </Action>
       </EventHandler>
