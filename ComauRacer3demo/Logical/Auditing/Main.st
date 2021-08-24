@@ -8,7 +8,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 
-	MpAuditTrail_0.Enable := TRUE;	
+	//MpAuditTrail_0.Enable := TRUE;	
 	//Triggering User custom event used for testing audit system.
 	IF(TriggerEvent)THEN
 		CustomEventStatus := MpAuditCustomEvent(MpLink := gAuditTrailLink, Type := TypeVar, Message := MessageVar, Comment := CommentVar);
@@ -18,7 +18,7 @@ PROGRAM _CYCLIC
 	END_IF
 	//Cleaning Buffer using ClearBufferBool/ Click button event sets ClearBufferBool value to TRUE.
 	IF(ClearBufferBool)THEN
-		MpAuditClearBuffer(MpLink :=gAuditTrailLink);
+		MpAuditClearBuffer(MpLink := gAuditTrailLink);
 		ClearBufferBool := FALSE;
 	END_IF
 	
