@@ -10,11 +10,11 @@
     <Widget xsi:type="widgets.brease.Button" id="btnRight3ManualControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="+" fontSize="60px" bold="false" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRight4ManualControlContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ1ManualControlContent" top="399" left="179" zIndex="8" text="Q1" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ2ManualControlContent" top="399" left="341" zIndex="9" text="q2" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ3ManualControlContent" top="399" left="499" zIndex="10" text="q3" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4ManualControlContent" top="399" left="681" zIndex="11" text="q4" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5ManualControlContent" top="399" left="841" zIndex="12" text="q5" bold="true" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6ManualControlContent" top="399" left="999" zIndex="13" text="q6" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ2ManualControlContent" top="399" left="341" zIndex="9" text="Q2" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ3ManualControlContent" top="399" left="499" zIndex="10" text="Q3" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4ManualControlContent" top="399" left="681" zIndex="11" text="Q4" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5ManualControlContent" top="399" left="841" zIndex="12" text="Q5" bold="true" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6ManualControlContent" top="399" left="999" zIndex="13" text="Q6" bold="true" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="479" left="260" width="180" zIndex="14" maxValue="1000" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU2','imperial-us':'http://www.br-automation.com/units|EU2'}" unitAlign="right" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiAccelerationManualControlContent" top="479" left="539" width="180" zIndex="15" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" unitAlign="right" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiDeccelerationManualControlContent" top="479" left="840" width="180" zIndex="16" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" unitAlign="right" />
