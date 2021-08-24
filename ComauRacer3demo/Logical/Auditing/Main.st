@@ -1,5 +1,5 @@
 PROGRAM _INIT
-	MpAuditTrail_0.Enable := FALSE;
+	MpAuditTrail_0.Enable := TRUE;
 	MpAuditTrail_0.MpLink := ADR(gAuditTrailLink);
 	MpAuditTrail_0.DeviceName := ADR('AUDIT');
 	//MpAuditTrail_0.Language := ADR(Language);
