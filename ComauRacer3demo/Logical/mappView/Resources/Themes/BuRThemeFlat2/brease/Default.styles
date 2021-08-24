@@ -238,7 +238,7 @@
 	<Style id="default" xsi:type="widgets.brease.KeyBoard" 
 		borderColor="#4A4A4A" 
 		mouseDownTextColor="#FFFFFF" 
-		mouseDownBackColor="#FF8500" 
+		mouseDownBackColor="#4E4E4E" 
 		textColor="#000000" />
 	
 	<!--numeric keyboard-->
@@ -246,7 +246,7 @@
 	<Style id="default" xsi:type="widgets.brease.NumPad"  
 		borderColor="#4A4A4A" 
 		mouseDownTextColor="#FFFFFF" 
-		mouseDownBackColor="#271D52" 
+		mouseDownBackColor="#4E4E4E" 
 		textColor="#000000" />
 
 	<!--date time picker keyboard-->
