@@ -91,5 +91,13 @@
         <seg>OFF</seg>
       </tuv>
     </tu>
+    <tu tuid="ChangePwdButton">
+      <tuv xml:lang="pl">
+        <seg>Zmień hasło</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Change password</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
