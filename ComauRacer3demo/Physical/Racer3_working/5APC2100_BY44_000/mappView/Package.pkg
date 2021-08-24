@@ -11,5 +11,6 @@
     <Object Type="File">CalibrationPageContent.binding</Object>
     <Object Type="File">TopPageContent.binding</Object>
     <Object Type="File">AutoControlPageContent.binding</Object>
+    <Object Type="File">DialogAuditDeleteConfirmContent_eventbinding.eventbinding</Object>
   </Objects>
 </Package>

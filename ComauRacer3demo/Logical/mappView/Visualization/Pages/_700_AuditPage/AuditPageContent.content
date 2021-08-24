@@ -13,9 +13,9 @@
     <Widget xsi:type="widgets.brease.Button" id="btnAuditContentNext" top="300" left="10" width="80" height="80" zIndex="2" image="Media/SymbolLib/Arrow/Forward.svg" imageHeight="60" imageWidth="60" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditExport" top="193" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/File/File.svg" imageHeight="60" imageWidth="60" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnAuditClearBuffor" top="300" left="1190" width="80" height="80" zIndex="4" image="Media/SymbolLib/Edit/Delete.svg" imageHeight="60" imageWidth="60" margin="0px" />
-	<Widget xsi:type="widgets.brease.Button" id="btnLeft1AuditPageContent" top="86" left="10" width="80" height="80" zIndex="5" margin="0px" visible="true" enable="false" />
-	<Widget xsi:type="widgets.brease.Button" id="btnLeft4AuditPageContent" top="407" left="10" width="80" height="80" zIndex="6" margin="0px" visible="true" enable="false" />
-  	<Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditPageContent" top="86" left="1190" width="80" height="80" zIndex="7" margin="0px" visible="true" enable="false" />
-  	<Widget xsi:type="widgets.brease.Button" id="btnRigh4AuditPageContent" top="407" left="1190" width="80" height="80" zIndex="8" margin="0px" visible="true" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1AuditPageContent" top="86" left="10" width="80" height="80" zIndex="5" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4AuditPageContent" top="407" left="10" width="80" height="80" zIndex="6" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1AuditPageContent" top="86" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4AuditPageContent" top="407" left="1190" width="80" height="80" zIndex="8" margin="0px" enable="false" />
   </Widgets>
 </Content>
