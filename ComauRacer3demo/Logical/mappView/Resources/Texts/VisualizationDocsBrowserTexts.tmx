@@ -313,5 +313,13 @@
         <seg>Sort by size descending</seg>
       </tuv>
     </tu>
+    <tu tuid="Info_NameNotFound">
+      <tuv xml:lang="pl">
+        <seg>Nie znaleziono pliku</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Name not found</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

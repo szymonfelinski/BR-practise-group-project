@@ -461,6 +461,7 @@
           <Variable Name="fullFilePath" />
           <Variable Name="IsPDF" />
           <Variable Name="fullFilePathWithFileDevice" />
+          <Variable Name="SearchNewName" />
         </Variable>
         <Variable Name="cmd">
           <Variable Name="MpFileManagerUI_0" />

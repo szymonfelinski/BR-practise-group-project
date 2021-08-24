@@ -40,5 +40,7 @@ TYPE
 		fileExtensionPDF : STRING[4] := '.PDF';
 		IsPDF : BOOL;
 		fullFilePathWithFileDevice : STRING[260];
+		SearchNewName : STRING[255];
+		textStar : STRING[80] := '*';
 	END_STRUCT;
 END_TYPE
