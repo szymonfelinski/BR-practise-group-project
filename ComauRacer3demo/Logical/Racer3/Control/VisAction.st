@@ -63,6 +63,12 @@ ACTION VisAction:
 	IF Communication.CalibrateAgain THEN
 		Communication.CalibrateAgain := FALSE;
 		gIsCalibrated:=FALSE;
+		Calibration.Para.Parameters.AxisCalibrated[0] := FALSE;
+		Calibration.Para.Parameters.AxisCalibrated[1] := FALSE;
+		Calibration.Para.Parameters.AxisCalibrated[2] := FALSE;
+		Calibration.Para.Parameters.AxisCalibrated[3] := FALSE;
+		Calibration.Para.Parameters.AxisCalibrated[4] := FALSE;
+		Calibration.Para.Parameters.AxisCalibrated[5] := FALSE;
 	END_IF
 	
 END_ACTION

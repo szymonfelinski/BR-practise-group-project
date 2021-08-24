@@ -15,7 +15,7 @@
 		mouseDownBorderColor="#C87E16" 
 		backColor="#C87E16" 
 		mouseDownBackColor="#C39C0F" 
-		disabledBackColor="#d1d1d1" />
+		disabledBackColor="#c1c1c1" />
 		
 	<Style id="defaultTurnedOn" xsi:type="widgets.brease.Button" 
 		fontSize="16px" 
@@ -84,6 +84,8 @@
 		mouseDownTextColor="#CCC" 
 		borderWidth="0px 6px 0px 6px" 
 		imageColor="#ccc"
+		mouseDownImageColor="#ccc"
+		checkedImageColor="#ccc"
 		borderColor="#9B7C0C" 
 		cornerRadius="5px"
 		mouseDownBorderWidth="0px 6px 0px 6px"
@@ -92,7 +94,7 @@
 		mouseDownBackColor="#C39C0F" 
 		checkedBackColor="#C39C0F" 
 		checkedBorderColor="#C87E16" 
-	disabledBackColor="#d1d1d1" />
+		disabledBackColor="#c1c1c1" />
 		
 	<Style id="default" xsi:type="widgets.brease.SystemNavButton" 
 		fontSize="16px" 
@@ -114,6 +116,8 @@
 		fontSize="16px"
 		bold="false" 
 		imageColor="#ccc"
+		mouseDownImageColor="#ccc"
+		checkedImageColor="#ccc"
 		textColor="#CCC" 
 		mouseDownTextColor="#CCC" 
 		borderStyle="none"  
@@ -122,7 +126,7 @@
 		cornerRadius="5px"
 		checkedBackColor="#C39C0F" 
 		checkedTextColor="rgba(204,204,204,1)"
-		disabledBackColor="#d1d1d1" />
+		disabledBackColor="#c1c1c1" />
 	
 	<Style  id="defaultSmall" xsi:type="widgets.brease.ToggleButton"  
 		fontSize="16px" 
@@ -199,7 +203,7 @@
 	
 	<Style id="default" xsi:type="widgets.brease.Label" 
 		fontSize="12px" 
-		textColor="#b4b4b4" 
+		textColor="#d4d4d4" 
 		backColor="transparent" 
 		cornerRadius="5px"
 		borderStyle="none" 
@@ -234,7 +238,7 @@
 	<Style id="default" xsi:type="widgets.brease.KeyBoard" 
 		borderColor="#4A4A4A" 
 		mouseDownTextColor="#FFFFFF" 
-		mouseDownBackColor="#FF8500" 
+		mouseDownBackColor="#4E4E4E" 
 		textColor="#000000" />
 	
 	<!--numeric keyboard-->
@@ -242,7 +246,7 @@
 	<Style id="default" xsi:type="widgets.brease.NumPad"  
 		borderColor="#4A4A4A" 
 		mouseDownTextColor="#FFFFFF" 
-		mouseDownBackColor="#271D52" 
+		mouseDownBackColor="#4E4E4E" 
 		textColor="#000000" />
 
 	<!--date time picker keyboard-->
@@ -295,7 +299,8 @@
 		activeBorderColor="#ff9900" 
 		backColor="#4E4E4E" 
 		activeBackColor="#d6d6d6" 
-		activeTextColor="#ff9900" 
+		activeTextColor="#ff9900"
+		disabledBackColor="#c1c1c1" 
 		bold="false" />
 	
 	<!--numeric output-->
@@ -370,7 +375,9 @@
 	<Style id="default" xsi:type="widgets.brease.LogoutButton" 
 		fontSize="16px" 
 		bold="false" 
-		textColor="#CCC" 
+		textColor="#CCC"
+		imageColor="#ccc" 
+		mouseDownImageColor="#ccc"
 		mouseDownTextColor="#FFFFFF"
 		cornerRadius="5px" 
 		borderWidth="0px 0px 0px 0px" 
@@ -385,8 +392,9 @@
 		fontSize="16px" 
 		bold="false" 
 		imageColor="#ccc"
+		mouseDownImageColor="#ccc"
 		textColor="#ccc" 
-		mouseDownTextColor="#FFFFFF" 
+		mouseDownTextColor="#ccc" 
 		cornerRadius="0px" 
 		borderWidth="0px 0px 0px 0px" 
 		mouseDownBorderWidth="0px 0px 0px 0px" 
@@ -743,8 +751,8 @@
 	<!--alarm list-->
 	
 	<Style id="default" xsi:type="widgets.brease.AlarmList" 
-		headerBackColor="#808080" 
-		headerTextColor="#FFFFFF"
+		headerBackColor="#4E4E4E" 
+		headerTextColor="#ccc"
 		backColorSelectedRow="#ff9900"
 	/>
 	
@@ -813,8 +821,8 @@
 	/>	
 	
 	<Style id="default" xsi:type="widgets.brease.AuditList" 
-		headerBackColor="#808080" 
-		headerTextColor="#FFFFFF" 
+		headerBackColor="#4E4E4E" 
+		headerTextColor="#ccc" 
 		backColorSelectedRow="#ff9900"
 	/>
 	

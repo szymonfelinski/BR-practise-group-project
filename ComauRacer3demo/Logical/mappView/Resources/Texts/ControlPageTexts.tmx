@@ -35,6 +35,22 @@
         <seg>Max decceleration</seg>
       </tuv>
     </tu>
+    <tu tuid="ManualControl.Tool">
+      <tuv xml:lang="pl">
+        <seg>Przełącz narzędzie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tool control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualControl.ReturnToZero">
+      <tuv xml:lang="pl">
+        <seg>Pozycja zero</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Return to zero</seg>
+      </tuv>
+    </tu>
     <tu tuid="ManualControl.JogVelocity">
       <tuv xml:lang="pl">
         <seg>Ustaw prędkość poruszania</seg>
