@@ -95,6 +95,7 @@ FUNCTION_BLOCK R3ManualMode
 		ManualModePara.ActivateMove:=FALSE;
 		RoboArm.Jog:=FALSE;
 		//go out
+		ManualModePara.ExitManual := FALSE;
 	END_IF
 	
 		

@@ -71,17 +71,17 @@ PROGRAM _CYCLIC
 				GroupReset();
 				Communication.ErrorReset := FALSE;
 			ELSIF NOT RoboArm6Axis.Error THEN //if there's no error, go to INIT
-				//RoboArm6Axis.ErrorReset := FALSE;
+				RoboArm6Axis.ErrorReset := FALSE;
 				State := STATE_INIT;
 			ELSIF Communication.ErrorReset THEN
 				GroupReset(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE);
-				
+				RoboArm6Axis.ErrorReset:=TRUE;
 			END_IF
 			
 		STATE_INIT:
 			Communication.txt_State_out:="Initialization";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Init';
-			
+			ManualControlPara.ExitManual := FALSE;
 			IF NOT Communication.BrakesSet THEN
 				SetBrakes.Axis1 := ADR(gAxisQ1);
 				SetBrakes.Axis2 := ADR(gAxisQ2);
@@ -162,14 +162,14 @@ PROGRAM _CYCLIC
 			
 		STATE_READY:
 			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
-			
+			(*
 			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
 				// when exiting ManualMode from mappView bind ManualModePara.ExitMode := TRUE and pending state, both at once
 				// because we want to wait till semiAuto and Auto finishes and then goes to READY state, but for manual we have to go out manually
 				ManualControlPara.ExitManual := TRUE;
 			END_IF
-			
+			*)
 			IF ControlSelector = ManualJog THEN
 				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
 				
@@ -295,15 +295,6 @@ PROGRAM _CYCLIC
 				
 			Communication.txt_State_out:="Calibration";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Calibration';
-			
-		STATE_UPDATE:
-			
-			IF RoboArm6Axis.UpdateDone THEN
-				RoboArm6Axis.Update := FALSE;
-				State := LastState;
-			END_IF
-						
-			RoboArm6Axis.Update := TRUE;
 		
 		STATE_BRAKES:
 			//Brakes.Cmds.BrakeOperation.SelectMode := 0;
