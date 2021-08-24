@@ -10,7 +10,7 @@
         <seg>Wyloguj</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Loggout</seg>
+        <seg>Logout</seg>
       </tuv>
     </tu>
     <tu tuid="LoginUsernameLabelText">
@@ -31,7 +31,7 @@
     </tu>
     <tu tuid="LoginLoginButtonLabelText">
       <tuv xml:lang="pl">
-        <seg>Zaloguj się</seg>
+        <seg>Zaloguj</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Login</seg>
