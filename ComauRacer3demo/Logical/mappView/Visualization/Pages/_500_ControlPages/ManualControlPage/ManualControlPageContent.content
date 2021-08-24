@@ -15,10 +15,10 @@
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4ManualControlContent" top="399" left="681" zIndex="11" text="q4" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5ManualControlContent" top="399" left="841" zIndex="12" text="q5" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6ManualControlContent" top="399" left="999" zIndex="13" text="q6" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="479" left="260" width="180" zIndex="14" maxValue="1000" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="479" left="260" width="180" zIndex="14" maxValue="1000" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU2','imperial-us':'http://www.br-automation.com/units|EU2'}" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiAccelerationManualControlContent" top="479" left="539" width="180" zIndex="15" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiDeccelerationManualControlContent" top="479" left="840" width="180" zIndex="16" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="520" left="260" width="180" zIndex="17" text="$IAT/ControlPage/ManualContol.maxVelocity" textAlign="center" bold="false" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="520" left="260" width="180" zIndex="17" text="$IAT/ControlPage/ManualContol.Jerk" textAlign="center" bold="false" />
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="520" left="539" width="180" zIndex="18" text="$IAT/ControlPage/ManualControl.maxAcceleration" textAlign="center" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="520" left="840" width="180" zIndex="19" text="$IAT/ControlPage/ManualControl.maxDecceleration" textAlign="center" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="20" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />

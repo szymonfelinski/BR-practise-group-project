@@ -292,7 +292,7 @@
             <Variable AuditEvents="True" Name="Velocity" EURangesId="7" EngineeringUnitId="1" />
             <Variable Name="Acceleration" EURangesId="8" EngineeringUnitId="2" />
             <Variable Name="Deceleration" EURangesId="8" EngineeringUnitId="2" />
-            <Variable Name="Jerk" />
+            <Variable Name="Jerk" EURangesId="7" EngineeringUnitId="5" />
           </Variable>
           <Variable Name="ActivateMove" />
           <Variable Name="Direction" />
