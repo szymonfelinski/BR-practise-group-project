@@ -373,7 +373,7 @@
                   <Variable Name="Q5" />
                   <Variable Name="Q6" />
                 </Variable>
-                <Variable Name="JogVelocity" />
+                <Variable Name="JogVelocity" EURangesId="7" EngineeringUnitId="1" />
                 <Variable Name="Direction" />
                 <Variable Name="ActivateMove" />
               </Variable>

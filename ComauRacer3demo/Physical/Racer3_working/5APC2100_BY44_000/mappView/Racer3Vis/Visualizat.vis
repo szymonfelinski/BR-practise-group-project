@@ -56,6 +56,7 @@
 		<EventBindingsSet refId="DialogConfirmContent_eventbinding" />
 		<EventBindingsSet refId="PDFViewerContent_eventbinding" />
 		<EventBindingsSet refId="HomePageContent_eventbinding" />
+		<EventBindingsSet refId="DialogAuditDeleteConfirmContent_eventbinding" />
 	</EventBindingsSets>
   <Dialogs>
 		<Dialog refId="DialogLogin" />
@@ -63,6 +64,7 @@
 		<Dialog refId="DialogNewFolder" />
 		<Dialog refId="DialogConfirm" />
 		<Dialog refId="PDFViewerDialog" />
+		<Dialog refId="DialogAuditDeleteConfirm" />
 	</Dialogs>
   <Contents>
 		<Content refId="HomePageContent" />
@@ -83,6 +85,7 @@
 		<Content refId="PDFViewerContent" />
 		<Content refId="DialogConfirmContent"/>
 		<Content refId="SDMPageContent"/>	
+		<Content refId="DialogAuditDeleteConfirmContent"/>	
 	</Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->
