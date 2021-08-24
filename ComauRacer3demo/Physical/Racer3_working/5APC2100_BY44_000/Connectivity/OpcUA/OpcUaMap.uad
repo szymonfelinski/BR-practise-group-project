@@ -432,6 +432,10 @@
           <Variable Name="LeftCoord" />
           <Variable Name="LeftCoordClick" />
           <Variable Name="RightCoordClick" />
+          <Variable Name="ReturnToZero" />
+          <Variable Name="ToolOutput" />
+          <Variable Name="BrakeOpen" />
+          <Variable Name="BrakeClose" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">
