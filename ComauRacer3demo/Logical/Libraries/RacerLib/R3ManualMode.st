@@ -10,9 +10,7 @@ FUNCTION_BLOCK R3ManualMode
 		JogVelocityActual := 0;
 	END_IF
 	
-	IF NOT RoboArmPara.Jog.CoordSystem = ManualModePara.CoordinateSystem THEN
-		RoboArmPara.Jog.CoordSystem := ManualModePara.CoordinateSystem;
-	END_IF
+	RoboArmPara.Jog.CoordSystem := ManualModePara.CoordinateSystem;
 	RoboArmPara.Jog.PathLimits := ManualModePara.PathLimits;
 	
 	IF ManualModePara.ActivateMove THEN
