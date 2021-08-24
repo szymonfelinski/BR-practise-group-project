@@ -84,7 +84,7 @@
       <EURanges Id="13">
         <EURange>
           <Low ValueProvider="Const">-170</Low>
-          <High ValueProvider="Const">90</High
+          <High ValueProvider="Const">90</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
