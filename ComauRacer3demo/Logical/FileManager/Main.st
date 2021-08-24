@@ -46,16 +46,16 @@ PROGRAM _CYCLIC
 	brsstrcat(ADR(aux.TableConfigurationStr), ADR(aux.NumberOfElementsStr));
 	brsstrcat(ADR(aux.TableConfigurationStr), ADR(aux.Two));
 	
-	(* dynamic change of the existing name *)
+	
 	aux.NumberOfElementsMinus := tabInfo.NumberOfElements - 1;
 
 	IF tabInfo.NumberOfElements >= 1 THEN
-		
 		aux.NewNamePlus := 0;
 		aux.newNewName := '';
 		aux.prevNewName := cmd.MpFileManagerUIConnectType.File.NewName;
 		aux.newNewName := aux.prevNewName;
 		FOR iFile := 0 TO aux.NumberOfElementsMinus BY 1 DO
+			(* dynamic change of the existing name *)
 			IF tabInfo.Name[iFile] = aux.newNewName THEN
 				aux.newNewName := aux.prevNewName;
 				aux.NewNamePlus := aux.NewNamePlus + 1;
@@ -72,6 +72,16 @@ PROGRAM _CYCLIC
 		END_FOR
 	END_IF
 		
+	(* search engine *)
+	cmd.MpFileManagerUIConnectType.File.Filter := '*';
+	IF aux.SearchNewName <> '' THEN
+		brsstrcat(ADR(cmd.MpFileManagerUIConnectType.File.Filter), ADR(aux.SearchNewName));
+		brsstrcat(ADR(cmd.MpFileManagerUIConnectType.File.Filter), ADR(aux.textStar));
+		cmd.MpFileManagerUIConnectType.File.Refresh := TRUE;
+	ELSE
+		cmd.MpFileManagerUIConnectType.File.Filter := '*';
+	END_IF
+	
 	//change sorting method
 	CASE aux.btnSort OF
 		0: 
