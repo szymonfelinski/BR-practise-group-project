@@ -53,18 +53,10 @@
     </tu>
     <tu tuid="LanguageEnglishLabel">
       <tuv xml:lang="pl">
-        <seg>Angielski</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>English</seg>
-      </tuv>
-    </tu>
-    <tu tuid="LanguagePolishLabel">
-      <tuv xml:lang="pl">
         <seg>Polski</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Polish</seg>
+        <seg>English</seg>
       </tuv>
     </tu>
     <tu tuid="ThemeSelectedLabel">
