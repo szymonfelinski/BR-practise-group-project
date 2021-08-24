@@ -71,7 +71,7 @@
     </tu>
     <tu tuid="Do_FolderUp">
       <tuv xml:lang="pl">
-        <seg>Poprzedni folder</seg>
+        <seg>Wróć</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Folder up</seg>

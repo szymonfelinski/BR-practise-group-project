@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="PDFViewerDialog" layoutRefId="PDFViewerLayout">
   <Assignments>
-    <Assignment type="Content" baseContentRefId="PDFViewerContent" areaRefId="PDFArea" styleRefId="Dialog" />
+    <Assignment type="Content" baseContentRefId="PDFViewerContent" areaRefId="PDFArea" styleRefId="Dialog" backGround="Media/SzareTloPDF.svg" />
   </Assignments>
 </ddef:Dialog>
