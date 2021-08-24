@@ -45,12 +45,6 @@
           <High ValueProvider="Const">135</High>
         </EURange>
       </EURanges>
-      <EURanges Id="6">
-        <EURange>
-          <Low ValueProvider="Const">-170</Low>
-          <High ValueProvider="Const">170</High>
-        </EURange>
-      </EURanges>
       <EURanges Id="7">
         <EURange>
           <Low ValueProvider="Const">0</Low>
@@ -434,6 +428,10 @@
           <Variable Name="RestoreAxis5" />
           <Variable Name="CalibrateAgain" />
           <Variable Name="txt_State_out_front" />
+          <Variable Name="ReturnToZero" />
+          <Variable Name="ToolOutput" />
+          <Variable Name="BrakeOpen" />
+          <Variable Name="BrakeClose" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">

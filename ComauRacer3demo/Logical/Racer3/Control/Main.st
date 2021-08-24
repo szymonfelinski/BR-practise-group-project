@@ -52,23 +52,7 @@ PROGRAM _CYCLIC
 	
 	UpdateCheck;
 	
-	// brake operation functions
-	IF Communication.BrakeClose THEN
-		i := 1;
-		Brakes.Info.State := brakeCLOSE;
-		State := STATE_BRAKES;
-		
-	ELSIF Communication.BrakeOpen THEN
-		i := 1;
-		Brakes.Info.State := brakeOPEN;
-		State := STATE_BRAKES;
-		
-	ELSIF Communication.BrakeReadStatus THEN
-		i := 1;
-		Brakes.Info.State := brakeREAD;
-		State := STATE_BRAKES;
-		
-	ELSIF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN
+	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
 		//RoboArm6Axis.Power := FALSE;
 		GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE);
 		State := STATE_INIT;
@@ -105,11 +89,26 @@ PROGRAM _CYCLIC
 				IF SetBrakes.Done THEN
 					Communication.BrakesSet := TRUE;
 				END_IF
+				//RoboArm6Axis.Enable := TRUE;
 				
-				
-			//RoboArm6Axis.Enable := TRUE;
 			ELSE //if brake parameters have been set
-				IF Communication.Power THEN
+				// brake operation functions (only when robot is powered off!)
+				IF Communication.BrakeClose THEN
+					i := 1;
+					Brakes.Info.State := brakeCLOSE;
+					State := STATE_BRAKES;
+		
+				ELSIF Communication.BrakeOpen THEN
+					i := 1;
+					Brakes.Info.State := brakeOPEN;
+					State := STATE_BRAKES;
+		
+				ELSIF Communication.BrakeReadStatus THEN
+					i := 1;
+					Brakes.Info.State := brakeREAD;
+					State := STATE_BRAKES;
+		
+				ELSIF Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
 					State := STATE_POWER_ON;
 				END_IF
 			END_IF
@@ -123,11 +122,11 @@ PROGRAM _CYCLIC
 				//RoboArm6Axis.Power := TRUE;
 			END_IF
 			
-			IF GroupPower.Status AND GroupPower.Enable THEN
+			IF GroupPower.Status AND GroupPower.Enable THEN //Status tells whether the group is really powered on, Enable must be true.
 				State := STATE_HOMING;
 			END_IF
 						
-			(*IF RoboArm6Axis.PowerOn THEN
+			(*IF RoboArm6Axis.PowerOn THEN //unused
 				State := STATE_HOMING;
 				
 			END_IF*)
@@ -158,10 +157,6 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		STATE_READY:
-			
-			
-			
-			
 			//changeStatePending so change mode is impossible while in-move (before state comes to ready) for example for auto and semiauto
 			
 			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
@@ -211,8 +206,8 @@ PROGRAM _CYCLIC
 			//ManualControlPara.PathLimits.Jerk;
 			//ManualControlPara.PathLimits.Velocity;
 			//ManualControlPara; //main struct to be bound in mapp view
-			IF Communication.ReturnToZero AND ManualControlPara.JogVelocity > 1.0 THEN
-				RoboArm6AxisPara.Position := gRacer3ZeroPosition;
+			IF Communication.ReturnToZero AND ManualControlPara.JogVelocity >= 1.0 THEN //return to Zero function, only works when velocity is greater than 1.0 (otherwise move could not be executed)
+				RoboArm6AxisPara.Position := gRacer3ZeroPosition; //read from PV set during calibration
 				RoboArm6AxisPara.CoordSystem := 0;
 				RoboArm6AxisPara.ManualMoveType := mcMOVE_ABSOLUTE;
 				RoboArm6AxisPara.Velocity := ManualControlPara.JogVelocity;
@@ -223,6 +218,8 @@ PROGRAM _CYCLIC
 				END_IF
 				
 			ELSE
+				Communication.ReturnToZero := FALSE;
+				RoboArm6Axis.MoveDirect := FALSE;
 				ManualControl(ManualModePara := ManualControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara,MainState := State, ControlSelector := ControlSelector);
 			END_IF
 			
