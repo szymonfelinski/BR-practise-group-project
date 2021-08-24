@@ -6,5 +6,9 @@
     <Object Type="File">Linear (1).png</Object>
     <Object Type="File">BR.png</Object>
     <Object Type="File">b-r-automation-and-williams-f1.png</Object>
+    <Object Type="File">padlock.svg</Object>
+    <Object Type="File">password.svg</Object>
+    <Object Type="File">lbs-measure-weight.svg</Object>
+    <Object Type="File">kg-measure-weight.svg</Object>
   </Objects>
 </Package>
