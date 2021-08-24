@@ -24,5 +24,6 @@ VAR
 	PathName : STRING[260];
 	FileName : STRING[260];
 	GroupPower : MC_BR_GroupPower;
+	GroupReset : MC_GroupReset;
 	SetBrakes : R3BrakeSet; (*Setting brake parameters*)
 END_VAR
