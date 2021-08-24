@@ -12,5 +12,6 @@
     <Object Type="File">DialogBoxDay.svg</Object>
     <Object Type="File">SzareTloPDF.svg</Object>
     <Object Type="Package">calibration</Object>
+    <Object Type="File">SzareTloLoginPanel.svg</Object>
   </Objects>
 </Package>
