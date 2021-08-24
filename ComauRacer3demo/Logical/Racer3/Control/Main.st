@@ -38,7 +38,7 @@ PROGRAM _CYCLIC
 	IF RoboArm6Axis.Error THEN
 		State := STATE_ERROR;
 	END_IF
-	
+	(*
 	IF Communication.Stop THEN
 		//stops and goes to standby
 		RoboArm6Axis.MoveLinear := FALSE;
@@ -49,7 +49,7 @@ PROGRAM _CYCLIC
 		//TODO turn off traces from all moves for sure, not only flags (clean them up)
 		State:= STATE_READY;
 	END_IF
-	
+	*)
 	UpdateCheck;
 	
 	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
@@ -65,7 +65,7 @@ PROGRAM _CYCLIC
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Error';
 			
 			GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE); //this powers off the axes
-			
+			ManualControlPara.ExitManual:=FALSE;
 			IF GroupReset.Done THEN
 				GroupReset.Execute := FALSE;
 				GroupReset();
@@ -192,12 +192,13 @@ PROGRAM _CYCLIC
 		STATE_MANUAL_CONTROL:
 			//Communication.LastControlState := 'Manual';
 			//ChangeMode
-			//ManualControlPara.ExitManual:=FALSE;
+			ManualControlPara.ExitManual:=FALSE;
 			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
 				ManualControlPara.ExitManual:=TRUE;
 				ControlSelector:=Communication.changeModePending;
 				State:=STATE_READY;
+				//Communication.Stop:=FALSE;
 			END_IF
 			IF Communication.Stop THEN
 				ManualControlPara.ExitManual:=TRUE;
@@ -237,6 +238,7 @@ PROGRAM _CYCLIC
 				SemiAutoControlPara.ExitSemiAuto:=TRUE;
 				ControlSelector:=Communication.changeModePending;
 				State:=STATE_READY;
+				//Communication.Stop:=FALSE;
 			END_IF
 			IF Communication.Stop THEN
 				SemiAutoControlPara.ExitSemiAuto:=TRUE;
