@@ -79,6 +79,8 @@
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">1295</High>
+		          </EURange>
+				  </EURanges>
       <EURanges Id="15">
         <EURange>
           <Low ValueProvider="Const">0</Low>
