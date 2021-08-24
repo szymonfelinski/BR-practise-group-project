@@ -123,7 +123,7 @@
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Communication.RightCoord" attribute="value" />
-<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnRigh2ManualControlContent" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>

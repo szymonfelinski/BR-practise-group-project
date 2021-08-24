@@ -111,54 +111,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="ManualControlPageContent.btnRight2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" event="MouseDown" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="ManualControlPageContent.btnLeft2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" event="MouseDown" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="EventBinding_8">
       <Source xsi:type="opcUa.Event" refId="::Control:Communication.CoordinateSystem" event="ValueChanged" />
       <EventHandler condition="newValue=true">
@@ -270,7 +222,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="ManualControlPageContent.btnRight2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRigh2ManualControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
@@ -307,8 +259,8 @@
         <Sequence>
           <Step order="0">
             <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
-                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+              <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
+                <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="false" />
               </Target>
             </Action>
           </Step>
@@ -321,8 +273,8 @@
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
-                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+              <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
+                <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="false" />
               </Target>
             </Action>
           </Step>
@@ -339,8 +291,8 @@
         <Sequence>
           <Step order="0">
             <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
-                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+              <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
+                <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
               </Target>
             </Action>
           </Step>
@@ -353,8 +305,8 @@
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
-                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+              <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
+                <Method xsi:type="widgets.brease.ToggleButton.Action.SetEnable" value="true" />
               </Target>
             </Action>
           </Step>
