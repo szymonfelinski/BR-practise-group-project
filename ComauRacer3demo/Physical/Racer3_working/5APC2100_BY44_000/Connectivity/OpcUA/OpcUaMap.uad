@@ -436,6 +436,10 @@
           <Variable Name="RestoreAxis5" />
           <Variable Name="CalibrateAgain" />
           <Variable Name="txt_State_out_front" />
+          <Variable Name="ReturnToZero" />
+          <Variable Name="ToolOutput" />
+          <Variable Name="BrakeOpen" />
+          <Variable Name="BrakeClose" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">
