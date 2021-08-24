@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ManualControlPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft1ManualControlContent" top="86" left="10" width="80" height="80" zIndex="0" breakWord="true" multiLine="true" text="$IAT/ControlPage/ManualControl.Tool" wordWrap="true" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1ManualControlContent" top="86" left="10" width="80" height="80" zIndex="0" margin="0px" visible="true" enable="false"/>
     <Widget xsi:type="widgets.brease.Button" id="btnLeft2ManualControlContent" top="193" left="10" width="80" height="80" zIndex="1" text="ACS" bold="true" margin="0px" style="defaultTurnedOn" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft3ManualControlContent" top="300" left="10" width="80" height="80" zIndex="2" text="-" fontSize="65px" bold="false" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft4ManualControlContent" top="407" left="10" width="80" height="80" zIndex="3" margin="0px" enable="false" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRight1ManualControlContent" top="86" left="1190" width="80" height="80" zIndex="4" breakWord="true" multiLine="true" text="$IAT/ControlPage/ManualControl.ReturnToZero" wordWrap="true" margin="0px" />
+		<Widget xsi:type="widgets.brease.Button" id="btnLeft4ManualControlContent" top="407" left="10" width="80" height="80" zIndex="3" margin="0px" visible="true" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1ManualControlContent" top="86" left="1190" width="80" height="80" zIndex="4" margin="0px" visible="true" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnRight2ManualControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="TCS" bold="true" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRight3ManualControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="+" fontSize="60px" bold="false" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRight4ManualControlContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh3ManualControlContent" top="300" left="1190" width="80" height="80" zIndex="6" text="+" fontSize="60px" bold="false" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4ManualControlContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" visible="true" enable="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ1ManualControlContent" top="399" left="179" zIndex="8" text="Q1" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ2ManualControlContent" top="399" left="341" zIndex="9" text="q2" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ3ManualControlContent" top="399" left="499" zIndex="10" text="q3" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4ManualControlContent" top="399" left="681" zIndex="11" text="q4" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5ManualControlContent" top="399" left="841" zIndex="12" text="q5" bold="true" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6ManualControlContent" top="399" left="999" zIndex="13" text="q6" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="479" left="260" width="180" zIndex="14" maxValue="1000" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU2','imperial-us':'http://www.br-automation.com/units|EU2'}" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityManualControlContent" top="479" left="260" width="180" zIndex="14" maxValue="1000" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiAccelerationManualControlContent" top="479" left="539" width="180" zIndex="15" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" />
     <Widget xsi:type="widgets.brease.NumericInput" id="nmiDeccelerationManualControlContent" top="479" left="840" width="180" zIndex="16" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="520" left="260" width="180" zIndex="17" text="$IAT/ControlPage/ManualContol.Jerk" textAlign="center" bold="false" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="520" left="260" width="180" zIndex="17" text="$IAT/ControlPage/ManualContol.maxVelocity" textAlign="center" bold="false" />
     <Widget xsi:type="widgets.brease.Label" id="Label2" top="520" left="539" width="180" zIndex="18" text="$IAT/ControlPage/ManualControl.maxAcceleration" textAlign="center" />
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="520" left="840" width="180" zIndex="19" text="$IAT/ControlPage/ManualControl.maxDecceleration" textAlign="center" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="20" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
@@ -34,7 +34,7 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ6HalfAuto" top="179" left="997" zIndex="30" unit="{'metric':'C81','imperial':'DD','imperial-us':'DD'}" backColor="rgba(240, 240, 240, 1)" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label6" top="139" left="175" width="100" zIndex="34" text="Q1" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label7" top="139" left="496" width="100" zIndex="35" text="Q3" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label8" top="139" left="340" width="100" zIndex="36" text="Q2" textAlign="center bottom" fontSize="15px" bold="true" />
+		<Widget xsi:type="widgets.brease.Label" id="Label8" top="139" left="340" width="100" zIndex="36" text="Q2" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label9" top="139" left="680" width="100" zIndex="31" text="Q4" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label10" top="139" left="840" width="100" zIndex="32" text="Q5" textAlign="center bottom" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label11" top="139" left="996" width="100" zIndex="33" text="Q6" textAlign="center bottom" fontSize="15px" bold="true" />
