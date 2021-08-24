@@ -63,15 +63,19 @@ PROGRAM _CYCLIC
 		STATE_ERROR:
 			Communication.txt_State_out:="Error";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Error';
-
-			IF NOT RoboArm6Axis.Error THEN
-				RoboArm6Axis.ErrorReset := FALSE;
-				State := STATE_INIT;
-			END_IF
 			
-			IF Communication.ErrorReset THEN
-				RoboArm6Axis.ErrorReset := TRUE;
+			GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE); //this powers off the axes
+			
+			IF GroupReset.Done THEN
+				GroupReset.Execute := FALSE;
+				GroupReset();
 				Communication.ErrorReset := FALSE;
+			ELSIF NOT RoboArm6Axis.Error THEN //if there's no error, go to INIT
+				//RoboArm6Axis.ErrorReset := FALSE;
+				State := STATE_INIT;
+			ELSIF Communication.ErrorReset THEN
+				GroupReset(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE);
+				
 			END_IF
 			
 		STATE_INIT:
