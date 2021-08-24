@@ -192,6 +192,7 @@ PROGRAM _CYCLIC
 		STATE_MANUAL_CONTROL:
 			//Communication.LastControlState := 'Manual';
 			//ChangeMode
+			//ManualControlPara.ExitManual:=FALSE;
 			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
 				ManualControlPara.ExitManual:=TRUE;
