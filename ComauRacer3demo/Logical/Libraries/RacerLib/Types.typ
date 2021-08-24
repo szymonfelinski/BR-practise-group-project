@@ -58,7 +58,7 @@ TYPE
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
 		Direction : INT; (*Stores which direction should the axis be moved (1 - POSITIVE, -1 - NEGATIVE)*)
-		JogVelocity : REAL; (*Stores the velocity of axis*)
+		JogVelocity : REAL := 50; (*Stores the velocity of axis*)
 		PathLimits : McJogPathLimitsType; (*Stores set limits of acceleration and deceleration, velocity and jerk*)
 		ActivateMove : BOOL; (*Enables or disables current move execution*)
 		ExitManual : BOOL; (*Exits Manual Mode on True*)
@@ -87,7 +87,6 @@ TYPE
 		STATE_AUTOMATIC, (*Automatic mode (script execution)*)
 		STATE_CALIBRATION, (*Calibration mode*)
 		STATE_HOMING, (*Homing mode*)
-		STATE_UPDATE, (*This will update the robot parameters on demand*)
 		STATE_BRAKES (*This will read brakes' status.*)
 		);
 	R3CalibrationType : 	STRUCT 
@@ -215,6 +214,10 @@ TYPE
 		BrakesSet : BOOL; (*This variable tells the program if brake parameters have been set.*)
 		ToolOutput : BOOL; (*This variable enables tool control*)
 		ReturnToZero : BOOL; (*This variable allows returning to zero position in manual mode.*)
+		RightCoord : BOOL := FALSE;
+		LeftCoord : BOOL := TRUE;
+		LeftCoordClick : BOOL;
+		RightCoordClick : BOOL;
 	END_STRUCT;
 	R3BrakeStateMachineEnum : 
 		(

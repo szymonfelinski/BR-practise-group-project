@@ -49,10 +49,6 @@
 
 
 
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Communication.txt_State_out" attribute="value" />
-<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="txt_StateOut" attribute="value" />
-</Binding>
 
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:ManualControlPara.PathLimits.Acceleration" attribute="node" />
@@ -114,6 +110,20 @@
 <Source xsi:type="opcUa" refId="::Control:RoboArm6Axis.Info.JointAxisPosition[5]" attribute="node" />
 <Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmoQ6HalfAuto" attribute="node" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Communication.LeftCoord" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Communication.RightCoord" attribute="value" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" attribute="value" />
+</Binding>
+<!--
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:ManualControlPara.PathLimits.Jerk" attribute="node" />
+<Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmiVelocityManualControlContent" attribute="node" />
+</Binding>
+-->
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:ManualControlPara.PathLimits.Jerk" attribute="node" />
 <Target xsi:type="brease" contentRefId="ManualControlPageContent" widgetRefId="nmiVelocityManualControlContent" attribute="node" />

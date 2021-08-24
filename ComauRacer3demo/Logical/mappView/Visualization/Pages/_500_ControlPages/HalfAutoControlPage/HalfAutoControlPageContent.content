@@ -2,11 +2,11 @@
 <Content id="HalfAutoControlPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Button" id="btnLeft1HalfAutoControlContent" top="86" left="10" width="80" height="80" zIndex="0" text="STOP" bold="true" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft2HalfAutoControlContent" top="193" left="10" width="80" height="80" zIndex="1" text="ACS" bold="true" margin="0px" style="defaultTurnedOn" tooltip="test" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnLeft2HalfAutoControlContent" top="193" left="10" width="80" height="80" zIndex="56" text="ACS" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnRigh2HalfAutoControlContent" top="193" left="1190" width="80" height="80" zIndex="55" text="TCS" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft3HalfAutoControlContent" top="300" left="10" width="80" height="80" zIndex="2" image="Media/SVGs/Linear%20(1).png" imageHeight="80" imageWidth="80" margin="0px" style="defaultTurnedOn" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft4HalfAutoControlContent" top="407" left="10" width="80" height="80" zIndex="3" text="Relative" fontSize="14px" bold="true" margin="0px" style="defaultTurnedOn" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1HalfAutoControlContent" top="86" left="1190" width="80" height="80" zIndex="4" text="START" bold="true" italic="false" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh2HalfAutoControlContent" top="193" left="1190" width="80" height="80" zIndex="5" text="TCS" bold="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3HalfAutoControlContent" top="300" left="1190" width="80" height="80" zIndex="6" image="Media/SVGs/Direct%20(1).png" imageAlign="right" text="Stop" imageHeight="100" imageWidth="85" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4HalfAutoControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Absolute" fontSize="13px" bold="true" margin="0px" />
     <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1HalfAutoControlContent" top="260" left="160" height="42" zIndex="8" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />

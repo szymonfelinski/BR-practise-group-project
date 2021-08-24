@@ -1,6 +1,6 @@
 
 ACTION UpdateCheck: 
-	IF CoordinateSystem THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
+	IF Communication.CoordinateSystem THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
 		ManualControlPara.CoordinateSystem := 9;
 		IF SemiAutoControlPara.CoordinateSystem <> 9 THEN
 			SemiAutoControlPara.CoordinateSystem := 9;
@@ -34,5 +34,17 @@ ACTION UpdateCheck:
 	IF Communication.UpdateSemiAutoVars THEN
 		SemiAutoControlPara.UpdatePending :=TRUE;
 		Communication.UpdateSemiAutoVars := FALSE;
+	END_IF
+	
+		IF Communication.LeftCoordClick THEN // ACS clicked
+		Communication.CoordinateSystem := NOT Communication.LeftCoord; // false if ACS on, true if TCS
+		Communication.RightCoord := NOT Communication.LeftCoord;
+		Communication.LeftCoordClick := FALSE;
+	END_IF
+	
+	IF Communication.RightCoordClick THEN
+		Communication.CoordinateSystem := Communication.RightCoord; // true if TCS on , false if ACS on
+		Communication.LeftCoord := NOT Communication.RightCoord;
+		Communication.RightCoordClick := FALSE;
 	END_IF
 END_ACTION

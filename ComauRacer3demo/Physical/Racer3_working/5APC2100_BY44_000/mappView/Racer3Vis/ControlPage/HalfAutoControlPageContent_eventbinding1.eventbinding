@@ -62,54 +62,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="HalfAutoControlPageContent.btnRigh2HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh2HalfAutoControlContent" event="MouseDown" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh2HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="HalfAutoControlPageContent.btnLeft2HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent" event="MouseDown" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh2HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnLeft3HalfAutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
@@ -361,6 +313,26 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.UpdateSemiAutoVars">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnLeft2HalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="HalfAutoControlPageContent.btnRigh2HalfAutoControlContent.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh2HalfAutoControlContent" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
