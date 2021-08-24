@@ -9,7 +9,6 @@
   <TaskClass Name="Cyclic#4">
     <Task Name="Auditing" Source="Auditing.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Alarm" Source="Alarm.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Recipe" Source="Recipe.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5">
     <Task Name="FileManage" Source="FileManager.prg" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -34,6 +33,7 @@
     <BinaryObject Name="arcoal" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="arsvcreg" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="McPathXT" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="RecipeMng" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Settings" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="iomap" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="AxesR3" Source="" Memory="UserROM" Language="Binary" />
@@ -53,10 +53,10 @@
     <BinaryObject Name="Workspace" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="FileMngUI" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="AlarmXCore" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="RecipeMng" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="AlarmXHis" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="UserMng" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="AuditMng" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="UserUnits" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ConfigF" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ConfigAlmH" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ConfigAdt" Source="" Memory="UserROM" Language="Binary" />
