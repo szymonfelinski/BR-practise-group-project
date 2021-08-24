@@ -60,57 +60,21 @@
     <EventBinding id="SettingsPageContent.btnLeft3SettingsContentSetLanguageEn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnLeft3SettingsContentSetLanguageEn" event="Click" />
       <EventHandler>
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguageEnglish">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="clientSystem.Action">
-                <Method xsi:type="clientSystem.Action.SetLanguage" value="en" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguagePolish">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.SetLanguage" value="en" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnLeft4SettingsContentSetLanguagePl.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="SettingsPageContent" widgetRefId="btnLeft4SettingsContentSetLanguagePl" event="Click" />
       <EventHandler>
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="clientSystem.Action">
-                <Method xsi:type="clientSystem.Action.SetLanguage" value="pl" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguageEnglish">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLanguagePolish">
-                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.SetLanguage" value="pl" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="SettingsPageContent.btnRigh3SettingsContentSetMeasurementSystemMetric.Click">
