@@ -208,7 +208,7 @@ PROGRAM _CYCLIC
 			//ManualControlPara.PathLimits.Acceleration;
 			//ManualControlPara.PathLimits.Deceleration;
 			//ManualControlPara.PathLimits.Jerk;
-			//ManualControlPara.PathLimits.Velocity;
+			ManualControlPara.PathLimits.Velocity := 1000.0;
 			//ManualControlPara; //main struct to be bound in mapp view
 			IF Communication.ReturnToZero AND ManualControlPara.JogVelocity >= 1.0 THEN //return to Zero function, only works when velocity is greater than 1.0 (otherwise move could not be executed)
 				RoboArm6AxisPara.Position := gRacer3ZeroPosition; //read from PV set during calibration

@@ -1,5 +1,0 @@
-VAR
-	R3AutomaticModePara_Recipe : R3AutomaticModePara;
-	CalibrationParaType_Recipe : CalibrationParaType;
-	MpRecipeXml_0 : MpRecipeXml;
-END_VAR

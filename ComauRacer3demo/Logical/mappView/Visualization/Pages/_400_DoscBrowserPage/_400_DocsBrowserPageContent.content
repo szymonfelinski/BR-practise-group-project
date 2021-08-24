@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="DocsBrowserPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Table" id="Table1" top="60" left="100" width="1083" height="500" zIndex="0">
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="100" left="100" width="1083" height="500" zIndex="0">
       <Widgets>
         <Widget xsi:type="widgets.brease.TableItem" id="tabName" zIndex="0" columnWidth="540" text="$IAT/Browser/File_Name" />
         <Widget xsi:type="widgets.brease.TableItem" id="tabSize" zIndex="1" columnWidth="200" text="$IAT/Browser/File_Size" />
@@ -25,9 +25,10 @@
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnDevice4" top="407" left="10" width="80" height="80" zIndex="3" breakWord="true" draggable="true" multiLine="true" text="$IAT/Browser/Device4" visible="false" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Button" id="btnSort" top="20" left="100" width="420" zIndex="11" text="$IAT/Browser/Do_sort" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFileText" top="20" left="520" width="160" zIndex="12" value="$IAT/Browser/SelectedFile" textAlign="left" fontSize="19px" bold="true" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFile" top="20" left="640" width="620" zIndex="13" value="" textAlign="left" fontSize="19px" bold="true" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSort" top="60" left="100" width="480" zIndex="11" text="$IAT/Browser/Do_sort" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFileText" top="20" left="100" width="160" zIndex="12" value="$IAT/Browser/SelectedFile" textAlign="left" fontSize="19px" bold="true" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtSelectedFile" top="20" left="240" width="940" zIndex="13" value="" textAlign="left" fontSize="19px" bold="true" />
     <Widget xsi:type="widgets.brease.Button" id="btnPDFViewer" top="407" left="1190" width="80" height="80" zIndex="14" multiLine="true" text="$IAT/Browser/PDFViewer" wordWrap="true" fontSize="15px" margin="0px" />
+    <Widget xsi:type="widgets.brease.TextInput" id="txtSearchNewName" top="60" left="640" width="540" zIndex="15" />
   </Widgets>
 </Content>

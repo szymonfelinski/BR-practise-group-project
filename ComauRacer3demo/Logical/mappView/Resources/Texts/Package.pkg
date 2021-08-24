@@ -14,5 +14,6 @@
     <Object Type="File">SystemDialog.tmx</Object>
     <Object Type="Package">Audit</Object>
     <Object Type="File">VisualizationSettingsTexts.tmx</Object>
+    <Object Type="File">UnitTexts.tmx</Object>
   </Objects>
 </Package>

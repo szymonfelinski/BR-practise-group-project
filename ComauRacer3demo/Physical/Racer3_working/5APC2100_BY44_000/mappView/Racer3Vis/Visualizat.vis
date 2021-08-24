@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <vdef:Visualization id="visRacer3" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
-	<StartPage pageRefId="ControlPage" />
+	<StartPage pageRefId="HomePage" />
   <Pages>
-		<Page refId="MainPage"/>
+		<Page refId="HomePage"/>
 		<Page refId="ServicePage"/>
 		<Page refId="AlarmPage"/>
 		<Page refId="ControlPage"/>
@@ -14,7 +14,7 @@
 		<Page refId="ManualControlPage"/>
 		<Page refId="AuditPage"/>
 		<Page refId="UserManagmentPage"/>
-		<Page refId="SDMPage"/>	
+		<Page refId="SDMPage"/>		
 	</Pages>
 	
 	<StartTheme themeRefId="BuRThemeFlat1" />
@@ -55,6 +55,8 @@
 		<EventBindingsSet refId="DialogNewFolderContent_eventbinding" />
 		<EventBindingsSet refId="DialogConfirmContent_eventbinding" />
 		<EventBindingsSet refId="PDFViewerContent_eventbinding" />
+		<EventBindingsSet refId="HomePageContent_eventbinding" />
+		<EventBindingsSet refId="DialogAuditDeleteConfirmContent_eventbinding" />
 	</EventBindingsSets>
   <Dialogs>
 		<Dialog refId="DialogLogin" />
@@ -62,9 +64,10 @@
 		<Dialog refId="DialogNewFolder" />
 		<Dialog refId="DialogConfirm" />
 		<Dialog refId="PDFViewerDialog" />
+		<Dialog refId="DialogAuditDeleteConfirm" />
 	</Dialogs>
   <Contents>
-		<Content refId="MainPageContent" />
+		<Content refId="HomePageContent" />
 		<Content refId="AlarmPageContent" />
 		<Content refId="ServicePageContent" />
 		<Content refId="ControlPageContent" />
@@ -82,6 +85,7 @@
 		<Content refId="PDFViewerContent" />
 		<Content refId="DialogConfirmContent"/>
 		<Content refId="SDMPageContent"/>	
+		<Content refId="DialogAuditDeleteConfirmContent"/>	
 	</Contents>
   <SnippetsSets>
     <!--<SnippetsSet refId=""/>-->

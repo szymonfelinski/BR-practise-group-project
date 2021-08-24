@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="CalibrationPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft1CalibrationContent" top="86" left="10" width="80" height="80" zIndex="0" margin="0px" visible="true" enable="false" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft2CalibrationContentt" top="193" left="10" width="80" height="80" zIndex="1" margin="0px" visible="true" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1CalibrationContent" top="86" left="10" width="80" height="80" zIndex="0" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft2CalibrationContentt" top="193" left="10" width="80" height="80" zIndex="1" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft3CalibrationContent" top="300" left="10" width="80" height="80" zIndex="2" text="-" fontSize="65px" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft4CalibrationContent" top="407" left="10" width="80" height="80" zIndex="3" margin="0px" visible="true" enable="false" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh1CalibrationContent" top="86" left="1190" width="80" height="80" zIndex="4" margin="0px" visible="true" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4CalibrationContent" top="407" left="10" width="80" height="80" zIndex="3" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1CalibrationContent" top="86" left="1190" width="80" height="80" zIndex="4" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh2CalibrationContent" top="193" left="1190" width="80" height="80" zIndex="5" breakWord="true" multiLine="true" text="$IAT/ControlPage/CalibrationControl.Savebtn" bold="true" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3CalibrationContent" top="300" left="1190" width="80" height="80" zIndex="6" text="+" fontSize="60px" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh4CalibrationContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" visible="true" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4CalibrationContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="8" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="9" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="10" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
     <Widget xsi:type="widgets.brease.Label" id="SelectAxisCalibrationPageLabel" top="180" left="460" width="360" zIndex="11" text="$IAT/ControlPage/CalibrationControl.Label" textAlign="center bottom" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="180" left="820" width="300" zIndex="12" maxValue="420" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="180" left="820" width="300" zIndex="12" maxValue="420" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" />
     <Widget xsi:type="widgets.brease.Label" id="Label1" top="140" left="820" width="300" zIndex="13" text="$IAT/ControlPage/ManualControl.JogVelocity" textAlign="center bottom" />
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="300" left="220" width="20" height="20" zIndex="14" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />
     <Widget xsi:type="widgets.brease.Image" id="Image2" top="300" left="380" width="20" height="20" zIndex="15" image="Media/SymbolLib/Symbols/Accept.svg" imageColor="rgba(100, 100, 100, 1)" visible="false" />

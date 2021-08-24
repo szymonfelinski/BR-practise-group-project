@@ -25,10 +25,7 @@
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.AxisButton.Q6" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ6CalibrationControlContent" attribute="value" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.JogVelocity" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="NumericInput1" attribute="value" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.AxisCalibrated[5]" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image6" attribute="visible" />
@@ -70,6 +67,10 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Communication.TextManager.CalibHelper" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="TextOutput1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.JogVelocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="NumericInput1" attribute="node" />
 </Binding>
 </Bindings>
 </BindingsSet>

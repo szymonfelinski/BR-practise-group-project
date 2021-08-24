@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">Localization/Units/User</prop>
+  </header>
+  <body>
+    <tu tuid="4543793.Name">
+      <tuv xml:lang="pl">
+        <seg>ZrywMetryczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>JerkMetric</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Meine Einheit</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Mon unité</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4543793.Sym">
+      <tuv xml:lang="pl">
+        <seg>mm/s³</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>mm/s³</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Einheit</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Unité</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4543793.Desc">
+      <tuv xml:lang="pl">
+        <seg>milimetr na sekundę sześcian</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>millimeter per second cube</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Meine Beschreibung</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Ma description</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4543794.Name">
+      <tuv xml:lang="pl">
+        <seg>ZrywImperialny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>JerkImperial</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4543794.Sym">
+      <tuv xml:lang="pl">
+        <seg>in/s³</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>in/s³</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4543794.Desc">
+      <tuv xml:lang="pl">
+        <seg>cal na sekundę sześcian</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>inch per second cube</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

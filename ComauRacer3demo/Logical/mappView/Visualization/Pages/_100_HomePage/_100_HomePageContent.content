@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="HomePageContent" height="800" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Image" id="ImgHome" top="140" left="385" width="510" height="300" zIndex="0" image="Media/SVGs/b-r-automation-and-williams-f1.png" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txtLogInpls" top="460" left="480" width="320" zIndex="1" value="$IAT/LoginBelow" borderStyle="outset" textAlign="center" fontSize="18px" bold="true" italic="false" underline="false" />
+    <Widget xsi:type="widgets.brease.Login" id="LoginPanel" top="520" left="440" width="400" zIndex="2" autFailMessage="$IAT/LoginAuthorisationFailed" buttonLabel="$IAT/LoginLoginButtonLabelText" passwordLabel="$IAT/LoginPasswordLabelText" setUserFailMessage="$IAT/LoginUserFailMessage" setUserSuccessMessage="$IAT/LoginUserSuccessMessage" userChangedMessage="$IAT/LoginUserChangedMessageText" userLabel="$IAT/LoginUsernameLabelText" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft3SettingsContentSetLanguageEn" top="700" left="20" width="80" height="80" zIndex="3" image="Media/SymbolLib/Localize/united-kingdom.svg" imageHeight="60" imageWidth="60" backColor="rgba(255, 255, 255, 0)" margin="0px" tooltip="$IAT/Visualization/Settings/LanguageEnglishLabel" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4SettingsContentSetLanguagePl" top="700" left="120" width="80" height="80" zIndex="4" image="Media/SymbolLib/Localize/poland.svg" imageHeight="60" imageWidth="60" backColor="rgba(255, 255, 255, 0)" margin="0px" tooltip="$IAT/Visualization/Settings/LanguagePolishLabel" />
+  </Widgets>
+</Content>

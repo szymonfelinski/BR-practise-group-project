@@ -2,59 +2,59 @@
 <Content id="HalfAutoControlPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Button" id="btnLeft1HalfAutoControlContent" top="86" left="10" width="80" height="80" zIndex="0" text="STOP" bold="true" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft3HalfAutoControlContent" top="300" left="10" width="80" height="80" zIndex="1" image="Media/SVGs/Linear%20(1).png" imageHeight="80" imageWidth="80" margin="0px" style="defaultTurnedOn" />
-    <Widget xsi:type="widgets.brease.Button" id="btnLeft4HalfAutoControlContent" top="407" left="10" width="80" height="80" zIndex="2" text="Relative" fontSize="14px" bold="true" margin="0px" style="defaultTurnedOn" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh1HalfAutoControlContent" top="86" left="1190" width="80" height="80" zIndex="3" text="START" bold="true" italic="false" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh3HalfAutoControlContent" top="300" left="1190" width="80" height="80" zIndex="4" image="Media/SVGs/Direct%20(1).png" imageAlign="right" text="Stop" imageHeight="100" imageWidth="85" margin="0px" />
-    <Widget xsi:type="widgets.brease.Button" id="btnRigh4HalfAutoControlContent" top="407" left="1190" width="80" height="80" zIndex="5" text="Absolute" fontSize="13px" bold="true" margin="0px" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1HalfAutoControlContent" top="260" left="160" height="42" zIndex="6" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2HalfAutoControlContent" top="260" left="320" height="42" zIndex="7" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3HalfAutoControlContent" top="260" left="479" height="42" zIndex="8" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ4HalfAutoControlContent" top="260" left="660" height="42" zIndex="9" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ5HalfAutoControlContent" top="260" left="820" height="42" zIndex="10" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ6HalfAutoControlContent" top="260" left="980" zIndex="11" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ1HalfAuto" top="219" left="140" width="120" height="43" zIndex="12" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ2HalfAuto" top="219" left="300" width="120" height="43" zIndex="13" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ3HalfAuto" top="219" left="459" width="118" height="43" zIndex="14" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ4HalfAuto" top="219" left="640" width="120" height="43" zIndex="15" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ5HalfAuto" top="219" left="800" width="120" height="43" zIndex="16" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ6HalfAuto" top="219" left="959" width="118" height="43" zIndex="17" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto7" top="360" left="140" width="120" zIndex="18" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto8" top="360" left="300" width="120" zIndex="19" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto9" top="360" left="459" width="118" zIndex="20" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto10" top="360" left="640" width="120" zIndex="21" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto11" top="360" left="800" width="120" zIndex="22" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto12" top="360" left="959" width="118" zIndex="23" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="24" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" textAlign="center" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="25" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="26" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
-    <Widget xsi:type="widgets.brease.Label" id="Label3" top="180" left="180" width="100" zIndex="27" text="Q1" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="180" left="500" width="100" zIndex="28" text="Q3" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label5" top="180" left="340" width="100" zIndex="29" text="Q2" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label6" top="180" left="680" width="100" zIndex="30" text="Q4" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label7" top="180" left="840" width="100" zIndex="31" text="Q5" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label8" top="180" left="1000" width="100" zIndex="32" text="Q6" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label9" top="380" left="180" width="100" zIndex="33" text="X" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label11" top="380" left="340" width="100" zIndex="34" text="Y" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label12" top="380" left="500" width="100" zIndex="35" text="Z" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label13" top="380" left="680" width="100" zIndex="36" text="A" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label14" top="380" left="840" width="100" zIndex="37" text="B" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.Label" id="Label15" top="380" left="1000" width="100" zIndex="38" text="C" textAlign="center bottom" fontSize="15px" bold="true" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityHalfAutoControlContent" top="520" left="120" width="180" zIndex="39" maxValue="420" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="nmiAccelerationHalfAutoControlContent" top="520" left="399" width="180" zIndex="40" maxValue="750" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="nmiDecelerationHalfAutoControlContent" top="520" left="700" width="180" zIndex="41" maxValue="750" />
-    <Widget xsi:type="widgets.brease.Label" id="txtVelocityHalfAutoControlContent" top="561" left="120" width="180" zIndex="42" text="$IAT/ControlPage/HalfManualControl.Velocity" textAlign="center" bold="false" />
-    <Widget xsi:type="widgets.brease.Label" id="txtAccelerationHalfAutoControlContent" top="561" left="399" width="180" zIndex="43" text="$IAT/ControlPage/HalfManualControl.Acceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="txtDecelerationHalfAutoControlContent" top="561" left="700" width="180" zIndex="44" text="$IAT/ControlPage/HalfManualControl.Deceleration" textAlign="center" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="nmiJerkHalfAutolControlContent1" top="520" left="980" width="180" zIndex="45" maxValue="750" />
-    <Widget xsi:type="widgets.brease.Label" id="txtJerkHalfAutoControlContent" top="561" left="980" width="180" zIndex="46" text="$IAT/ControlPage/HalfManualControl.Jerk" textAlign="center" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1" top="320" left="160" zIndex="47" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2" top="320" left="320" zIndex="48" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3" top="320" left="480" zIndex="49" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ4" top="320" left="660" zIndex="50" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ5" top="320" left="820" zIndex="51" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
-    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ6" top="320" left="980" zIndex="52" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnLeft2HalfAutoControlContent" top="193" left="10" width="80" height="80" zIndex="53" text="ACS" />
     <Widget xsi:type="widgets.brease.ToggleButton" id="btnRigh2HalfAutoControlContent" top="193" left="1190" width="80" height="80" zIndex="54" text="TCS" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft3HalfAutoControlContent" top="300" left="10" width="80" height="80" zIndex="2" image="Media/SVGs/Linear%20(1).png" imageHeight="80" imageWidth="80" margin="0px" style="defaultTurnedOn" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4HalfAutoControlContent" top="407" left="10" width="80" height="80" zIndex="3" text="Relative" fontSize="14px" bold="true" margin="0px" style="defaultTurnedOn" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1HalfAutoControlContent" top="86" left="1190" width="80" height="80" zIndex="4" text="START" bold="true" italic="false" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh3HalfAutoControlContent" top="300" left="1190" width="80" height="80" zIndex="6" image="Media/SVGs/Direct%20(1).png" imageAlign="right" text="Stop" imageHeight="100" imageWidth="85" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh4HalfAutoControlContent" top="407" left="1190" width="80" height="80" zIndex="7" text="Absolute" fontSize="13px" bold="true" margin="0px" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1HalfAutoControlContent" top="260" left="160" height="42" zIndex="8" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2HalfAutoControlContent" top="260" left="320" height="42" zIndex="9" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3HalfAutoControlContent" top="260" left="479" height="42" zIndex="10" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ4HalfAutoControlContent" top="260" left="660" height="42" zIndex="11" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ5HalfAutoControlContent" top="260" left="820" height="42" zIndex="12" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ6HalfAutoControlContent" top="260" left="980" zIndex="13" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ1HalfAuto" top="219" left="140" width="120" height="43" zIndex="14" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ2HalfAuto" top="219" left="300" width="120" height="43" zIndex="15" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ3HalfAuto" top="219" left="459" width="118" height="43" zIndex="16" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ4HalfAuto" top="219" left="640" width="120" height="43" zIndex="17" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ5HalfAuto" top="219" left="800" width="120" height="43" zIndex="18" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoQ6HalfAuto" top="219" left="959" width="118" height="43" zIndex="19" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto7" top="360" left="140" width="120" zIndex="20" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto8" top="360" left="300" width="120" zIndex="21" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto9" top="360" left="459" width="118" zIndex="22" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto10" top="360" left="640" width="120" zIndex="23" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto11" top="360" left="800" width="120" zIndex="24" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto12" top="360" left="959" width="118" zIndex="25" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" bold="true" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="180" width="280" zIndex="26" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="500" width="280" zIndex="27" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="28" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="180" left="180" width="100" zIndex="29" text="Q1" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="180" left="500" width="100" zIndex="30" text="Q3" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="180" left="340" width="100" zIndex="31" text="Q2" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="180" left="680" width="100" zIndex="32" text="Q4" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="180" left="840" width="100" zIndex="33" text="Q5" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="180" left="1000" width="100" zIndex="34" text="Q6" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="380" left="180" width="100" zIndex="35" text="X" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label11" top="380" left="340" width="100" zIndex="36" text="Y" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label12" top="380" left="500" width="100" zIndex="37" text="Z" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label13" top="380" left="680" width="100" zIndex="38" text="A" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label14" top="380" left="840" width="100" zIndex="39" text="B" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label15" top="380" left="1000" width="100" zIndex="40" text="C" textAlign="center bottom" fontSize="15px" bold="true" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="nmiVelocityHalfAutoControlContent" top="520" left="120" width="180" zIndex="41" maxValue="420" unit="{'metric':'C16','imperial':'IU','imperial-us':'IU'}" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="nmiAccelerationHalfAutoControlContent" top="520" left="399" width="180" zIndex="42" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="nmiDecelerationHalfAutoControlContent" top="520" left="700" width="180" zIndex="43" maxValue="750" unit="{'metric':'M41','imperial':'IV','imperial-us':'IV'}" />
+    <Widget xsi:type="widgets.brease.Label" id="txtVelocityHalfAutoControlContent" top="561" left="120" width="180" zIndex="44" text="$IAT/ControlPage/HalfManualControl.Velocity" textAlign="center" bold="false" />
+    <Widget xsi:type="widgets.brease.Label" id="txtAccelerationHalfAutoControlContent" top="561" left="399" width="180" zIndex="45" text="$IAT/ControlPage/HalfManualControl.Acceleration" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="txtDecelerationHalfAutoControlContent" top="561" left="700" width="180" zIndex="46" text="$IAT/ControlPage/HalfManualControl.Deceleration" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="nmiJerkHalfAutolControlContent1" top="520" left="980" width="180" zIndex="47" maxValue="750" unit="{'metric':'http://www.br-automation.com/units|EU1','imperial':'http://www.br-automation.com/units|EU2','imperial-us':'http://www.br-automation.com/units|EU2'}" />
+    <Widget xsi:type="widgets.brease.Label" id="txtJerkHalfAutoControlContent" top="561" left="980" width="180" zIndex="48" text="$IAT/ControlPage/HalfManualControl.Jerk" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ1" top="320" left="160" zIndex="49" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ2" top="320" left="320" zIndex="50" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ3" top="320" left="480" zIndex="51" unit="{'metric':'MMT','imperial':'INH','imperial-us':'INH'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ4" top="320" left="660" zIndex="52" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ5" top="320" left="820" zIndex="53" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="mniQ6" top="320" left="980" zIndex="54" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" enable="false" />
   </Widgets>
 </Content>

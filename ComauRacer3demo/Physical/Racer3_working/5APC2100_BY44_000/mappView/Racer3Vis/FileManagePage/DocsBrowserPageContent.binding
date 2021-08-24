@@ -42,5 +42,9 @@
 <Source xsi:type="opcUa" refId="::FileManage:aux.btnSortStr" attribute="value" />
 <Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="btnSort" attribute="text" />
 </Binding>
+		<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::FileManage:aux.SearchNewName" attribute="value" />
+<Target xsi:type="brease" contentRefId="DocsBrowserPageContent" widgetRefId="txtSearchNewName" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

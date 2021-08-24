@@ -69,26 +69,34 @@
     </tu>
     <tu tuid="ThemeSelectedLabel">
       <tuv xml:lang="pl">
-        <seg>Motyw:</seg>
+        <seg>Tryb nocny:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Theme:</seg>
+        <seg>Night mode:</seg>
       </tuv>
     </tu>
     <tu tuid="ThemeDarkLabel">
       <tuv xml:lang="pl">
-        <seg>Ciemny</seg>
+        <seg>Włączony</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Dark</seg>
+        <seg>ON</seg>
       </tuv>
     </tu>
     <tu tuid="ThemeLightLabel">
       <tuv xml:lang="pl">
-        <seg>Jasny</seg>
+        <seg>Wyłączony</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Light</seg>
+        <seg>OFF</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ChangePwdButton">
+      <tuv xml:lang="pl">
+        <seg>Zmień hasło</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Change password</seg>
       </tuv>
     </tu>
   </body>
