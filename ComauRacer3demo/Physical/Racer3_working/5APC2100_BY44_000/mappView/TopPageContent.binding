@@ -7,5 +7,9 @@
 <Target xsi:type="brease" contentRefId="TopPageContent" widgetRefId="Image1" attribute="visible" />
 </Binding>
 	-->
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:CalibrationStateBtn" attribute="value" />
+<Target xsi:type="brease" contentRefId="TopPageContent" widgetRefId="Image1" attribute="visible" />
+</Binding>
 </Bindings>
 </BindingsSet>
