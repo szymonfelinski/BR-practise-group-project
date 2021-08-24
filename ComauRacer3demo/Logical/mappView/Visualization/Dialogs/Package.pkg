@@ -5,5 +5,6 @@
     <Object Type="Package" Description="AreaContents">AreaContents</Object>
     <Object Type="Package">DialogLogin</Object>
     <Object Type="Package">DocsBrowserDialogs</Object>
+    <Object Type="Package">DialogAuditDeleteConfirm</Object>
   </Objects>
 </Package>
