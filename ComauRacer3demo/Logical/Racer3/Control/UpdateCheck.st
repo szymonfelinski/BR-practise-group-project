@@ -1,6 +1,6 @@
 
 ACTION UpdateCheck: 
-	IF CoordinateSystem THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
+	IF Communication.CoordinateSystem THEN //Coordinate system in ManualControl and SemiAutoControl: 9-global  0-axis
 		ManualControlPara.CoordinateSystem := 9;
 		IF SemiAutoControlPara.CoordinateSystem <> 9 THEN
 			SemiAutoControlPara.CoordinateSystem := 9;

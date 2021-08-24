@@ -63,12 +63,6 @@
           <High ValueProvider="Const">450</High>
         </EURange>
       </EURanges>
-      <EURanges Id="10">
-        <EURange>
-          <Low ValueProvider="Const">10</Low>
-          <High ValueProvider="Const">1295</High>
-        </EURange>
-      </EURanges>
       <EURanges Id="11">
         <EURange>
           <Low ValueProvider="Const">0</Low>
@@ -79,6 +73,12 @@
         <EURange>
           <Low ValueProvider="Const">-170</Low>
           <High ValueProvider="Const">90</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="14">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">1295</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -333,7 +333,7 @@
             <Variable Name="TCS" EnableArrayElements="True">
               <Variable Name="TCS[0]" EURangesId="8" EngineeringUnitId="2" />
               <Variable Name="TCS[1]" EURangesId="9" EngineeringUnitId="2" />
-              <Variable Name="TCS[2]" EURangesId="10" EngineeringUnitId="2" />
+              <Variable Name="TCS[2]" EURangesId="14" EngineeringUnitId="2" />
               <Variable Name="TCS[3]" EURangesId="11" EngineeringUnitId="3" />
               <Variable Name="TCS[4]" EURangesId="11" EngineeringUnitId="3" />
               <Variable Name="TCS[5]" EURangesId="11" EngineeringUnitId="3" />
