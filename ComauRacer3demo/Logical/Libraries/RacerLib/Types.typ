@@ -215,6 +215,10 @@ TYPE
 		BrakesSet : BOOL; (*This variable tells the program if brake parameters have been set.*)
 		ToolOutput : BOOL; (*This variable enables tool control*)
 		ReturnToZero : BOOL; (*This variable allows returning to zero position in manual mode.*)
+		RightCoord : BOOL := FALSE;
+		LeftCoord : BOOL := TRUE;
+		LeftCoordClick : BOOL;
+		RightCoordClick : BOOL;
 	END_STRUCT;
 	R3BrakeStateMachineEnum : 
 		(

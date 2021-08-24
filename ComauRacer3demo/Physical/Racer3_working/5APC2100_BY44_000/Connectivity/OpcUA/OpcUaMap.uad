@@ -428,6 +428,10 @@
           <Variable Name="RestoreAxis5" />
           <Variable Name="CalibrateAgain" />
           <Variable Name="txt_State_out_front" />
+          <Variable Name="RightCoord" />
+          <Variable Name="LeftCoord" />
+          <Variable Name="LeftCoordClick" />
+          <Variable Name="RightCoordClick" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">

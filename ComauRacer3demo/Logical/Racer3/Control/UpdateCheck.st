@@ -35,4 +35,16 @@ ACTION UpdateCheck:
 		SemiAutoControlPara.UpdatePending :=TRUE;
 		Communication.UpdateSemiAutoVars := FALSE;
 	END_IF
+	
+		IF Communication.LeftCoordClick THEN // ACS clicked
+		Communication.CoordinateSystem := NOT Communication.LeftCoord; // false if ACS on, true if TCS
+		Communication.RightCoord := NOT Communication.LeftCoord;
+		Communication.LeftCoordClick := FALSE;
+	END_IF
+	
+	IF Communication.RightCoordClick THEN
+		Communication.CoordinateSystem := Communication.RightCoord; // true if TCS on , false if ACS on
+		Communication.LeftCoord := NOT Communication.RightCoord;
+		Communication.RightCoordClick := FALSE;
+	END_IF
 END_ACTION
