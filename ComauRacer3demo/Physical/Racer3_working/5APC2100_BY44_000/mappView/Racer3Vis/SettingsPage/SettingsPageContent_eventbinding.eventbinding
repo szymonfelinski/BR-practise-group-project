@@ -143,5 +143,147 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_L1" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F2&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeDark">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.ChangeTheme" theme="BuRThemeFlat1" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeLight">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_L2" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F8&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.ChangeTheme" theme="BuRThemeFlat2" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeDark">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtLabelThemeLight">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_L3" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F13&quot;">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.SetLanguage" value="en" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_L4" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F15&quot;">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.SetLanguage" value="pl" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_R2" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F9&quot;">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenChangePasswordDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_R3" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F14&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.SetMeasurementSystem" value="metric" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemImperialLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemMetricLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_R4" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;INSERT&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.SetMeasurementSystem" value="imperial" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemImperialLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="SettingsPageContent" widgetRefId="txtMeasurementSystemMetricLabel">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
