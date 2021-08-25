@@ -5,7 +5,7 @@
     <Widget xsi:type="widgets.brease.Button" id="btnAlarmContentNext" top="300" left="10" width="80" height="80" zIndex="1" image="Media/SymbolLib/Arrow/Forward.svg" imageHeight="60" imageWidth="60" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1AlarmContentAcknowledge" top="193" left="1190" width="80" height="80" zIndex="2" image="Media/SymbolLib/Alarm/Acknowledge.svg" imageHeight="60" imageWidth="60" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4AlarmContentAcknowledgeAll" top="300" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/Alarm/Acknowledge.svg" imageHeight="60" imageWidth="60" margin="0px" />
-    <Widget xsi:type="widgets.brease.AlarmList" id="LstAlarmList" top="20" left="140" width="1000" height="660" zIndex="4" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
+    <Widget xsi:type="widgets.brease.AlarmList" id="LstAlarmList" top="20" left="100" width="1080" height="660" zIndex="4" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
       <Widgets>
         <Widget xsi:type="widgets.brease.AlarmListItem" id="LstAlarmTimestamp" width="320" zIndex="0" columnType="timestamp" text="$IAT/AlarmListItemTimestampText" />
         <Widget xsi:type="widgets.brease.AlarmListItem" id="LstAlarmMsg" width="520" zIndex="1" text="$IAT/AlarmListItemMessageText" />
