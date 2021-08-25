@@ -6,6 +6,7 @@ ACTION CalibrationAction:
 	
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
+			Calibration.Para.Parameters.CalibrationModePara.JogVelocity := 5.0; //default velocity
 			IF RoboArm6Axis.IsHomed AND NOT Communication.ResetHome THEN
 				Calibration.Info.CurrentState := STATE_MOVING; //if a home is set, go directly to manual calibration (perhaps calibration on demand?)
 			ELSE
@@ -15,18 +16,23 @@ ACTION CalibrationAction:
 		STATE_FAKE_HOME:
 			
 			FOR i := 0 TO 5 BY 1 DO
-				Calibration.Para.Positions[i] := 0.0;
+				IF i = 2 THEN
+					Calibration.Para.Positions[i] := -90.0; //axis 3 default position is -90.0 degrees
+				ELSE
+					Calibration.Para.Positions[i] := 0.0;
+				END_IF
+				
 			END_FOR
 										
 			Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Position := Calibration.Para.Positions, HomingMode := Calibration.Para.FakeHomingModeEnum); //this makes the robot think its axes are 0.0
 			IF Calibration.Cmds.GroupHome.Done THEN
 				Calibration.Cmds.GroupHome.Execute := FALSE;
 				Calibration.Cmds.GroupHome();
-				IF Communication.ResetHome THEN
+				IF Communication.ResetHome THEN //if manual homing reset
 					Calibration.Info.CurrentState := STATE_SAVING_POSITION;
 					Communication.ResetHome := FALSE;
 				ELSE
-					Calibration.Info.CurrentState := STATE_MOVING
+					Calibration.Info.CurrentState := STATE_MOVING;
 				END_IF
 				
 			END_IF

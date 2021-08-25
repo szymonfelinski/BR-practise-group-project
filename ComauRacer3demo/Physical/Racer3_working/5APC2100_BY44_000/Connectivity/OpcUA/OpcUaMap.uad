@@ -462,6 +462,7 @@
           <Variable Name="ToolOutput" />
           <Variable Name="BrakeOpen" />
           <Variable Name="BrakeClose" />
+          <Variable Name="ResetHome" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">
