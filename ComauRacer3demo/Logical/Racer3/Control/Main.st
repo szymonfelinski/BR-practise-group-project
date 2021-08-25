@@ -170,21 +170,27 @@ PROGRAM _CYCLIC
 				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			*)
-			IF ControlSelector = ManualJog THEN
-				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
+			(* TODO: Better handling of fake home, do it per axis after each save - IMPORTANT*)
+			IF NOT Communication.ResetHome THEN 
 				
-				State := STATE_MANUAL_CONTROL;
-			ELSIF ControlSelector = SemiAutomatic THEN
-				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="SemiAutoControl", Identifier := 'ControlMode');
-				State := STATE_SEMI_AUTOMATIC;
-			ELSIF ControlSelector = Automatic THEN
-				MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="AutoControl", Identifier := 'ControlMode');
-				State := STATE_AUTOMATIC;
-			ELSE 
-				Communication.txt_State_out:="Ready";
-				Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Ready';
+				IF ControlSelector = ManualJog THEN
+					MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
+					
+					State := STATE_MANUAL_CONTROL;
+				ELSIF ControlSelector = SemiAutomatic THEN
+					MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="SemiAutoControl", Identifier := 'ControlMode');
+					State := STATE_SEMI_AUTOMATIC;
+				ELSIF ControlSelector = Automatic THEN
+					MpAuditWStringChange(MpLink:= gAuditTrailLink, Old :=Communication.txt_State_out,New:="AutoControl", Identifier := 'ControlMode');
+					State := STATE_AUTOMATIC;
+				ELSE 
+					Communication.txt_State_out:="Ready";
+					Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Ready';
+				END_IF
+			ELSE
+				State := STATE_CALIBRATION;
 			END_IF
-						
+			
 			ControlSelector:=Communication.changeModePending;
 			// TODO think what happens when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
 			// maybe do something similar to exit mode in manual
