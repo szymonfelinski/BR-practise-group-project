@@ -27,9 +27,9 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto10" top="457" left="649" width="150" zIndex="23" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto11" top="457" left="812" width="150" zIndex="24" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" textAlign="center" bold="true" />
     <Widget xsi:type="widgets.brease.NumericOutput" id="nmoHalfAuto12" top="457" left="976" width="150" zIndex="25" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" textAlign="center" bold="true" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="86" left="180" width="280" zIndex="26" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" textAlign="center" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="86" left="500" width="280" zIndex="27" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="86" left="820" width="280" zIndex="28" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="86" left="160" width="280" zIndex="26" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" textAlign="center" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="86" left="504" width="280" zIndex="27" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="86" left="849" width="280" zIndex="28" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
     <Widget xsi:type="widgets.brease.Label" id="Label4" top="193" left="486" width="150" zIndex="30" text="Q3" textAlign="center" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label5" top="193" left="323" width="150" zIndex="31" text="Q2" textAlign="center" fontSize="15px" bold="true" />
     <Widget xsi:type="widgets.brease.Label" id="Label6" top="193" left="650" width="150" zIndex="32" text="Q4" textAlign="center" fontSize="15px" bold="true" />
