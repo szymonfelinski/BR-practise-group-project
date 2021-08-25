@@ -34,86 +34,199 @@
     <EventBinding id="ControlPageContent.btnRigh1ControlContent.DisabledClick">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnRigh1ControlContent" event="DisabledClick" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ControlPageContent.btnLeft2ControlContent.DisabledClick">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnLeft2ControlContent" event="DisabledClick" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ControlPageContent.btnRigh2ControlContent.DisabledClick">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnRigh2ControlContent" event="DisabledClick" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ControlPageContent.btnLeft1ControlContent.DisabledClick">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnLeft1ControlContent" event="DisabledClick" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ControlPageContent.btnErrorResetControlPanel.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ControlPageContent" widgetRefId="btnErrorResetControlPanel" event="Click" />
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ControlPageContent" widgetRefId="btnRigh4ControlContent" event="DisabledClick" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="17" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="17" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+    </EventBinding>
+    <EventBinding id="key_press">
+      <Source xsi:type="clientSystem.Event" event="KeyPress" />
+      <EventHandler condition="key=&quot;F7&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F8&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F9&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="3" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F2&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;INSERT&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.temp_value">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="17" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:KeyCheck.value_changed">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>
