@@ -154,7 +154,7 @@
     </EventBinding>
     <EventBinding id="EventBinding_10">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=F13">
+      <EventHandler condition="key=&quot;F13&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -173,9 +173,51 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_12">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F14&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="EventBinding_11">
       <Source xsi:type="clientSystem.Event" event="KeyUp" />
-      <EventHandler condition="key=KEY_F13">
+      <EventHandler condition="key=&quot;F13&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_13">
+      <Source xsi:type="clientSystem.Event" event="KeyUp" />
+      <EventHandler condition="key=&quot;F14&quot;">
         <Sequence>
           <Step order="0">
             <Action>

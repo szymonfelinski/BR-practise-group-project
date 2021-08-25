@@ -65,97 +65,113 @@
     <EventBinding id="HalfAutoControlPageContent.btnLeft3HalfAutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnRigh3HalfAutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnLeft4HalfAutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnRigh4HalfAutoControlContent.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent" event="MouseDown" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
-            <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.nmiVelocityHalfAutoControlContent.ValueChanged" comment="inform that update is needed">
@@ -336,6 +352,170 @@
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="together_keys_down">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F7&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:SemiAutoControlPara.Flag">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F2&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.Stop">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:SemiAutoControlPara.Flag">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F8&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoord">
+                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F9&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoord">
+                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F13&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F14&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.PathSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh3HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F15&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;INSERT&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ModeSystem">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>
