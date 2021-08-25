@@ -3,9 +3,9 @@ PROGRAM _INIT
 	
 	RoboArm6Axis.Enable := TRUE;
 
-	RoboArm6Axis.Override  := 100.0;
+	RoboArm6Axis.Override := 100.0;
 	RoboArm6AxisPara.ProgramName := 'Point.st';    //File stored on FileDevice, default program (Point.st moves TCP to -200, 300, 800)
-	RoboArm6Axis.MpLink     := ADR(gAxesGroupRacer3);
+	RoboArm6Axis.MpLink := ADR(gAxesGroupRacer3);
 	RoboArm6Axis.Parameters := ADR(RoboArm6AxisPara);
 	RoboArm6AxisPara.Acceleration := 1000.0;
 	RoboArm6AxisPara.Deceleration := 1000.0;
@@ -191,7 +191,7 @@ PROGRAM _CYCLIC
 				State := STATE_CALIBRATION;
 			END_IF
 			
-			ControlSelector:=Communication.changeModePending;
+			ControlSelector := Communication.changeModePending;
 			// TODO think what happens when ControlSelector changes in-between init,update,start,go in auto and semiauto and fix it
 			// maybe do something similar to exit mode in manual
 		
@@ -201,18 +201,19 @@ PROGRAM _CYCLIC
 			ManualControlPara.ExitManual:=FALSE;
 			IF ControlSelector = ManualJog AND Communication.changeModePending <> 1 THEN
 				// exit from MANUAL
-				ManualControlPara.ExitManual:=TRUE;
-				ControlSelector:=Communication.changeModePending;
-				State:=STATE_READY;
+				ManualControlPara.ExitManual :=TRUE;
+				ControlSelector := Communication.changeModePending;
+				State := STATE_READY;
 				//Communication.Stop:=FALSE;
 			END_IF
 			IF Communication.Stop THEN
-				ManualControlPara.ExitManual:=TRUE;
-				Communication.Stop:=FALSE;
+				ManualControlPara.ExitManual := TRUE;
+				Communication.Stop := FALSE;
 			END_IF
 		
-			Communication.txt_State_out:="ManualControl";
-			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Manual';
+			Communication.txt_State_out := "ManualControl";
+			Communication.txt_State_out_front := '$$IAT/ControlPage/txt_State_out_front.Manual';
+			RoboArm6Axis.Override := 100.0; //required for Jog
 			//ManualControlPara.PathLimits.Acceleration;
 			//ManualControlPara.PathLimits.Deceleration;
 			//ManualControlPara.PathLimits.Jerk;
@@ -253,6 +254,7 @@ PROGRAM _CYCLIC
 			
 			Communication.txt_State_out:="SemiAutoControl";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.SemiAuto';
+			RoboArm6Axis.Override := 100.0;
 			SemiAutoControl(SemiAutoModePara := SemiAutoControlPara, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara, MainState := State, ControlSelector := ControlSelector);
 		
 		STATE_AUTOMATIC:

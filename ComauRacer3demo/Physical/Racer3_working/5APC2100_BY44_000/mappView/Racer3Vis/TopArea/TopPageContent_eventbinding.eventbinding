@@ -11,5 +11,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="TopPageContent.btnNavigationButtonControlPage.MouseDown">
+      <Source xsi:type="widgets.brease.NavigationButton.Event" contentRefId="TopPageContent" widgetRefId="btnNavigationButtonControlPage" event="MouseDown" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.changeModePending">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
