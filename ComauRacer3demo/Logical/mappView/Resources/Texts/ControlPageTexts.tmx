@@ -361,5 +361,13 @@ to the image and click save</seg>
         <seg>Max velocity</seg>
       </tuv>
     </tu>
+    <tu tuid="HomeResetButton">
+      <tuv xml:lang="pl">
+        <seg>Reset bazowania</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Home reset</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

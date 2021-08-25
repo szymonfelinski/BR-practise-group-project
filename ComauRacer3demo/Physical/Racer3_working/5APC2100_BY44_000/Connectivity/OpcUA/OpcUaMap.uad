@@ -87,22 +87,22 @@
           <High ValueProvider="Const">750</High>
         </EURange>
       </EURanges>
-      <EURanges Id="16">
+      <EURanges Id="18">
         <EURange>
           <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">1000</High>
+          <High ValueProvider="Const">200</High>
         </EURange>
       </EURanges>
-      <EURanges Id="17">
+      <EURanges Id="19">
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">500</High>
         </EURange>
       </EURanges>
-      <EURanges Id="18">
+      <EURanges Id="20">
         <EURange>
           <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">200</High>
+          <High ValueProvider="Const">1000</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -189,9 +189,6 @@
           <Variable Name="X" EngineeringUnitId="2" />
           <Variable Name="Y" EngineeringUnitId="2" />
           <Variable Name="Z" EngineeringUnitId="2" />
-          <Variable Name="A" EngineeringUnitId="3" />
-          <Variable Name="B" EngineeringUnitId="3" />
-          <Variable Name="C" EngineeringUnitId="3" />
           <Variable Name="PathVelocity" />
           <Variable Name="CommandBusy" />
           <Variable Name="CommandAborted" />
@@ -207,6 +204,9 @@
             <Variable Name="pObject" />
             <Variable Name="State" />
           </Variable>
+          <Variable Name="A" />
+          <Variable Name="B" />
+          <Variable Name="C" />
         </Variable>
         <Variable Name="ControlSelector" />
         <Variable Name="ManualControl">
@@ -306,11 +306,11 @@
           </Variable>
           <Variable Name="CoordinateSystem" />
           <Variable Name="JogVelocity" EURangesId="18" EngineeringUnitId="1" />
-          <Variable Name="PathLimits">
-            <Variable AuditEvents="True" Name="Velocity" EURangesId="16" EngineeringUnitId="1" />
-            <Variable Name="Acceleration" EURangesId="16" EngineeringUnitId="2" />
-            <Variable Name="Deceleration" EURangesId="16" EngineeringUnitId="2" />
-            <Variable Name="Jerk" EURangesId="17" EngineeringUnitId="5" />
+          <Variable Name="PathLimits" AutomaticEnable="True">
+            <Variable Name="Velocity" EURangesId="19" />
+            <Variable Name="Acceleration" EURangesId="20" />
+            <Variable Name="Deceleration" EURangesId="20" />
+            <Variable Name="Jerk" EURangesId="18" />
           </Variable>
           <Variable Name="ActivateMove" />
           <Variable Name="Direction" />
