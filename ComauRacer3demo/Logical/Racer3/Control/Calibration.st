@@ -1,8 +1,12 @@
 
 ACTION CalibrationAction:
+	IF Communication.ResetHome THEN
+		Calibration.Info.CurrentState := STATE_FAKE_HOME;
+	END_IF
+	
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
-			IF RoboArm6Axis.IsHomed THEN
+			IF RoboArm6Axis.IsHomed AND NOT Communication.ResetHome THEN
 				Calibration.Info.CurrentState := STATE_MOVING; //if a home is set, go directly to manual calibration (perhaps calibration on demand?)
 			ELSE
 				Calibration.Info.CurrentState := STATE_FAKE_HOME; //otherwise set a fake home
@@ -14,9 +18,13 @@ ACTION CalibrationAction:
 				Calibration.Para.Positions[i] := RoboArm6Axis.Info.JointAxisPosition[i];
 			END_FOR
 										
-			Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Position := Calibration.Para.Positions, HomingMode := Calibration.Para.FakeHomingModeEnum);
+			Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Position := Calibration.Para.Positions, HomingMode := Calibration.Para.FakeHomingModeEnum); //this makes the robot think its axes are 0.0
 			IF Calibration.Cmds.GroupHome.Done THEN
+				Calibration.Cmds.GroupHome.Execute := FALSE;
+				Calibration.Cmds.GroupHome();
+				Communication.ResetHome := FALSE;
 				Calibration.Info.CurrentState := STATE_MOVING;
+				
 			END_IF
 						
 		STATE_MOVING:
@@ -25,8 +33,8 @@ ACTION CalibrationAction:
 			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Deceleration := 1000.0;
 			//CalibrationModePara.CalibrationModePara.PathLimits.Jerk := 1000.0; //no need to limit jerk
 			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Velocity := 100.0;
-			Calibration.Para.Parameters.Axis5To6Para.Axis5Angle := 118.0; //angle defined in calibration pdf (see page 100 of _lb-rc-RACER3-STM_en)
-			Calibration.Para.Parameters.Axis5To6Para.Axis5Velocity := 50.0; //use low velocity for moving axis 5 for calibrating axis 6
+			Calibration.Para.Parameters.Axis5To6Para.Axis5Angle := -118.0; //angle defined in calibration pdf (see page 100 of _lb-rc-RACER3-STM_en)
+			Calibration.Para.Parameters.Axis5To6Para.Axis5Velocity := Calibration.Para.Parameters.CalibrationModePara.JogVelocity; //use low velocity for moving axis 5 for calibrating axis 6
 			Calibration.Para.Parameters.CalibrationModePara.CoordinateSystem := 0; //set axis coordinate system for calibration
 			//CalibrationModePara.CalibrationState := STATE_START; //reset calibration state everytime after jog
 			

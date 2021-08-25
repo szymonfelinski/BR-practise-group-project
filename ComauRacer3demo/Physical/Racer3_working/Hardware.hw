@@ -3,6 +3,11 @@
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="5ACCIF01.FPSC-000" Type="5ACCIF01.FPSC-000" Version="1.9.0.3">
     <Connection Connector="SL" TargetModule="5APC2100_BY44_000" TargetConnector="SL1" />
+    <Connector Name="IF1">
+      <Group ID="Channel1" />
+      <Parameter ID="ChannelID1" Value="McAcpBroadcast" />
+      <Parameter ID="ChannelType1" Value="OCTET[96]" />
+    </Connector>
   </Module>
   <Module Name="5ACCLI01.SDL0-000" Type="5ACCLI01.SDL0-000" Version="2.0.0.0">
     <Connection Connector="SL" TargetModule="5APC2100_BY44_000" TargetConnector="SL2" />
@@ -31,24 +36,29 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="ComauRacer3demo_czysty_racer3" />
+    <Parameter ID="UserPartitionSize" Value="128" />
+    <Parameter ID="AutomaticTransferOfUserfiles" Value="on" />
     <Parameter ID="RemMemDevice" Value="PCI.1.PPC21xx.SRAM" />
     <Parameter ID="RemMemSize" Value="2048" />
     <Parameter ID="PermanentPvSize" Value="768" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="5ACCIF01.FPSC-000.IF1" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
+    <Parameter ID="Cyclic1Duration" Value="2000" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic1Output" Value="1" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="CNC_PrgDir" />
-    <Parameter ID="FileDevicePath1" Value="D:\CNC_PrgDir\" Description="For HW config use D:\CNC_PrgDir\" />
+    <Parameter ID="FileDevicePath1" Value="F:\CNC_PrgDir" Description="For HW config use D:\CNC_PrgDir\" />
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="AUDIT" />
-    <Parameter ID="FileDevicePath2" Value="C:\Temp\Audit" />
+    <Parameter ID="FileDevicePath2" Value="F:\Audit" />
     <Group ID="FileDevice3" />
     <Parameter ID="FileDeviceName3" Value="UserPart" />
-    <Parameter ID="FileDevicePath3" Value="F:\Temp\UserPart\" Description="For HW config use F:\" />
+    <Parameter ID="FileDevicePath3" Value="F:\UserPart\" Description="For HW config use F:\" />
     <Group ID="FileDevice4" />
     <Parameter ID="FileDeviceName4" Value="RECIPE" />
-    <Parameter ID="FileDevicePath4" Value="C:\Temp\Recipe" />
+    <Parameter ID="FileDevicePath4" Value="F:\Recipe" />
     <Parameter ID="TimeZone" Value="160" />
     <Parameter ID="ActivateDaylightSavingTime" Value="1" />
     <Group ID="FtpUser1" />
@@ -56,7 +66,6 @@
     <Parameter ID="FtpUserPassword1" Value="dPVRvIP+UG4zebJ0O0hf643aLF5yFibVmkrUfiZ9rkg=" />
     <Parameter ID="FtpUserSalt1" Value="Grtq2ClC" />
     <Parameter ID="FTPAccessRight1" Value="0" />
-    <Parameter ID="FTPMSPartition1" Value="DATA" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaActivateAuditEvents" Value="1" />
     <Parameter ID="OpcUa_Security_AdminRole" Value="Everyone" />
