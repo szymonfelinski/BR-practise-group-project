@@ -170,7 +170,8 @@ PROGRAM _CYCLIC
 				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			*)
-			IF NOT Communication.ResetHome THEN
+			(* TODO: Better handling of fake home, do it per axis after each save - IMPORTANT*)
+			IF NOT Communication.ResetHome THEN 
 				
 				IF ControlSelector = ManualJog THEN
 					MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
