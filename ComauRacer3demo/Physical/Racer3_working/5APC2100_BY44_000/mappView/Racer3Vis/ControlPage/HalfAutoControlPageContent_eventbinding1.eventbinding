@@ -335,7 +335,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnLeft2HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent" event="MouseUp" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
@@ -345,7 +345,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="HalfAutoControlPageContent.btnRigh2HalfAutoControlContent.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh2HalfAutoControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh2HalfAutoControlContent" event="MouseUp" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">

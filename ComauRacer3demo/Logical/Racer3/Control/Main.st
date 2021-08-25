@@ -50,6 +50,11 @@ PROGRAM _CYCLIC
 		State:= STATE_READY;
 	END_IF
 	*)
+	
+	IF Communication.WarmRestart THEN
+		Communication.WarmRestart := FALSE;
+		SYSreset(1,1);
+	END_IF
 	UpdateCheck;
 	
 	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES

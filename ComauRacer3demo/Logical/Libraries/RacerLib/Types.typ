@@ -223,6 +223,7 @@ TYPE
 		LeftCoordClick : BOOL;
 		RightCoordClick : BOOL;
 		ResetHome : BOOL;
+		WarmRestart : BOOL := FALSE;
 	END_STRUCT;
 	R3BrakeStateMachineEnum : 
 		(
