@@ -9,7 +9,7 @@
           <Group ID="Translation">
             <Property ID="X" Value="-190" />
             <Property ID="Y" Value="-470" />
-            <Property ID="Z" Value="-1" />
+            <Property ID="Z" Value="20" />
           </Group>
           <Group ID="Orientation">
             <Property ID="Angle1" Value="0.0" />

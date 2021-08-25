@@ -72,9 +72,7 @@
           <Property ID="CCoordinateName" Value="C" />
         </Selector>
         <Selector ID="WireFrameModel" Value="Standard">
-          <Selector ID="Q1ToQ2" Value="ConnectionLine">
-            <Property ID="Distance" Value="10" />
-          </Selector>
+          <Selector ID="Q1ToQ2" Value="NotUsed" />
           <Selector ID="Q2ToQ3" Value="ConnectionLine">
             <Property ID="Distance" Value="12" />
           </Selector>

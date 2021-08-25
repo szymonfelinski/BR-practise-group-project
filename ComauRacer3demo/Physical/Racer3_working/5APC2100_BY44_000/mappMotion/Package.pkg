@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">Hierarchy.objecthierarchy</Object>
     <Object Type="Package">ComauRacer3</Object>
+    <Object Type="File">Config_1.tool</Object>
   </Objects>
 </Package>
