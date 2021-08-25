@@ -41,5 +41,45 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="R2_Alarm" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F9&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
+            <Method xsi:type="widgets.brease.AlarmList.Action.Acknowledge" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="R3_Alarm" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F14&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
+            <Method xsi:type="widgets.brease.AlarmList.Action.AcknowledgeAll" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="L2_Alarm" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F8&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
+            <Method xsi:type="widgets.brease.AlarmList.Action.GoToPreviousPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="L3_Alarm" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F13&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
+            <Method xsi:type="widgets.brease.AlarmList.Action.GoToNextPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
