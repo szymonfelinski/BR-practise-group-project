@@ -76,7 +76,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[0] := TRUE;
-				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[0]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
+				CalibrationPara.InitHome(Axis := ADR(CalibrationPara.AxesRef[0]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
 				CalibrationPara.SavedPositions[0] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
@@ -98,7 +98,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[1] := TRUE;
-				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[1]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
+				CalibrationPara.InitHome(Axis := ADR(CalibrationPara.AxesRef[1]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
 				CalibrationPara.SavedPositions[1] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
@@ -120,7 +120,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[2] := TRUE;
 				CalibrationPara.InitHomePara.Position := -90.0;
-				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[2]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
+				CalibrationPara.InitHome(Axis := ADR(CalibrationPara.AxesRef[2]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
 				CalibrationPara.SavedPositions[2] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
@@ -141,7 +141,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[3] := TRUE;
-				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[3]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
+				CalibrationPara.InitHome(Axis := ADR(CalibrationPara.AxesRef[3]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
 				CalibrationPara.SavedPositions[3] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
@@ -162,7 +162,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[4] := TRUE;
-				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[4]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
+				CalibrationPara.InitHome(Axis := ADR(CalibrationPara.AxesRef[4]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
 				CalibrationPara.SavedPositions[4] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
@@ -206,7 +206,7 @@ FUNCTION_BLOCK R3CalibrationMode
 				
 					IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 						CalibrationPara.AxisCalibrated[5] := TRUE;
-						Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[5]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
+						CalibrationPara.InitHome(Axis := ADR(CalibrationPara.AxesRef[5]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
 						CalibrationPara.SavedPositions[5] := CalibrationPara.InitHomePara.Position;
 						RoboArm.Jog := FALSE;
 						CalibrationPara.AxisSaveBtn := FALSE;
