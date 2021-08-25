@@ -9,16 +9,16 @@
     <Widget xsi:type="widgets.brease.Button" id="btnRigh2ControlContent" top="193" left="1190" width="80" height="80" zIndex="5" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh3ControlContent" top="300" left="1190" width="80" height="80" zIndex="6" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh4ControlContent" top="407" left="1190" width="80" height="80" zIndex="7" margin="0px" enable="false" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="193" left="460" width="342" zIndex="8" pageId="CaibrationPage" text="$IAT/ControlPage/Control.Calibration" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="60" left="182" width="280" zIndex="9" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="60" left="499" width="280" zIndex="10" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="60" left="820" width="280" zIndex="11" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="300" left="459" width="340" zIndex="12" text="$IAT/ControlPage/ControlPage.PowerON" />
-    <Widget xsi:type="widgets.brease.Image" id="Image1" top="140" left="610" width="40" height="40" zIndex="13" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" visible="false" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="407" left="459" width="340" zIndex="14" text="$IAT/ControlPage/Control.ErrorReset" />
-    <Widget xsi:type="widgets.brease.Image" id="Image2" top="39" left="100" width="1078" height="580" zIndex="15" image="Media/calibration/calb_axis_A.png" visible="false" />
-    <Widget xsi:type="widgets.brease.Image" id="Image3" top="439" left="819" width="460" height="280" zIndex="16" image="Media/calibration/calib_axis_B.png" visible="false" />
-    <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="514" left="621" width="160" height="60" zIndex="17" multiLine="true" wordWrap="true" textAlign="center" />
-    <Widget xsi:type="widgets.brease.Label" id="Label_current_state" top="514" left="479" width="140" height="60" zIndex="18" text="$IAT/ControlPage/ControlPage.Current" textAlign="center" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationCalibrationControlContent" top="193" left="473" width="342" zIndex="8" pageId="CaibrationPage" text="$IAT/ControlPage/Control.Calibration" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationAutoControlContent" top="86" left="160" width="280" zIndex="9" pageId="AutoControlPage" text="$IAT/ControlPage/ControlNaviogation.Auto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationHalfAutoControlContent" top="86" left="504" width="280" zIndex="10" pageId="HalfAutoControlPage" text="$IAT/ControlPage/ControlNavigation.HalfAuto" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="btnNavigationManualControlContent" top="86" left="849" width="280" zIndex="11" pageId="ManualControlPage" text="$IAT/ControlPage/ControlNavigation..Manual" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="300" left="474" width="340" zIndex="12" text="$IAT/ControlPage/ControlPage.PowerON" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="140" left="624" width="40" height="40" zIndex="13" image="Media/SymbolLib/Arrow/ArrowDown.svg" backColor="rgba(255, 255, 255, 0)" visible="false" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="btnErrorResetControlPanel" top="407" left="474" width="340" zIndex="14" text="$IAT/ControlPage/Control.ErrorReset" />
+    <Widget xsi:type="widgets.brease.Image" id="Image2" top="39" left="100" width="1078" height="580" zIndex="18" image="Media/calibration/calb_axis_A.png" visible="false" />
+    <Widget xsi:type="widgets.brease.Image" id="Image3" top="439" left="820" width="460" height="280" zIndex="17" image="Media/calibration/calib_axis_B.png" visible="false" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="txt_StateOut" top="514" left="654" width="160" height="60" zIndex="15" multiLine="true" wordWrap="true" textAlign="right" />
+    <Widget xsi:type="widgets.brease.Label" id="Label_current_state" top="514" left="474" width="166" height="60" zIndex="16" text="$IAT/ControlPage/ControlPage.Current" textAlign="left" fontSize="16px" />
   </Widgets>
 </Content>
