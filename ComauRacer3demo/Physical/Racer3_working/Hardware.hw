@@ -3,6 +3,11 @@
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="5ACCIF01.FPSC-000" Type="5ACCIF01.FPSC-000" Version="1.9.0.3">
     <Connection Connector="SL" TargetModule="5APC2100_BY44_000" TargetConnector="SL1" />
+    <Connector Name="IF1">
+      <Group ID="Channel1" />
+      <Parameter ID="ChannelID1" Value="McAcpBroadcast" />
+      <Parameter ID="ChannelType1" Value="OCTET[96]" />
+    </Connector>
   </Module>
   <Module Name="5ACCLI01.SDL0-000" Type="5ACCLI01.SDL0-000" Version="2.0.0.0">
     <Connection Connector="SL" TargetModule="5APC2100_BY44_000" TargetConnector="SL2" />
@@ -12,15 +17,17 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
       <Parameter ID="ActivateDevice" Value="1" />
       <Parameter ID="Mode" Value="Manual" />
-      <Parameter ID="InternetAddress" Value="192.168.0.111" />
+      <Parameter ID="InternetAddress" Value="192.168.0.100" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Connector Name="IF4">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
       <Parameter ID="ActivateDevice" Value="1" />
       <Parameter ID="Mode" Value="Manual" />
-      <Parameter ID="InternetAddress" Value="192.168.1.111" />
+      <Parameter ID="InternetAddress" Value="192.168.1.100" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Connector Name="IF5">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
@@ -29,24 +36,30 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="ComauRacer3demo_czysty_racer3" />
+    <Parameter ID="UserPartitionSize" Value="128" />
+    <Parameter ID="AutomaticTransferOfUserfiles" Value="on" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="RemMemDevice" Value="PCI.1.PPC21xx.SRAM" />
     <Parameter ID="RemMemSize" Value="2048" />
     <Parameter ID="PermanentPvSize" Value="768" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="5ACCIF01.FPSC-000.IF1" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
+    <Parameter ID="Cyclic1Duration" Value="2000" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic1Output" Value="1" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="CNC_PrgDir" />
-    <Parameter ID="FileDevicePath1" Value="C:\CNC_PrgDir\" Description="For HW config use D:\CNC_PrgDir\" />
+    <Parameter ID="FileDevicePath1" Value="F:\CNC_PrgDir" Description="For HW config use D:\CNC_PrgDir\" />
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="AUDIT" />
-    <Parameter ID="FileDevicePath2" Value="C:\Temp\Audit" />
+    <Parameter ID="FileDevicePath2" Value="F:\Audit" />
     <Group ID="FileDevice3" />
     <Parameter ID="FileDeviceName3" Value="UserPart" />
-    <Parameter ID="FileDevicePath3" Value="C:\Temp\UserPart\" Description="For HW config use F:\" />
+    <Parameter ID="FileDevicePath3" Value="F:\UserPart\" Description="For HW config use F:\" />
     <Group ID="FileDevice4" />
     <Parameter ID="FileDeviceName4" Value="RECIPE" />
-    <Parameter ID="FileDevicePath4" Value="C:\Temp\Recipe" />
+    <Parameter ID="FileDevicePath4" Value="F:\Recipe" />
     <Parameter ID="TimeZone" Value="160" />
     <Parameter ID="ActivateDaylightSavingTime" Value="1" />
     <Group ID="FtpUser1" />
@@ -54,7 +67,6 @@
     <Parameter ID="FtpUserPassword1" Value="dPVRvIP+UG4zebJ0O0hf643aLF5yFibVmkrUfiZ9rkg=" />
     <Parameter ID="FtpUserSalt1" Value="Grtq2ClC" />
     <Parameter ID="FTPAccessRight1" Value="0" />
-    <Parameter ID="FTPMSPartition1" Value="DATA" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaActivateAuditEvents" Value="1" />
     <Parameter ID="OpcUa_Security_AdminRole" Value="Everyone" />
@@ -69,14 +81,17 @@
     <Parameter ID="VncPortNumber" Value="5901" />
   </Module>
   <Module Name="8EI8X8MWT10.0100-1" Type="8EI8X8MWT10.0100-1" Version="2.3.0.3">
-    <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2" NodeNumber="2">
+    <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2" NodeNumber="4">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0500-1" TargetConnector="PLK1" NodeNumber="2">
+    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0500-1" TargetConnector="PLK1" NodeNumber="4">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ1" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="81818" />
@@ -217,11 +232,14 @@
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="NotUsed" />
   </Module>
   <Module Name="8EI8X8MWT10.0500-1" Type="8EI8X8MWT10.0500-1" Version="2.3.0.3">
-    <Connection Connector="PLK1" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK2">
+    <Connection Connector="PLK1" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK2" NodeNumber="5">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ2" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="80" />
@@ -363,10 +381,10 @@
   </Module>
   <Module Name="X20BB80a" Type="X20BB80" Version="1.1.0.0" />
   <Module Name="X20BC0083" Type="X20BC0083" Version="2.12.0.0">
-    <Connection Connector="PLK1" TargetModule="5ACCIF01.FPSC-000" TargetConnector="IF1" NodeNumber="1">
+    <Connection Connector="PLK1" TargetModule="5ACCIF01.FPSC-000" TargetConnector="IF1" NodeNumber="3">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK1" NodeNumber="1">
+    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK1" NodeNumber="3">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Connection Connector="SL" TargetModule="X20BB80a" TargetConnector="SL1" />

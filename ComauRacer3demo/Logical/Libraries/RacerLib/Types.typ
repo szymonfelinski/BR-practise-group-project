@@ -58,7 +58,7 @@ TYPE
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
 		Direction : INT; (*Stores which direction should the axis be moved (1 - POSITIVE, -1 - NEGATIVE)*)
-		JogVelocity : REAL := 50; (*Stores the velocity of axis*)
+		JogVelocity : REAL := 20; (*Stores the velocity of axis*)
 		PathLimits : McJogPathLimitsType; (*Stores set limits of acceleration and deceleration, velocity and jerk*)
 		ActivateMove : BOOL; (*Enables or disables current move execution*)
 		ExitManual : BOOL; (*Exits Manual Mode on True*)
@@ -96,6 +96,7 @@ TYPE
 		AxisSaveBtn : BOOL; (*Button to save current position as calibrated*)
 		Axis5To6Para : R3Axis5To6Type; (*Stores axis 5 settings for axis 6 calibration*)
 		SavedPositions : ARRAY[0..5]OF LREAL;
+		InitHome : MC_BR_InitHome_AcpAx; (*Used to init home positions after each save*)
 	END_STRUCT;
 	R3CalibrationStateEnum : 
 		(
@@ -218,6 +219,7 @@ TYPE
 		LeftCoord : BOOL := TRUE;
 		LeftCoordClick : BOOL;
 		RightCoordClick : BOOL;
+		ResetHome : BOOL;
 	END_STRUCT;
 	R3BrakeStateMachineEnum : 
 		(
