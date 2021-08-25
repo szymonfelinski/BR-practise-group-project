@@ -105,6 +105,12 @@
           <High ValueProvider="Const">1000</High>
         </EURange>
       </EURanges>
+      <EURanges Id="21">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">100</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="4403510" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millimetre per second" Symbol="mm/s" />
@@ -171,7 +177,7 @@
           <Variable Name="ErrorReset" />
           <Variable Name="Parameters" />
           <Variable Name="Update" />
-          <Variable Name="Override" />
+          <Variable Name="Override" EURangesId="21" />
           <Variable Name="Power" />
           <Variable Name="Home" />
           <Variable Name="MoveProgram" />
