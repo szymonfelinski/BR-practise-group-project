@@ -22,8 +22,12 @@ ACTION CalibrationAction:
 			IF Calibration.Cmds.GroupHome.Done THEN
 				Calibration.Cmds.GroupHome.Execute := FALSE;
 				Calibration.Cmds.GroupHome();
-				Communication.ResetHome := FALSE;
-				Calibration.Info.CurrentState := STATE_MOVING;
+				IF Communication.ResetHome THEN
+					Calibration.Info.CurrentState := STATE_SAVING_POSITION;
+					Communication.ResetHome := FALSE;
+				ELSE
+					Calibration.Info.CurrentState := STATE_MOVING
+				END_IF
 				
 			END_IF
 						
