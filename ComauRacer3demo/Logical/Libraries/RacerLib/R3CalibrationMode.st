@@ -6,8 +6,10 @@ not resetting ActivateMove might result in damage to physical system! *)
 FUNCTION_BLOCK R3CalibrationMode
 	CalibrationPara.InitHomePara.Position := 0.0; //this is non-zero only for Axis 3
 	CalibrationPara.InitHomePara.HomingMode := mcHOMING_DIRECT; //this saves current position as value 'Position'
-	CalibrationPara.InitHome(Execute := FALSE);
-	
+	IF CalibrationPara.InitHome.Done THEN
+		CalibrationPara.InitHome(Execute := FALSE);
+	END_IF
+		
 	IF CalibrationPara.CalibrationModePara.Direction = 1 THEN // set actual axis velocity based on which direction it's set to be moved
 		
 		JogVelocityActual := CalibrationPara.CalibrationModePara.JogVelocity;
@@ -75,7 +77,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[0] := TRUE;
 				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[0]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
-				CalibrationPara.SavedPositions[0] := RoboArm.Info.JointAxisPosition[0];
+				CalibrationPara.SavedPositions[0] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -97,7 +99,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[1] := TRUE;
 				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[1]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
-				CalibrationPara.SavedPositions[1] := RoboArm.Info.JointAxisPosition[1];
+				CalibrationPara.SavedPositions[1] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -119,7 +121,7 @@ FUNCTION_BLOCK R3CalibrationMode
 				CalibrationPara.AxisCalibrated[2] := TRUE;
 				CalibrationPara.InitHomePara.Position := -90.0;
 				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[2]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
-				CalibrationPara.SavedPositions[2] := RoboArm.Info.JointAxisPosition[2];
+				CalibrationPara.SavedPositions[2] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -140,7 +142,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[3] := TRUE;
 				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[3]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
-				CalibrationPara.SavedPositions[3] := RoboArm.Info.JointAxisPosition[3];
+				CalibrationPara.SavedPositions[3] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -161,7 +163,7 @@ FUNCTION_BLOCK R3CalibrationMode
 			IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 				CalibrationPara.AxisCalibrated[4] := TRUE;
 				Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[4]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
-				CalibrationPara.SavedPositions[4] := RoboArm.Info.JointAxisPosition[4];
+				CalibrationPara.SavedPositions[4] := CalibrationPara.InitHomePara.Position;
 				RoboArm.Jog := FALSE;
 				CalibrationPara.AxisSaveBtn := FALSE;
 			END_IF
@@ -205,7 +207,7 @@ FUNCTION_BLOCK R3CalibrationMode
 					IF CalibrationPara.AxisSaveBtn THEN //set Calibrated flag for given axis if AxisSaveBtn flag is set
 						CalibrationPara.AxisCalibrated[5] := TRUE;
 						Calibration.Cmds.InitHome(Axis := ADR(CalibrationPara.AxesRef[5]), Execute := TRUE, HomingParameters := CalibrationPara.InitHomePara);
-						CalibrationPara.SavedPositions[5] := RoboArm.Info.JointAxisPosition[5];
+						CalibrationPara.SavedPositions[5] := CalibrationPara.InitHomePara.Position;
 						RoboArm.Jog := FALSE;
 						CalibrationPara.AxisSaveBtn := FALSE;
 					END_IF
