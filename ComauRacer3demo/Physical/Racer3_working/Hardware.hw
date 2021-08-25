@@ -29,7 +29,6 @@
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="ComauRacer3demo_czysty_racer3" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="RemMemDevice" Value="PCI.1.PPC21xx.SRAM" />
     <Parameter ID="RemMemSize" Value="2048" />
     <Parameter ID="PermanentPvSize" Value="768" />
