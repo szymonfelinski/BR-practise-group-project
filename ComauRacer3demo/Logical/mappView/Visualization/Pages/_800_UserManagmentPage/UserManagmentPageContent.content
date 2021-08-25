@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="UserManagmentPageContent" height="700" width="1280" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.UserList" id="LstUserList" top="20" left="140" width="1020" height="660" zIndex="0" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
+    <Widget xsi:type="widgets.brease.UserList" id="LstUserList" top="20" left="100" width="1080" height="660" zIndex="0" itemsPerPage="12" nextText="$IAT/AlarmListNextText" previousText="$IAT/AlarmListPreviousText">
       <Widgets>
         <Widget xsi:type="widgets.brease.UserListItem" id="LstUserName" zIndex="0" text="$IAT/UserListName" />
-        <Widget xsi:type="widgets.brease.UserListItem" id="LstUserFullName" zIndex="1" columnType="FullName" text="$IAT/UserListFullname" />
-        <Widget xsi:type="widgets.brease.UserListItem" id="LstUserIsAdmin" zIndex="2" columnType="IsAdmin" text="$IAT/UserListIsAdmin" />
-        <Widget xsi:type="widgets.brease.UserListItem" id="LstUserLastLog" zIndex="3" columnType="LastLogin" text="$IAT/UserListLastLogin" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="LstUserFullName" width="260" zIndex="1" columnType="FullName" text="$IAT/UserListFullname" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="LstUserIsAdmin" width="140" zIndex="2" columnType="IsAdmin" text="$IAT/UserListIsAdmin" />
+        <Widget xsi:type="widgets.brease.UserListItem" id="LstUserLastLog" width="280" zIndex="3" columnType="LastLogin" text="$IAT/UserListLastLogin" />
         <Widget xsi:type="widgets.brease.UserListItem" id="LstUserRoles" zIndex="4" columnType="Roles" text="$IAT/UserListRole" />
       </Widgets>
     </Widget>
@@ -14,10 +14,9 @@
     <Widget xsi:type="widgets.brease.Button" id="btn3UserManagmenContentNext" top="300" left="10" width="80" height="80" zIndex="2" image="Media/SymbolLib/Arrow/Forward.svg" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnUserManagmentAddUser" top="407" left="1190" width="80" height="80" zIndex="3" image="Media/SymbolLib/Edit/Add.svg" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnUserManagmentDeleteUser" top="193" left="1190" width="80" height="80" zIndex="4" image="Media/SymbolLib/Edit/Delete.svg" margin="0px" />
-	<Widget xsi:type="widgets.brease.Button" id="btnUserManagmentEditUser" top="300" left="1190" width="80" height="80" zIndex="5" image="Media/SymbolLib/Edit/Edit.svg" margin="0px" />
-	<Widget xsi:type="widgets.brease.Button" id="btnLeft1UserManagentPageContent" top="86" left="10" width="80" height="80" zIndex="6" margin="0px" visible="true" enable="false" />
-	<Widget xsi:type="widgets.brease.Button" id="btnLeft4UserManagentPageContent" top="407" left="10" width="80" height="80" zIndex="7" margin="0px" visible="true" enable="false" />
-	<Widget xsi:type="widgets.brease.Button" id="btnRigh1UserManagentPageContent" top="86" left="1190" width="80" height="80" zIndex="8" margin="0px" visible="true" enable="false" />
-	
+    <Widget xsi:type="widgets.brease.Button" id="btnUserManagmentEditUser" top="300" left="1190" width="80" height="80" zIndex="5" image="Media/SymbolLib/Edit/Edit.svg" margin="0px" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft1UserManagentPageContent" top="86" left="10" width="80" height="80" zIndex="6" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnLeft4UserManagentPageContent" top="407" left="10" width="80" height="80" zIndex="7" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnRigh1UserManagentPageContent" top="86" left="1190" width="80" height="80" zIndex="8" margin="0px" enable="false" />
   </Widgets>
 </Content>
