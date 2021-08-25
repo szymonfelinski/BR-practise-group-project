@@ -36,6 +36,8 @@
 		<BindingsSet refId="ControlPageContent_binding"/>
 		<BindingsSet refId="CalibrationPageContent_binding"/>
 		<BindingsSet refId="TopPageContent_binding"/>
+		<BindingsSet refId="AutoControlPageContent_binding"/>
+		
   </BindingsSets>
 
   <EventBindingsSets>

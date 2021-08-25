@@ -160,5 +160,13 @@
         <seg>Language</seg>
       </tuv>
     </tu>
+    <tu tuid="OverrideLabel">
+      <tuv xml:lang="pl">
+        <seg>Prędkość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

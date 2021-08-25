@@ -30,5 +30,8 @@
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight51AutoControlContent" top="514" left="1100" width="80" height="80" zIndex="26" breakWord="true" multiLine="true" text="$IAT/Automatic/ResetError" wordWrap="true" fontSize="16px" margin="0px" />
     <Widget xsi:type="widgets.brease.Label" id="txtSelectedFileAutoControlContent" top="407" left="660" width="220" height="40" zIndex="27" text="$IAT/Automatic/SelectedFile" textAlign="right" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Label" id="txtSelectedFileNameAutoControlContent" top="407" left="909" width="220" height="40" zIndex="28" text="" textAlign="left" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.BasicSlider" id="BasicSliderOverride" top="620" left="909" width="171" height="40" zIndex="29" />
+    <Widget xsi:type="widgets.brease.Label" id="txtOverride" top="630" left="660" width="220" height="40" zIndex="30" text="$IAT/Automatic/OverrideLabel" textAlign="right" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputOverride" top="635" left="1100" width="170" zIndex="31" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}" unitAlign="right" unitTextAlign="right" textAlign="center" />
   </Widgets>
 </Content>
