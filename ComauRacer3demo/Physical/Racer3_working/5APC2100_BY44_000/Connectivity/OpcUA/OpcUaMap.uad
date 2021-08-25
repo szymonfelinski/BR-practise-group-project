@@ -79,12 +79,30 @@
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">1295</High>
-		          </EURange>
-				  </EURanges>
+        </EURange>
+      </EURanges>
       <EURanges Id="15">
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">750</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="16">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">1000</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="17">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">500</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="18">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">200</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -287,12 +305,12 @@
             <Variable Name="Q6" />
           </Variable>
           <Variable Name="CoordinateSystem" />
-          <Variable Name="JogVelocity" EURangesId="7" EngineeringUnitId="1" />
+          <Variable Name="JogVelocity" EURangesId="18" EngineeringUnitId="1" />
           <Variable Name="PathLimits">
-            <Variable AuditEvents="True" Name="Velocity" EURangesId="7" EngineeringUnitId="1" />
-            <Variable Name="Acceleration" EURangesId="8" EngineeringUnitId="2" />
-            <Variable Name="Deceleration" EURangesId="8" EngineeringUnitId="2" />
-            <Variable Name="Jerk" EURangesId="7" EngineeringUnitId="5" />
+            <Variable AuditEvents="True" Name="Velocity" EURangesId="16" EngineeringUnitId="1" />
+            <Variable Name="Acceleration" EURangesId="16" EngineeringUnitId="2" />
+            <Variable Name="Deceleration" EURangesId="16" EngineeringUnitId="2" />
+            <Variable Name="Jerk" EURangesId="17" EngineeringUnitId="5" />
           </Variable>
           <Variable Name="ActivateMove" />
           <Variable Name="Direction" />
