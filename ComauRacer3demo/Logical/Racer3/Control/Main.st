@@ -3,7 +3,7 @@ PROGRAM _INIT
 	
 	RoboArm6Axis.Enable := TRUE;
 
-	RoboArm6Axis.Override := 100.0;
+	RoboArm6Axis.Override := 100.0; //it's non-100 only for automatic mode
 	RoboArm6AxisPara.ProgramName := 'Point.st';    //File stored on FileDevice, default program (Point.st moves TCP to -200, 300, 800)
 	RoboArm6Axis.MpLink := ADR(gAxesGroupRacer3);
 	RoboArm6Axis.Parameters := ADR(RoboArm6AxisPara);
