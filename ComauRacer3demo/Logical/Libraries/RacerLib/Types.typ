@@ -97,6 +97,8 @@ TYPE
 		Axis5To6Para : R3Axis5To6Type; (*Stores axis 5 settings for axis 6 calibration*)
 		SavedPositions : ARRAY[0..5]OF LREAL;
 		InitHome : MC_BR_InitHome_AcpAx; (*Used to init home positions after each save*)
+		InitHomePara : McAcpAxHomingParType; (*Homing parameters after each save*)
+		AxesRef : ARRAY[0..5]OF UDINT; (*Axes reference.*)
 	END_STRUCT;
 	R3CalibrationStateEnum : 
 		(
@@ -112,7 +114,8 @@ TYPE
 	R3Axis5To6Type : 	STRUCT  (*Type for storing axis 5 setting for axis 6 calibration*)
 		Axis5MovedToCalAxis6 : BOOL; (*Stores whether axis 5 has been moved in order to calibrate axis 6*)
 		Axis5Velocity : REAL; (*Velocity of axis 5*)
-		Axis5Angle : LREAL; (*Angle of axis 5 to be set*)
+		Axis3Angle : LREAL := -45.0; (*Angle of axis 3 to be set*)
+		Axis5Angle : LREAL := -118.0; (*Angle of axis 5 to be set*)
 		Axis5Return : BOOL; (*Flag to be set by a button to restore axis 5's position after calibrating axis 6*)
 		Axis5Restored : BOOL; (*Axis 5 has been restored to previous position*)
 	END_STRUCT;
