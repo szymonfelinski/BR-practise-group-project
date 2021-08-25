@@ -14,6 +14,7 @@
       <Parameter ID="Mode" Value="Manual" />
       <Parameter ID="InternetAddress" Value="192.168.0.100" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Connector Name="IF4">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
@@ -21,6 +22,7 @@
       <Parameter ID="Mode" Value="Manual" />
       <Parameter ID="InternetAddress" Value="192.168.1.100" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Connector Name="IF5">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
@@ -37,13 +39,13 @@
     <Parameter ID="TaskClassIdleTime" Value="2000" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="CNC_PrgDir" />
-    <Parameter ID="FileDevicePath1" Value="C:\CNC_PrgDir\" Description="For HW config use D:\CNC_PrgDir\" />
+    <Parameter ID="FileDevicePath1" Value="D:\CNC_PrgDir\" Description="For HW config use D:\CNC_PrgDir\" />
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="AUDIT" />
     <Parameter ID="FileDevicePath2" Value="C:\Temp\Audit" />
     <Group ID="FileDevice3" />
     <Parameter ID="FileDeviceName3" Value="UserPart" />
-    <Parameter ID="FileDevicePath3" Value="C:\Temp\UserPart\" Description="For HW config use F:\" />
+    <Parameter ID="FileDevicePath3" Value="F:\Temp\UserPart\" Description="For HW config use F:\" />
     <Group ID="FileDevice4" />
     <Parameter ID="FileDeviceName4" Value="RECIPE" />
     <Parameter ID="FileDevicePath4" Value="C:\Temp\Recipe" />
@@ -69,14 +71,17 @@
     <Parameter ID="VncPortNumber" Value="5901" />
   </Module>
   <Module Name="8EI8X8MWT10.0100-1" Type="8EI8X8MWT10.0100-1" Version="2.3.0.3">
-    <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2" NodeNumber="2">
+    <Connection Connector="PLK1" TargetModule="X20BC0083" TargetConnector="PLK2" NodeNumber="4">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0500-1" TargetConnector="PLK1" NodeNumber="2">
+    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0500-1" TargetConnector="PLK1" NodeNumber="4">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ1" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="81818" />
@@ -217,11 +222,14 @@
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[3]/RealAxis/Simulation" Value="NotUsed" />
   </Module>
   <Module Name="8EI8X8MWT10.0500-1" Type="8EI8X8MWT10.0500-1" Version="2.3.0.3">
-    <Connection Connector="PLK1" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK2">
+    <Connection Connector="PLK1" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK2" NodeNumber="5">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposP3TConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX41" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX42" Value="EnDat" />
+    <Parameter ID="InterfaceType" Location="DriveConfiguration/Encoder/EncoderX43" Value="EnDat" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ2" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="80" />
@@ -363,10 +371,10 @@
   </Module>
   <Module Name="X20BB80a" Type="X20BB80" Version="1.1.0.0" />
   <Module Name="X20BC0083" Type="X20BC0083" Version="2.12.0.0">
-    <Connection Connector="PLK1" TargetModule="5ACCIF01.FPSC-000" TargetConnector="IF1" NodeNumber="1">
+    <Connection Connector="PLK1" TargetModule="5ACCIF01.FPSC-000" TargetConnector="IF1" NodeNumber="3">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK1" NodeNumber="1">
+    <Connection Connector="PLK2" TargetModule="8EI8X8MWT10.0100-1" TargetConnector="PLK1" NodeNumber="3">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Connection Connector="SL" TargetModule="X20BB80a" TargetConnector="SL1" />
