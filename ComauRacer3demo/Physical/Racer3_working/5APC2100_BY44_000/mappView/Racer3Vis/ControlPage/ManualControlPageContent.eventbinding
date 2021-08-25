@@ -346,19 +346,23 @@
     </EventBinding>
     <EventBinding id="L2_down" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoord">
-            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+      <EventHandler condition="key=&quot;F8&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoord">
+                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="L3_down" comment="done">
@@ -415,19 +419,23 @@
     </EventBinding>
     <EventBinding id="P2_down" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoord">
-            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+      <EventHandler condition="key=&quot;F9&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoord">
+                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="P3_down" comment="done">
