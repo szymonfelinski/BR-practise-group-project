@@ -15,7 +15,7 @@ ACTION CalibrationAction:
 		STATE_FAKE_HOME:
 			
 			FOR i := 0 TO 5 BY 1 DO
-				Calibration.Para.Positions[i] := RoboArm6Axis.Info.JointAxisPosition[i];
+				Calibration.Para.Positions[i] := 0.0;
 			END_FOR
 										
 			Calibration.Cmds.GroupHome(AxesGroup := ADR(gAxesGroupRacer3), Execute := TRUE, Position := Calibration.Para.Positions, HomingMode := Calibration.Para.FakeHomingModeEnum); //this makes the robot think its axes are 0.0
