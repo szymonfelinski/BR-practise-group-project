@@ -469,6 +469,7 @@
           <Variable Name="BrakeOpen" />
           <Variable Name="BrakeClose" />
           <Variable Name="ResetHome" />
+          <Variable Name="WarmRestart" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">

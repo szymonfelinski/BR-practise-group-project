@@ -206,7 +206,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="ManualControlPageContent.btnLeft2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent" event="MouseUp" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
@@ -226,7 +226,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="ManualControlPageContent.btnRight2ManualControlContent.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent" event="MouseUp" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
