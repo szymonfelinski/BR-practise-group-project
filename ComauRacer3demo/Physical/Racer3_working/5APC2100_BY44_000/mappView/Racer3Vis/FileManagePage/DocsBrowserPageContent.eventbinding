@@ -218,5 +218,75 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="key_down_DocsBrowser" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F7&quot; AND PageName = &quot;DocsBrowserPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.EnterFolder">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F9&quot; AND PageName = &quot;DocsBrowserPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.FolderUp">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F14&quot; AND PageName = &quot;DocsBrowserPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.Refresh">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F2&quot; AND PageName = &quot;DocsBrowserPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F8&quot; AND PageName = &quot;DocsBrowserPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F13&quot; AND PageName = &quot;DocsBrowserPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.DeviceList.SelectedIndex">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="key_down_DocsBrowser_hidden_keys" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="IsPDF">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.IsPDF" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;INSERT&quot; AND PageName = &quot;DocsBrowserPage&quot; AND IsPDF=TRUE">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PDFViewerDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

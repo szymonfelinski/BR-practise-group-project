@@ -61,5 +61,55 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="key_down_UserManagment" comment="done">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;INSERT&quot; AND PageName = &quot;UserManagmentPage&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenAddUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F9&quot; AND PageName = &quot;UserManagmentPage&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.DeleteUser" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F14&quot; AND PageName = &quot;UserManagmentPage&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.OpenModifyUserDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F8&quot; AND PageName = &quot;UserManagmentPage&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.GoToPreviousPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F13&quot; AND PageName = &quot;UserManagmentPage&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
+            <Method xsi:type="widgets.brease.UserList.Action.GoToNextPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F7&quot; AND PageName = &quot;UserManagmentPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.WarmRestart">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
