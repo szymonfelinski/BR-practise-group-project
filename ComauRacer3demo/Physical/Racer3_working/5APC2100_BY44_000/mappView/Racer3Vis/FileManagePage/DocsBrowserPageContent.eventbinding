@@ -225,6 +225,11 @@
           <Method xsi:type="session.VariableAction.GetValue" />
         </ReadTarget>
       </Operand>
+      <Operand datatype="BOOL" name="IsPDF">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.IsPDF">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
       <EventHandler condition="key=&quot;F7&quot; AND PageName = &quot;DocsBrowserPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::FileManage:cmd.MpFileManagerUIConnectType.File.EnterFolder">
@@ -267,20 +272,7 @@
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="key_down_DocsBrowser_hidden_keys" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <Operand datatype="ANY_STRING" name="PageName">
-        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
-          <Method xsi:type="session.VariableAction.GetValue" />
-        </ReadTarget>
-      </Operand>
-      <Operand datatype="BOOL" name="IsPDF">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::FileManage:aux.IsPDF" serverAlias="">
-          <Method xsi:type="opcUa.NodeAction.GetValue" />
-        </ReadTarget>
-      </Operand>
-      <EventHandler condition="key=&quot;INSERT&quot; AND PageName = &quot;DocsBrowserPage&quot; AND IsPDF=TRUE">
+      <EventHandler condition="key=&quot;INSERT&quot; AND PageName = &quot;DocsBrowserPage&quot; AND IsPDF">
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PDFViewerDialog" />
