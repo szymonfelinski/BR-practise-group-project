@@ -4,6 +4,10 @@ ActivateMove and AxisSaveBtn are assumed momentary.
 not resetting AxisSaveBtn and switching AxisButton will result in immediate AxisCalibrated[i] := TRUE!
 not resetting ActivateMove might result in damage to physical system! *)
 FUNCTION_BLOCK R3CalibrationMode
+	IF CalibrationPara.InitHome.Done OR NOT CalibrationPara.InitHome.Busy THEN
+		CalibrationPara.InitHome(Execute := FALSE);
+	END_IF
+	
 	CalibrationPara.InitHomePara.Position := 0.0; //this is non-zero only for Axis 3
 	CalibrationPara.InitHomePara.HomingMode := mcHOMING_DIRECT; //this saves current position as value 'Position'
 	IF CalibrationPara.InitHome.Done THEN
