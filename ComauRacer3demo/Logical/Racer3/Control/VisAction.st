@@ -1,6 +1,6 @@
 
 ACTION VisAction: 
-	Communication.NOTCoordinateSystem := NOT Communication.CoordinateSystem;
+	//Communication.NOTCoordinateSystem := NOT Communication.CoordinateSystem;
 	Communication.NOTPathSystem	:= NOT Communication.PathSystem;
 	Communication.NOTModeSystem := NOT Communication.ModeSystem;
 	
@@ -29,7 +29,7 @@ ACTION VisAction:
 				//make event happen
 				KeyCheck.event_achieved := TRUE;
 			END_IF
-		ELSE
+		ELSIF KeyCheck.temp_value <> KeyCheck.pending_combo[KeyCheck.i] THEN
 			KeyCheck.i:=0;
 		END_IF
 	END_IF
