@@ -195,6 +195,13 @@
           </Step>
         </Sequence>
       </EventHandler>
+      <EventHandler condition="key=&quot;F9&quot;AND PageName = &quot;CaibrationPage&quot;">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.AxisSaveBtn">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_13">
       <Source xsi:type="clientSystem.Event" event="KeyUp" />
