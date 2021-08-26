@@ -6,7 +6,6 @@ FUNCTION_BLOCK R3Workspace
 	Para.Para.WorkspaceReference.Name := 'R3WorkSpace';*)
 	
 	
-	Para.Cmd.Mode := mcPCM_LOAD;
 	Para.Cmd.Name := 'Feature_WorkspaceMonitoring';
 	Para.Cmd.DataType := mcCFG_AXGRP_FEAT_WSM;
 	Para.Cmd.DataAddress := ADR(Para.Para);
