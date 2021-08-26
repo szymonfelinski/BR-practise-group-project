@@ -380,7 +380,6 @@
             </Variable>
           </Variable>
         </Variable>
-        <Variable Name="CoordinateSystem" />
         <Variable Name="Calibration">
           <Variable Name="Info" />
           <Variable Name="Cmds" />
@@ -408,7 +407,7 @@
           </Variable>
         </Variable>
         <Variable Name="CalibrationStateBtn" />
-        <Variable Name="Axis_1to5_calibrated" />
+        <Variable Name="Axis_1to4_calibrated" />
         <Variable Name="AutomaticCurrentLanguage" />
         <Variable Name="AutomaticModePara">
           <Variable Name="Parameters">
@@ -438,7 +437,6 @@
           <Variable Name="PathSystem" />
           <Variable Name="NOTModeSystem" />
           <Variable Name="ModeSystem" />
-          <Variable Name="CoordinateSystem" />
           <Variable Name="NOTCoordinateSystem" />
           <Variable Name="Power" />
           <Variable Name="txt_State_out" />
@@ -460,16 +458,14 @@
           <Variable Name="RestoreAxis5" />
           <Variable Name="CalibrateAgain" />
           <Variable Name="txt_State_out_front" />
-          <Variable Name="RightCoord" />
-          <Variable Name="LeftCoord" />
-          <Variable Name="LeftCoordClick" />
-          <Variable Name="RightCoordClick" />
           <Variable Name="ReturnToZero" />
           <Variable Name="ToolOutput" />
           <Variable Name="BrakeOpen" />
           <Variable Name="BrakeClose" />
           <Variable Name="ResetHome" />
           <Variable Name="WarmRestart" />
+          <Variable Name="CoordinateSystemManual" />
+          <Variable Name="CoordinateSystemSemiAuto" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">
@@ -480,6 +476,7 @@
           <Variable Name="value_changed" />
           <Variable Name="event_achieved" />
         </Variable>
+        <Variable Name="Axis5Calibrated" />
       </Task>
       <Task Name="FileManage">
         <Variable Name="aux">

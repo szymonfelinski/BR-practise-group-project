@@ -94,7 +94,7 @@ TYPE
 		CalibrationModePara : R3ManualModeType; (*same type used for manual mode (slightly different code handling)*)
 		AxisCalibrated : ARRAY[0..5]OF BOOL := [6(0)]; (*Saves which axes have been calibrated (defaults to 0 upon creation)*)
 		AxisSaveBtn : BOOL; (*Button to save current position as calibrated*)
-		Axis5To6Para : R3Axis5To6Type; (*Stores axis 5 settings for axis 6 calibration*)
+		Axis5To6Para : R3Axis5To6Type; (*Stores axis 4 and 5 settings for axis 5 and 6 calibration*)
 		SavedPositions : ARRAY[0..5]OF LREAL;
 		InitHome : MC_BR_InitHome_AcpAx; (*Used to init home positions after each save*)
 		InitHomePara : McAcpAxHomingParType; (*Homing parameters after each save*)
@@ -109,15 +109,16 @@ TYPE
 		STATE_CALIBRATE_Q4,
 		STATE_CALIBRATE_Q5,
 		STATE_CALIBRATE_Q6,
-		STATE_RESTORE_Q5
+		STATE_RESTORE_Q3_Q5
 		);
-	R3Axis5To6Type : 	STRUCT  (*Type for storing axis 5 setting for axis 6 calibration*)
-		Axis5MovedToCalAxis6 : BOOL; (*Stores whether axis 5 has been moved in order to calibrate axis 6*)
-		Axis5Velocity : REAL; (*Velocity of axis 5*)
+	R3Axis5To6Type : 	STRUCT  (*Type for storing axis 3 and 5 settings for axes 5 and 6 calibration*)
+		Axis3Moved : BOOL; (*Stores whether axis 3 has been moved in order to calibrate axes 5 and  6*)
+		Axis5Moved : BOOL; (*Stores whether axis 5 has been moved in order to calibrate axis 6*)
+		AxisMoveVelocity : REAL; (*Velocity of axis 3 and 5*)
 		Axis3Angle : LREAL := -45.0; (*Angle of axis 3 to be set*)
 		Axis5Angle : LREAL := -118.0; (*Angle of axis 5 to be set*)
-		Axis5Return : BOOL; (*Flag to be set by a button to restore axis 5's position after calibrating axis 6*)
-		Axis5Restored : BOOL; (*Axis 5 has been restored to previous position*)
+		Axis5Return : BOOL; (*Flag to be set by a button to restore axis 3 and 5's positions after calibrating axis 6*)
+		Axis35Restored : BOOL; (*Axis 3 and 5 have been restored to previous position*)
 	END_STRUCT;
 	R3SemiAutoEnumType : 
 		(
@@ -194,7 +195,8 @@ TYPE
 		changeModePending : USINT := 0; (*1-Manual       2-SemiManual      3-Auto 0-none*)
 		NOTPathSystem : BOOL;
 		NOTModeSystem : BOOL;
-		CoordinateSystem : BOOL := FALSE;
+		CoordinateSystemManual : BOOL := FALSE;
+		CoordinateSystemSemiAuto : BOOL := FALSE;
 		NOTCoordinateSystem : BOOL;
 		txt_State_out : WSTRING[80];
 		AskedMaxVelocity : REAL; (*not needed*)
@@ -218,10 +220,6 @@ TYPE
 		BrakesSet : BOOL; (*This variable tells the program if brake parameters have been set.*)
 		ToolOutput : BOOL; (*This variable enables tool control*)
 		ReturnToZero : BOOL; (*This variable allows returning to zero position in manual mode.*)
-		RightCoord : BOOL := FALSE;
-		LeftCoord : BOOL := TRUE;
-		LeftCoordClick : BOOL;
-		RightCoordClick : BOOL;
 		ResetHome : BOOL;
 		WarmRestart : BOOL := FALSE;
 	END_STRUCT;
@@ -252,8 +250,8 @@ TYPE
 		Cmds : R3BrakeCmdsType;
 	END_STRUCT;
 	R3KeyCheckType : 	STRUCT 
-		original_combo : ARRAY[0..5]OF USINT := [1,1,2,3,0,17];
-		pending_combo : ARRAY[0..5]OF USINT;
+		original_combo : ARRAY[0..4]OF USINT := [1,2,3,0,17];
+		pending_combo : ARRAY[0..4]OF USINT;
 		i : USINT := 0;
 		temp_value : USINT;
 		value_changed : BOOL := FALSE;

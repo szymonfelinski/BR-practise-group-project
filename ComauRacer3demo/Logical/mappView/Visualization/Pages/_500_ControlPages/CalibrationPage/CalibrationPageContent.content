@@ -27,7 +27,7 @@
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ2CalibrationControlContent" top="13" left="163" width="150" zIndex="1" text="2" bold="true" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ3CalibrationControlContent" top="13" left="327" width="150" zIndex="2" text="3" bold="true" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ4CalibrationControlContent" top="13" left="491" width="150" zIndex="3" text="4" bold="true" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5CalibrationControlContent" top="13" left="655" width="150" zIndex="4" text="5" bold="true" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ5CalibrationControlContent" top="13" left="655" width="150" zIndex="4" text="5" bold="true" enable="false" />
         <Widget xsi:type="widgets.brease.ToggleButton" id="btnQ6CalibrationControlContent" top="13" left="819" width="150" zIndex="5" text="6" bold="true" enable="false" />
       </Widgets>
     </Widget>

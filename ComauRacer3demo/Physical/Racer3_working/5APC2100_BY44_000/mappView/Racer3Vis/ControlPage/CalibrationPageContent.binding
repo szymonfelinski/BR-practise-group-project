@@ -51,10 +51,7 @@
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image1" attribute="visible" />
 </Binding>
 
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Control:Axis_1to5_calibrated" attribute="value" />
-<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ6CalibrationControlContent" attribute="enable" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Communication.CalibrationImage" attribute="value" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="Image7" attribute="image" />
@@ -71,6 +68,14 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.JogVelocity" attribute="node" />
 <Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="NumericInput1" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Axis5Calibrated" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ6CalibrationControlContent" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Control:Axis_1to4_calibrated" attribute="value" />
+<Target xsi:type="brease" contentRefId="CalibrationPageContent" widgetRefId="btnQ5CalibrationControlContent" attribute="enable" />
 </Binding>
 </Bindings>
 </BindingsSet>

@@ -11,6 +11,7 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 69.0;
 	
+	Communication.ReturnToZero := FALSE;
 	ManualControlPara.PathLimits.Acceleration := 1000.0;
 	ManualControlPara.PathLimits.Deceleration := 1000.0;
 	ManualControlPara.PathLimits.Velocity := 150.0;
@@ -52,15 +53,20 @@ PROGRAM _CYCLIC
 	*)
 	
 	IF Communication.WarmRestart THEN
+		Communication.Power := FALSE;
+		RoboArm6Axis.Power := FALSE;
 		Communication.WarmRestart := FALSE;
 		SYSreset(1,1);
 	END_IF
 	UpdateCheck;
 	
-	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
+	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands must have no effect in STATE_BRAKES
 		//RoboArm6Axis.Power := FALSE;
 		GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE);
-		State := STATE_INIT;
+		IF NOT GroupPower.Status THEN
+			State := STATE_INIT;
+		END_IF
+		
 	END_IF
 	
 	
@@ -87,6 +93,12 @@ PROGRAM _CYCLIC
 			Communication.txt_State_out:="Initialization";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Init';
 			ManualControlPara.ExitManual := FALSE;
+			(*IF RoboArm6Axis.PowerOn THEN
+				Communication.Power := TRUE;
+				Communication.BrakesSet := TRUE;
+				//State := STATE_POWER_ON;
+			ELSE*)
+				
 			IF NOT Communication.BrakesSet THEN
 				SetBrakes.Axis1 := ADR(gAxisQ1);
 				SetBrakes.Axis2 := ADR(gAxisQ2);
@@ -120,7 +132,8 @@ PROGRAM _CYCLIC
 				ELSIF Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
 					State := STATE_POWER_ON;
 				END_IF
-			END_IF
+				END_IF
+			
 			
 		STATE_POWER_ON:
 			Communication.txt_State_out:="Power";
@@ -131,7 +144,7 @@ PROGRAM _CYCLIC
 				//RoboArm6Axis.Power := TRUE;
 			END_IF
 			
-			IF GroupPower.Status AND GroupPower.Enable THEN //Status tells whether the group is really powered on, Enable must be true.
+			IF (GroupPower.Status AND GroupPower.Enable) OR RoboArm6Axis.PowerOn THEN //Status tells whether the group is really powered on, Enable must be true., second condition applies when a transfer is initiated - no real benefit otherwise
 				State := STATE_HOMING;
 			END_IF
 						
@@ -175,9 +188,9 @@ PROGRAM _CYCLIC
 				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			*)
-			(* TODO: Better handling of fake home, do it per axis after each save - IMPORTANT*)
-			IF NOT Communication.ResetHome THEN 
-				
+			Communication.ReturnToZero := FALSE; //reset ReturnToZero flag each time manual mode is exit
+			(* TODO: Better handling of fake home, do it per axis after each save - DONE*)
+			IF NOT Communication.ResetHome THEN //if ResetHome is set off
 				IF ControlSelector = ManualJog THEN
 					MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
 					
