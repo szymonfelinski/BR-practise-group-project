@@ -441,7 +441,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot; AND PageName = &quot;HalfAutoControlPage&quot;">
+      <EventHandler condition="key=&quot;INS&quot; AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
