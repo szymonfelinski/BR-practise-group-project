@@ -466,6 +466,7 @@
           <Variable Name="WarmRestart" />
           <Variable Name="CoordinateSystemManual" />
           <Variable Name="CoordinateSystemSemiAuto" />
+          <Variable Name="NOTCoordinateSystemSemiAuto" />
         </Variable>
         <Variable Name="FileName" />
         <Variable Name="KeyCheck">

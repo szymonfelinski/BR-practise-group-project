@@ -116,7 +116,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_8">
-      <Source xsi:type="opcUa.Event" refId="::Control:Communication.CoordinateSystem" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Control:Communication.CoordinateSystemManual" event="ValueChanged" />
       <EventHandler condition="newValue=true">
         <Action>
           <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ1ManualControlContent">
@@ -161,7 +161,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_9">
-      <Source xsi:type="opcUa.Event" refId="::Control:Communication.CoordinateSystem" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Control:Communication.CoordinateSystemManual" event="ValueChanged" />
       <EventHandler condition="newValue=false">
         <Action>
           <Target xsi:type="widgets.brease.ToggleButton.Action" contentRefId="ManualControlPageContent" widgetRefId="btnQ1ManualControlContent">
