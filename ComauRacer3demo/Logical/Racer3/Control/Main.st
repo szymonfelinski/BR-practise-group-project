@@ -188,7 +188,8 @@ PROGRAM _CYCLIC
 				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			*)
-			IF Communication.ReadWorkspace THEN
+			IF Communication.ReadWorkspace OR R3WorkspaceFB.Para.Done THEN
+				WorkspaceControl.Cmd.Mode := mcPCM_LOAD;
 				R3WorkspaceFB(Para := WorkspaceControl);
 			END_IF
 			
