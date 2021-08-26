@@ -4,6 +4,11 @@ ACTION CalibrationAction:
 		Calibration.Info.CurrentState := STATE_FAKE_HOME;
 	END_IF
 	
+	IF Calibration.Cmds.GroupHome.Done OR NOT Calibration.Cmds.GroupHome.Busy THEN
+		Calibration.Cmds.GroupHome.Execute := FALSE;
+		Calibration.Cmds.GroupHome();
+	END_IF
+	
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
 			IF gIsCalibrated THEN
@@ -66,6 +71,7 @@ ACTION CalibrationAction:
 						
 			IF Calibration.Para.Parameters.Axis5To6Para.Axis35Restored AND Calibration.Para.Parameters.AxisCalibrated[5] THEN
 				Calibration.Info.CurrentState := STATE_SAVING_POSITION;
+				Calibration.Para.Parameters.Axis5To6Para.Axis35Restored := FALSE;
 				i := 1;
 			END_IF
 
