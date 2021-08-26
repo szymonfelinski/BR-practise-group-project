@@ -122,6 +122,9 @@
   </Aliases>
   <DefaultView AuditEvents="True" AclId="2">
     <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gActiveContent" />
+      </GlobalVariables>
       <Task Name="Control">
         <Variable Name="RoboArm6Axis">
           <Variable Name="Info">
