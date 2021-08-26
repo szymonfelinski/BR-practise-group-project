@@ -18,5 +18,6 @@
     <Widget xsi:type="widgets.brease.Button" id="btnLeft1UserManagentPageContent" top="86" left="10" width="80" height="80" zIndex="6" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnLeft4UserManagentPageContent" top="407" left="10" width="80" height="80" zIndex="7" margin="0px" enable="false" />
     <Widget xsi:type="widgets.brease.Button" id="btnRigh1UserManagentPageContent" top="86" left="1190" width="80" height="80" zIndex="8" margin="0px" enable="false" />
+    <Widget xsi:type="widgets.brease.Button" id="btnWarmRestart" top="560" left="10" width="80" height="80" zIndex="9" multiLine="true" text="Warm Restart" wordWrap="true" />
   </Widgets>
 </Content>

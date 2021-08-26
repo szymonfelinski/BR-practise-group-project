@@ -229,15 +229,5 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_2">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F13&quot; AND key=&quot;F15&quot; AND key=&quot;-&quot;">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.WarmRestart">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
   </Bindings>
 </EventBindingSet>
