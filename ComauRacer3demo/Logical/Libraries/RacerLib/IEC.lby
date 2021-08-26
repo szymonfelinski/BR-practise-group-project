@@ -11,5 +11,6 @@
     <File>checkAxisLimits.st</File>
     <File>R3AutomaticMode.st</File>
     <File>R3BrakeSet.st</File>
+    <File>R3Workspace.st</File>
   </Files>
 </Library>

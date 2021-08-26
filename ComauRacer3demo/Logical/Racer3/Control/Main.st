@@ -188,6 +188,10 @@ PROGRAM _CYCLIC
 				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			*)
+			IF Communication.ReadWorkspace THEN
+				R3WorkspaceFB(Para := WorkspaceControl);
+			END_IF
+			
 			Communication.ReturnToZero := FALSE; //reset ReturnToZero flag each time manual mode is exit
 			(* TODO: Better handling of fake home, do it per axis after each save - DONE*)
 			IF NOT Communication.ResetHome THEN //if ResetHome is set off
