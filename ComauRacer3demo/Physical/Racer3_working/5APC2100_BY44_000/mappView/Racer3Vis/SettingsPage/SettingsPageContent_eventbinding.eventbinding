@@ -246,7 +246,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;INS&quot; AND PageName = &quot;SettingsPage&quot;">
+      <EventHandler condition="key=&quot;F10&quot; AND PageName = &quot;SettingsPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
