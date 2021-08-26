@@ -136,9 +136,14 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="key_up">
+    <EventBinding id="key_up_ControlPage">
       <Source xsi:type="clientSystem.Event" event="KeyUp" />
-      <EventHandler condition="key=&quot;F7&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F7&quot; AND PageName = &quot;ControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -156,7 +161,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F8&quot;">
+      <EventHandler condition="key=&quot;F8&quot; AND PageName = &quot;ControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -174,7 +179,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F9&quot;">
+      <EventHandler condition="key=&quot;F9&quot; AND PageName = &quot;ControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -192,7 +197,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F2&quot;">
+      <EventHandler condition="key=&quot;F2&quot; AND PageName = &quot;ControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -210,7 +215,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot;">
+      <EventHandler condition="key=&quot;INSERT&quot; AND PageName = &quot;ControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -229,9 +234,14 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_2">
+    <EventBinding id="key_down_ControlPage">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F13&quot; AND key=&quot;F15&quot; AND key=&quot;-&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F13&quot; AND key=&quot;F15&quot; AND key=&quot;-&quot; AND PageName = &quot;ControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.WarmRestart">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />

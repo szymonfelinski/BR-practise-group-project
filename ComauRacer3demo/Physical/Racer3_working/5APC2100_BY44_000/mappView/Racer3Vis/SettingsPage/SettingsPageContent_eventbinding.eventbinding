@@ -150,7 +150,7 @@
           <Method xsi:type="session.VariableAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <EventHandler condition="key=&quot;F9&quot; AND PageName = &quot;SettingsPage&quot;">
+      <EventHandler condition="key=&quot;F7&quot; AND PageName = &quot;SettingsPage&quot;">
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenChangePasswordDialog" />

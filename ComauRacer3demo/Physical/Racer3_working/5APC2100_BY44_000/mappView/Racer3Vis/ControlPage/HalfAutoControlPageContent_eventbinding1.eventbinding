@@ -356,14 +356,19 @@
     </EventBinding>
     <EventBinding id="together_keys_down">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F7&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F7&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:SemiAutoControlPara.Flag">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F2&quot;">
+      <EventHandler condition="key=&quot;F2&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -381,7 +386,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F8&quot;">
+      <EventHandler condition="key=&quot;F8&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -399,7 +404,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F9&quot;">
+      <EventHandler condition="key=&quot;F9&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -417,7 +422,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F13&quot;">
+      <EventHandler condition="key=&quot;F13&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -442,7 +447,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F14&quot;">
+      <EventHandler condition="key=&quot;F14&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -467,7 +472,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F15&quot;">
+      <EventHandler condition="key=&quot;F15&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -492,7 +497,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot;">
+      <EventHandler condition="key=&quot;INSERT&quot;AND PageName = &quot;HalfAutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
