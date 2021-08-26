@@ -314,19 +314,21 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="L1_down" comment="done">
+    <EventBinding id="key_down_Manual" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F2&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F2&quot;AND PageName = &quot;ManualControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ToolOutput">
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="L2_down" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F8&quot;">
+      <EventHandler condition="key=&quot;F8&quot;AND PageName = &quot;ManualControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -344,10 +346,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="L3_down" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F13&quot;">
+      <EventHandler condition="key=&quot;F13&quot;AND PageName = &quot;ManualControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -365,41 +364,14 @@
           </Step>
         </Sequence>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="L3_up" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyUp" />
-      <EventHandler condition="key=&quot;F13&quot;">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
-                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="P1_down" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F7&quot;">
+      <EventHandler condition="key=&quot;F7&quot;AND PageName = &quot;ManualControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ReturnToZero">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="P2_down" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F9&quot;">
+      <EventHandler condition="key=&quot;F9&quot;AND PageName = &quot;ManualControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -417,10 +389,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="P3_down" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F14&quot;">
+      <EventHandler condition="key=&quot;F14&quot;AND PageName = &quot;ManualControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -439,9 +408,32 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="P3_up" comment="done">
+    <EventBinding id="key_up_manual" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyUp" />
-      <EventHandler condition="key=&quot;F14&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F13&quot;AND PageName = &quot;ManualControlPage&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F14&quot;AND PageName = &quot;ManualControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
