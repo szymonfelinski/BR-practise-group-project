@@ -408,7 +408,7 @@
           </Variable>
         </Variable>
         <Variable Name="CalibrationStateBtn" />
-        <Variable Name="Axis_1to5_calibrated" />
+        <Variable Name="Axis_1to4_calibrated" />
         <Variable Name="AutomaticCurrentLanguage" />
         <Variable Name="AutomaticModePara">
           <Variable Name="Parameters">
@@ -480,6 +480,7 @@
           <Variable Name="value_changed" />
           <Variable Name="event_achieved" />
         </Variable>
+        <Variable Name="Axis5Calibrated" />
       </Task>
       <Task Name="FileManage">
         <Variable Name="aux">

@@ -1,14 +1,21 @@
 
 ACTION VisAction: 
-	Communication.NOTCoordinateSystem	:= NOT Communication.CoordinateSystem;
+	Communication.NOTCoordinateSystem := NOT Communication.CoordinateSystem;
 	Communication.NOTPathSystem	:= NOT Communication.PathSystem;
 	Communication.NOTModeSystem := NOT Communication.ModeSystem;
 	
-	IF Calibration.Para.Parameters.AxisCalibrated[4] AND Calibration.Para.Parameters.AxisCalibrated[0] AND Calibration.Para.Parameters.AxisCalibrated[1] AND Calibration.Para.Parameters.AxisCalibrated[2] AND Calibration.Para.Parameters.AxisCalibrated[3] AND Calibration.Para.Parameters.AxisCalibrated[4] THEN
-		Axis_1to5_calibrated :=TRUE;
+	IF Calibration.Para.Parameters.AxisCalibrated[0] AND Calibration.Para.Parameters.AxisCalibrated[1] AND Calibration.Para.Parameters.AxisCalibrated[2] AND Calibration.Para.Parameters.AxisCalibrated[3] THEN
+		Axis_1to4_calibrated := TRUE;
 	ELSE
-		Axis_1to5_calibrated :=FALSE;
+		Axis_1to4_calibrated := FALSE;
 	END_IF
+	
+	IF Axis_1to4_calibrated AND Calibration.Para.Parameters.AxisCalibrated[4] THEN
+		Axis5Calibrated := TRUE;
+	ELSE
+		Axis5Calibrated := FALSE;
+	END_IF
+	
 	IF KeyCheck.value_changed AND KeyCheck.event_achieved THEN
 		KeyCheck.value_changed := FALSE;
 		KeyCheck.event_achieved := FALSE;

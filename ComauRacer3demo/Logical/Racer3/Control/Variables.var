@@ -12,7 +12,8 @@ VAR
 	ManualControl : R3ManualMode;
 	ManualControlPara : R3ManualModeType;
 	i : USINT; (*Counter.*)
-	Axis_1to5_calibrated : BOOL; (*If value TRUE then axis 6 can be calibrated*)
+	Axis5Calibrated : BOOL; (*If value TRUE then axis 6 can be calibrated*)
+	Axis_1to4_calibrated : BOOL; (*If value TRUE then axis 5 can be calibrated*)
 	Calibration : R3CalibrationMainType; (*Main calibration variable.*)
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;

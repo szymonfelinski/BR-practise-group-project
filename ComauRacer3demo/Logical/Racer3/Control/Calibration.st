@@ -43,8 +43,8 @@ ACTION CalibrationAction:
 			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Deceleration := 1000.0;
 			//CalibrationModePara.CalibrationModePara.PathLimits.Jerk := 1000.0; //no need to limit jerk
 			Calibration.Para.Parameters.CalibrationModePara.PathLimits.Velocity := 100.0;
-			//Calibration.Para.Parameters.Axis5To6Para.Axis5Angle := -118.0; //angle defined in calibration pdf (see page 100 of _lb-rc-RACER3-STM_en)
-			Calibration.Para.Parameters.Axis5To6Para.Axis5Velocity := Calibration.Para.Parameters.CalibrationModePara.JogVelocity; //use low velocity for moving axis 5 for calibrating axis 6
+			//Calibration.Para.Parameters.Axis5to6Para.Axis5Angle := -118.0; //angle defined in calibration pdf (see page 100 of _lb-rc-RACER3-STM_en)
+			Calibration.Para.Parameters.Axis5To6Para.AxisMoveVelocity := Calibration.Para.Parameters.CalibrationModePara.JogVelocity; //use low velocity for moving axis 5 for calibrating axis 6
 			Calibration.Para.Parameters.CalibrationModePara.CoordinateSystem := 0; //set axis coordinate system for calibration
 			//CalibrationModePara.CalibrationState := STATE_START; //reset calibration state everytime after jog
 			
@@ -58,7 +58,7 @@ ACTION CalibrationAction:
 			
 			Calibration.Cmds.Mode(CalibrationPara := Calibration.Para.Parameters, RoboArm := RoboArm6Axis, RoboArmPara := RoboArm6AxisPara); //call FB with set values
 						
-			IF Calibration.Para.Parameters.Axis5To6Para.Axis5Restored AND Calibration.Para.Parameters.AxisCalibrated[5] THEN
+			IF Calibration.Para.Parameters.Axis5To6Para.Axis35Restored AND Calibration.Para.Parameters.AxisCalibrated[5] THEN
 				Calibration.Info.CurrentState := STATE_SAVING_POSITION;
 				i := 1;
 			END_IF
