@@ -4,7 +4,6 @@ ActivateMove and AxisSaveBtn are assumed momentary.
 not resetting AxisSaveBtn and switching AxisButton will result in immediate AxisCalibrated[i] := TRUE!
 not resetting ActivateMove might result in damage to physical system! *)
 FUNCTION_BLOCK R3CalibrationMode
-	CalibrationPara.AxisSaveBtn := FALSE; //reset button status in case someone click when axis isn't ready
 	CalibrationPara.InitHomePara.Position := 0.0; //this is non-zero only for Axis 3
 	CalibrationPara.InitHomePara.HomingMode := mcHOMING_DIRECT; //this saves current position as value 'Position'
 	IF CalibrationPara.InitHome.Done THEN
@@ -23,7 +22,7 @@ FUNCTION_BLOCK R3CalibrationMode
 	
 	CASE CalibrationPara.CalibrationState OF
 		STATE_START:
-			
+			CalibrationPara.AxisSaveBtn := FALSE; //reset button status in case someone clicks when axis isn't ready
 			IF RoboArm.MoveDirect THEN
 				RoboArm.MoveDirect := FALSE;
 			END_IF
