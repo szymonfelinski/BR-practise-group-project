@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingSet id="AutoControlPageContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
     <EventBinding id="AutoControlPageContent.btnNavigationAutoControlContent.Click">
@@ -736,42 +736,62 @@
           <Method xsi:type="session.VariableAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <EventHandler condition="key=&quot;F2&quot; AND NOT ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <Operand datatype="BOOL" name="Language">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Control:AutomaticCurrentLanguage" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="Continue">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Control:AutomaticModePara.Parameters.Continue" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="Pause">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Control:AutomaticModePara.Parameters.Pause" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="ContinuePar">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Control:AutomaticModePara.Parameters.Continue" serverAlias="">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F2&quot; AND NOT Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.New" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F8&quot; AND NOT ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F8&quot; AND NOT Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.OpenFileExplorer" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F13&quot; AND NOT ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F13&quot; AND NOT Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.Save" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F15&quot; AND NOT ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F15&quot; AND NOT Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.SaveAs" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F7&quot; AND NOT ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F7&quot; AND NOT Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticCurrentLanguage">
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F9&quot; AND NOT ()::Control:AutomaticCurrentLanguage    AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F9&quot; AND NOT Language  AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -789,14 +809,14 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F14&quot; AND NOT ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F14&quot; AND NOT Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.Pause" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot; AND NOT ()::Control:AutomaticCurrentLanguage   AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;INSERT&quot; AND NOT Language   AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -814,14 +834,14 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F2&quot; AND ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F2&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="AutoControlPageContent" widgetRefId="padAutoModeMotionPad">
             <Method xsi:type="widgets.brease.MotionPad.Action.New" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F8&quot; AND ()::Control:AutomaticCurrentLanguage    AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F8&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -846,7 +866,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F13&quot; AND ()::Control:AutomaticCurrentLanguage    AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F13&quot; AND Language    AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -864,7 +884,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F15&quot; AND ()::Control:AutomaticCurrentLanguage    AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F15&quot; AND Language    AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -882,7 +902,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot; AND ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;INSERT&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -900,21 +920,21 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F14&quot; AND ()::Control:AutomaticCurrentLanguage AND NOT ()::Control:AutomaticModePara.Parameters.Pause  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F14&quot; AND Language AND NOT Pause  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Pause">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F14&quot; AND ()::Control:AutomaticCurrentLanguage AND NOT ()::Control:AutomaticModePara.Parameters.Continue  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F14&quot; AND Language AND NOT ContinuePar  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticModePara.Parameters.Continue">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F9&quot; AND ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;SettingsPage&quot;">
+      <EventHandler condition="key=&quot;F9&quot; AND Language  AND PageName = &quot;SettingsPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -932,7 +952,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F7&quot; AND ()::Control:AutomaticCurrentLanguage  AND PageName = &quot;SettingsPage&quot;">
+      <EventHandler condition="key=&quot;F7&quot; AND Language  AND PageName = &quot;SettingsPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticCurrentLanguage">
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
