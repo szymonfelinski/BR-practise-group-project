@@ -1,6 +1,6 @@
 
 ACTION CalibrationAction:
-	IF Communication.ResetHome THEN
+	IF Communication.ResetHome THEN //this enables the user to reset each axis to 0.0 in software - allows for movement when a (false) workspace violation is set off during calibration.
 		Calibration.Info.CurrentState := STATE_FAKE_HOME;
 	END_IF
 	
