@@ -51,5 +51,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="UserManagmentPageContent.btnWarmRestart.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="UserManagmentPageContent" widgetRefId="btnWarmRestart" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.WarmRestart">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

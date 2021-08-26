@@ -36,15 +36,17 @@ ACTION UpdateCheck:
 		Communication.UpdateSemiAutoVars := FALSE;
 	END_IF
 	
-		IF Communication.LeftCoordClick THEN // ACS clicked
-		Communication.CoordinateSystem := NOT Communication.LeftCoord; // false if ACS on, true if TCS
-		Communication.RightCoord := NOT Communication.LeftCoord;
+	IF Communication.LeftCoordClick THEN // ACS clicked
+		Communication.CoordinateSystem := FALSE; // false if ACS on, true if TCS
+		Communication.RightCoord := TRUE;
+		Communication.LeftCoord := FALSE;
 		Communication.LeftCoordClick := FALSE;
 	END_IF
 	
 	IF Communication.RightCoordClick THEN
-		Communication.CoordinateSystem := Communication.RightCoord; // true if TCS on , false if ACS on
-		Communication.LeftCoord := NOT Communication.RightCoord;
+		Communication.CoordinateSystem := TRUE; // true if TCS on , false if ACS on
+		Communication.LeftCoord := TRUE;
+		Communication.RightCoord := FALSE;
 		Communication.RightCoordClick := FALSE;
 	END_IF
 END_ACTION
