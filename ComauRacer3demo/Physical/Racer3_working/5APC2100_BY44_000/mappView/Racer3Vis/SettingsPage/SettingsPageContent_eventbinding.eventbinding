@@ -143,6 +143,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
+	<!--
     <EventBinding id="EventBinding_L1" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
       <EventHandler condition="key=&quot;F2&quot;">
@@ -285,5 +286,6 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+	-->
   </Bindings>
 </EventBindingSet>
