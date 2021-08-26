@@ -816,7 +816,7 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;INS&quot; AND NOT Language   AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F10&quot; AND NOT Language   AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -902,7 +902,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F10&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
