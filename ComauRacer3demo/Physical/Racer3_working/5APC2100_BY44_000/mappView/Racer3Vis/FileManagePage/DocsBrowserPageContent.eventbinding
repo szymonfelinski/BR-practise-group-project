@@ -272,7 +272,7 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;INS&quot; AND PageName = &quot;DocsBrowserPage&quot; AND IsPDF">
+      <EventHandler condition="key=&quot;F10&quot; AND PageName = &quot;DocsBrowserPage&quot; AND IsPDF">
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PDFViewerDialog" />
