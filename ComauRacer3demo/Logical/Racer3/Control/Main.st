@@ -61,7 +61,10 @@ PROGRAM _CYCLIC
 	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
 		//RoboArm6Axis.Power := FALSE;
 		GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE);
-		State := STATE_INIT;
+		IF NOT GroupPower.Status THEN
+			State := STATE_INIT;
+		END_IF
+		
 	END_IF
 	
 	
@@ -88,6 +91,12 @@ PROGRAM _CYCLIC
 			Communication.txt_State_out:="Initialization";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Init';
 			ManualControlPara.ExitManual := FALSE;
+			IF RoboArm6Axis.PowerOn THEN
+				Communication.Power := TRUE;
+				Communication.BrakesSet := TRUE;
+				State := STATE_POWER_ON;
+			ELSE
+				
 			IF NOT Communication.BrakesSet THEN
 				SetBrakes.Axis1 := ADR(gAxisQ1);
 				SetBrakes.Axis2 := ADR(gAxisQ2);
@@ -121,7 +130,9 @@ PROGRAM _CYCLIC
 				ELSIF Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
 					State := STATE_POWER_ON;
 				END_IF
+				END_IF
 			END_IF
+			
 			
 		STATE_POWER_ON:
 			Communication.txt_State_out:="Power";
@@ -132,7 +143,7 @@ PROGRAM _CYCLIC
 				//RoboArm6Axis.Power := TRUE;
 			END_IF
 			
-			IF GroupPower.Status AND GroupPower.Enable THEN //Status tells whether the group is really powered on, Enable must be true.
+			IF (GroupPower.Status AND GroupPower.Enable) OR RoboArm6Axis.PowerOn THEN //Status tells whether the group is really powered on, Enable must be true., second condition applies when a transfer is initiated - no real benefit otherwise
 				State := STATE_HOMING;
 			END_IF
 						
@@ -176,10 +187,9 @@ PROGRAM _CYCLIC
 				ManualControlPara.ExitManual := TRUE;
 			END_IF
 			*)
-			Communication.ReturnToZero := FALSE;
+			Communication.ReturnToZero := FALSE; //reset ReturnToZero flag each time manual mode is exit
 			(* TODO: Better handling of fake home, do it per axis after each save - DONE*)
 			IF NOT Communication.ResetHome THEN //if ResetHome is set off
-				Communication.ReturnToZero := FALSE;
 				IF ControlSelector = ManualJog THEN
 					MpAuditWStringChange(MpLink:= gAuditTrailLink, Old := Communication.txt_State_out ,New:="ManualControl", Identifier := 'ControlMode');
 					
