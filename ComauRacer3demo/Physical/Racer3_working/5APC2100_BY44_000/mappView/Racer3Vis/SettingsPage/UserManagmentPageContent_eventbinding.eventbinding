@@ -68,7 +68,7 @@
           <Method xsi:type="session.VariableAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <EventHandler condition="key=&quot;INSERT&quot; AND PageName = &quot;UserManagmentPage&quot;">
+      <EventHandler condition="key=&quot;F10&quot; AND PageName = &quot;UserManagmentPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.UserList.Action" contentRefId="UserManagmentPageContent" widgetRefId="LstUserList">
             <Method xsi:type="widgets.brease.UserList.Action.OpenAddUserDialog" />

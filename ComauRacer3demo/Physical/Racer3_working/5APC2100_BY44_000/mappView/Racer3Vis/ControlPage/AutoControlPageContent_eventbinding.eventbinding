@@ -816,7 +816,7 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot; AND NOT Language   AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F10&quot; AND NOT Language   AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -902,7 +902,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;INSERT&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
+      <EventHandler condition="key=&quot;F10&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -934,7 +934,7 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F9&quot; AND Language  AND PageName = &quot;SettingsPage&quot;">
+      <EventHandler condition="key=&quot;F9&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -952,10 +952,25 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F7&quot; AND Language  AND PageName = &quot;SettingsPage&quot;">
+      <EventHandler condition="key=&quot;F7&quot; AND Language  AND PageName = &quot;AutoControlPage&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:AutomaticCurrentLanguage">
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="SelectedFileText">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <Operand datatype="ANY_STRING" name="SelectedFile">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="selectedFileFullPath">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="AutoControlPageContent" widgetRefId="txtSelectedFileNameAutoControlContent">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="=SelectedFile" />
           </Target>
         </Action>
       </EventHandler>
