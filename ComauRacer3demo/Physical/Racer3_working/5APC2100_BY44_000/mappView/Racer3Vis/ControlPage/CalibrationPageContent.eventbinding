@@ -152,5 +152,93 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_12">
+      <Source xsi:type="clientSystem.Event" event="KeyDown" />
+      <EventHandler condition="key=&quot;F14&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F13&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="-1" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_13">
+      <Source xsi:type="clientSystem.Event" event="KeyUp" />
+      <EventHandler condition="key=&quot;F14&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F13&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Calibration.Para.Parameters.CalibrationModePara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="CalibrationPageContent.btnHomeReset.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="CalibrationPageContent" widgetRefId="btnHomeReset" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ResetHome">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
