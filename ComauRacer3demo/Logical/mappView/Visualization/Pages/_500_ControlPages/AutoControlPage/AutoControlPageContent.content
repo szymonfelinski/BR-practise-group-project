@@ -23,13 +23,13 @@
     <Widget xsi:type="widgets.brease.MotionPad" id="padAutoModeMotionPad" top="160" left="140" width="500" height="520" zIndex="11" keyboard="true" mpLink="gAxesGroupRacer3" permissionOperate="['Administrators', 'Operator']" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight5AutoControlContent" top="514" left="1190" width="80" height="80" zIndex="20" breakWord="true" multiLine="true" text="$IAT/Automatic/Continuous" wordWrap="true" fontSize="16px" margin="0px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight31AutoControlContent" top="300" left="1190" width="80" height="80" zIndex="21" breakWord="true" multiLine="true" text="$IAT/Automatic/Resume" wordWrap="true" fontSize="16px" margin="0px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtCurFileAutoControlContent" top="300" left="660" width="220" height="40" zIndex="22" text="$IAT/Automatic/CurrentFile" textAlign="right" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtFileNameAutoControlContent" top="300" left="909" width="220" height="40" zIndex="23" text="" textAlign="left" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtCurLangAutoControlContent" top="193" left="660" width="220" height="40" zIndex="24" text="$IAT/Automatic/CurrentLang" textAlign="right" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtCurLangNameAutoControlContent" top="193" left="909" width="220" height="40" zIndex="25" text="" textAlign="left" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtCurFileAutoControlContent" top="300" left="700" width="180" height="40" zIndex="22" text="$IAT/Automatic/CurrentFile" textAlign="left" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtFileNameAutoControlContent" top="300" left="880" width="220" height="40" zIndex="23" text="" textAlign="right" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtCurLangAutoControlContent" top="200" left="700" width="180" height="40" zIndex="24" text="$IAT/Automatic/CurrentLang" textAlign="left" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtCurLangNameAutoControlContent" top="200" left="880" width="220" height="40" zIndex="25" text="" textAlign="right" fontSize="16px" />
     <Widget xsi:type="widgets.brease.Button" id="btnSTRight51AutoControlContent" top="514" left="1100" width="80" height="80" zIndex="26" breakWord="true" multiLine="true" text="$IAT/Automatic/ResetError" wordWrap="true" fontSize="16px" margin="0px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtSelectedFileAutoControlContent" top="407" left="660" width="220" height="40" zIndex="27" text="$IAT/Automatic/SelectedFile" textAlign="right" fontSize="16px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtSelectedFileNameAutoControlContent" top="407" left="909" width="220" height="40" zIndex="28" text="" textAlign="left" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtSelectedFileAutoControlContent" top="400" left="700" width="180" height="40" zIndex="27" text="$IAT/Automatic/SelectedFile" textAlign="left" fontSize="16px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtSelectedFileNameAutoControlContent" top="400" left="880" width="220" height="40" zIndex="28" text="" textAlign="right" fontSize="16px" />
     <Widget xsi:type="widgets.brease.BasicSlider" id="BasicSliderOverride" top="620" left="909" width="171" height="40" zIndex="29" />
     <Widget xsi:type="widgets.brease.Label" id="txtOverride" top="630" left="660" width="220" height="40" zIndex="30" text="$IAT/Automatic/OverrideLabel" textAlign="right" fontSize="16px" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputOverride" top="635" left="1100" width="170" zIndex="31" unit="{'metric':'P1','imperial':'P1','imperial-us':'P1'}" unitAlign="right" unitTextAlign="right" textAlign="center" />
