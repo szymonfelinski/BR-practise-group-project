@@ -744,7 +744,9 @@
         </Action>
       </EventHandler>
     </EventBinding>
+	<!--
     <EventBinding id="key_down">
+	
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
       <EventHandler condition="key=&quot;F2&quot; AND NOT ()::Control:AutomaticCurrentLanguage">
         <Action>
@@ -950,5 +952,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
+	-->
   </Bindings>
 </EventBindingSet>

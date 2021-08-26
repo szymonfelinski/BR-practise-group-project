@@ -53,6 +53,8 @@ PROGRAM _CYCLIC
 	*)
 	
 	IF Communication.WarmRestart THEN
+		Communication.Power := FALSE;
+		RoboArm6Axis.Power := FALSE;
 		Communication.WarmRestart := FALSE;
 		SYSreset(1,1);
 	END_IF

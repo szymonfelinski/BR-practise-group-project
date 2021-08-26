@@ -195,7 +195,8 @@ TYPE
 		changeModePending : USINT := 0; (*1-Manual       2-SemiManual      3-Auto 0-none*)
 		NOTPathSystem : BOOL;
 		NOTModeSystem : BOOL;
-		CoordinateSystem : BOOL := FALSE;
+		CoordinateSystemManual : BOOL := FALSE;
+		CoordinateSystemSemiAuto : BOOL := FALSE;
 		NOTCoordinateSystem : BOOL;
 		txt_State_out : WSTRING[80];
 		AskedMaxVelocity : REAL; (*not needed*)
@@ -219,10 +220,6 @@ TYPE
 		BrakesSet : BOOL; (*This variable tells the program if brake parameters have been set.*)
 		ToolOutput : BOOL; (*This variable enables tool control*)
 		ReturnToZero : BOOL; (*This variable allows returning to zero position in manual mode.*)
-		RightCoord : BOOL := FALSE;
-		LeftCoord : BOOL := TRUE;
-		LeftCoordClick : BOOL;
-		RightCoordClick : BOOL;
 		ResetHome : BOOL;
 		WarmRestart : BOOL := FALSE;
 	END_STRUCT;
@@ -253,8 +250,8 @@ TYPE
 		Cmds : R3BrakeCmdsType;
 	END_STRUCT;
 	R3KeyCheckType : 	STRUCT 
-		original_combo : ARRAY[0..5]OF USINT := [1,1,2,3,0,17];
-		pending_combo : ARRAY[0..5]OF USINT;
+		original_combo : ARRAY[0..4]OF USINT := [1,2,3,0,17];
+		pending_combo : ARRAY[0..4]OF USINT;
 		i : USINT := 0;
 		temp_value : USINT;
 		value_changed : BOOL := FALSE;

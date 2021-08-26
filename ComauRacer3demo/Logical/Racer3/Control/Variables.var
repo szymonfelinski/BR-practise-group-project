@@ -18,7 +18,6 @@ VAR
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;
 	MpAlarmXCore_Control : MpAlarmXCore;
-	CoordinateSystem : BOOL := FALSE; (*0 for axis,1 for euler*)
 	LastState : R3StateMachineEnum; (*Stores last machine state.*)
 	CalibrationStateBtn : BOOL; (*TRUE when in state STATE_CALIBRATION *)
 	Communication : CommunicationType;
