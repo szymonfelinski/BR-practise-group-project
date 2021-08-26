@@ -41,20 +41,35 @@
         </Action>
       </EventHandler>
     </EventBinding>
-	<!--
-    <EventBinding id="R2_audit" comment="done">
+    <EventBinding id="key_down_AuditPage" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F9&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F9&quot; AND PageName = &quot;AuditPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="AuditPageContent" widgetRefId="LstAudit">
             <Method xsi:type="widgets.brease.AuditList.Action.Export" />
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="R3_Audit" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F14&quot;">
+      <EventHandler condition="key=&quot;F8&quot; AND PageName = &quot;AuditPage&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="AuditPageContent" widgetRefId="LstAudit">
+            <Method xsi:type="widgets.brease.AuditList.Action.GoToPreviousPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F13&quot; AND PageName = &quot;AuditPage&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="AuditPageContent" widgetRefId="LstAudit">
+            <Method xsi:type="widgets.brease.AuditList.Action.GoToNextPage" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F14&quot; AND PageName = &quot;AuditPage&quot;">
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="DialogAuditDeleteConfirm" />
@@ -62,26 +77,5 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="L2_Audit" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F8&quot;">
-        <Action>
-          <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="AuditPageContent" widgetRefId="LstAudit">
-            <Method xsi:type="widgets.brease.AuditList.Action.GoToPreviousPage" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="L3_audit" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F13&quot;">
-        <Action>
-          <Target xsi:type="widgets.brease.AuditList.Action" contentRefId="AuditPageContent" widgetRefId="LstAudit">
-            <Method xsi:type="widgets.brease.AuditList.Action.GoToNextPage" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-	-->
   </Bindings>
 </EventBindingSet>

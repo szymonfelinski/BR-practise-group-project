@@ -154,7 +154,12 @@
     </EventBinding>
     <EventBinding id="EventBinding_12">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F14&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F14&quot;AND PageName = &quot;CaibrationPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -172,7 +177,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F13&quot;">
+      <EventHandler condition="key=&quot;F13&quot;AND PageName = &quot;CaibrationPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -193,7 +198,12 @@
     </EventBinding>
     <EventBinding id="EventBinding_13">
       <Source xsi:type="clientSystem.Event" event="KeyUp" />
-      <EventHandler condition="key=&quot;F14&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F14&quot;AND PageName = &quot;CaibrationPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -211,7 +221,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F13&quot;">
+      <EventHandler condition="key=&quot;F13&quot;AND PageName = &quot;CaibrationPage&quot;">
         <Sequence>
           <Step order="0">
             <Action>

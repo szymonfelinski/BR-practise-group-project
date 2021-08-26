@@ -41,40 +41,35 @@
         </Action>
       </EventHandler>
     </EventBinding>
-	<!--
-    <EventBinding id="R2_Alarm" comment="done">
+    <EventBinding id="key_down_AlarmPage" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F9&quot;">
+      <Operand datatype="ANY_STRING" name="PageName">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="key=&quot;F9&quot; AND PageName = &quot;AlarmPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
             <Method xsi:type="widgets.brease.AlarmList.Action.Acknowledge" />
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="R3_Alarm" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F14&quot;">
+      <EventHandler condition="key=&quot;F14&quot; AND PageName = &quot;AlarmPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
             <Method xsi:type="widgets.brease.AlarmList.Action.AcknowledgeAll" />
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="L2_Alarm" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F8&quot;">
+      <EventHandler condition="key=&quot;F8&quot; AND PageName = &quot;AlarmPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
             <Method xsi:type="widgets.brease.AlarmList.Action.GoToPreviousPage" />
           </Target>
         </Action>
       </EventHandler>
-    </EventBinding>
-    <EventBinding id="L3_Alarm" comment="done">
-      <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <EventHandler condition="key=&quot;F13&quot;">
+      <EventHandler condition="key=&quot;F13&quot; AND PageName = &quot;AlarmPage&quot;">
         <Action>
           <Target xsi:type="widgets.brease.AlarmList.Action" contentRefId="AlarmPageContent" widgetRefId="LstAlarmList">
             <Method xsi:type="widgets.brease.AlarmList.Action.GoToNextPage" />
@@ -82,6 +77,5 @@
         </Action>
       </EventHandler>
     </EventBinding>
-	-->
   </Bindings>
 </EventBindingSet>
