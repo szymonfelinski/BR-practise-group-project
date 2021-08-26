@@ -1,6 +1,6 @@
 
 ACTION VisAction: 
-	//Communication.NOTCoordinateSystem := NOT Communication.CoordinateSystem;
+	Communication.NOTCoordinateSystemSemiAuto := NOT Communication.CoordinateSystemSemiAuto;
 	Communication.NOTPathSystem	:= NOT Communication.PathSystem;
 	Communication.NOTModeSystem := NOT Communication.ModeSystem;
 	

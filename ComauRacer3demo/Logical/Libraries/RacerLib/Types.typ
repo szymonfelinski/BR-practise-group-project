@@ -196,6 +196,7 @@ TYPE
 		NOTPathSystem : BOOL;
 		NOTModeSystem : BOOL;
 		CoordinateSystemManual : BOOL := FALSE;
+		NOTCoordinateSystemSemiAuto : BOOL := FALSE;
 		CoordinateSystemSemiAuto : BOOL := FALSE;
 		NOTCoordinateSystem : BOOL;
 		txt_State_out : WSTRING[80];
