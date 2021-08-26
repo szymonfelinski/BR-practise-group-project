@@ -58,7 +58,7 @@ PROGRAM _CYCLIC
 	END_IF
 	UpdateCheck;
 	
-	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands have no effect in STATE_BRAKES
+	IF NOT Communication.Power AND NOT (State = STATE_BRAKES) THEN //power commands must have no effect in STATE_BRAKES
 		//RoboArm6Axis.Power := FALSE;
 		GroupPower(AxesGroup := ADR(gAxesGroupRacer3), Enable := FALSE);
 		IF NOT GroupPower.Status THEN
