@@ -91,11 +91,11 @@ PROGRAM _CYCLIC
 			Communication.txt_State_out:="Initialization";
 			Communication.txt_State_out_front:= '$$IAT/ControlPage/txt_State_out_front.Init';
 			ManualControlPara.ExitManual := FALSE;
-			IF RoboArm6Axis.PowerOn THEN
+			(*IF RoboArm6Axis.PowerOn THEN
 				Communication.Power := TRUE;
 				Communication.BrakesSet := TRUE;
-				State := STATE_POWER_ON;
-			ELSE
+				//State := STATE_POWER_ON;
+			ELSE*)
 				
 			IF NOT Communication.BrakesSet THEN
 				SetBrakes.Axis1 := ADR(gAxisQ1);
@@ -131,7 +131,6 @@ PROGRAM _CYCLIC
 					State := STATE_POWER_ON;
 				END_IF
 				END_IF
-			END_IF
 			
 			
 		STATE_POWER_ON:
