@@ -314,82 +314,23 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="key_down_Manual" comment="done">
+    <EventBinding id="L1_down" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyDown" />
-      <Operand datatype="ANY_STRING" name="PageName">
-        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
-          <Method xsi:type="session.VariableAction.GetValue" />
-        </ReadTarget>
-      </Operand>
-      <EventHandler condition="key=&quot;F2&quot;AND PageName = &quot;ManualControlPage&quot;">
+      <EventHandler condition="key=&quot;F2&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ToolOutput">
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F8&quot;AND PageName = &quot;ManualControlPage&quot;">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoord">
-                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="key=&quot;F13&quot;AND PageName = &quot;ManualControlPage&quot;">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
-                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="-1" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="key=&quot;F7&quot;AND PageName = &quot;ManualControlPage&quot;">
+      <EventHandler condition="key=&quot;F7&quot;">
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.ReturnToZero">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="key=&quot;F9&quot;AND PageName = &quot;ManualControlPage&quot;">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoord">
-                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="key=&quot;F14&quot;AND PageName = &quot;ManualControlPage&quot;">
+      <EventHandler condition="key=&quot;F14&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -407,15 +348,78 @@
           </Step>
         </Sequence>
       </EventHandler>
+      <EventHandler condition="key=&quot;F13&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.Direction">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="-1" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:ManualControlPara.ActivateMove">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F8&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystemManual">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F9&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnRight2ManualControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ManualControlPageContent" widgetRefId="btnLeft2ManualControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystemManual">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
     </EventBinding>
-    <EventBinding id="key_up_manual" comment="done">
+    <EventBinding id="L3_up" comment="done">
       <Source xsi:type="clientSystem.Event" event="KeyUp" />
-      <Operand datatype="ANY_STRING" name="PageName">
-        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
-          <Method xsi:type="session.VariableAction.GetValue" />
-        </ReadTarget>
-      </Operand>
-      <EventHandler condition="key=&quot;F13&quot;AND PageName = &quot;ManualControlPage&quot;">
+      <EventHandler condition="key=&quot;F14&quot;">
         <Sequence>
           <Step order="0">
             <Action>
@@ -433,7 +437,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F14&quot;AND PageName = &quot;ManualControlPage&quot;">
+      <EventHandler condition="key=&quot;F13&quot;">
         <Sequence>
           <Step order="0">
             <Action>
