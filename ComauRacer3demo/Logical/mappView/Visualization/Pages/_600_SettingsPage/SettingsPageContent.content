@@ -15,8 +15,8 @@
     <Widget xsi:type="widgets.brease.Label" id="txtMeasurementSystemLabel" top="407" left="280" width="250" height="80" zIndex="11" text="$IAT/Visualization/Settings/UnitSystemSelectedLabel" fontSize="20px" />
     <Widget xsi:type="widgets.brease.Label" id="txtLabelThemeDark" top="193" left="750" width="250" height="80" zIndex="12" text="$IAT/Visualization/Settings/ThemeDarkLabel" textAlign="right" fontSize="20px" visible="false" />
     <Widget xsi:type="widgets.brease.Label" id="txtLanguageEnglish" top="300" left="750" width="250" height="80" zIndex="14" text="$IAT/Visualization/Settings/LanguageEnglishLabel" textAlign="right" fontSize="20px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtMeasurementSystemMetricLabel" top="420" left="750" width="250" height="80" zIndex="13" text="$IAT/Visualization/Settings/UnitSystemMetricLabel" textAlign="right" fontSize="20px" />
+    <Widget xsi:type="widgets.brease.Label" id="txtMeasurementSystemMetricLabel" top="407" left="760" width="250" height="80" zIndex="13" text="$IAT/Visualization/Settings/UnitSystemMetricLabel" textAlign="right" fontSize="20px" />
     <Widget xsi:type="widgets.brease.Label" id="txtLabelThemeLight" top="193" left="750" width="250" height="80" zIndex="15" text="$IAT/Visualization/Settings/ThemeLightLabel" textAlign="right" fontSize="20px" />
-    <Widget xsi:type="widgets.brease.Label" id="txtMeasurementSystemImperialLabel" top="420" left="750" width="250" height="80" zIndex="16" text="$IAT/Visualization/Settings/UnitSystemImperialLabel" textAlign="right" fontSize="20px" visible="false" />
+    <Widget xsi:type="widgets.brease.Label" id="txtMeasurementSystemImperialLabel" top="407" left="760" width="250" height="80" zIndex="16" text="$IAT/Visualization/Settings/UnitSystemImperialLabel" textAlign="right" fontSize="20px" visible="false" />
   </Widgets>
 </Content>
