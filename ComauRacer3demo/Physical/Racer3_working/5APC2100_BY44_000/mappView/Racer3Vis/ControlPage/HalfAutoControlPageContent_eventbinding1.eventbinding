@@ -361,42 +361,6 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="key=&quot;F8&quot;">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoord">
-                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.LeftCoordClick">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="key=&quot;F9&quot;">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoord">
-                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.RightCoordClick">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
       <EventHandler condition="key=&quot;F13&quot;">
         <Sequence>
           <Step order="0">
@@ -492,6 +456,56 @@
             <Action>
               <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRigh4HalfAutoControlContent">
                 <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F8&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRight2HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystemSemiAuto">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="key=&quot;F9&quot;">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnLeft2HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="default" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="HalfAutoControlPageContent" widgetRefId="btnRight2HalfAutoControlContent">
+                <Method xsi:type="widgets.brease.Button.Action.SetStyle" value="defaultTurnedOn" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Control:Communication.CoordinateSystemSemiAuto">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
               </Target>
             </Action>
           </Step>
