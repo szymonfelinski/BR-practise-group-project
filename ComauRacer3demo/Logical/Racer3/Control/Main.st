@@ -11,6 +11,7 @@ PROGRAM _INIT
 	RoboArm6AxisPara.Deceleration := 1000.0;
 	RoboArm6AxisPara.Velocity := 69.0;
 	
+	Communication.ReturnToZero := FALSE;
 	ManualControlPara.PathLimits.Acceleration := 1000.0;
 	ManualControlPara.PathLimits.Deceleration := 1000.0;
 	ManualControlPara.PathLimits.Velocity := 150.0;
