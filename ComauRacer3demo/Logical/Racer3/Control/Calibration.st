@@ -4,14 +4,25 @@ ACTION CalibrationAction:
 		Calibration.Info.CurrentState := STATE_FAKE_HOME;
 	END_IF
 	
+	IF Calibration.Cmds.GroupHome.Done OR NOT Calibration.Cmds.GroupHome.Busy THEN
+		Calibration.Cmds.GroupHome.Execute := FALSE;
+		Calibration.Cmds.GroupHome();
+	END_IF
+	
 	CASE Calibration.Info.CurrentState OF
 		STATE_BEGIN:
+			IF gIsCalibrated THEN
+				Calibration.Info.CurrentState := STATE_DONE;
+			ELSE
+				
 			Calibration.Para.Parameters.CalibrationModePara.JogVelocity := 5.0; //default velocity
 			IF RoboArm6Axis.IsHomed AND NOT Communication.ResetHome THEN
 				Calibration.Info.CurrentState := STATE_MOVING; //if a home is set, go directly to manual calibration (perhaps calibration on demand?)
 			ELSE
 				Calibration.Info.CurrentState := STATE_FAKE_HOME; //otherwise set a fake home
+				END_IF
 			END_IF
+			
 			
 		STATE_FAKE_HOME:
 			
@@ -29,7 +40,7 @@ ACTION CalibrationAction:
 				Calibration.Cmds.GroupHome.Execute := FALSE;
 				Calibration.Cmds.GroupHome();
 				IF Communication.ResetHome THEN //if manual homing reset
-					Calibration.Info.CurrentState := STATE_SAVING_POSITION;
+					Calibration.Info.CurrentState := STATE_BEGIN;
 					Communication.ResetHome := FALSE;
 				ELSE
 					Calibration.Info.CurrentState := STATE_MOVING;
@@ -60,6 +71,7 @@ ACTION CalibrationAction:
 						
 			IF Calibration.Para.Parameters.Axis5To6Para.Axis35Restored AND Calibration.Para.Parameters.AxisCalibrated[5] THEN
 				Calibration.Info.CurrentState := STATE_SAVING_POSITION;
+				Calibration.Para.Parameters.Axis5To6Para.Axis35Restored := FALSE;
 				i := 1;
 			END_IF
 
@@ -111,6 +123,7 @@ ACTION CalibrationAction:
 				Calibration.Para.HomingParameters.RestorePositionVariableAddress := ADR(gRacer3HomeRestorePos[5]);
 				Calibration.Cmds.InitHome(Axis := ADR(gAxisQ6), Execute := TRUE, HomingParameters := Calibration.Para.HomingParameters);
 				IF Calibration.Cmds.InitHome.Done THEN
+					gIsCalibrated := TRUE;
 					Calibration.Info.CurrentState := STATE_DONE;
 				END_IF
 				
@@ -118,7 +131,7 @@ ACTION CalibrationAction:
 		
 		STATE_DONE:
 			//gRacer3BasePosition := RoboArm6Axis.Info.JointAxisPosition; //replaced by assignment at the beginning of STATE_SAVING_POSITIONS
-			gIsCalibrated := TRUE;
+			
 			
 			State:=STATE_HOMING;
 

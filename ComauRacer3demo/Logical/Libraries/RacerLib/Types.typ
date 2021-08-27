@@ -54,6 +54,11 @@ TYPE
 		Info : R3AutomaticModeInfo;
 		Cmds : R3AutomaticModeCmds;
 	END_STRUCT;
+	R3WorkspaceType : 	STRUCT  (*this allows workspace to be set during runtime.*)
+		Para : McCfgAxGrpFeatWsmType := (ModalDataBehaviour:=(Type:=mcAGFMDB_USE_AX_GRP_SET));
+		Cmd : MC_BR_ProcessConfig;
+		Done : BOOL; (*indicates the FB has finished*)
+	END_STRUCT;
 	R3ManualModeType : 	STRUCT  (*Manual mode type*)
 		AxisButton : R3AxisBtnType; (*Stores button states for select coordinate system*)
 		CoordinateSystem : McCoordinateSystemEnum; (*Stores selected coordinate system (0 - axis, 9 - global, 10 - tool) (no tool is set, so 9=10)*)
@@ -223,6 +228,7 @@ TYPE
 		ReturnToZero : BOOL; (*This variable allows returning to zero position in manual mode.*)
 		ResetHome : BOOL;
 		WarmRestart : BOOL := FALSE;
+		ReadWorkspace : BOOL;
 	END_STRUCT;
 	R3BrakeStateMachineEnum : 
 		(

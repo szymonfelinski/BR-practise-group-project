@@ -86,3 +86,9 @@ END_FUNCTION
 		UnloadMode : {REDUND_UNREPLICABLE} McUnloadProgramModeEnum; (*defines unload mode behaviour*)
 	END_VAR
 END_FUNCTION_BLOCK
+
+{REDUND_ERROR} {REDUND_UNREPLICABLE} FUNCTION_BLOCK R3Workspace (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
+	VAR_IN_OUT
+		Para : R3WorkspaceType;
+	END_VAR
+END_FUNCTION_BLOCK

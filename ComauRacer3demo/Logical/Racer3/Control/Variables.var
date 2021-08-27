@@ -15,6 +15,7 @@ VAR
 	Axis5Calibrated : BOOL; (*If value TRUE then axis 6 can be calibrated*)
 	Axis_1to4_calibrated : BOOL; (*If value TRUE then axis 5 can be calibrated*)
 	Calibration : R3CalibrationMainType; (*Main calibration variable.*)
+	WorkspaceControl : R3WorkspaceType;
 	SemiAutoControl : R3SemiAutoMode;
 	SemiAutoControlPara : R3SemiAutoModeType;
 	MpAlarmXCore_Control : MpAlarmXCore;
@@ -26,4 +27,5 @@ VAR
 	GroupPower : MC_BR_GroupPower;
 	GroupReset : MC_GroupReset;
 	SetBrakes : R3BrakeSet; (*Setting brake parameters*)
+	R3WorkspaceFB : R3Workspace;
 END_VAR
